@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-xl">Find assessors closest to {{data['postcode']}}</h1>
+
+        <p>Give them a ring to book an appointment.</p>
+
+        <div class="app-prose-scope">
+            <h2 class="govuk-heading-m">Who are these people?</h2>
+
+            <ul class="govuk-list">
+                <li>These are certified energy assessors</li>
+                <li>6 UK-wide schemes certify them every 3 years</li>
+                <li>They visit your property</li>
+            </ul>
+        </div>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            {%
+
+            set assessors = [
+            {
+            "name": "Sarah Phillips",
+            "distance": 0.1,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Andrew Williams",
+            "distance": 0.1,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Matthew Dorkin",
+            "distance": 0.2,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "William Turner",
+            "distance": 0.2,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Joshua Crew",
+            "distance": 0.4,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Misa Howse",
+            "distance": 0.4,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Lauren Goulding",
+            "distance": 0.6,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Gregg Sellen",
+            "distance": 0.6,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Juliet Montague",
+            "distance": 0.6,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Wallace Gromit",
+            "distance": 0.6,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Martha Stewart",
+            "distance": 0.9,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Donald Duck",
+            "distance": 1,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Reiss Nelson",
+            "distance": 1,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "John Doe",
+            "distance": 2,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Harald Anderson",
+            "distance": 2,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Adele Li Puma",
+            "distance": 2,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Daniel Adams",
+            "distance": 4,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Craig Bass",
+            "distance": 5,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Angelica Savastano",
+            "distance": 5,
+            "phone": "0792 102 1368"
+            },
+            {
+            "name": "Joe Blogs",
+            "distance": 5,
+            "phone": "0792 102 1368"
+            }
+            ]
+
+            %}
+            {% for assessor in assessors %}
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    {{assessor.name}}
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{assessor.distance}}m away
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a href="tel:{{assessor.phone}}">
+                        {{assessor.phone}}
+                    </a>
+                </dd>
+            </div>
+            {% endfor %}
+        </dl>
+
+        <div class="app-prose-scope">
+            <h2 class="govuk-heading-m">Still need help?</h2>
+
+            <ul class="govuk-list">
+                <li><a href="/schemes">Contact a Scheme directly</a></li>
+                <li><a href="/address">Use a different postcode</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

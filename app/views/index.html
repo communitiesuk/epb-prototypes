@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Find an Energy Assessor
+        <span class="govuk-caption-xl">For your domestic dwelling</span>
+      </h1>
+      <p>
+        Do an energy assessment.
+      </p>
+
+      <div class="app-prose-scope">
+        <h2 class="govuk-heading-m">Who can use this page?</h2>
+
+        <ul class="govuk-list">
+          <li>You are a home owner or representing one</li>
+          <li>You are selling/renting your house and need an EPC certificate</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">What you need to complete this service</h2>
+
+        <p>You can change the service name by editing the file '/app/config.js'.</p>
+
+        <a href="/address" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+          Start now
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+          </svg>
+        </a>
+
+        <h2 class="govuk-heading-m">Helpful links</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="javascript:alert('Go to Landmarks old system')">For Commercial Assessments</a></li>
+          <li><a href="javascript:alert('Go to Landmarks old system')">Get support via phone</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+{% endblock %}
