@@ -8,20 +8,11 @@ GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
+        <a href="/address" class="govuk-back-link">Back</a>
 
         <h1 class="govuk-heading-xl">Assessors near {{data['postcode']}}</h1>
 
-        <p>Give them a ring to book an appointment.</p>
-
-        <div class="app-prose-scope">
-            <h2 class="govuk-heading-m">Who are these people?</h2>
-
-            <ul class="govuk-list">
-                <li>These are certified energy assessors</li>
-                <li>6 UK-wide schemes certify them every 3 years</li>
-                <li>They visit your property</li>
-            </ul>
-        </div>
+        <p class="govuk-!-margin-bottom-9">This is a list of 20 assessors near you. Contact them directly to book an appointment.</p>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             {%
@@ -130,14 +121,28 @@ GOV.UK Prototype Kit
             ]
 
             %}
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Name
+                </dt>
+                <dd class="govuk-summary-list__value govuk-!-font-weight-bold">
+                    Distance
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-font-weight-bold">
+                   Phone number
+                </dd>
+            </div>
             {% for assessor in assessors %}
-            <!-- Column names -->
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                     {{assessor.name}}
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    {{assessor.distance}} miles away <!-- Logic for 1 mile -->
+                    {% if assessor.distance<1 %}
+                        Less than 1 mile away
+                    {% else %}
+                        {{assessor.distance}} miles away
+                    {% endif %}
                 </dd>
                 <dd class="govuk-summary-list__actions">
                     <a href="tel:{{assessor.phone}}">

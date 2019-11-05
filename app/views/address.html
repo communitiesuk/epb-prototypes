@@ -1,36 +1,41 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Find an assessor | Energy performance of buildings
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <!-- BACK BUTTON -->
+        <a href="/" class="govuk-back-link">Back</a>
+
         <h1 class="govuk-heading-xl">
-            What is the postcode of the property that you need an assessment for
+            The address of your house
         </h1>
 
         <form action="/result" method="post" class="form">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <label class="govuk-label" for="postcode">
-                        What is the postcode for the property that needs an EPC?
+                        Postcode
                     </label>
+
+                    <input name="postcode" class="govuk-input" id="postcode" type="text" />
+
                     <span id="more-detail-hint" class="govuk-hint">
                         For example SW1A 2AA
                     </span>
-
-                    <input name="postcode" class="govuk-input" id="postcode" type="text" />
                 </fieldset>
             </div>
 
             <button class="govuk-button" data-module="govuk-button">Find an assessor</button>
         </form>
 
-        <!-- Directly -->
+        <h2 class="govuk-heading-m">Don't have the postcode?</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="/schemes">Contact & book with accrediting schemes directly</a></li>
+        </ul>
     </div>
 </div>
 

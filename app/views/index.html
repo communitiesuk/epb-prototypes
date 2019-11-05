@@ -2,33 +2,68 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Find an assessor | Energy performance of buildings
 {% endblock %}
 
 {% block content %}
-  <!-- Back button -->
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
         Find an energy assessor
-        <span class="govuk-caption-xl">For your domestic dwelling</span>
+        <span class="govuk-caption-xl">For your domestic property</span>
       </h1>
       <p>
-        Do an energy assessment.
+        Energy assessors measure the energy efficiency of your property and are qualified to issue you with an Energy
+        Performance Certificate. You are required to have a recent Energy Performance Certificate before you market your
+        property for sale or letting.
       </p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What is involved in an assessment
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <ul class='govuk-list'>
+            <li>An assessment takes 30 minutes, depending on the size of your property.</li>
+            <li>It will not harm the property.</li>
+            <li>Access to the property must be provided to the assessor.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            When you need an energy certificate
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>When you don't need an Energy Performance Certificate</p>
+          <ul class="govuk-list">
+            <li>You are not selling or renting your property.</li>
+            <li>You are selling your property, but the buyer intends to demolish it.</li>
+            <li>The building is of less than 50m<sup>2</sup> and not a dwelling.</li>
+            <li>The building is temporary with a planned time of use fewer than 2 years.</li>
+          </ul>
+        </div>
+      </details>
 
       <div class="app-prose-scope">
         <h2 class="govuk-heading-m">Who can use this service?</h2>
 
-        <ul class="govuk-list">
-          <li>You are a home owner or representing one</li>
-          <li>You are selling/renting your house and need an EPC certificate</li>
-          <li>If your property is in Scotland, you need to use a <a>different service</a></li>
+        <ul class="govuk-list govuk-!-margin-bottom-9">
+          <li>You are a UK home owner or you're representing one</li>
+          <li>You are selling or letting your house and need an Energy Performance Certificate</li>
+          <li>If your property is in Scotland, you need to use <a href="https://www.google.com/">a different service</a></li>
         </ul>
 
         <h2 class="govuk-heading-m">What you need to complete this service</h2>
-
-        <p>You can change the service name by editing the file '/app/config.js'.</p>
+        <ul class="govuk-list govuk-!-margin-bottom-9">
+          <li>The address of the property</li>
+          <li>A phone to contact assessors</li>
+        </ul>
 
         <a href="/address" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
           Start now
@@ -38,11 +73,20 @@
         </a>
 
         <h2 class="govuk-heading-m">Helpful links</h2>
-
         <ul class="govuk-list govuk-list--bullet">
-          <li><a href="javascript:alert('Go to Landmarks old system')">For Commercial Assessments</a></li>
-          <li><a href="javascript:alert('Go to Landmarks old system')">Get support via phone</a></li>
+          <li><a href="/schemes">For Commercial Assessments</a></li>
         </ul>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Get support over the phone
+          </span>
+          </summary>
+          <div class="govuk-details__text">
+            Please call <a href="tel:07921021368">0792 102 1368</a>
+          </div>
+        </details>
       </div>
     </div>
 </div>
