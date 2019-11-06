@@ -20,7 +20,7 @@ module.exports = {
   useCookieSessionStore: 'false',
 
   // Enable or disable built-in docs and examples.
-  useDocumentation: 'true',
+  useDocumentation: 'false',
 
   // Force HTTP to redirect to HTTPS on production
   useHttps: 'true',
@@ -29,6 +29,5 @@ module.exports = {
   cookieText: 'GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a>',
 
   // Enable or disable Browser Sync
-  useBrowserSync: 'true'
-
+  useBrowserSync: 'false'
 }
