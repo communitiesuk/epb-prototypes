@@ -10,7 +10,7 @@ env:
   parameter-store:
     PAAS_LOGIN_PROTOTYPES: "epbr-govpaas-integration-login"
     PAAS_PW_PROTOTYPES: "epbr-govpaas-integration-pw"
-    PAAS_SPACE_PROTOTYPES: "epbr-govpaas-integration-space"
+    PAAS_SPACE_PROTOTYPES: "epbr-govpaas-prototypes-space"
     PAAS_API: "epbr-govpaas-api"
     PAAS_ORG: "epbr-govpaas-orgname"
 
