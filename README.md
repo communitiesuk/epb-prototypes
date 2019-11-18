@@ -7,7 +7,7 @@ This is where we store our prototypes.
 ### Dependencies
 - [Node.js](https://nodejs.org)
     - _Note: Installing Node.js using the above link will automatically install Node Package Manager (NPM)._
-- [NPM](https://www.npmjs.com)
+- [Node Package Manager (NPM)](https://www.npmjs.com)
 
 ### Install
 
