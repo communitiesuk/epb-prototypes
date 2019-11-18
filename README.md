@@ -41,7 +41,7 @@ $ npm start
   - _Note: Some systems might have a service already listening 
   on port 80. Simply read the console output from `npm start` to identify your port._
 
-## Further reading
+## Resources
 - Cloned from [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com/docs)
 - [GOV.UK Design System](https://design-system.service.gov.uk/get-started/)
   - [Styles](https://design-system.service.gov.uk/styles/)
