@@ -31,7 +31,7 @@ $ npm i
 
 ## Start
 
-Start the local server by running
+Start the local server:
 
 ```sh
 $ npm start
