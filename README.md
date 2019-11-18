@@ -23,7 +23,7 @@ Change directory to `epb-prototypes`:
 $ cd epb-prototypes
 ```
 
-Install the Node.js modules
+Install the Node.js modules:
 
 ```sh
 $ npm i
