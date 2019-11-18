@@ -2,6 +2,7 @@
 usage-data-config.json
 # ignore extension SCSS because it's dynamically generated
 lib/extensions/_extensions.scss
+.idea
 .env
 .sass-cache
 .DS_Store
