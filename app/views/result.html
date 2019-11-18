@@ -10,13 +10,15 @@ Find an assessor | Energy performance of buildings
     <div class="govuk-grid-column-two-thirds-from-desktop">
         <a href="/address" class="govuk-back-link">Back</a>
 
-        <h1 class="govuk-heading-xl">Assessors near {{data['postcode']}}</h1>
+        <h1 class="govuk-heading-xl">Energy assessors near your property</h1>
         
-        <p>This is a list of 20 assessors near you. Contact them directly to book an appointment.</p>
+        <p>There are 20 assessors near your property. <!-- This isn't exactly true -->
+            Contact them to book an energy assessment.</p>
 
         <div class="govuk-inset-text govuk-!-margin-bottom-9">
             <p>
-                All the assessors shown here are accredited by an energy accreditation scheme that oversees energy assessors in the production of energy performance certificates.
+                All assessors listed below are accredited to carry out energy assessments on residential properties,
+                and to issue Energy Performance Certificates.
             </p>
         </div>
 
@@ -158,15 +160,6 @@ Find an assessor | Energy performance of buildings
             </div>
             {% endfor %}
         </dl>
-
-        <div class="app-prose-scope">
-            <h2 class="govuk-heading-m">Still need help?</h2>
-
-            <ul class="govuk-list">
-                <li><a href="/schemes">Contact an energy assessor accreditation scheme directly</a></li>
-                <li><a href="/address">Find an assessor for a different address</a></li>
-            </ul>
-        </div>
     </div>
 </div>
 
