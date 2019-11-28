@@ -7,159 +7,170 @@ Find an assessor | Energy performance of buildings
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
-        <a href="/address" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-column-two-thirds">
+    <a href="/address" class="govuk-back-link">Back</a>
 
-        <h1 class="govuk-heading-xl">Energy assessors near your property</h1>
-        
-        <p>Contact an assessor listed below to book an energy assessment.</p>
+    <h1 class="govuk-heading-xl">Energy assessors near your property</h1>
 
-        <div class="govuk-inset-text govuk-!-margin-bottom-9">
-            <p>
-                All assessors listed below are accredited to carry out energy assessments on residential properties,
-                and to issue Energy Performance Certificates.
-            </p>
-        </div>
+    <p>Contact an assessor listed below to book an energy assessment.</p>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            {%
-
-            set assessors = [
-            {
-            "name": "Sarah Phillips",
-            "distance": 0.1,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Andrew Williams",
-            "distance": 0.1,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Matthew Dorkin",
-            "distance": 0.2,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "William Turner",
-            "distance": 0.2,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Joshua Crew",
-            "distance": 0.4,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Misa Howse",
-            "distance": 0.4,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Lauren Goulding",
-            "distance": 0.6,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Gregg Sellen",
-            "distance": 0.6,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Juliet Montague",
-            "distance": 0.6,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Wallace Gromit",
-            "distance": 0.6,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Martha Stewart",
-            "distance": 0.9,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Donald Duck",
-            "distance": 1,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Reiss Nelson",
-            "distance": 1,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "John Doe",
-            "distance": 2,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Harald Anderson",
-            "distance": 2,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Adele Li Puma",
-            "distance": 2,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Daniel Adams",
-            "distance": 4,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Craig Bass",
-            "distance": 5,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Angelica Savastano",
-            "distance": 5,
-            "phone": "0792 102 1368"
-            },
-            {
-            "name": "Joe Blogs",
-            "distance": 5,
-            "phone": "0792 102 1368"
-            }
-            ]
-
-            %}
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Name
-                </dt>
-                <dd class="govuk-summary-list__value govuk-!-font-weight-bold">
-                    Distance
-                </dd>
-                <dd class="govuk-summary-list__actions govuk-!-font-weight-bold">
-                   Phone number
-                </dd>
-            </div>
-            {% for assessor in assessors %}
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    {{assessor.name}}
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    {% if assessor.distance<1 %}
-                        Less than 1 mile away
-                    {% else %}
-                        {{assessor.distance}} miles away
-                    {% endif %}
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                    <a href="tel:{{assessor.phone}}">
-                        {{assessor.phone}}
-                    </a>
-                </dd>
-            </div>
-            {% endfor %}
-        </dl>
+    <div>
+      <h2 class="govuk-heading-l">Search results</h2>
     </div>
+    <div class="govuk-inset-text govuk-!-margin-bottom-9">
+      <p>
+        All assessors listed below are accredited to carry out energy assessments on residential properties,
+        and to issue Energy Performance Certificates.
+      </p>
+    </div>
+
+    {%
+
+        set assessors = [
+        {
+        "name": "William Turner",
+        "distance": 0.2,
+        "phone": "0792 102 1368",
+        "email_address": "epbassessor@epb.com",
+        "website": "EPB4U.com",
+        "accreditation_scheme": "CIBSIE",
+        "assessor_ID": "1234"
+        },
+        {
+        "name": "Gregg Sellen",
+        "distance": 0.6,
+        "phone": "0792 102 1368",
+        "email_address": "epbassessor@epb.com",
+        "website": "EPB4U.com",
+        "accreditation_scheme": "CIBSIE",
+        "assessor_ID": "1234"
+        },
+        {
+        "name": "Juliet Montague",
+        "distance": 0.6,
+        "phone": "0792 102 1368",
+        "email_address": "epbassessor@epb.com",
+        "website": "EPB4U.com",
+        "accreditation_scheme": "CIBSIE",
+        "assessor_ID": "1234"
+        },
+        {
+        "name": "Wallace Gromit",
+        "distance": 0.6,
+        "phone": "0792 102 1368",
+        "email_address": "epbassessor@epb.com",
+        "website": "EPB4U.com",
+        "accreditation_scheme": "CIBSIE",
+        "assessor_ID": "1234"
+        },
+        {
+        "name": "Martha Stewart",
+        "distance": 0.9,
+        "phone": "0792 102 1368",
+        "email_address": "epbassessor@epb.com",
+        "website": "EPB4U.com",
+        "accreditation_scheme": "CIBSIE",
+        "assessor_ID": "1234"
+        },
+        {
+        "name": "Donald Duck",
+        "distance": 1,
+        "phone": "0792 102 1368",
+        "email_address": "epbassessor@epb.com",
+        "website": "EPB4U.com",
+        "accreditation_scheme": "CIBSIE",
+        "assessor_ID": "1234"
+        },
+        {
+        "name": "John Doe",
+        "distance": 2,
+        "phone": "0792 102 1368",
+        "email_address": "epbassessor@epb.com",
+        "website": "EPB4U.com",
+        "accreditation_scheme": "CIBSIE",
+        "assessor_ID": "1234"
+        },
+        {
+        "name": "Harald Anderson",
+        "distance": 2,
+        "phone": "0792 102 1368",
+        "email_address": "epbassessor@epb.com",
+        "website": "EPB4U.com",
+        "accreditation_scheme": "CIBSIE",
+        "assessor_ID": "1234"
+        },
+        {
+        "name": "Daniel Adams",
+        "distance": 4,
+        "phone": "0792 102 1368",
+        "email_address": "epbassessor@epb.com",
+        "website": "EPB4U.com",
+        "accreditation_scheme": "CIBSIE",
+        "assessor_ID": "1234"
+        },
+        {
+        "name": "Craig Bass",
+        "distance": 5,
+        "phone": "0792 102 1368",
+        "email_address": "epbassessor@epb.com",
+        "website": "EPB4U.com",
+        "accreditation_scheme": "CIBSIE",
+        "assessor_ID": "1234"
+        }
+        ]
+
+        %}
+
+    <ul class="govuk-list">
+      {% for assessor in assessors %}
+      <li>
+        <div>
+          <h3 class="govuk-heading-m">{{assessor.name}}</h3>
+          <div>
+            <dl class="govuk-summary-list govuk-summary-list--no-border">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Assessor ID</dt>
+                <dd class="govuk-summary-list__value">{{assessor.assessor_ID}}</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Distance</dt>
+                <dd class="govuk-summary-list__value">
+                  {% if assessor.distance<1 %}
+                  Less than 1 mile away
+                  {% else %}
+                  {{assessor.distance}} miles away
+                  {% endif %}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Email</dt>
+                <dd class="govuk-summary-list__value">me@epb.com</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Website</dt>
+                <dd class="govuk-summary-list__value">
+                  <a href="wedsite:{{assessor.website}}">
+                    {{assessor.website}}
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Phone</dt>
+                <dd class="govuk-summary-list__value">
+                  <a href="tel:{{assessor.phone}}">
+                    {{assessor.phone}}
+                  </a </dd> </div> <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Accreditation scheme</dt>
+                <dd class="govuk-summary-list__value">{{assessor.accreditation_scheme}}</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 {% endblock %}
