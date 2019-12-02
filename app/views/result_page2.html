@@ -28,7 +28,7 @@ Find an assessor | Energy performance of buildings
 
         set assessors = [
         {
-        "name": "William Turner",
+        "name": "Craig Bass",
         "distance": 0.2,
         "phone": "0792 102 1368",
         "email_address": "epbassessor@epb.com",
@@ -109,7 +109,7 @@ Find an assessor | Energy performance of buildings
         "assessor_ID": "1234"
         },
         {
-        "name": "Craig Bass",
+        "name": "William Turner",
         "distance": 5,
         "phone": "0792 102 1368",
         "email_address": "epbassessor@epb.com",
@@ -170,53 +170,40 @@ Find an assessor | Energy performance of buildings
       </li>
       {% endfor %}
     </ul>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
-  <nav class="nav-pagination" role="navigation" aria-label="Pagination">
-
-    <ul class="nav-pagination__list">
-      <li class="nav-pagination__item nav-pagination__item--previous">
-        <div class="govuk-grid-column-one-third">
+    <nav class="nav-pagination" role="navigation" aria-label="Pagination">
+      <ul class="nav-pagination__list">
+        <li class="nav-pagination__item nav-pagination__item--previous">
           <a href="/result.html" class="nav-pagination__link" rel="prev">
             <span class="nav-pagination__link-title">
-              <svg class="nav-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17"
-                viewBox="0 0 17 13">
-                <path fill="currentColor"
-                  d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
-                </path>
+              <svg class="nav-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                <path fill="currentColor" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
               </svg>
               <span class="nav-pagination__link-text">
                 Previous
               </span>
             </span>
-            <span class="nav-pagination__link-divider visually-hidden">:</span>
-            <span class="nav-pagination__link-label">1 of 3</span>
+              <span class="nav-pagination__link-divider visually-hidden">:</span>
+              <span class="nav-pagination__link-label">1 of 3</span>
           </a>
-        </div>
-      </li>
-      <li class="nav-pagination__item nav-pagination__item--next">
-        <div class="govuk-grid-column-one-third align-right">
-          <a href="/result_page3" class="nav-pagination__link" rel="next">
+        </li>
+        <li class="nav-pagination__item nav-pagination__item--next">
+          <a href="/result_page3.html" class="nav-pagination__link" rel="next">
             <span class="nav-pagination__link-title">
-              <span class="nav-pagination__link-text govuk-!-margin-right-2">
+              <svg class="nav-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+              </svg>
+              <span class="nav-pagination__link-text">
                 Next
               </span>
-              <svg class="nav-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17"
-                viewBox="0 0 17 13">
-                <path fill="currentColor"
-                  d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
-                </path>
-              </svg>
             </span>
-            <span class="nav-pagination__link-divider visually-hidden">:</span>
-            <span class="nav-pagination__link-label govuk-!-margin-right-6">2 of 3</span>
+              <span class="nav-pagination__link-divider visually-hidden">:</span>
+              <span class="nav-pagination__link-label">2 of 3</span>
           </a>
-        </div>
-      </li>
-    </ul>
-  </nav>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
+
 
 {% endblock %}
