@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find an assessor | Energy performance of buildings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="index_welsh" class="govuk-back-link">Back</a>
+
+        <div class="govuk-inset-text">
+            This page will be translated into Welsh (Cymraeg)
+        </div>
+
+        <h1 class="govuk-heading-xl">
+            What is the postcode of the property?
+        </h1>
+
+        <p>
+            Enter the postcode of the domestic property that needs to be assessed. 
+            You will then be shown a list of nearby accredited assessors.
+        </p>
+
+        <form action="/result" method="post" class="form">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <label class="govuk-label" for="postcode">
+                        Postcode
+                    </label>
+
+                    <input 
+                      name="postcode" 
+                      class="govuk-input" 
+                      id="postcode" 
+                      type="text" 
+                      pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}" 
+                      required
+                    />
+
+                    <span id="more-detail-hint" class="govuk-hint">
+                        For example SW1A 2AA
+                    </span>
+                </fieldset>
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">Find an assessor</button>
+        </form>
+
+        <p>
+          If you do not have the postcode, you can contact an 
+          <a href="schemes_welsh" class="govuk-link">energy assessor accreditation scheme</a> directly to book an assessor,
+          or call the help desk at 
+          <a href="tel:03342343777" class="govuk-link">
+          0334 234 3777</a>.
+        </p>
+    </div>
+</div>
+
+{% endblock %}
