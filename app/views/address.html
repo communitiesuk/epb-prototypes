@@ -7,51 +7,38 @@ Find an assessor | Energy performance of buildings
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <a href="/" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-column-two-thirds">
+    <a href="/" class="govuk-back-link">Back</a>
 
-        <h1 class="govuk-heading-xl">
-            What is the postcode of the property?
-        </h1>
+    <h1 class="govuk-heading-xl">
+      Find an energy assessor
+    </h1>
+    <p class="govuk-body">
+        Find energy assessors in your area.
+    </p>
 
-        <p>
-            Enter the postcode of the domestic property that needs to be assessed. 
-            You will then be shown a list of nearby accredited assessors.
-        </p>
-
-        <form action="/result" method="post" class="form">
+    <div class="postcode-search-form">
+      <form action="/result" method="post" class="form">
+          <fieldset class="govuk-fieldset">
             <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <label class="govuk-label" for="postcode">
-                        Postcode
-                    </label>
+              <label class="govuk-label" for="postcode">
+                Enter a postcode
+              </label>
 
-                    <input 
-                      name="postcode" 
-                      class="govuk-input" 
-                      id="postcode" 
-                      type="text" 
-                      pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}" 
-                      required
-                    />
+            <span id="more-detail-hint" class="govuk-hint">
+              For example SW1A 2AA
+            </span>
 
-                    <span id="more-detail-hint" class="govuk-hint">
-                        For example SW1A 2AA
-                    </span>
-                </fieldset>
+            <input name="postcode" class="govuk-input" id="postcode" type="text" pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}" required />
             </div>
-
-            <button class="govuk-button" data-module="govuk-button">Find an assessor</button>
+            <button class="govuk-button" data-module="govuk-button">Find</button>
+            <p>
+              <a class="govuk-link" rel="external" href="http://www.royalmail.com/find-a-postcode">Find a postcode on Royal Mail's postcode finder</a>
+            </p>
+          </fieldset>
         </form>
-
-        <p>
-          If you do not have the postcode, you can contact an 
-          <a href="/schemes" class="govuk-link">energy assessor accreditation scheme</a> directly to book an assessor,
-          or call the help desk at 
-          <a href="tel:03342343777" class="govuk-link">
-          0334 234 3777</a>.
-        </p>
     </div>
+  </div>
 </div>
 
 {% endblock %}
