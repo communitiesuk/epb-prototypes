@@ -42,7 +42,7 @@ Find an assessor | Energy performance of buildings
         "phone": "0792 102 1368",
         "email_address": "epbassessor@epb.com",
         "website": "epbassessments.com",
-        "accreditation_scheme": "CIBSIE",
+        "accreditation_scheme": "Sterling",
         "assessor_ID": "1234"
         },
         {
@@ -51,7 +51,7 @@ Find an assessor | Energy performance of buildings
         "phone": "0792 102 1368",
         "email_address": "epbassessor@epb.com",
         "website": "epbassessments.com",
-        "accreditation_scheme": "CIBSIE",
+        "accreditation_scheme": "ECMK",
         "assessor_ID": "1234"
         },
         {
@@ -60,7 +60,7 @@ Find an assessor | Energy performance of buildings
         "phone": "0792 102 1368",
         "email_address": "epbassessor@epb.com",
         "website": "epbassessments.com",
-        "accreditation_scheme": "CIBSIE",
+        "accreditation_scheme": "ECMK",
         "assessor_ID": "1234"
         },
         {
@@ -78,7 +78,7 @@ Find an assessor | Energy performance of buildings
         "phone": "0792 102 1368",
         "email_address": "epbassessor@epb.com",
         "website": "epbassessments.com",
-        "accreditation_scheme": "CIBSIE",
+        "accreditation_scheme": "ECMK",
         "assessor_ID": "1234"
         },
         {
@@ -96,7 +96,7 @@ Find an assessor | Energy performance of buildings
         "phone": "0792 102 1368",
         "email_address": "epbassessor@epb.com",
         "website": "epbassessments.com",
-        "accreditation_scheme": "CIBSIE",
+        "accreditation_scheme": "Elmhurst Energy",
         "assessor_ID": "1234"
         },
         {
@@ -105,7 +105,7 @@ Find an assessor | Energy performance of buildings
         "phone": "0792 102 1368",
         "email_address": "epbassessor@epb.com",
         "website": "epbassessments.com",
-        "accreditation_scheme": "CIBSIE",
+        "accreditation_scheme": "Elmhurst Energy",
         "assessor_ID": "1234"
         },
         {
@@ -114,7 +114,7 @@ Find an assessor | Energy performance of buildings
         "phone": "0792 102 1368",
         "email_address": "epbassessor@epb.com",
         "website": "epbassessments.com",
-        "accreditation_scheme": "CIBSIE",
+        "accreditation_scheme": "ECMK",
         "assessor_ID": "1234"
         }
         ]
@@ -128,10 +128,7 @@ Find an assessor | Energy performance of buildings
           <h3 class="govuk-heading-m">{{assessor.name}}</h3>
           <div>
             <dl class="govuk-summary-list govuk-summary-list--no-border">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Assessor ID</dt>
-                <dd class="govuk-summary-list__value">{{assessor.assessor_ID}}</dd>
-              </div>
+
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Distance</dt>
                 <dd class="govuk-summary-list__value">
@@ -143,8 +140,18 @@ Find an assessor | Energy performance of buildings
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Phone</dt>
+                <dd class="govuk-summary-list__value">
+                  <a href="tel:{{assessor.phone}}">
+                    {{assessor.phone}}
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Email</dt>
-                <dd class="govuk-summary-list__value">assessor@epb.com</dd>
+                <dd class="govuk-summary-list__value">
+                  <a href="mailto:{{assessor.email}}">{{assessor.email_address}}</a>
+                </dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Website</dt>
@@ -155,11 +162,10 @@ Find an assessor | Energy performance of buildings
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Phone</dt>
-                <dd class="govuk-summary-list__value">
-                  <a href="tel:{{assessor.phone}}">
-                    {{assessor.phone}}
-                  </a </dd> </div> <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Assessor ID</dt>
+                <dd class="govuk-summary-list__value">{{assessor.assessor_ID}}</dd>
+              </div>
+              <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Accreditation scheme</dt>
                 <dd class="govuk-summary-list__value">{{assessor.accreditation_scheme}}</dd>
               </div>
@@ -182,8 +188,8 @@ Find an assessor | Energy performance of buildings
                 Next
               </span>
             </span>
-              <span class="nav-pagination__link-divider visually-hidden">:</span>
-              <span class="nav-pagination__link-label">2 of 3</span>
+            <span class="nav-pagination__link-divider visually-hidden">:</span>
+            <span class="nav-pagination__link-label">2 of 3</span>
           </a>
         </li>
       </ul>
