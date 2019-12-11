@@ -10,19 +10,21 @@ Find an assessor | Energy performance of buildings
   <div class="govuk-grid-column-two-thirds">
     <a href="/address" class="govuk-back-link">Back</a>
 
-    <h1 class="govuk-heading-xl">Energy assessors near your property</h1>
+    <h1 class="govuk-heading-xl">Results for energy assessors near you</h1>
 
     <p>Contact an assessor listed below to book an energy assessment.</p>
 
-    <div>
-      <h2 class="govuk-heading-l">Search results</h2>
-    </div>
-    <div class="govuk-inset-text govuk-!-margin-bottom-9">
-      <p>
-        All assessors listed below are accredited to carry out energy assessments on residential properties,
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What is an accreditation scheme
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Accreditation schemes check that all the assessors listed below are qualified to carry out energy assessments on residential properties,
         and to issue Energy Performance Certificates.
-      </p>
-    </div>
+      </div>
+    </details>
 
     {%
 
@@ -125,10 +127,9 @@ Find an assessor | Energy performance of buildings
       {% for assessor in assessors %}
       <li>
         <div>
-          <h3 class="govuk-heading-m">{{assessor.name}}</h3>
+          <h2 class="govuk-heading-m">{{assessor.name}}</h2>
           <div>
             <dl class="govuk-summary-list govuk-summary-list--no-border">
-
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Distance</dt>
                 <dd class="govuk-summary-list__value">
@@ -140,34 +141,23 @@ Find an assessor | Energy performance of buildings
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Phone</dt>
+                <dt class="govuk-summary-list__key">Contact details</dt>
                 <dd class="govuk-summary-list__value">
-                  <a href="tel:{{assessor.phone}}">
-                    {{assessor.phone}}
-                  </a>
+                  <p>
+                    <a href="tel:{{assessor.phone}}">{{assessor.phone}}</a>
+                  </p>
+                  <p>
+                    <a href="mailto:{{assessor.email}}">{{assessor.email_address}}</a>
+                  </p>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Email</dt>
-                <dd class="govuk-summary-list__value">
-                  <a href="mailto:{{assessor.email}}">{{assessor.email_address}}</a>
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Website</dt>
-                <dd class="govuk-summary-list__value">
-                  <a href="wedsite:{{assessor.website}}">
-                    {{assessor.website}}
-                  </a>
-                </dd>
+                <dt class="govuk-summary-list__key">Accredited by</dt>
+                <dd class="govuk-summary-list__value">{{assessor.accreditation_scheme}}</dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Assessor ID</dt>
                 <dd class="govuk-summary-list__value">{{assessor.assessor_ID}}</dd>
-              </div>
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Accreditation scheme</dt>
-                <dd class="govuk-summary-list__value">{{assessor.accreditation_scheme}}</dd>
               </div>
             </dl>
           </div>
