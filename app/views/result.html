@@ -10,14 +10,31 @@ Find an assessor | Energy performance of buildings
   <div class="govuk-grid-column-two-thirds">
     <a href="/address" class="govuk-back-link">Back</a>
 
-    <h1 class="govuk-heading-xl">Results for energy assessors near you</h1>
+    <h1 class="govuk-heading-xl">Find an energy assessor</h1>
+
+    <div class="postcode-search-form" style="background-color:whitesmoke;padding:30px">
+      <form action="/result" method="post" class="form">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="postcode">
+                Enter a postcode
+              </label>
+            <span id="more-detail-hint" class="govuk-hint">
+              For example SW1A 2AA
+            </span>
+            <input name="postcode" class="govuk-input" id="address-postcode" type="text" value="SW1A 2AA"/>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">Find</button>
+          </fieldset>
+        </form>
+    </div>
 
     <p>Contact an assessor listed below to book an energy assessment.</p>
 
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          What is an accreditation scheme
+          Who accredits assessors
         </span>
       </summary>
       <div class="govuk-details__text">
@@ -25,6 +42,11 @@ Find an assessor | Energy performance of buildings
         and to issue Energy Performance Certificates.
       </div>
     </details>
+
+    <h2 class="govuk-heading-m">1 - 10 of 30 results near SW1A 2AA:</h2>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
 
     {%
 

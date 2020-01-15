@@ -31,10 +31,10 @@ Find an assessor | Energy performance of buildings
             <span id="address-postcode-error" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span> Enter a real postcode
             </span>
-            <input class="govuk-input govuk-input--error" id="address-postcode" type="text" value="Not a postcode" aria-describedby="address-postcode-error" autocomplete="postal-code">
+            <input class="govuk-input govuk-input--error" id="address-postcode" type="text" aria-describedby="address-postcode-error" autocomplete="postal-code">
           </div>
           <div class="govuk-form-group">
-          <input class="govuk-button" data-module="govuk-button" type="submit" value="Find">
+            <input class="govuk-button" data-module="govuk-button" type="submit" value="Find">
           </div>
         </fieldset>
 
@@ -44,17 +44,17 @@ Find an assessor | Energy performance of buildings
   </div>
 </div>
 <script type="text/javascript">
-function redirect() {
-  var postcode = document.getElementById("address-postcode").value;
-  var regex = RegExp('[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}');
+  function redirect() {
+    var postcode = document.getElementById("address-postcode").value;
+    var regex = RegExp('[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}');
 
-  if (regex.test(postcode) == false) {
-    location.href = "/address_invalid_postcode";
-  } else {
-    location.href = "/result";
+    if (regex.test(postcode) == false) {
+      location.href = "/address_invalid_postcode";
+    } else {
+      location.href = "/result";
+    }
+    return false;
   }
-return false;
-}
 </script>
 
 {% endblock %}
