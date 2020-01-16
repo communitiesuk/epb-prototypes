@@ -42,9 +42,9 @@ Find an assessor | Energy performance of buildings
     var regex = RegExp('[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}');
 
     if (regex.test(postcode) == false) {
-      location.href = "/address_invalid_postcode";
+      location.href = "/address_invalid_postcode?var="+postcode;
     } else {
-      location.href = "/result";
+      location.href = "/result?var="+postcode;
     }
     return false;
   }

@@ -13,20 +13,20 @@ Find an assessor | Energy performance of buildings
     <h1 class="govuk-heading-xl">Find an energy assessor</h1>
 
     <div class="postcode-search-form" style="background-color:whitesmoke;padding:30px">
-      <form action="/result" method="post" class="form">
-          <fieldset class="govuk-fieldset">
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="postcode">
-                Enter a postcode
-              </label>
+      <form action="/result" method="post" class="form" onsubmit="return redirect();">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="postcode">
+              Enter a postcode
+            </label>
             <span id="more-detail-hint" class="govuk-hint">
               For example SW1A 2AA
             </span>
-            <input name="postcode" class="govuk-input" id="address-postcode" type="text" value="SW1A 2AA"/>
-            </div>
-            <button class="govuk-button" data-module="govuk-button">Find</button>
-          </fieldset>
-        </form>
+            <input name="postcode" class="govuk-input" id="address-postcode" type="text" />
+          </div>
+          <button class="govuk-button" data-module="govuk-button">Find</button>
+        </fieldset>
+      </form>
     </div>
 
     <p>Contact an assessor listed below to book an energy assessment.</p>
@@ -190,7 +190,7 @@ Find an assessor | Energy performance of buildings
     <nav class="nav-pagination" role="navigation" aria-label="Pagination">
       <ul class="nav-pagination__list">
         <li class="nav-pagination__item nav-pagination__item--previous">
-          <a href="/result.html" class="nav-pagination__link" rel="prev">
+          <a href="javascript:searchedPostcodeRedirect('1');" class="nav-pagination__link" rel="prev">
             <span class="nav-pagination__link-title">
               <svg class="nav-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
                 <path fill="currentColor" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
@@ -204,7 +204,7 @@ Find an assessor | Energy performance of buildings
           </a>
         </li>
         <li class="nav-pagination__item nav-pagination__item--next">
-          <a href="/result_page3.html" class="nav-pagination__link" rel="next">
+          <a href="javascript:searchedPostcodeRedirect('3');" class="nav-pagination__link" rel="next">
             <span class="nav-pagination__link-title">
               <svg class="nav-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
                 <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
@@ -221,6 +221,43 @@ Find an assessor | Energy performance of buildings
     </nav>
   </div>
 </div>
+<script type="text/javascript">
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split("=");
+      if (pair[0] == variable) {
+        return pair[1];
+      }
+    }
+    return (false);
+  }
 
+  document.getElementById("address-postcode").value = unescape(getQueryVariable('var'))
+</script>
+<script type="text/javascript">
+  function searchedPostcodeRedirect(page) {
+    var postcode = document.getElementById("address-postcode").value;
+    if (page == '1') {
+      location.href = "/result?var=" + postcode;
+    } else {
+      location.href = "/result_page" + page + "?var=" + postcode;
+    }
+    return false;
+  }
+</script>
+<script type="text/javascript">
+  function redirect() {
+    var postcode = document.getElementById("address-postcode").value;
+    var regex = RegExp('[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}');
 
+    if (regex.test(postcode) == false) {
+      location.href = "/address_invalid_postcode?var="+postcode;
+    } else {
+      location.href = "/result?var="+postcode;
+    }
+    return false;
+  }
+</script>
 {% endblock %}
