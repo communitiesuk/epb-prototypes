@@ -1,0 +1,72 @@
+.epc-box {
+  box-sizing: border-box;
+  float: left;
+  border: 2px solid #000;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0!important;
+}
+
+.epc-box-one-third-width {
+  width: 30%;
+}
+
+.epc-box-two-third-width {
+  width: 70%;
+  text-align: left;
+}
+
+.epc-box-single-line {
+  line-height: 14px;
+  padding-top: 18px;
+  height: 50px;
+}
+
+.epc-box-double-line {
+  line-height: 116px;
+}
+
+.epc-band-rating {
+  font-size: 100px;
+}
+
+.epc-date-of-expiry {
+  font-size: 25px;
+}
+
+.epc-box-go-right {
+  float: right;
+}
+
+.epc-box-clear {
+  clear: both;
+}
+
+.epc-box-clear-right {
+  clear: right;
+}
+
+.epc-box-tidy-left {
+  margin-left: 40px;
+}
+
+.epc-box-match-heading {
+  margin-top: 5px;
+}
+
+@media print {
+  .epc-no-print, footer, .app-cookie-banner, .govuk-back-link {
+    display: none;
+  }
+
+  .epc-page-break {
+    display: block;
+    clear: both;
+    page-break-after: always;
+  }
+
+  .govuk-grid-column-full, .govuk-width-container {
+    width: auto !important;
+    float: none !important;
+  }
+}
