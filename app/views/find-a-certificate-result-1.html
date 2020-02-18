@@ -1,0 +1,429 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find an assessor | Energy performance of buildings
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper" id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+    <span class="govuk-caption-xl">
+      2 Marsham Street, London, SW1B 2BB
+    </span>
+      <h1 class="govuk-heading-xl">
+        Energy Performance Certificate
+      </h1>
+
+      <div class="govuk-grid-row govuk-!-margin-bottom-8">
+        <div class="govuk-grid-column-one-half govuk-!-margin-left-4 govuk-body">
+          <div class="epc-box epc-box-two-third-width govuk-!-padding-left-1 govuk-!-padding-top-6" style="height: 170px;">
+            68 Primrose Hill<br>
+            The delight town<br>
+            County<br>
+          </div>
+          <div class="epc-box epc-box-one-third-width epc-box-single-line">
+            Energy Rating
+          </div>
+          <div class="epc-box epc-box-one-third-width epc-box-double-line">
+            <div class="epc-band-rating">B</div>
+          </div>
+          <div class="epc-box epc-box-single-line-height">
+            <div class="epc-date-of-expiry">Valid until 05/01/2030</div>
+          </div>
+          <div class="epc-box epc-box-single-line-height">
+            Certificate Number
+          </div>
+          <div class="epc-box epc-box-single-line-height">
+            1234-6789-1234-14244
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-l">
+          Why does this certificate exist?
+        </h2>
+
+        <p class="govuk-body">
+          Helping the occupant save money on their energy bills
+        </p>
+
+        <p class="govuk-body">
+          Reducing illness caused by energy inefficient dwellings
+        </p>
+
+        <p class="govuk-body">
+          Helping the UK tackle climate change
+        </p>
+      </div>
+
+      <div class="govuk-!-margin-bottom-8 epc-no-print">
+        <h2 class="govuk-heading-l">Renting this property</h2>
+
+        <p class="govuk-body">
+          The Regulations mean that, since 1 April 2018, private landlords may not let domestic properties
+          on new tendancies to new or existing tenants of the Energy Efficiency Certificate (EPC) rating is F or G
+          (unless an exemption applies).
+        </p>
+        <p class="govuk-body">
+          From 1 April 2020 the prohibition on letting F and G properties will extend to all relevant properties, even
+          when there has been no change in tenancy.
+        </p>
+        <p class="govuk-body">
+          Regulations available at <a href="https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance">https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance</a>
+        </p>
+      </div>
+
+      <div class="govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-l">Energy performance for this property</h2>
+
+          <svg width="615" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" role="img">
+              <title id="svg-title">Your energy rating is b(90) and your potential is a(99)</title>
+
+
+              <style>
+                  .letter {
+                      font-size: 40px;
+                      font-family: sans-serif;
+                      fill: #fff;
+                      font-weight: bold;
+                  }
+
+                  .small-letter {
+                      font-size: 30px;
+                      font-family: sans-serif;
+                      fill: #fff;
+                      font-weight: bold;
+                      text-align: center;
+                  }
+
+                  .small {
+                      font-size: 20px;
+                      font-family: sans-serif;
+                      fill: #000;
+                      line-height: 50px;
+                      margin-top: 100px;
+                  }
+
+                  .small tspan:first-child, .small tspan:last-child {
+                      fill: #fff;
+                  }
+
+
+                  .band-a{
+                      fill: #008054
+                  }
+
+                  .band-b{
+                      fill: #19b459
+                  }
+
+                  .band-c{
+                      fill: #8dce46
+                  }
+
+                  .band-d{
+                      fill: #ffd500
+                  }
+
+                  .band-e{
+                      fill: #fcaa65
+                  }
+
+                  .band-f{
+                      fill: #ef8023
+                  }
+
+                  .band-g{
+                      fill: #e9153b
+                  }
+
+              </style>
+
+
+              <rect width="150" height="50" x="0" y="25" class="band-a">
+              </rect>
+
+              <rect width="190" height="50" x="0" y="75" class="band-b">
+              </rect>
+
+              <rect width="230" height="50" x="0" y="125" class="band-c">
+              </rect>
+
+              <rect width="270" height="50" x="0" y="175" class="band-d">
+              </rect>
+
+              <rect width="310" height="50" x="0" y="225" class="band-e">
+              </rect>
+
+              <rect width="350" height="50" x="0" y="275" class="band-f">
+              </rect>
+
+              <rect width="390" height="50" x="0" y="325" class="band-g">
+              </rect>
+
+
+              <text x="0" y="0" class="letter">
+
+                  <tspan x="107" y="64">A</tspan>
+
+                  <tspan x="147" y="114">B</tspan>
+
+                  <tspan x="187" y="164">C</tspan>
+
+                  <tspan x="227" y="214">D</tspan>
+
+                  <tspan x="267" y="264">E</tspan>
+
+                  <tspan x="307" y="314">F</tspan>
+
+                  <tspan x="347" y="364">G</tspan>
+
+              </text>
+
+              <text x="0" y="0" class="small">
+
+                  <tspan x="10" y="55">(92+)</tspan>
+
+                  <tspan x="10" y="105">(81-91)</tspan>
+
+                  <tspan x="10" y="155">(69-80)</tspan>
+
+                  <tspan x="10" y="205">(55-68)</tspan>
+
+                  <tspan x="10" y="255">(39-54)</tspan>
+
+                  <tspan x="10" y="305">(21-38)</tspan>
+
+                  <tspan x="10" y="355">(1-20)</tspan>
+
+              </text>
+
+              <text x="8" y="20" class="small">
+                  Energy Rating
+              </text>
+
+              <text x="415" y="20" class="small">
+                  Current
+              </text>
+
+              <text x="515" y="20" class="small">
+                  Potential
+              </text>
+
+              <svg x="415" y="75" width="90" height="50">
+                  <rect width="75" height="50" class="band-b" x="25"></rect>
+                  <polygon points="0,25 25,50 25,0 0,25" class="band-b"></polygon>
+                  <text x="40" y="35" class="small-letter">90</text>
+              </svg>
+
+              <svg x="515" y="25" width="90" height="50">
+                  <rect width="75" height="50" class="band-a" x="25"></rect>
+                  <polygon points="0,25 25,50 25,0 0,25" class="band-a"></polygon>
+                  <text x="40" y="35" class="small-letter">99</text>
+              </svg>
+          </svg>
+
+
+        <h3 class="govuk-heading-m">How to read this chart</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>The graph shows the current energy efficiency of your home</li>
+          <li>The higher the rating the lower your fuel bills are likely to be</li>
+          <li>The potential rating shows the effect of undertaking the recommendations on page 3</li>
+          <li>The average energy efficiency rating for a dwelling in England and Wales is band D (rating 60)</li>
+          <li>The EPC rating shown here is based on standard assumptions about occupancy and energy use and may not reflect how energy is consumed by individual occupants.</li>
+        </ul>
+      </div>
+
+      <div class="govuk-!-margin-bottom-8 epc-page-break">
+        <h2 class="govuk-heading-l">Recommendations</h2>
+        <div class="epc-box epc-box-one-third-width epc-box-single-line-height epc-box-go-right govuk-body epc-box-tidy-left">
+          Potential Energy Rating
+        </div>
+        <div class="epc-box epc-box-one-third-width epc-box-clear-right epc-box-go-right govuk-body epc-box-tidy-left" style="line-height: 112px;">
+          <div class="epc-band-rating">A</div>
+        </div>
+
+        <h3 class="govuk-heading-m">Internal or external wall insulation</h3>
+        <p class="govuk-body">
+          Solid walls have no gap, so they cannot be fill with cavity wall insulation.
+        </p>
+        <h4 class="govuk-heading-s">Internal insulation</h4>
+        <p class="govuk-body">
+          Internal wall insulation is done by fitting rigid insulation boards to the wall, or by building a stud wall filled in with insulation material such as mineral wool fibre.
+        </p>
+        <h4 class="govuk-heading-s">External insulation</h4>
+        <p class="govuk-body">
+          External wall insulation involves fixing a layer of insulation material to the wall, then covering it with a special type of render (plasterwork) or cladding. The finish can be smooth, textured, painted, tiled, panelled, pebble-dashed, or finished with brick slips.
+          <a href="https://energysavingtrust.org.uk/home-insulation/solid-wall">Read more</a>
+        </p>
+
+        <div class="govuk-body">
+          <div style="width: 50%; float: left;">
+            <p>
+              Typical installation cost
+              <br>
+              <strong>£9,000</strong>
+            </p>
+          </div>
+          <div style="width: 50%; float: right;">
+            <p>
+              Typical yearly saving
+              <br>
+              <strong>£639</strong>
+            </p>
+          </div>
+          <h4 class="govuk-heading-s">Paying for this</h4>
+          <p>
+            You might be able to reduce these costs buy carrying out the work at the same time as other home improvements or by not tackling the whole house at once.
+          </p>
+          <h4 class="govuk-heading-s">Outbound advice links</h4>
+          <p>
+            <a href="#">link 1</a>
+            <br>
+            <a href="#">link 2</a>
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="govuk-body epc-page-break">
+
+        <h2 class="govuk-heading-l">How this certificate was produced</h2>
+
+        <h3 class="govuk-heading-m">Assessor and accreditation scheme details</h3>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Assessor's accreditation number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              STRO001884
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Accreditation scheme
+            </dt>
+            <dd class="govuk-summary-list__value">
+              STROMA
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Assessor's name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Andrew Stonemason
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              07921021369
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              E-mail address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="mailto:hello@communities.gov.uk">andrew@epc-rocks.co.uk</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Related party disclosure
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No related party
+            </dd>
+          </div>
+        </dl>
+
+        <h3 class="govuk-heading-m">Dwelling details</h3>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Reference number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              123-456
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type of assessment
+            </dt>
+            <dd class="govuk-summary-list__value">
+              RdSAP
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of assessment
+            </dt>
+            <dd class="govuk-summary-list__value">
+              02 January 2020
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of certificate
+            </dt>
+            <dd class="govuk-summary-list__value">
+              05 January 2020
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Total floor area
+            </dt>
+            <dd class="govuk-summary-list__value">
+              150 m<sup>2</sup>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Dwelling type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Top floor flat
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <h2 class="govuk-heading-l">Previous versions of this certificate</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Reference number</th>
+          <th scope="col" class="govuk-table__header">EPC Rating</th>
+          <th scope="col" class="govuk-table__header">EPC Expiry Date</th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/find-a-certificate-result-2">223-456</a></th>
+          <td class="govuk-table__cell">F</td>
+          <td class="govuk-table__cell">01/01/2021</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-l">Issues with this certificate</h2>
+      <p class="govuk-body">Link to someone who can fix it to be added.</p>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

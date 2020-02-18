@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a certificate | Energy performance of buildings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Find a Energy Performance Certificate for a residential property
+        </h1>
+        <form method="GET" action="/find-a-certificate-results">
+            <fieldset class="govuk-fieldset fieldset-background">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="query">
+                        Enter a postcode OR a street name and town OR an EPC reference number below
+                    </label>
+
+                    <input id="query" name="query" type="text" class="govuk-input" aria-describedby="query-hint" autocomplete="postal-code" spellcheck="false">
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">Find</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

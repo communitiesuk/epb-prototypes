@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a certificate | Energy performance of buildings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Find an Energy Performance Certificate for a residential property
+        </h1>
+
+        <h2 class="govuk-heading-m">1-3 of 3 results matching SW1A 2AA</h2>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Address</th>
+                <th scope="col" class="govuk-table__header">EPC Rating</th>
+                <th scope="col" class="govuk-table__header">EPC Expiry Date</th>
+            </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"><a href="/find-a-certificate-result-1">2 Marsham Street, London, SW1B 2BB</a></th>
+                <td class="govuk-table__cell">B</td>
+                <td class="govuk-table__cell">01/01/2021</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"><a href="/find-a-certificate-result-2">1 Marsham Street, London, SW1B 2BB</a></th>
+                <td class="govuk-table__cell">B</td>
+                <td class="govuk-table__cell">01/01/2022</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"><a href="/find-a-certificate-result-1ß">3 Marsham Street, London, SW1B 2BB</a></th>
+                <td class="govuk-table__cell">B</td>
+                <td class="govuk-table__cell">01/01/2023</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+{% endblock %}
