@@ -54,6 +54,27 @@
   margin-top: 5px;
 }
 
+.epc-blue-bottom {
+  border-bottom: 4px solid #1d70b8;
+  overflow: hidden;
+}
+
+.govuk-summary-list__row .govuk-summary-list__key {
+  font-weight: normal;
+}
+
+.govuk-summary-list__row .govuk-summary-list__value {
+  font-weight: bold;
+}
+
+.govuk-panel--fixed-height {
+  height: 300px;
+}
+
+div.govuk-error-summary:focus {
+  outline: none;
+}
+
 @media print {
   .epc-no-print, footer, .app-cookie-banner, .govuk-back-link {
     display: none;

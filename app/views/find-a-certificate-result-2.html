@@ -9,41 +9,40 @@ Find an assessor | Energy performance of buildings
 <main class="govuk-main-wrapper" id="main-content" role="main">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-    <span class="govuk-caption-xl">
-      2 Marsham Street, London, SW1B 2BB
-    </span>
+      <a href="/find-a-certificate" class="govuk-back-link">Back</a>
       <h1 class="govuk-heading-xl">
         Energy Performance Certificate
       </h1>
 
       <div class="govuk-grid-row govuk-!-margin-bottom-8">
-        <div class="govuk-grid-column-one-half govuk-!-margin-left-4 govuk-body">
-          <div class="epc-box epc-box-two-third-width govuk-!-padding-left-1 govuk-!-padding-top-6" style="height: 170px;">
-            68 Primrose Hill<br>
-            The delight town<br>
-            County<br>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <div class="govuk-panel govuk-panel--confirmation govuk-panel--fixed-height isInvalid">
+              <h2 class="govuk-panel__title govuk-!-font-size-36">
+                Certificate Number: 1234-6789-1234-14244
+              </h2>
+              <div class="govuk-panel__body govuk-!-font-size-24">
+                68 Primrose Hill<br>
+                The delight town<br>
+                County
+              </div>
+            </div>
           </div>
-          <div class="epc-box epc-box-one-third-width epc-box-single-line">
-            Energy Rating
-          </div>
-          <div class="epc-box epc-box-one-third-width epc-box-double-line">
-            <div class="epc-band-rating">F</div>
-          </div>
-          <div class="epc-box epc-box-single-line-height">
-            <div class="epc-date-of-expiry">Valid until 05/01/2030</div>
-          </div>
-          <div class="epc-box epc-box-single-line-height">
-            Certificate Number
-          </div>
-          <div class="epc-box epc-box-single-line-height">
-            1234-6789-1234-14244
+          <div class="govuk-grid-column-one-half">
+            <div class="govuk-panel govuk-panel--confirmation govuk-panel--fixed-height" id="mot-status-panel">
+              <h2 class="govuk-panel__title govuk-!-font-size-36">Energy Rating</h2>
+              <div class="div govuk-!-font-size-48 govuk-panel__body">
+                <strong>F</strong><br /><br /><br />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-!-margin-bottom-8">
+      <div class="govuk-!-margin-bottom-8 epc-blue-bottom">
         <h2 class="govuk-heading-l">
           Why does this certificate exist?
         </h2>
@@ -61,20 +60,27 @@ Find an assessor | Energy performance of buildings
         </p>
       </div>
 
-      <div class="govuk-!-margin-bottom-8 epc-no-print">
+      <div class="govuk-!-margin-bottom-8 epc-no-print epc-blue-bottom">
         <h2 class="govuk-heading-l">Renting this property</h2>
 
-        <div class="epc-box epc-box-one-third-width epc-box-single-line-height epc-box-go-right govuk-body epc-box-tidy-left epc-box-match-heading">
-          Energy Rating
+        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+          <h2 class="govuk-error-summary__title" id="error-summary-title">
+            You may not be able to let this property
+          </h2>
+          <div class="govuk-error-summary__body">
+            <div class="epc-box epc-box-one-third-width epc-box-single-line-height epc-box-go-right govuk-body epc-box-tidy-left epc-box-match-heading">
+              Energy Rating
+            </div>
+            <div class="epc-box epc-box-one-third-width epc-box-clear epc-box-go-right govuk-body epc-box-tidy-left epc-box-double-line">
+              <div class="epc-band-rating">F</div>
+            </div>
+            <p class="govuk-body">
+              Your property has an EPC rating of F or G, you must take appropriate steps to comply
+              with the requirements of the MEES Regulations. We explain how to to this below.
+            </p>
+          </div>
         </div>
-        <div class="epc-box epc-box-one-third-width epc-box-clear epc-box-go-right govuk-body epc-box-tidy-left epc-box-double-line">
-          <div class="epc-band-rating">F</div>
-        </div>
-        <h3 class="govuk-heading-m">You cannot let this property</h3>
-        <p class="govuk-body">
-          Your property has an EPC rating of F or G, you must take appropriate steps to comply
-          with the requirements of the MEES Regulations. We explain how to to this below.
-        </p>
+
         <div class="epc-box-clear"></div>
 
 
@@ -92,7 +98,7 @@ Find an assessor | Energy performance of buildings
         </p>
       </div>
 
-      <div class="govuk-!-margin-bottom-8">
+      <div class="govuk-!-margin-bottom-8 epc-blue-bottom">
         <h2 class="govuk-heading-l">Energy performance for this property</h2>
 
         <svg width="615" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" role="img">
@@ -242,6 +248,7 @@ Find an assessor | Energy performance of buildings
           </svg>
         </svg>
 
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
         <h3 class="govuk-heading-m">How to read this chart</h3>
         <ul class="govuk-list govuk-list--bullet">
@@ -253,7 +260,7 @@ Find an assessor | Energy performance of buildings
         </ul>
       </div>
 
-      <div class="govuk-!-margin-bottom-8 epc-page-break">
+      <div class="govuk-!-margin-bottom-8 epc-page-break epc-blue-bottom">
         <h2 class="govuk-heading-l">Recommendations</h2>
         <div class="epc-box epc-box-one-third-width epc-box-single-line-height epc-box-go-right govuk-body epc-box-tidy-left">
           Potential Energy Rating
@@ -306,136 +313,186 @@ Find an assessor | Energy performance of buildings
 
 
 
-      <div class="govuk-body epc-page-break">
-
+      <div class="govuk-body epc-page-break epc-blue-bottom">
         <h2 class="govuk-heading-l">How this certificate was produced</h2>
 
         <h3 class="govuk-heading-m">Assessor and accreditation scheme details</h3>
         <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Assessor's accreditation number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              STRO001884
-            </dd>
+          <div class="govuk-summary-list__row" id="make">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Vehicle make</dt>
+            <dd class="govuk-summary-list__value">NISSAN</dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Accreditation scheme
-            </dt>
-            <dd class="govuk-summary-list__value">
-              STROMA
-            </dd>
+          <div class="govuk-summary-list__row" id="date_of_first_registration">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of first registration</dt>
+            <dd class="govuk-summary-list__value">July 2017</dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Assessor's name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Andrew Stonemason
-            </dd>
+          <div class="govuk-summary-list__row" id="year_of_manufacture">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Year of manufacture</dt>
+            <dd class="govuk-summary-list__value">2017</dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Phone number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              07921021369
-            </dd>
+          <div class="govuk-summary-list__row" id="engine_capacity">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Cylinder capacity</dt>
+            <dd class="govuk-summary-list__value">1461 cc</dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              E-mail address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <a href="mailto:hello@communities.gov.uk">andrew@epc-rocks.co.uk</a>
-            </dd>
+          <div class="govuk-summary-list__row" id="co2_emissions">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">CO₂ emissions</dt>
+            <dd class="govuk-summary-list__value">99 g/km</dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Related party disclosure
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No related party
-            </dd>
+          <div class="govuk-summary-list__row" id="fuel_type">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Fuel type</dt>
+            <dd class="govuk-summary-list__value">DIESEL</dd>
           </div>
+          <div class="govuk-summary-list__row" id="euro_status">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Euro status</dt>
+            <dd class="govuk-summary-list__value">Not available</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="real_driving_emissions">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Real Driving Emissions (RDE)</dt>
+            <dd class="govuk-summary-list__value">Not available</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="marked_for_export">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Export marker</dt>
+            <dd class="govuk-summary-list__value">No</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="vehicleStatus">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Vehicle status</dt>
+            <dd class="govuk-summary-list__value">Taxed</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="colour">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Vehicle colour</dt>
+            <dd class="govuk-summary-list__value">RED</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="type_approval">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Vehicle type approval</dt>
+            <dd class="govuk-summary-list__value">M1</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="wheelPlan">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Wheelplan</dt>
+            <dd class="govuk-summary-list__value">2 AXLE RIGID BODY</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="revenue_weight">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Revenue weight</dt>
+            <dd class="govuk-summary-list__value">Not available</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="date_of_last_v5c_issued">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of last V5C (logbook) issued</dt>
+            <dd class="govuk-summary-list__value">26 May 2018</dd>
+          </div>
+
         </dl>
 
         <h3 class="govuk-heading-m">Dwelling details</h3>
         <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Reference number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              223-456
-            </dd>
+          <div class="govuk-summary-list__row" id="make">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Vehicle make</dt>
+            <dd class="govuk-summary-list__value">NISSAN</dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Type of assessment
-            </dt>
-            <dd class="govuk-summary-list__value">
-              RdSAP
-            </dd>
+          <div class="govuk-summary-list__row" id="date_of_first_registration">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of first registration</dt>
+            <dd class="govuk-summary-list__value">July 2017</dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Date of assessment
-            </dt>
-            <dd class="govuk-summary-list__value">
-              02 January 2020
-            </dd>
+          <div class="govuk-summary-list__row" id="year_of_manufacture">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Year of manufacture</dt>
+            <dd class="govuk-summary-list__value">2017</dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Date of certificate
-            </dt>
-            <dd class="govuk-summary-list__value">
-              05 January 2020
-            </dd>
+          <div class="govuk-summary-list__row" id="engine_capacity">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Cylinder capacity</dt>
+            <dd class="govuk-summary-list__value">1461 cc</dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Total floor area
-            </dt>
-            <dd class="govuk-summary-list__value">
-              150 m<sup>2</sup>
-            </dd>
+          <div class="govuk-summary-list__row" id="co2_emissions">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">CO₂ emissions</dt>
+            <dd class="govuk-summary-list__value">99 g/km</dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Dwelling type
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Top floor flat
-            </dd>
+          <div class="govuk-summary-list__row" id="fuel_type">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Fuel type</dt>
+            <dd class="govuk-summary-list__value">DIESEL</dd>
           </div>
+          <div class="govuk-summary-list__row" id="euro_status">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Euro status</dt>
+            <dd class="govuk-summary-list__value">Not available</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="real_driving_emissions">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Real Driving Emissions (RDE)</dt>
+            <dd class="govuk-summary-list__value">Not available</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="marked_for_export">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Export marker</dt>
+            <dd class="govuk-summary-list__value">No</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="vehicleStatus">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Vehicle status</dt>
+            <dd class="govuk-summary-list__value">Taxed</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="colour">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Vehicle colour</dt>
+            <dd class="govuk-summary-list__value">RED</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="type_approval">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Vehicle type approval</dt>
+            <dd class="govuk-summary-list__value">M1</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="wheelPlan">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Wheelplan</dt>
+            <dd class="govuk-summary-list__value">2 AXLE RIGID BODY</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="revenue_weight">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Revenue weight</dt>
+            <dd class="govuk-summary-list__value">Not available</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="date_of_last_v5c_issued">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of last V5C (logbook) issued</dt>
+            <dd class="govuk-summary-list__value">26 May 2018</dd>
+          </div>
+
+        </dl>
         </dl>
       </div>
 
-      <h2 class="govuk-heading-l">Previous versions of this certificate</h2>
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Reference number</th>
-          <th scope="col" class="govuk-table__header">EPC Rating</th>
-          <th scope="col" class="govuk-table__header">EPC Expiry Date</th>
-        </tr>
-        </thead>
-        <tbody class="govuk-table__body">
+      <div class="govuk-body epc-blue-bottom">
+        <h2 class="govuk-heading-l">Previous certificates linked to this property</h2>
 
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="/find-a-certificate-result-1">123-456</a></th>
-          <td class="govuk-table__cell">A</td>
-          <td class="govuk-table__cell">01/01/2021</td>
-        </tr>
-        </tbody>
-      </table>
+        <p class="govuk-body">Lorem Ipsum these certificates might not be absolutely accurate. You might not entirely find all the, please get <a href="#">in touch</a>.</p>
 
-      <h2 class="govuk-heading-l">Issues with this certificate</h2>
-      <p class="govuk-body">Link to someone who can fix it to be added.</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Reference number</th>
+            <th scope="col" class="govuk-table__header">EPC Rating</th>
+            <th scope="col" class="govuk-table__header">EPC Expiry Date</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/find-a-certificate-result-1">123-456</a></th>
+            <td class="govuk-table__cell">A</td>
+            <td class="govuk-table__cell">01/01/2021</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <h2 class="govuk-heading-l">Issues with this certificate</h2>
+        <p class="govuk-body">Link to someone who can fix it to be added.</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-!-margin-bottom-9 related-links" style="margin-top: 80px">
+        <h3 class="govuk-heading-m">DVLA services</h3>
+        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" onclick="trackLinkClick('Tax your vehicle')" href="https://www.gov.uk/vehicle-tax">Tax your vehicle</a></p>
+        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" onclick="trackLinkClick('Register your vehicle as off the road (SORN)')" href="https://www.gov.uk/make-a-sorn">Register your vehicle as off the road (SORN)</a></p>
+        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" onclick="trackLinkClick('Change your vehicle’s tax class')" href="https://www.gov.uk/change-vehicle-tax-class/tax-due-to-run-out-or-changing-if-vehicle-is-exempt">Change your vehicle’s tax class</a></p>
+        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" onclick="trackLinkClick('Tell DVLA you’ve sold, transferred or bought a vehicle')" href="https://www.gov.uk/sold-bought-vehicle">Tell DVLA you’ve sold, transferred or bought a vehicle</a></p>
+        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" onclick="trackLinkClick('Report an untaxed vehicle')" href="https://www.gov.uk/report-untaxed-vehicle">Report an untaxed vehicle</a></p>
+        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" onclick="trackLinkClick('Check you’re not buying a stolen vehicle')" href="https://www.gov.uk/checks-when-buying-a-used-car">Check you’re not buying a stolen vehicle</a></p>
+      </div>
+      <div class="related-links">
+        <h3 class="govuk-heading-m">DVSA services</h3>
+        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" onclick="trackLinkClick('Check the MOT history of a vehicle')" href="https://www.gov.uk/check-mot-history">Check the MOT history of a vehicle</a></p>
+        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" onclick="trackLinkClick('Report a vehicle with no MOT')" href="https://www.gov.uk/report-no-mot">Report a vehicle with no MOT</a></p>
+        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" onclick="trackLinkClick('MOTs for vehicles registered in Northern Ireland')" href="https://www.nidirect.gov.uk/information-and-services/motoring/mot-and-vehicle-testing">MOTs for vehicles registered in Northern Ireland</a></p>
+      </div>
+
     </div>
   </div>
 </main>
