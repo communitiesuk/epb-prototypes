@@ -1,57 +1,62 @@
+.govuk-error-summary {
+  overflow: hidden;
+}
+
 .epc-box {
-  box-sizing: border-box;
-  float: left;
-  border: 2px solid #000;
-  width: 100%;
+  color: #fff;
+  background: #28a197;
+  padding-left: 80px;
+  padding-top: 40px;
+  max-width: 400px;
+}
+
+.epc-box p.govuk-body, .epc-rating-box p.govuk-body {
+  color: #fff;
+}
+
+.epc-rating-box {
+  width: 150px;
+  background: #28a197;
   text-align: center;
-  margin-bottom: 0!important;
-}
-
-.epc-box-one-third-width {
-  width: 30%;
-}
-
-.epc-box-two-third-width {
-  width: 70%;
-  text-align: left;
-}
-
-.epc-box-single-line {
-  line-height: 14px;
-  padding-top: 18px;
-  height: 50px;
-}
-
-.epc-box-double-line {
-  line-height: 116px;
-}
-
-.epc-band-rating {
-  font-size: 100px;
-}
-
-.epc-date-of-expiry {
-  font-size: 25px;
-}
-
-.epc-box-go-right {
   float: right;
+  border: 2px solid #fff;
+  margin: 10px;
 }
 
-.epc-box-clear {
+.epc-box .epc-rating-box {
+  margin-top: -30px;
+}
+
+.epc-rating-title {
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.epc-rating-result {
+  line-height: 100px;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+p.epc-extra-box {
+  border-top: 2px solid #fff;
   clear: both;
+  margin: 0;
+  margin-left: -80px;
+  margin-right: -10px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: bold;
 }
 
-.epc-box-clear-right {
-  clear: right;
+p.epc-extra-box span {
+  display: block;
+  font-weight: normal;
 }
 
-.epc-box-tidy-left {
-  margin-left: 40px;
-}
-
-.epc-box-match-heading {
-  margin-top: 5px;
+p.epc-extra-box b {
+  display: block;
+  margin-top: -30px;
 }
 
 .epc-blue-bottom {

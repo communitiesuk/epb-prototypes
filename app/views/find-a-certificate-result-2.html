@@ -8,56 +8,35 @@ Find an assessor | Energy performance of buildings
 
 <main class="govuk-main-wrapper" id="main-content" role="main">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <a href="/find-a-certificate" class="govuk-back-link">Back</a>
-      <h1 class="govuk-heading-xl">
-        Energy Performance Certificate
-      </h1>
-
-      <div class="govuk-grid-row govuk-!-margin-bottom-8">
-
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-            <div class="govuk-panel govuk-panel--confirmation govuk-panel--fixed-height isInvalid">
-              <h2 class="govuk-panel__title govuk-!-font-size-36">
-                Certificate Number: 1234-6789-1234-14245
-              </h2>
-              <div class="govuk-panel__body govuk-!-font-size-24">
-                68 Primrose Hill<br>
-                The delight town<br>
-                County
-              </div>
-            </div>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <div class="govuk-panel govuk-panel--confirmation govuk-panel--fixed-height" id="mot-status-panel">
-              <h2 class="govuk-panel__title govuk-!-font-size-36">Energy Rating</h2>
-              <div class="div govuk-!-font-size-48 govuk-panel__body">
-                <strong>C</strong><br /><br /><br />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-!-margin-bottom-8 epc-blue-bottom">
-        <h2 class="govuk-heading-l">
-          Why does this certificate exist?
-        </h2>
+      <div class="govuk-!-margin-bottom-8">
+        <a href="/find-a-certificate" class="govuk-back-link">Back</a>
+        <h1 class="govuk-heading-xl">
+          Energy Performance Certificate
+        </h1>
 
-        <p class="govuk-body">
-          Helping the occupant save money on their energy bills
-        </p>
-
-        <p class="govuk-body">
-          Reducing illness caused by energy inefficient dwellings
-        </p>
-
-        <p class="govuk-body">
-          Helping the UK tackle climate change
-        </p>
+        <div class="epc-box">
+          <div class="epc-rating-box">
+            <p class="epc-rating-title govuk-body">
+              Energy Rating
+            </p>
+            <p class="epc-rating-result govuk-body">
+              F
+            </p>
+          </div>
+          <p class="govuk-body">
+            69 Primrose Hill<br>
+            London<br>
+            NW3 2UU
+          </p>
+          <p class="govuk-body epc-extra-box">
+            Valid until 30 09 2022
+          </p>
+          <p class="govuk-body epc-extra-box">
+            <span>Certificate Number</span>
+            <b>1234-6789-1234-14245</b>
+          </p>
+        </div>
       </div>
 
       <div class="govuk-!-margin-bottom-8 epc-no-print epc-blue-bottom">
@@ -68,11 +47,13 @@ Find an assessor | Energy performance of buildings
             You may not be able to let this property
           </h2>
           <div class="govuk-error-summary__body">
-            <div class="epc-box epc-box-one-third-width epc-box-single-line-height epc-box-go-right govuk-body epc-box-tidy-left epc-box-match-heading">
-              Energy Rating
-            </div>
-            <div class="epc-box epc-box-one-third-width epc-box-clear epc-box-go-right govuk-body epc-box-tidy-left epc-box-double-line">
-              <div class="epc-band-rating">F</div>
+            <div class="epc-rating-box">
+              <p class="epc-rating-title govuk-body">
+                Energy Rating
+              </p>
+              <p class="epc-rating-result govuk-body">
+                F
+              </p>
             </div>
             <p class="govuk-body">
               Your property has an EPC rating of F or G, you must take appropriate steps to comply
@@ -226,7 +207,7 @@ Find an assessor | Energy performance of buildings
             Energy Rating
           </text>
 
-          <text x="315" y="20" class="small">
+          <text x="415" y="20" class="small">
             Current
           </text>
 
@@ -234,16 +215,16 @@ Find an assessor | Energy performance of buildings
             Potential
           </text>
 
-          <svg x="415" y="200" width="90" height="50">
+          <svg x="415" y="275" width="90" height="50">
             <rect width="75" height="50" class="band-f" x="25"></rect>
-            <polygon points="0,25 25,50 25,0 0,25" class="band-d"></polygon>
-            <text x="40" y="35" class="small-letter">55</text>
+            <polygon points="0,25 25,50 25,0 0,25" class="band-f"></polygon>
+            <text x="40" y="35" class="small-letter">25</text>
           </svg>
 
-          <svg x="515" y="25" width="90" height="50">
-            <rect width="75" height="50" class="band-a" x="25"></rect>
-            <polygon points="0,25 25,50 25,0 0,25" class="band-a"></polygon>
-            <text x="40" y="35" class="small-letter">95</text>
+          <svg x="515" y="175" width="90" height="50">
+            <rect width="75" height="50" class="band-d" x="25"></rect>
+            <polygon points="0,25 25,50 25,0 0,25" class="band-d"></polygon>
+            <text x="40" y="35" class="small-letter">55</text>
           </svg>
         </svg>
 
@@ -261,11 +242,13 @@ Find an assessor | Energy performance of buildings
 
       <div class="govuk-!-margin-bottom-8 epc-page-break epc-blue-bottom">
         <h2 class="govuk-heading-l">Recommendations</h2>
-        <div class="epc-box epc-box-one-third-width epc-box-single-line-height epc-box-go-right govuk-body epc-box-tidy-left">
-          Potential Energy Rating
-        </div>
-        <div class="epc-box epc-box-one-third-width epc-box-clear-right epc-box-go-right govuk-body epc-box-tidy-left" style="line-height: 112px;">
-          <div class="epc-band-rating">A</div>
+        <div class="epc-rating-box">
+          <p class="epc-rating-title govuk-body">
+            Potential Energy Rating
+          </p>
+          <p class="epc-rating-result govuk-body">
+            D
+          </p>
         </div>
 
         <h3 class="govuk-heading-m">Internal or external wall insulation</h3>
@@ -335,7 +318,7 @@ Find an assessor | Energy performance of buildings
           </div>
           <div class="govuk-summary-list__row" id="email">
             <dt class="govuk-summary-list__key govuk-!-width-one-half">E-mail address</dt>
-            <dd class="govuk-summary-list__value">Andy.stone@provider.com</dd>
+            <dd class="govuk-summary-list__value"><a href="mailto:">Andy.stone@provider.com</a></dd>
           </div>
           <div class="govuk-summary-list__row" id="related_party_disclosure">
             <dt class="govuk-summary-list__key govuk-!-width-one-half">Related party disclosure</dt>
@@ -351,11 +334,11 @@ Find an assessor | Energy performance of buildings
           </div>
           <div class="govuk-summary-list__row" id="date_of_assessment">
             <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of assessment</dt>
-            <dd class="govuk-summary-list__value">23 February 2017</dd>
+            <dd class="govuk-summary-list__value">30 September 2012</dd>
           </div>
           <div class="govuk-summary-list__row" id="date_of_certificate">
             <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of certificate</dt>
-            <dd class="govuk-summary-list__value">3 February 2017</dd>
+            <dd class="govuk-summary-list__value">30 September 2012</dd>
           </div>
           <div class="govuk-summary-list__row" id="ref_num">
             <dt class="govuk-summary-list__key govuk-!-width-one-half">Reference number</dt>
@@ -389,15 +372,15 @@ Find an assessor | Energy performance of buildings
           <tbody class="govuk-table__body">
 
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/find-a-certificate-result-2">1234-6789-1234-14244</a></th>
-            <td class="govuk-table__cell">F</td>
-            <td class="govuk-table__cell">01/01/2021</td>
+            <th scope="row" class="govuk-table__header"><a href="/find-a-certificate-result-1">1234-6789-1234-14244</a></th>
+            <td class="govuk-table__cell">D</td>
+            <td class="govuk-table__cell">09/08/2021</td>
           </tr>
           </tbody>
         </table>
 
         <h2 class="govuk-heading-l">Issues with this certificate</h2>
-        <p class="govuk-body">Please contact the assessor <a href="mailto:marten@madetech.com">Andrew Stonemason</a> if you find any issues with this certificate. If they are unable to help you with your query, please contact the Help Desk at <a href="call:02071646673">0207 164 6672</a></p>
+        <p class="govuk-body">Please contact the assessor <a href="mailto:marten@madetech.com">Andrew Stonemason</a> if you find any issues with this certificate. If they are unable to help you with your query, please contact the Help Desk at <a href="call:02071646673">0207 164 6672</a>.</p>
       </div>
     </div>
 
