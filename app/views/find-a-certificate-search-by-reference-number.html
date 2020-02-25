@@ -1,0 +1,26 @@
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="/find-a-certificate" class="govuk-back-link">
+            Back
+        </a>
+
+        <h1 class="govuk-heading-xl">
+            Search for an EPC by reference number
+        </h1>
+        <form method="GET" action="/find-a-certificate-results">
+            <fieldset class="govuk-fieldset fieldset-background">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="reference_number">
+                        Enter a reference number
+                    </label>
+                    <span id="refernece-number-hint" class="govuk-hint">
+            For example 1234-5678-9101-1121
+          </span>
+                    <input id="reference_number" name="reference_number" type="text" class="govuk-input" aria-describedby="reference-number-hint" autocomplete="postal-code" spellcheck="false">
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">Find</button>
+            </fieldset>
+        </form>
+    </div>
+</div>

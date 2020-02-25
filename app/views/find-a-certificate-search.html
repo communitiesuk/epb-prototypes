@@ -8,21 +8,32 @@ Find a certificate | Energy performance of buildings
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+        <a href="/find-a-certificate" class="govuk-back-link">
+            Back
+        </a>
+
         <h1 class="govuk-heading-xl">
-            Find a Energy Performance Certificate for a residential property
+            Search for an EPC by postcode
         </h1>
         <form method="GET" action="/find-a-certificate-results">
             <fieldset class="govuk-fieldset fieldset-background">
                 <div class="govuk-form-group">
-                    <label class="govuk-label" for="query">
-                        Enter a postcode OR a street name and town OR an EPC reference number below
+                    <label class="govuk-label" for="postcode">
+                        Enter a postcode
                     </label>
-                    <input id="query" name="query" type="text" class="govuk-input" aria-describedby="query-hint" autocomplete="postal-code" spellcheck="false">
+                    <span id="postcode-hint" class="govuk-hint">
+            For example SW1A 2AA
+          </span>
+                    <input id="postcode" name="postcode" type="text" class="govuk-input" aria-describedby="postcode-hint" autocomplete="postal-code" spellcheck="false">
                 </div>
 
                 <button class="govuk-button" data-module="govuk-button">Find</button>
             </fieldset>
         </form>
+        <h2 class="govuk-heading-l govuk-!-margin-top-2">Search by Certificate Reference Number</h2>
+        <p class="govuk-body">
+            If you know the reference number a certificate and want to validate that, use the <a href="/find-a-certificate-search-by-reference-number">Find certificate by reference number</a> service.
+        </p>
     </div>
 </div>
 
