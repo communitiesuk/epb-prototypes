@@ -5,9 +5,13 @@
 .epc-box {
   color: #fff;
   background: #28a197;
-  padding-left: 80px;
-  padding-top: 40px;
-  max-width: 400px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.epc-box .epc-address {
+  padding-left: 30px;
+  padding-top: 30px;
 }
 
 .epc-box p.govuk-body, .epc-rating-box p.govuk-body {
@@ -23,8 +27,8 @@
   margin: 10px;
 }
 
-.epc-box .epc-rating-box {
-  margin-top: -30px;
+.epc-rating-box.do-wide {
+  width: 45%;
 }
 
 .epc-rating-title {
@@ -42,6 +46,7 @@
   display: block;
   line-height: 40px;
   padding-top: 10px;
+  font-size: 40px;
 }
 
 .epc-rating-result span span {
@@ -54,12 +59,21 @@
 p.epc-extra-box {
   border-top: 2px solid #fff;
   clear: both;
+  line-height: 90px;
   margin: 0;
-  margin-left: -80px;
-  margin-right: -10px;
-  line-height: 60px;
+  padding: 0;
   text-align: center;
   font-weight: bold;
+  float: left;
+  width: 50%;
+}
+
+p.epc-extra-box + p.epc-extra-box {
+  border-left: 2px solid #fff;
+  box-sizing: border-box;
+  float: right;
+  clear: none;
+  line-height: 60px;
 }
 
 p.epc-extra-box span {
