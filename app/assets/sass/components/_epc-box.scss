@@ -38,6 +38,19 @@
   font-weight: bold;
 }
 
+.epc-rating-result span {
+  display: block;
+  line-height: 40px;
+  padding-top: 10px;
+}
+
+.epc-rating-result span span {
+  padding-top: 0;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, .1);
+  font-size: 20px;
+}
+
 p.epc-extra-box {
   border-top: 2px solid #fff;
   clear: both;
