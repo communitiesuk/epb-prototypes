@@ -109,6 +109,41 @@ div.govuk-error-summary:focus {
   outline: none;
 }
 
+.smaller-left .govuk-\!-width-one-half {
+  width: 30%!important;
+}
+
+.star-0, .star-1, .star-2, .star-3, .star-4, .star-5 {
+  float: right;
+  display: block;
+}
+
+.star-0:after {
+  content: "---";
+  font-size: 13px;
+  text-align: center;
+}
+
+.star-1:after {
+  content: "★☆☆☆☆";
+}
+
+.star-2:after {
+  content: "★★☆☆☆";
+}
+
+.star-3:after {
+  content: "★★★☆☆";
+}
+
+.star-4:after {
+  content: "★★★★☆";
+}
+
+.star-5:after {
+  content: "★★★★★";
+}
+
 @media print {
   .epc-no-print, footer, .app-cookie-banner, .govuk-back-link {
     display: none;
