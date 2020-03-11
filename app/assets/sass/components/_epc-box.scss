@@ -9,6 +9,29 @@
   overflow: hidden;
 }
 
+.dashed-p {
+  margin-bottom: 40px;
+}
+
+.dashed-p p {
+  margin: 0!important;
+  padding: 0!important;
+}
+
+.dashed-p p:before {
+  content: "";
+  margin-top: 13px;
+  width: 15px;
+  border-bottom: 1px solid #000;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+
+.dashed-p p a {
+  text-decoration: none;
+}
+
 .epc-box .epc-address {
   padding-left: 30px;
   padding-top: 30px;
