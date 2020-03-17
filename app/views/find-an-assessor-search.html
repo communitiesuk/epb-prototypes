@@ -18,7 +18,7 @@ Find an assessor | Energy performance of buildings
     </p>
 
     <div class="postcode-search-form">
-      <form action="/result" method="post" class="form" onsubmit="return redirect();">
+      <form action="/find-an-assessor-results" method="post" class="form" onsubmit="return redirect();">
         <fieldset class="govuk-fieldset">
           <div class="govuk-form-group">
             <label class="govuk-label" for="postcode">
@@ -27,7 +27,7 @@ Find an assessor | Energy performance of buildings
             <span id="more-detail-hint" class="govuk-hint">
               For example SW1A 2AA
             </span>
-            <input name="postcode" class="govuk-input" id="address-postcode" type="text" />
+            <input name="postcode" id="postcode" class="govuk-input" id="address-postcode" type="text" />
           </div>
           <button class="govuk-button" data-module="govuk-button">Find</button>
         </fieldset>
