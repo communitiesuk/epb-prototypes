@@ -8,17 +8,35 @@ Find an assessor | Energy performance of buildings
 
 <main class="govuk-main-wrapper" id="main-content" role="main">
   <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">Contents</h2>
+      <div class="dashed-p">
+        <p class="govuk-body"><a href="#renting">Renting this property</a></p>
+        <p class="govuk-body"><a href="#epc">Energy performance for this property</a></p>
+        <p class="govuk-body"><a href="#summary">Summary of property energy performance</a></p>
+        <p class="govuk-body"><a href="#energy">Environmental impact of this property</a></p>
+        <p class="govuk-body"><a href="#recommendations">Recommendations</a></p>
+        <p class="govuk-body"><a href="#heat-demand">The property's heat demand</a></p>
+        <p class="govuk-body"><a href="#information">How this certificate was produced</a></p>
+        <p class="govuk-body"><a href="#previous">Previous certificates linked to this property</a></p>
+      </div>
+    </div>
+
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-!-margin-bottom-8">
         <a href="/find-a-certificate" class="govuk-back-link">Back</a>
         <h1 class="govuk-heading-xl">
           Energy Performance Certificate
         </h1>
+      </div>
 
+      <hr class="epc-light-top" />
+
+      <div class="epc-blue-bottom">
         <div class="epc-box">
           <div class="epc-rating-box">
             <p class="epc-rating-title govuk-body">
-              Energy Rating
+              Energy rating
             </p>
             <p class="epc-rating-result govuk-body">
               F
@@ -33,45 +51,28 @@ Find an assessor | Energy performance of buildings
             Valid until 30 September 2019
           </p>
           <p class="govuk-body epc-extra-box">
-            <span>Certificate Number</span>
+            <span>Certificate number</span>
             <b>9876-6789-5432-2345-1358</b>
           </p>
         </div>
       </div>
     </div>
 
-    <div class="govuk-grid-column-one-third">
-      <div class="govuk-!-margin-bottom-9 related-links" style="margin-top: 60px">
-        <h3 class="govuk-heading-m">Related content</h3>
-        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" href="https://www.simpleenergyadvice.org.uk">Simple Energy Advice</a></p>
-        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" href="https://www.gov.uk/improve-energy-efficiency">Improving Energy Efficiency</a></p>
-        <p class="govuk-body"><a target="_blank" rel="noopener noreferrer" class="govuk-link" href="https://energysavingtrust.org.uk">Energy Saving Trust</a></p>
-      </div>
-    </div>
-
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-!-margin-bottom-8 epc-no-print epc-blue-bottom">
-        <h2 class="govuk-heading-l">Renting this property</h2>
+        <h2 class="govuk-heading-l">Letting this property</h2>
 
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <div class="govuk-warning-text__text">
             <span class="govuk-warning-text__assistive">Warning</span>
-            <div class="epc-rating-box">
-              <p class="epc-rating-title govuk-body">
-                Energy Rating
-              </p>
-              <p class="epc-rating-result govuk-body">
-                F
-              </p>
-            </div>
             <h2 class="govuk-error-summary__title" id="error-summary-title">
               You may not be able to let this property
             </h2>
             <div class="govuk-error-summary__body">
               <p class="govuk-body">
-                Your property has an EPC rating of F or G, you must take appropriate steps to comply
-                with the requirements of the current regulations (<a href="#">MEES</a>). We explain how to do this below.
+                Your property has an energy rating of F. You must take appropriate steps to comply
+                with the requirements of the current regulations (<a href="#">MEES</a>). The <a href="#recommendations">recommendations section</a> of the EPC sets out changes you can make to improve the property’s rating.
               </p>
             </div>
           </div>
@@ -80,17 +81,8 @@ Find an assessor | Energy performance of buildings
         <div class="epc-box-clear"></div>
 
         <p class="govuk-body">
-          The Regulations mean that, since 1 April 2018, private landlords may not let domestic properties
-          on new tendencies to new or existing tenants of the Energy Efficiency Certificate (EPC) rating is F or G
-          (unless an exemption applies).
-        </p>
-        <p class="govuk-body">
-          From 1 April 2020 the prohibition on letting F and G properties will extend to all relevant properties, even
-          when there has been no change in tenancy.
-        </p>
-        <p class="govuk-body">
-          Regulations available at <a
-            href="https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance">https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance</a>
+          From 1 April 2020, properties can only be let if they have an energy rating of A to E. If the property is rated F or G, it cannot be let, unless an exemption has been registered.
+          You can read <a href="https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance">guidance for landlords on the regulations and exemptions</a>.
         </p>
       </div>
     </div>
@@ -229,7 +221,7 @@ Find an assessor | Energy performance of buildings
 
           </text>
 
-          <text x="0" y="0" class="small">
+          <!--<text x="0" y="0" class="small">
 
             <tspan x="10" y="55">(92+)</tspan>
 
@@ -245,7 +237,7 @@ Find an assessor | Energy performance of buildings
 
             <tspan x="10" y="355">(1-20)</tspan>
 
-          </text>
+          </text>-->
 
           <text x="8" y="15" class="small" dominant-baseline="middle">
             Energy Rating
@@ -262,13 +254,13 @@ Find an assessor | Energy performance of buildings
           <svg x="415" y="275" width="90" height="50">
             <rect width="75" height="50" class="band-f" x="25"></rect>
             <polygon points="0,25 25,50 25,0 0,25" class="band-f"></polygon>
-            <text x="40" y="35" class="small-letter">25</text>
+            <text x="40" y="35" class="small-letter">F</text>
           </svg>
 
           <svg x="515" y="175" width="90" height="50">
             <rect width="75" height="50" class="band-d" x="25"></rect>
             <polygon points="0,25 25,50 25,0 0,25" class="band-d"></polygon>
-            <text x="40" y="35" class="small-letter">56</text>
+            <text x="40" y="35" class="small-letter">D</text>
           </svg>
         </svg>
 
@@ -280,11 +272,18 @@ Find an assessor | Energy performance of buildings
 
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-body epc-page-break epc-blue-bottom">
-        <h2 class="govuk-heading-l">Summary of property energy performance</h2>
-        <p class="govuk-body">The energy performance features of your property are rated below. This does not take into consideration the physical condition of any part of your property. Where it says 'Assumed' it means that the insulation could not
-          be inspected and an assumption has been made based on the age and type of your property.</p>
-
+        <h2 class="govuk-heading-l">Breakdown of property's energy performance</h2>
+        <p class="govuk-body">The energy performance of each feature of this property that was assessed is summarised below. This does not take into consideration the physical condition of any part of your property.</p>
+        <p class="govuk-body">Where it says 'Assumed' it means that the insulation could not be inspected and an assumption has been made based on the age and type of your property.</p><!-- KILL if no assumed section exists -->
         <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row" id="type">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Property type</dt>
+            <dd class="govuk-summary-list__value">end-terrace house</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="total_floor_area">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Total floor area</dt>
+            <dd class="govuk-summary-list__value">83 m2</dd>
+          </div>
           <div class="govuk-summary-list__row" id="walls">
             <dt class="govuk-summary-list__key govuk-!-width-one-half">Walls</dt>
             <dd class="govuk-summary-list__value">System built, as built, insulated (assumed)</dd>
@@ -322,9 +321,6 @@ Find an assessor | Energy performance of buildings
             <dd class="govuk-summary-list__value">No low energy lighting</dd>
           </div>
         </dl>
-
-        <h3 class="govuk-heading-m">Current primary energy use per square metre</h3>
-        <p class="govuk-body">145kWh/m2 per year</p>
       </div>
     </div>
 
@@ -332,7 +328,7 @@ Find an assessor | Energy performance of buildings
       <div class="govuk-!-margin-bottom-8 epc-blue-bottom">
         <h2 class="govuk-heading-l">Environmental impact of this property</h2>
 
-        <p class="govuk-body">One of the biggest contributors to global warming is carbon dioxide. The energy we use for heating, lighting and power in homes produces over a quarter of the UK's carbon dioxide emissions.</p>
+        <p class="govuk-body">One of the biggest contributors to global warming is carbon dioxide (CO<sub>2</sub>). The energy we use for heating, lighting and power in our homes produces over a quarter of the UK's CO<sub>2</sub> emissions.</p>
 
         <svg width="615" height="376" viewBox="0 0 615 376" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" role="img">
           <title id="svg-title">Your environmental rating is F (22) and your potential energy rating is D (58)</title>
@@ -447,7 +443,7 @@ Find an assessor | Energy performance of buildings
 
           </text>
 
-          <text x="0" y="0" class="small">
+          <!--<text x="0" y="0" class="small">
 
             <tspan x="10" y="55">(92+)</tspan>
 
@@ -463,7 +459,7 @@ Find an assessor | Energy performance of buildings
 
             <tspan x="10" y="355">(1-20)</tspan>
 
-          </text>
+          </text>-->
 
           <text x="8" y="15" class="small" dominant-baseline="middle">
             Environmental Rating
@@ -480,23 +476,20 @@ Find an assessor | Energy performance of buildings
           <svg x="415" y="275" width="90" height="50">
             <rect width="75" height="50" class="band-ecology-f" x="25"></rect>
             <polygon points="0,25 25,50 25,0 0,25" class="band-ecology-f"></polygon>
-            <text x="40" y="35" class="small-letter">22</text>
+            <text x="40" y="35" class="small-letter">F</text>
           </svg>
 
           <svg x="515" y="175" width="90" height="50">
             <rect width="75" height="50" class="band-ecology-d" x="25"></rect>
             <polygon points="0,25 25,50 25,0 0,25" class="band-ecology-d"></polygon>
-            <text x="40" y="35" class="small-letter">58</text>
+            <text x="40" y="35" class="small-letter">D</text>
           </svg>
         </svg>
 
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-        <p class="govuk-body">The average household causes about 6 tonnes of carbon dioxide every year. Based on this assessment, your home currently produces approximately 2.4 tonnes of carbon dioxide every year. Adopting the recommendations in this
-          report can reduce emissions and protect the environment. If you were to install these recommendations you could reduce this amount by 1.0 tonnes per year. You could reduce emissions even more by switching to renewable energy sources.</p>
-
-        <p class="govuk-body">The environmental impact rating is a measure of a home's impact on the environment in terms of carbon dioxide (CO<sub>2</sub>) emissions based on standardised assumptions about occupancy and energy use. The higher the
-          rating the less impact it has on the environment.</p>
+        <p class="govuk-body">The average household causes about 6 tonnes of CO2 every year. Based on your energy assessment, your home currently produces approximately 2.4 tonnes of CO2 every year. By making the recommended changes below, you will reduce this property’s carbon emissions by 1.0 tonnes per year and protect the environment. If you were to install these recommendations you could reduce this amount by 1.0 tonnes per year.</p>
+        <p class="govuk-body">The environmental impact rating is a measure of a home's impact on the environment in terms of CO2 emissions based on standardised assumptions about occupancy and energy use. The higher the rating, the less impact it has on the environment.</p>
       </div>
     </div>
 
@@ -512,11 +505,8 @@ Find an assessor | Energy performance of buildings
           </p>
         </div>
 
-        <p class="govuk-body">The assessor has made these recommendations for your property.</p>
-
         <p class="govuk-body">Making any of the recommended changes will improve your property’s energy efficiency.</p>
-
-        <p class="govuk-body">Making all of the recommended changes will improve your property’s energy rating to D.</p>
+        <p class="govuk-body">If you make all of the changes recommended below, this will improve your property’s energy rating to D.</p>
 
         <br style="clear: both;" />
 
@@ -615,15 +605,15 @@ Find an assessor | Energy performance of buildings
       <div class="epc-blue-bottom">
         <h3 class="govuk-heading-m">Paying for this</h3>
         <p class="govuk-body">
-          You might be able to reduce these costs by carrying out the work at the same time as other home improvements or by not tackling the whole house at once. Find out more at the <a href="#">Energy Saving Trust</a> website.
+          You might be able to reduce these costs by carrying out the work at the same time as other home improvements or by not tackling the whole house at once. The <a href="#">Energy Saving Trust</a> gives advice on paying for energy improvements.
         </p>
       </div>
     </div>
 
     <div class="govuk-grid-column-two-thirds">
       <div class="epc-blue-bottom">
-        <h3 class="govuk-heading-l">Property heat demand</h3>
-        <p class="govuk-body">The majority of energy costs cover heating the space and water used in a home. The figures below show the current estemated energy use for heating in this property.</p>
+        <h3 class="govuk-heading-l">The property's heat demand</h3>
+        <p class="govuk-body">Heating a property usually makes up the majority of energy costs. Where applicable, this table shows the energy that could be saved in this property by insulating the loft and walls, based on typical energy use.</p>
 
         <div class="epc-rating-box do-wide" style="float: left;">
           <p class="epc-rating-title govuk-body">
@@ -682,19 +672,15 @@ Find an assessor | Energy performance of buildings
           </tbody>
         </table>
 
-        <p class="govuk-body govuk-!-margin-top-2" style="clear: both;">If you replace your existing heating system with one that generates heat using renewable energy sources, you could receive Renewable Heat Incentive (RHI) payments, subject to
-          meeting minimum energy efficiency requirements. The amount of payments you are eligable for will be based on the current estemated energy use required for space and water heating in your property. More infomation is avliable on the <a
-            href="https://www.gov.uk/domestic-renewable-heat-incentive">RHI information page</a>.</p>
+        <p class="govuk-body govuk-!-margin-top-2" style="clear: both;">You might be able to receive [<a href="https://www.gov.uk/domestic-renewable-heat-incentive">Renewable Heat Incentive (RHI) payments</a>]. This will help to reduce carbon emissions by replacing your existing heating system with one that generates renewable heat. The estimated energy required for space and water heating will form the basis of the payments.</p>
       </div>
     </div>
 
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-body epc-page-break epc-blue-bottom">
-        <h2 class="govuk-heading-l">How this certificate was produced</h2>
-        <p class="govuk-body">This document has been produced following an energy assessment undertaken by a qualified Energy Assessor, accredited by Stroma. You can obtain contact details of the Accreditation Scheme at <a
-            href="#">www.stroma.co.uk</a>.</p>
+        <h2 class="govuk-heading-l">Assessment details</h2>
+        <p class="govuk-body">This document has been produced following an energy assessment undertaken by a qualified energy assessor, accredited by Stroma.</p>
 
-        <h3 class="govuk-heading-m">Assessor and accreditation scheme details</h3>
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row" id="accreditation_id">
             <dt class="govuk-summary-list__key govuk-!-width-one-half">Assessor's accreditation number</dt>
@@ -720,14 +706,6 @@ Find an assessor | Energy performance of buildings
             <dt class="govuk-summary-list__key govuk-!-width-one-half">Related party disclosure</dt>
             <dd class="govuk-summary-list__value">No related party</dd>
           </div>
-        </dl>
-
-        <h3 class="govuk-heading-m">Property details</h3>
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row" id="type">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Property type</dt>
-            <dd class="govuk-summary-list__value">end-terrace house</dd>
-          </div>
           <div class="govuk-summary-list__row" id="date_of_assessment">
             <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of assessment</dt>
             <dd class="govuk-summary-list__value">30 September 2009</dd>
@@ -736,22 +714,13 @@ Find an assessor | Energy performance of buildings
             <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of certificate</dt>
             <dd class="govuk-summary-list__value">30 September 2009</dd>
           </div>
-          <div class="govuk-summary-list__row" id="ref_num">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Reference number</dt>
-            <dd class="govuk-summary-list__value">9876-6789-5432-2345-1358</dd>
-          </div>
           <div class="govuk-summary-list__row" id="assessment_type">
             <dt class="govuk-summary-list__key govuk-!-width-one-half">Type of assessment</dt>
             <dd class="govuk-summary-list__value"><a href="#">RdSAP</a>, existing property</dd>
           </div>
-          <div class="govuk-summary-list__row" id="total_floor_area">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Total floor area</dt>
-            <dd class="govuk-summary-list__value">83 m2</dd>
-          </div>
         </dl>
 
-        <p class="govuk-body">Please contact the assessor <a href="mailto:marten@madetech.com">Andrew Stonemason</a> if you find any issues with this certificate. If they are unable to help you with your query, please contact the Help Desk at <a
-            href="call:02071646673">0207 164 6672</a>.</p>
+        <p class="govuk-body">Please contact the assessor if you find any issues with this certificate. If they are unable to help you with your query, please contact their accreditation scheme Stroma.</p>
       </div>
     </div>
 
@@ -759,7 +728,7 @@ Find an assessor | Energy performance of buildings
       <div class="govuk-body epc-blue-bottom">
         <h2 class="govuk-heading-l">Previous certificates linked to this property</h2>
 
-        <p class="govuk-body">This list might not contain all certificates linked to this property.</p>
+        <p class="govuk-body">If you are aware of previous assessments for this property and they are not listed here please contact the Help Desk at 0207 164 6672.</p>
 
         <table class="govuk-table">
           <thead class="govuk-table__head">
@@ -774,7 +743,7 @@ Find an assessor | Energy performance of buildings
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header"><a href="/find-a-certificate-result-1">9876-6789-5432-2345-1357</a></th>
               <td class="govuk-table__cell">D</td>
-              <td class="govuk-table__cell">9 August 2021</td>
+              <td class="govuk-table__cell">9 August 2028</td>
             </tr>
           </tbody>
         </table>
