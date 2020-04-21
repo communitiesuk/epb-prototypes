@@ -10,3 +10,15 @@
   border-left: 10px solid #00703c;
   background-color: #f3f2f1;
 }
+
+.inset-text-box {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  clear: both;
+  background-color: #f3f2f1;
+}
