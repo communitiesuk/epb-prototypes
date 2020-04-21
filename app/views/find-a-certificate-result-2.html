@@ -276,55 +276,59 @@ Find an assessor | Energy performance of buildings
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-body epc-page-break epc-blue-bottom">
         <a name="summary"></a>
-        <h2 class="govuk-heading-l">Breakdown of property's energy performance</h2>
-        <p class="govuk-body">The energy performance of each feature of this property that was assessed is summarised below. This does not take into consideration the physical condition of any part of your property.</p>
-        <p class="govuk-body">Where it says 'Assumed' it means that the insulation could not be inspected and an assumption has been made based on the age and type of your property.</p><!-- KILL if no assumed section exists -->
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row" id="type">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Property type</dt>
-            <dd class="govuk-summary-list__value">End terrace house</dd>
-          </div>
-          <div class="govuk-summary-list__row" id="total_floor_area">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Total floor area</dt>
-            <dd class="govuk-summary-list__value">83 m2</dd>
-          </div>
-          <div class="govuk-summary-list__row" id="walls">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Walls</dt>
-            <dd class="govuk-summary-list__value">System built, as built, insulated (assumed)</dd>
-          </div>
-          <div class="govuk-summary-list__row" id="roof">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Roof</dt>
-            <dd class="govuk-summary-list__value">(another dwelling above)</dd>
-          </div>
-          <div class="govuk-summary-list__row" id="floor">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Floor</dt>
-            <dd class="govuk-summary-list__value">(another dwelling below)</dd>
-          </div>
-          <div class="govuk-summary-list__row" id="windows">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Windows</dt>
-            <dd class="govuk-summary-list__value">Fully double glazed</dd>
-          </div>
-          <div class="govuk-summary-list__row" id="main-heating">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Main heating</dt>
-            <dd class="govuk-summary-list__value">Room heaters, electric</dd>
-          </div>
-          <div class="govuk-summary-list__row" id="main-heating-control">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Main heating control</dt>
-            <dd class="govuk-summary-list__value">Programmer and appliance thermostats</dd>
-          </div>
-          <div class="govuk-summary-list__row" id="secondary-heating">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Secondary heating</dt>
-            <dd class="govuk-summary-list__value">None</dd>
-          </div>
-          <div class="govuk-summary-list__row" id="hot-water">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Hot water</dt>
-            <dd class="govuk-summary-list__value">Electric immersion, off-peak</dd>
-          </div>
-          <div class="govuk-summary-list__row" id="lighting">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">Lighting</dt>
-            <dd class="govuk-summary-list__value">No low energy lighting</dd>
-          </div>
-        </dl>
+        <h2 class="govuk-heading-l">Breakdown of property’s energy performance</h2>
+        <p class="govuk-body">
+          The table below shows the energy performance for features of this property. Only features relevant to this property are shown. The assessment does not consider the condition of a feature and how well it is working.
+        </p>
+        <p class="govuk-body">Each feature is assessed as one of the following:</p><!-- KILL if no assumed section exists -->
+
+        <ul class="govuk-list govuk-list--bullet govuk-!-margin-left-6">
+          <li>very poor (least efficient)</li>
+          <li>poor</li>
+          <li>average</li>
+          <li>good</li>
+          <li>very good (most efficient)</li>
+        </ul>
+
+        <p class="govuk-body">
+          When the description says 'assumed', it means that the insulation could not be inspected and an assumption has been made based on the age and type of your property.
+        </p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Feature</th>
+            <th scope="col" class="govuk-table__header">Description</th>
+            <th scope="col" class="govuk-table__header">Energy performance</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Walls</td>
+            <td class="govuk-table__cell">System built, as built, insulated (assumed)</td>
+            <td class="govuk-table__header">Good</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Secondary heating</td>
+            <td class="govuk-table__cell">None</td>
+            <td class="govuk-table__header">Average</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Hot water</td>
+            <td class="govuk-table__cell">Electric immersion, off-peak</td>
+            <td class="govuk-table__header">Very poor</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Total floor area</td>
+            <td class="govuk-table__cell">83 m2</td>
+            <td class="govuk-table__header">Average</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Main heating</td>
+            <td class="govuk-table__cell">Room heaters, electric</td>
+            <td class="govuk-table__header">Average</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
