@@ -1,40 +1,47 @@
-.environmental-impact-wrapper {
-  position:  relative;
-
-}
-
-.environmental-impact-wrapper .govuk-grid-column-one-third {
-  // position:  absolute;
-  bottom: 0px;
-}
-
- .average {
+.average {
   background-color: #f3f2f1;
-  width: 100%;
+  width: 90%;
   height: 300px;
+  position: relative;
   text-align: center;
 }
 
 .current {
-  // background-color: #ffdd00;
-  width: 100%;
-  height: 300px;
-  text-align: center;
+  margin-top: 50px;
+  height: 250px;
+  width: 90%;
+  bottom: 0px;
+  background-color: #ffdd00;
   position: relative;
-  background: linear-gradient(to top, #ffdd00 0%,#ffdd00 35%,#ffdd00 50%,white 50%,white 100%);
-}
-// .current:after {
-//   content:'\A';
-//   position:absolute;
-//   background:black;
-//   top:0; bottom:0;
-//   left:0;
-//   width:50%;
-// }
-
- .potential {
-  background-color: #00703c;
-  width: 100%;
-  height: 150px;
   text-align: center;
+}
+
+.potential {
+  background-color: #00703c;
+  margin-top: 150px;
+  height: 150px;
+  width: 90%;
+  bottom: 0px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.potential .text {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: -40%;
+  color: #0b0c0c;
+}
+
+.text-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding-bottom: 20px;
 }
