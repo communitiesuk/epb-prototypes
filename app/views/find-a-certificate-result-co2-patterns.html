@@ -1,0 +1,844 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find an assessor | Energy performance of buildings
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper" id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-!-margin-bottom-8">
+        <a href="/find-a-certificate" class="govuk-back-link">Back</a>
+        <h1 class="govuk-heading-xl">
+          Energy Performance Certificate
+        </h1>
+      </div>
+
+      <hr class="epc-light-top" />
+
+      <div class="epc-blue-bottom">
+        <div class="epc-box">
+          <div class="epc-rating-box">
+            <p class="epc-rating-title govuk-body">
+              Energy rating
+            </p>
+            <p class="epc-rating-result govuk-body">
+              F
+            </p>
+          </div>
+          <p class="epc-address govuk-body">
+            69 Primrose Hill<br>
+            London<br>
+            NW3 2UU
+          </p>
+          <p class="govuk-body epc-extra-box">
+            Valid until 30 September 2019
+          </p>
+          <p class="govuk-body epc-extra-box">
+            <span>Certificate number</span>
+            <b>9876-6789-5432-2345-1358</b>
+          </p>
+        </div>
+      </div>
+      <div>
+        <a onclick="window.print();return false;" class="govuk-link govuk-!-margin-bottom-5" id="link" href="#" style="display: none;">Print this certificate page</a>
+        <noscript><p class="govuk-body">To print this certificate, press cmd/ctrl+p on your keyboard</p></noscript>
+        <script>document.getElementById('link').style.display = 'block';</script>
+
+        <hr class="epc-light-top">
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third" style="margin-top: 192px;">
+      <hr class="epc-blue-top" />
+      <h2 class="govuk-heading-m">Contents</h2>
+      <div class="dashed-p">
+        <p class="govuk-body"><a href="#renting">Rules on letting this property</a></p>
+        <p class="govuk-body"><a href="#epc">Energy performance rating for this property</a></p>
+        <p class="govuk-body"><a href="#summary">Breakdown of property's energy performance</a></p>
+        <p class="govuk-body"><a href="#energy">Environmental impact of this property</a></p>
+        <p class="govuk-body"><a href="#recommendations">How to improve this property’s energy performance</a></p>
+        <p class="govuk-body"><a href="#heat-demand">Estimated energy use and potential savings</a></p>
+        <p class="govuk-body"><a href="#information">Contacting the assessor and accreditation scheme</a></p>
+        <p class="govuk-body"><a href="#previous">Other certificates for this property</a></p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-!-margin-bottom-8 epc-no-print epc-blue-bottom">
+        <a name="renting"></a>
+        <h2 class="govuk-heading-l">Rules on letting this property</h2>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <div class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              You may not be able to let this property
+            </h2>
+            <div class="govuk-error-summary__body">
+              <p class="govuk-body">
+                Your property has an energy rating of F. You must take appropriate steps to comply
+                with the requirements of the current regulations (<a href="#">MEES</a>). The <a href="#recommendations">recommendations section</a> of the EPC sets out changes you can make to improve the property’s rating.
+              </p>
+
+              <p class="govuk-body">
+                From 1 April 2020, properties can only be let if they have an energy rating of A to E. If the property is rated F or G, it cannot be let, unless an exemption has been registered.
+                You can read <a href="https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance">guidance for landlords on the regulations and exemptions</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="epc-box-clear"></div>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-!-margin-bottom-8 epc-blue-bottom">
+        <a name="epc"></a>
+        <h2 class="govuk-heading-l">Energy performance rating for this property</h2>
+
+        <p class="govuk-body govuk-!-margin-bottom-6">
+          Your property’s energy rating is F. It has the potential to be D by following the recommendations on <a href="#recommendations">how to improve this property’s energy performance</a>.
+        </p>
+
+        <svg width="615" height="376" viewBox="0 0 615 376" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" role="img">
+          <style>
+            .letter {
+              font-size: 40px;
+              font-family: sans-serif;
+              fill: #fff;
+              font-weight: bold;
+            }
+
+            .small-letter {
+              font-size: 30px;
+              font-family: sans-serif;
+              fill: #fff;
+              font-weight: bold;
+              text-align: center;
+            }
+
+            .small {
+              font-size: 20px;
+              font-family: sans-serif;
+              fill: #000;
+              line-height: 50px;
+              margin-top: 100px;
+            }
+
+            .small tspan:first-child,
+            .small tspan:last-child {
+              fill: #fff;
+            }
+
+
+            .band-a {
+              fill: #008054
+            }
+
+            .band-b {
+              fill: #19b459
+            }
+
+            .band-c {
+              fill: #8dce46
+            }
+
+            .band-d {
+              fill: #ffd500
+            }
+
+            .band-e {
+              fill: #fcaa65
+            }
+
+            .band-f {
+              fill: #ef8023
+            }
+
+            .band-g {
+              fill: #e9153b
+            }
+          </style>
+
+          <line x1="410" y1="0" x2="410" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="510" y1="0" x2="510" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="0" y1="25" x2="615" y2="25" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="0" y1="0" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>
+
+          <line x1="0" y1="0" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="0" y1="0" x2="0" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="615" y1="376" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="615" y1="376" x2="0" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
+
+          <rect width="150" height="50" x="0" y="25" class="band-a">
+          </rect>
+
+          <rect width="190" height="50" x="0" y="75" class="band-b">
+          </rect>
+
+          <rect width="230" height="50" x="0" y="125" class="band-c">
+          </rect>
+
+          <rect width="270" height="50" x="0" y="175" class="band-d">
+          </rect>
+
+          <rect width="310" height="50" x="0" y="225" class="band-e">
+          </rect>
+
+          <rect width="350" height="50" x="0" y="275" class="band-f">
+          </rect>
+
+          <rect width="390" height="50" x="0" y="325" class="band-g">
+          </rect>
+
+
+          <text x="0" y="0" class="letter">
+
+            <tspan x="107" y="64">A</tspan>
+
+            <tspan x="147" y="114">B</tspan>
+
+            <tspan x="187" y="164">C</tspan>
+
+            <tspan x="227" y="214">D</tspan>
+
+            <tspan x="267" y="264">E</tspan>
+
+            <tspan x="307" y="314">F</tspan>
+
+            <tspan x="347" y="364">G</tspan>
+
+          </text>
+
+          <!--<text x="0" y="0" class="small">
+
+            <tspan x="10" y="55">(92+)</tspan>
+
+            <tspan x="10" y="105">(81-91)</tspan>
+
+            <tspan x="10" y="155">(69-80)</tspan>
+
+            <tspan x="10" y="205">(55-68)</tspan>
+
+            <tspan x="10" y="255">(39-54)</tspan>
+
+            <tspan x="10" y="305">(21-38)</tspan>
+
+            <tspan x="10" y="355">(1-20)</tspan>
+
+          </text>-->
+
+          <text x="8" y="15" class="small" dominant-baseline="middle">
+            Energy Rating
+          </text>
+
+          <text x="460" y="15" class="small" text-anchor="middle" dominant-baseline="middle">
+            Current
+          </text>
+
+          <text x="565" y="15" class="small" text-anchor="middle" dominant-baseline="middle">
+            Potential
+          </text>
+
+          <svg x="415" y="275" width="90" height="50">
+            <rect width="75" height="50" class="band-f" x="25"></rect>
+            <polygon points="0,25 25,50 25,0 0,25" class="band-f"></polygon>
+            <text x="40" y="35" class="small-letter">F</text>
+          </svg>
+
+          <svg x="515" y="175" width="90" height="50">
+            <rect width="75" height="50" class="band-d" x="25"></rect>
+            <polygon points="0,25 25,50 25,0 0,25" class="band-d"></polygon>
+            <text x="40" y="35" class="small-letter">D</text>
+          </svg>
+        </svg>
+
+        <p class="govuk-body govuk-!-margin-top-5">
+          This graph shows the current and potential energy ratings for your property.
+        </p>
+        <p class="govuk-body">
+          Energy ratings are measured from A (high) to G (low). The higher the rating, the lower your fuel bills are likely to be.
+        </p>
+        <p class="govuk-body">
+          The average energy rating for a property in England and Wales is D.
+        </p>
+        <p class="govuk-body">
+          Energy ratings are based on assumptions about average occupancy and energy use. They may not reflect how energy is consumed by the people living at the property.
+        </p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="summary"></a>
+        <h2 class="govuk-heading-l">Breakdown of property’s energy performance</h2>
+        <p class="govuk-body">
+          The table below shows the energy performance for features of this property. Only features relevant to this property are shown. The assessment does not consider the condition of a feature and how well it is working.
+        </p>
+        <p class="govuk-body">Each feature is assessed as one of the following:</p><!-- KILL if no assumed section exists -->
+
+        <ul class="govuk-list govuk-list--bullet govuk-!-margin-left-6">
+          <li>very poor (least efficient)</li>
+          <li>poor</li>
+          <li>average</li>
+          <li>good</li>
+          <li>very good (most efficient)</li>
+        </ul>
+
+        <p class="govuk-body">
+          When the description says 'assumed', it means that the insulation could not be inspected and an assumption has been made based on the age and type of your property.
+        </p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Feature</th>
+            <th scope="col" class="govuk-table__header">Description</th>
+            <th scope="col" class="govuk-table__header">Energy performance</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Total floor area</td>
+            <td class="govuk-table__cell">102 m<sup>2</sup></td>
+            <td class="govuk-table__header"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Property type</td>
+            <td class="govuk-table__cell">Top floor flat</td>
+            <td class="govuk-table__header"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Walls</td>
+            <td class="govuk-table__cell">System built, as built, insulated (assumed)</td>
+            <td class="govuk-table__header">Good</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Secondary heating</td>
+            <td class="govuk-table__cell">None</td>
+            <td class="govuk-table__header">Average</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Hot water</td>
+            <td class="govuk-table__cell">Electric immersion, off-peak</td>
+            <td class="govuk-table__header">Very poor</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Main heating</td>
+            <td class="govuk-table__cell">Room heaters, electric</td>
+            <td class="govuk-table__header">Average</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+<!-- CO2 current lower than average -->
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="energy"></a>
+        <h2 class="govuk-heading-l">Environmental impact of this property</h2>
+
+        <p class="govuk-body">One of the biggest contributors to climate change is carbon dioxide (CO<sub>2</sub>). The energy used for heating, lighting and power in our homes produces over a quarter of the UK's CO<sub>2</sub> emissions.</p>
+
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                  <div class="average">
+                      <p class="govuk-body govuk-!-padding-top-3">Average household produces</p>
+                      <br>
+                      <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80">6</p>
+                      <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                  <div class="current">
+                      <p class="govuk-body govuk-!-padding-top-3">This property produces</p>
+                      <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80">2.4</p>
+                      <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                  <div class="potential">
+                      <div class="text">This property's potential production</div>
+                      <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80 govuk-!-padding-top-3">
+                          <span style="color: white;">1.4</span>
+                      </p>
+                      <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+          </div>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body">By making the <a href="#recommendations">recommended changes</a>, you will reduce this property’s carbon emissions by 1.0 tonnes per year and help to protect the environment.</p>
+        <p class="govuk-body">Environmental impact ratings are based on assumptions about average occupancy and energy use. They may not reflect how energy is consumed by the people living at the property.</p>
+      </div>
+    </div>
+
+
+    <!-- CO2 current lower than average and higher than potential -->
+
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="energy"></a>
+        <h2 class="govuk-heading-l">Environmental impact of this property</h2>
+
+        <p class="govuk-body">One of the biggest contributors to climate change is carbon dioxide (CO<sub>2</sub>). The energy used for heating, lighting and power in our homes produces over a quarter of the UK's CO<sub>2</sub> emissions.</p>
+
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                  <div class="average-200">
+                      <p class="govuk-body govuk-!-padding-top-3">Average household produces</p>
+                      <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80">6</p>
+                      <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                  <div class="current">
+                      <p class="govuk-body govuk-!-padding-top-3">This property produces</p>
+                      <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80">7.4</p>
+                      <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                  <div class="potential">
+                      <div class="text">This property's potential production</div>
+                      <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80 govuk-!-padding-top-3">
+                          <span style="color: white;">5.4</span>
+                      </p>
+                      <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+          </div>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body">By making the <a href="#recommendations">recommended changes</a>, you will reduce this property’s carbon emissions by 1.0 tonnes per year and help to protect the environment.</p>
+        <p class="govuk-body">Environmental impact ratings are based on assumptions about average occupancy and energy use. They may not reflect how energy is consumed by the people living at the property.</p>
+      </div>
+    </div>
+
+    <!-- CO2 current lower than average and lower than potential -->
+
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="energy"></a>
+        <h2 class="govuk-heading-l">Environmental impact of this property</h2>
+
+        <p class="govuk-body">One of the biggest contributors to climate change is carbon dioxide (CO<sub>2</sub>). The energy used for heating, lighting and power in our homes produces over a quarter of the UK's CO<sub>2</sub> emissions.</p>
+
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                <div class="average-150">
+                  <div class="text">Average household produces</div>
+                  <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80 govuk-!-padding-top-3">
+                      <span style="color: black;">6</span>
+                  </p>
+                  <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                  <div class="current-300">
+                      <p class="govuk-body govuk-!-padding-top-3">This property produces</p>
+                      <br>
+                      <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80">13.3</p>
+                      <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                  <div class="potential-200">
+                      <div class="text">This property's potential production</div>
+                      <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80 govuk-!-padding-top-3">
+                          <span style="color: white;">11.9</span>
+                      </p>
+                      <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+          </div>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body">By making the <a href="#recommendations">recommended changes</a>, you will reduce this property’s carbon emissions by 1.0 tonnes per year and help to protect the environment.</p>
+        <p class="govuk-body">Environmental impact ratings are based on assumptions about average occupancy and energy use. They may not reflect how energy is consumed by the people living at the property.</p>
+      </div>
+    </div>
+
+
+    <!-- CO2 current lower than average, average and potential are the same-->
+
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="energy"></a>
+        <h2 class="govuk-heading-l">Environmental impact of this property</h2>
+
+        <p class="govuk-body">One of the biggest contributors to climate change is carbon dioxide (CO<sub>2</sub>). The energy used for heating, lighting and power in our homes produces over a quarter of the UK's CO<sub>2</sub> emissions.</p>
+
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                  <div class="average-150">
+                    <div class="text">Average household produces</div>
+                    <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80 govuk-!-padding-top-3">
+                        <span style="color: black;">6</span>
+                    </p>
+                    <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                  <div class="current-300">
+                      <p class="govuk-body govuk-!-padding-top-3">This property produces</p>
+                      <br>
+                      <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80">13.3</p>
+                      <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                  <div class="potential-300">
+                    <p class="govuk-body govuk-!-padding-top-3" style="color: white;">
+                      This property's potential production
+                    </p>
+                    <br>
+                    <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80">
+                      <span style="color: white;">13.3</span>
+                    </p>
+                    <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+          </div>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body">By making the <a href="#recommendations">recommended changes</a>, you will reduce this property’s carbon emissions by 1.0 tonnes per year and help to protect the environment.</p>
+        <p class="govuk-body">Environmental impact ratings are based on assumptions about average occupancy and energy use. They may not reflect how energy is consumed by the people living at the property.</p>
+      </div>
+    </div>
+
+
+    <!-- CO2 current higher than average, average and potential are the same-->
+
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="energy"></a>
+        <h2 class="govuk-heading-l">Environmental impact of this property</h2>
+
+        <p class="govuk-body">One of the biggest contributors to climate change is carbon dioxide (CO<sub>2</sub>). The energy used for heating, lighting and power in our homes produces over a quarter of the UK's CO<sub>2</sub> emissions.</p>
+
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                <div class="average">
+                    <p class="govuk-body govuk-!-padding-top-3">Average household produces</p>
+                    <br>
+                    <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80">6</p>
+                    <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="current">
+                    <p class="govuk-body govuk-!-padding-top-3">This property produces</p>
+                    <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80">3.4</p>
+                    <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                  <div class="potential-250">
+                    <p class="govuk-body govuk-!-padding-top-3" style="color: white;">
+                      This property's potential production
+                    </p>
+                    <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80">
+                      <span style="color: white;">3.4</span>
+                    </p>
+                    <div class="text-bottom">tonnes of CO<sub>2</sub></div>
+                  </div>
+              </div>
+          </div>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body">By making the <a href="#recommendations">recommended changes</a>, you will reduce this property’s carbon emissions by 1.0 tonnes per year and help to protect the environment.</p>
+        <p class="govuk-body">Environmental impact ratings are based on assumptions about average occupancy and energy use. They may not reflect how energy is consumed by the people living at the property.</p>
+      </div>
+    </div>
+
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="epc-page-break">
+        <a name="recommendations"></a>
+        <h2 class="govuk-heading-l">How to improve this property’s energy performance</h2>
+        <div class="epc-rating-box">
+          <p class="epc-rating-title govuk-body">
+            Potential Energy Rating
+          </p>
+          <p class="epc-rating-result govuk-body">
+            D
+          </p>
+        </div>
+
+        <p class="govuk-body">Making any of the recommended changes will improve your property’s energy efficiency.</p>
+        <p class="govuk-body">If you make all of the changes recommended below, this will improve your property’s energy rating to D.</p>
+
+        <br style="clear: both;" />
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-m">Recommendation 1: Internal or external wall insulation</h3>
+      <p class="govuk-body">
+        Solid walls have no gap, so they cannot be filled with cavity wall insulation. <br /><br />
+        <a href="https://energysavingtrust.org.uk/home-insulation/solid-wall">Understand more about wall insulation on Energy Saving Trust</a>.
+      </p>
+
+      <div class="govuk-body">
+        <div style="width: 50%; float: left;">
+          <p>
+            Typical installation cost
+            <br />
+            <strong>£9,000</strong>
+          </p>
+        </div>
+        <div style="width: 50%; float: right;">
+          <p>
+            Typical yearly saving
+            <br />
+            <strong>£639</strong>
+          </p>
+        </div>
+      </div>
+
+      <br style="clear: both;" />
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-m">Recommendation 2: Low energy lighting for all fixed outlets</h3>
+      <p class="govuk-body">
+          Replacement of traditional light bulbs with energy saving recommended ones will reduce lighting costs over the lifetime of the bulb, and they last up to 12 times longer than ordinary light bulbs. Also consider selecting low energy light fittings when redecorating; contact the Lighting Association for your nearest stockist of Domestic Energy Efficient Lighting Scheme fittings.<br /><br />
+        <a href="https://energysavingtrust.org.uk/home-insulation/solid-wall">Understand more about low energy lights on Energy Saving Trust</a>.
+      </p>
+
+      <div class="govuk-body">
+        <div style="width: 50%; float: left;">
+          <p>
+            Typical installation cost
+            <br />
+            <strong>£26</strong>
+          </p>
+        </div>
+        <div style="width: 50%; float: right;">
+          <p>
+            Typical yearly saving
+            <br />
+            <strong>£21</strong>
+          </p>
+        </div>
+      </div>
+
+      <br style="clear: both;" />
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-m">Recommendation 3: High heat retention storage heaters</h3>
+      <p class="govuk-body">
+          Modern storage heaters are smaller and easier to control than the older type in the property. Ask for a quotation for new, fan-assisted heaters with automatic charge control.  As installations should be in accordance with the current regulations covering electrical wiring, only a qualified electrician should carry out the installation. Building Regulations apply to this work, so your local authority building control department should be informed, unless the installer is registered with a competent persons scheme, and can therefore self-certify the work for Building Regulation compliance. Ask a qualified electrical heating engineer to explain the options which might also include switching to other forms of electric heating.<br /><br />
+        <a href="https://energysavingtrust.org.uk/home-insulation/solid-wall">Understand more about storage heaters on Energy Saving Trust</a>.
+      </p>
+
+      <div class="govuk-body">
+        <div style="width: 50%; float: left;">
+          <p>
+            Typical installation cost
+            <br />
+            <strong>£1,000</strong>
+          </p>
+        </div>
+        <div style="width: 50%; float: right;">
+          <p>
+            Typical yearly saving
+            <br />
+            <strong>£147</strong>
+          </p>
+        </div>
+      </div>
+
+      <br style="clear: both;" />
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="epc-blue-bottom">
+        <h3 class="govuk-heading-m">Paying for energy improvements</h3>
+        <p class="govuk-body">
+          <a href="https://www.gov.uk/improve-energy-efficiency">Find energy grants and ways to save energy in your home</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="epc-blue-bottom">
+        <a name="heat-demand"></a>
+        <h3 class="govuk-heading-l">Estimated energy use and potential savings</h3>
+        <p class="govuk-body">Heating a property usually makes up the majority of energy costs.</p>
+        <p class="govuk-body">The table below shows the estimated energy use to heat this property’s rooms (space) and water. It also shows the energy that could be saved by installing insulation.</p>
+
+        <div class="govuk-grid-column-one-half">
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p class="govuk-body">Estimated space heating use</p>
+          <p class="govuk-body"><span class="govuk-!-font-size-36 govuk-!-font-weight-bold">25,874</span>  kWh per year</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p class="govuk-body">Estimated water heating use</p>
+          <p class="govuk-body"><span class="govuk-!-font-size-36 govuk-!-font-weight-bold">2,302</span>  kWh per year</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-margin-top-6">
+          <p class="govuk-body">Potential space heating saving</p>
+          <p class="govuk-body inset-text"><span class="govuk-!-font-size-36 govuk-!-font-weight-bold">8,945</span> kWh per year</p>
+        </div>
+
+        <div class="govuk-grid-column-full govuk-!-margin-top-5">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Potential space heating energy saving breakdown</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Type of insulation</th>
+              <th scope="col" class="govuk-table__header">Amount of energy saved (kWh per year)</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Loft insulation</th>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                2,231
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Cavity wall insulation</th>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                6,712
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        <p class="govuk-body govuk-!-margin-top-2" style="clear: both;">
+          You may be able to receive <a href="https://www.gov.uk/domestic-renewable-heat-incentive">Renewable Heat Incentive payments</a>.
+          This will help to reduce carbon emissions by replacing your existing heating system with one that generates renewable heat.
+        </p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="information"></a>
+        <h2 class="govuk-heading-l">Contacting the assessor and accreditation scheme</h2>
+        <p class="govuk-body">This EPC was created by a qualified energy assessor.</p>
+        <p class="govuk-body">If you are unhappy about the energy assessment or certificate, you can complain to the assessor directly.</p>
+        <p class="govuk-body">If you are still unhappy after contacting the assessor, you should contact the assessor’s accreditation scheme.</p>
+        <p class="govuk-body">Accreditation schemes are appointed by the government to ensure that assessors are qualified to carry out EPC assessments.</p>
+
+        <h2 class="govuk-heading-m">Assessor contact details</h2>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row" id="name">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Assessor's name</dt>
+            <dd class="govuk-summary-list__value">Andrew Stonemason</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="phone">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Telephone</dt>
+            <dd class="govuk-summary-list__value">0707 164 6673</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="email">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">E-mail</dt>
+            <dd class="govuk-summary-list__value"><a href="mailto:">Andy.stone@provider.com</a></dd>
+          </div>
+        </dl>
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Accreditation scheme contact details</h2>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row" id="Accreditation_scheme">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Accreditation scheme</dt>
+            <dd class="govuk-summary-list__value">ECMK</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="accreditation_id">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Assessor's accreditation number</dt>
+            <dd class="govuk-summary-list__value">ECMK001884</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="scheme-phone">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Telephone</dt>
+            <dd class="govuk-summary-list__value">0207 164 6673</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="scheme-email">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">E-mail</dt>
+            <dd class="govuk-summary-list__value"><a href="mailto:">support@ecmk.com</a></dd>
+          </div>
+        </dl>
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Assessment details</h2>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row" id="related_party_disclosure">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Related party disclosure</dt>
+            <dd class="govuk-summary-list__value">No related party</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="date_of_assessment">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of assessment</dt>
+            <dd class="govuk-summary-list__value">9 August 2018</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="date_of_certificate">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of certificate</dt>
+            <dd class="govuk-summary-list__value">9 August 2018</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="assessment_type">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Type of assessment</dt>
+            <dd class="govuk-summary-list__value"><a href="#">RdSAP</a>, existing property</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-blue-bottom">
+        <a name="previous"></a>
+        <h2 class="govuk-heading-l">Other certificates for this property</h2>
+
+        <p class="govuk-body">If you are aware of previous assessments for this property and they are not listed here please contact the Help Desk at 0207 164 6672.</p>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Reference number</th>
+              <th scope="col" class="govuk-table__header">EPC Rating</th>
+              <th scope="col" class="govuk-table__header">EPC Expiry Date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/find-a-certificate-result-1">9876-6789-5432-2345-1357</a></th>
+              <td class="govuk-table__cell">D</td>
+              <td class="govuk-table__cell">9 August 2028</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
