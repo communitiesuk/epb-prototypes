@@ -1,0 +1,371 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find an assessor | Energy performance of buildings
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper" id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-!-margin-bottom-8">
+        <a href="/find-a-certificate" class="govuk-back-link">Back</a>
+        <h1 class="govuk-heading-xl">
+          Non Domestic Energy Performance Certificate
+        </h1>
+      </div>
+
+      <hr class="epc-light-top" />
+
+      <div class="epc-blue-bottom">
+        <div class="epc-box">
+          <div class="epc-rating-box">
+            <p class="epc-rating-title govuk-body">
+              Energy rating
+            </p>
+            <p class="epc-rating-result govuk-body">
+              B
+            </p>
+          </div>
+          <p class="epc-address govuk-body">
+            66 Primrose Hill<br>
+            London<br>
+            NW3 2UU
+          </p>
+          <p class="govuk-body epc-extra-box">
+            Valid until 21 September 2020
+          </p>
+          <p class="govuk-body epc-extra-box">
+            <span>Certificate number</span>
+            <b>9876-6789-5432-2345-1350</b>
+          </p>
+        </div>
+      </div>
+      <div>
+        <a onclick="window.print();return false;" class="govuk-link govuk-!-margin-bottom-5" id="link" href="#" style="display: none;">Print this certificate page</a>
+        <noscript><p class="govuk-body">To print this certificate, press cmd/ctrl+p on your keyboard</p></noscript>
+        <script>document.getElementById('link').style.display = 'block';</script>
+
+        <hr class="epc-light-top">
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third" style="margin-top: 192px;">
+      <hr class="epc-blue-top" />
+      <h2 class="govuk-heading-m">Contents</h2>
+      <div class="dashed-p">
+        <p class="govuk-body"><a href="#renting">Rules on letting this property</a></p>
+        <p class="govuk-body"><a href="#epc">Energy performance rating for this property</a></p>
+        <p class="govuk-body"><a href="#summary">Breakdown of property's energy performance</a></p>
+        <p class="govuk-body"><a href="#energy">Environmental impact of this property</a></p>
+        <p class="govuk-body"><a href="#recommendations">How to improve this property’s energy performance</a></p>
+        <p class="govuk-body"><a href="#heat-demand">Estimated energy use and potential savings</a></p>
+        <p class="govuk-body"><a href="#information">Contacting the assessor and accreditation scheme</a></p>
+        <p class="govuk-body"><a href="#previous">Other certificates for this property</a></p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-!-margin-bottom-8 epc-blue-bottom">
+        <a name="epc"></a>
+        <h2 class="govuk-heading-l">Energy performance rating for this property</h2>
+
+        <p class="govuk-body govuk-!-margin-bottom-6">
+          Your property’s energy rating is B. It has the potential to be B by following the recommendations on <a href="#recommendations">how to improve this property’s energy performance</a>.
+        </p>
+
+        <svg width="615" height="376" viewBox="0 0 615 376" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" role="img">
+          <style>
+            .letter {
+              font-size: 40px;
+              font-family: sans-serif;
+              fill: #fff;
+              font-weight: bold;
+            }
+
+            .small-letter {
+              font-size: 30px;
+              font-family: sans-serif;
+              fill: #fff;
+              font-weight: bold;
+              text-align: center;
+            }
+
+            .small {
+              font-size: 20px;
+              font-family: sans-serif;
+              fill: #000;
+              line-height: 50px;
+              margin-top: 100px;
+            }
+
+            .small tspan:first-child,
+            .small tspan:last-child {
+              fill: #fff;
+            }
+
+
+            .band-a {
+              fill: #008054
+            }
+
+            .band-b {
+              fill: #19b459
+            }
+
+            .band-c {
+              fill: #8dce46
+            }
+
+            .band-d {
+              fill: #ffd500
+            }
+
+            .band-e {
+              fill: #fcaa65
+            }
+
+            .band-f {
+              fill: #ef8023
+            }
+
+            .band-g {
+              fill: #e9153b
+            }
+          </style>
+
+          <line x1="410" y1="0" x2="410" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="510" y1="0" x2="510" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="0" y1="25" x2="615" y2="25" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="0" y1="0" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>
+
+          <line x1="0" y1="0" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="0" y1="0" x2="0" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="615" y1="376" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>
+          <line x1="615" y1="376" x2="0" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
+
+          <rect width="150" height="50" x="0" y="25" class="band-a">
+          </rect>
+
+          <rect width="190" height="50" x="0" y="75" class="band-b">
+          </rect>
+
+          <rect width="230" height="50" x="0" y="125" class="band-c">
+          </rect>
+
+          <rect width="270" height="50" x="0" y="175" class="band-d">
+          </rect>
+
+          <rect width="310" height="50" x="0" y="225" class="band-e">
+          </rect>
+
+          <rect width="350" height="50" x="0" y="275" class="band-f">
+          </rect>
+
+          <rect width="390" height="50" x="0" y="325" class="band-g">
+          </rect>
+
+
+          <text x="0" y="0" class="letter">
+
+            <tspan x="107" y="64">A</tspan>
+
+            <tspan x="147" y="114">B</tspan>
+
+            <tspan x="187" y="164">C</tspan>
+
+            <tspan x="227" y="214">D</tspan>
+
+            <tspan x="267" y="264">E</tspan>
+
+            <tspan x="307" y="314">F</tspan>
+
+            <tspan x="347" y="364">G</tspan>
+
+          </text>
+
+          <!--<text x="0" y="0" class="small">
+
+            <tspan x="10" y="55">(92+)</tspan>
+
+            <tspan x="10" y="105">(81-91)</tspan>
+
+            <tspan x="10" y="155">(69-80)</tspan>
+
+            <tspan x="10" y="205">(55-68)</tspan>
+
+            <tspan x="10" y="255">(39-54)</tspan>
+
+            <tspan x="10" y="305">(21-38)</tspan>
+
+            <tspan x="10" y="355">(1-20)</tspan>
+
+          </text>-->
+
+          <text x="8" y="15" class="small" dominant-baseline="middle">
+            Energy Rating
+          </text>
+
+          <text x="460" y="15" class="small" text-anchor="middle" dominant-baseline="middle">
+            Current
+          </text>
+
+          <text x="565" y="15" class="small" text-anchor="middle" dominant-baseline="middle">
+            Potential
+          </text>
+
+          <svg x="415" y="75" width="90" height="50">
+            <rect width="75" height="50" class="band-b" x="25"></rect>
+            <polygon points="0,25 25,50 25,0 0,25" class="band-b"></polygon>
+            <text x="40" y="35" class="small-letter">B</text>
+          </svg>
+
+          <svg x="515" y="75" width="90" height="50">
+            <rect width="75" height="50" class="band-b" x="25"></rect>
+            <polygon points="0,25 25,50 25,0 0,25" class="band-b"></polygon>
+            <text x="40" y="35" class="small-letter">B</text>
+          </svg>
+        </svg>
+
+        <p class="govuk-body govuk-!-margin-top-5">
+          This graph shows the current and potential energy ratings for your property.
+        </p>
+        <p class="govuk-body">
+          Energy ratings are measured from A (high) to G (low). The higher the rating, the lower your fuel bills are likely to be.
+        </p>
+        <p class="govuk-body">
+          The average energy rating for a property in England and Wales is D.
+        </p>
+        <p class="govuk-body">
+          Energy ratings are based on assumptions about average occupancy and energy use. They may not reflect how energy is consumed by the people living at the property.
+        </p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="benchmarks"></a>
+        <h2 class="govuk-heading-l">Benchmarks</h2>
+        <p class="govuk-body">Buildings similar to this one could have ratings as follows:</p>
+
+        If newly built
+        <svg x="415" y="75" width="90" height="50">
+          <rect width="75" height="50" class="band-a" x="25"></rect>
+          <polygon points="0,25 25,50 25,0 0,25" class="band-a"></polygon>
+          <text x="40" y="35" class="small-letter">A</text>
+        </svg>
+
+        <p></p>
+
+        If typical of the existing stock
+        <svg x="415" y="75" width="90" height="50">
+          <rect width="75" height="50" class="band-b" x="25"></rect>
+          <polygon points="0,25 25,50 25,0 0,25" class="band-b"></polygon>
+          <text x="40" y="35" class="small-letter">B</text>
+        </svg>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-body epc-page-break epc-blue-bottom">
+      <a name="technical-information"></a>
+      <h2 class="govuk-heading-l">Technical Information</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Feature</th>
+          <th scope="col" class="govuk-table__header">Description</th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Main heating fuel</td>
+          <td class="govuk-table__cell">District Heating</td>
+          <td class="govuk-table__header"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Building environment:</td>
+          <td class="govuk-table__cell">Heating and Natural Ventilation</td>
+          <td class="govuk-table__header"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Total useful floor area (m2)</td>
+          <td class="govuk-table__cell">212</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Assessment Level</td>
+          <td class="govuk-table__cell">3</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Building emission rate (kgCO2/m2 per year)</td>
+          <td class="govuk-table__cell">30.12</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Primary energy use (kWh/m2 per year)</td>
+          <td class="govuk-table__cell">161.86</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-body epc-page-break epc-blue-bottom">
+      <a name="technical-information"></a>
+      <h2 class="govuk-heading-l">About this certificate</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <p class="govuk-body">This is an Energy Performance Certificate as defined in the Energy Performance of Buildings Regulations 2012 as amended.</p>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Assessment Software</td>
+          <td class="govuk-table__cell">iSBEM v5.4.b using calulation engine SBEM v5.4.b.0</td>
+          <td class="govuk-table__header"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Assessor Name</td>
+          <td class="govuk-table__cell">Barry Garlow</td>
+          <td class="govuk-table__header"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Assessor Accreditation ID</td>
+          <td class="govuk-table__cell">QUID205385</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Accreditation Scheme</td>
+          <td class="govuk-table__cell">Quidos Limited</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Employer/Trading Name</td>
+          <td class="govuk-table__cell">Nexus</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Issue Date</td>
+          <td class="govuk-table__cell">08 Oct 2018</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Valid until</td>
+          <td class="govuk-table__cell">07 Oct 2028 (unless superseded by a later certificate)</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Related Party Disclosure</td>
+          <td class="govuk-table__cell">Not related to the owner.</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-body epc-page-break epc-blue-bottom">
+      <a name="technical-information"></a>
+      <h2 class="govuk-heading-l">Recommendation Report</h2>
+      <p class="govuk-body"><a href="#">Recommendation Report</a></p>
+  </div>
+</main>
+
+{% endblock %}
