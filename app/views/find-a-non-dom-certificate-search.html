@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a certificate | Energy performance of buildings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="/find-a-non-dom-certificate" class="govuk-back-link">
+            Back
+        </a>
+
+        <h1 class="govuk-heading-xl">
+            Find an EPC by postcode
+        </h1>
+
+        <form method="GET" action="/find-a-non-dom-certificate-results">
+            <fieldset class="govuk-fieldset fieldset-background">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="postcode">
+                        Enter a postcode
+                    </label>
+                    <span id="postcode-hint" class="govuk-hint">
+            For example SW1A 2AA
+          </span>
+                    <input id="postcode" name="postcode" type="text" class="govuk-input" aria-describedby="postcode-hint" autocomplete="postal-code" spellcheck="false">
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">Find</button>
+            </fieldset>
+        </form>
+
+        <p class="govuk-body">
+            If you don’t know the property’s postcode, <a href="/find-a-certificate-search-by-street-name-and-town">find an EPC using the street name and town</a>.
+        </p>
+    </div>
+</div>
+
+{% endblock %}
