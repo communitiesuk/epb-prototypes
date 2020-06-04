@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a certificate | Energy performance of buildings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="/find-a-certificate-search" class="govuk-back-link">
+            Back
+        </a>
+
+        <h1 class="govuk-heading-xl">
+            Find assessment reports by reference number
+        </h1>
+
+        <form method="GET" action="/find-a-non-dom-certificate-by-street-name-and-town-results">
+            <fieldset class="govuk-fieldset fieldset-background">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="reference_number">
+                        Enter a reference number:
+                    </label>
+                    <span id="street-name-hint" class="govuk-hint">
+                        For example RRN-0000-0001-0002-0003
+                     </span>
+                    <input id="reference_number" name="reference_number" type="text" class="govuk-input" aria-describedby="reference-number-hint" spellcheck="false">
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">Find</button>
+            </fieldset>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
