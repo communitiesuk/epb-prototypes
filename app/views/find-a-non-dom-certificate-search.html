@@ -6,11 +6,19 @@ Find a certificate | Energy performance of buildings
 
 {% block content %}
 
-<!--<script>-->
-<!--  function myFunction() {-->
-<!--    document.getElementById("demo").innerHTML = "Paragraph changed.";-->
-<!--  }-->
-<!--</script>-->
+<script>
+  function myFunction() {
+    if (document.getElementById("epc").checked == true) {
+      document.postcodeform.action = "/find-a-non-dom-certificate-results-epc";
+    } else if (document.getElementById("dec").checked == true) {
+      document.postcodeform.action = "/find-a-non-dom-certificate-results-dec";
+    } else if (document.getElementById("ac").checked == true) {
+      document.postcodeform.action = "/find-a-non-dom-certificate-results-ac";
+    } else {
+      document.postcodeform.action = "/find-a-non-dom-certificate-results";
+    }
+  }
+</script>
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -22,7 +30,7 @@ Find a certificate | Energy performance of buildings
             Find assessment reports by postcode
         </h1>
 
-        <form method="GET" action="/find-a-non-dom-certificate-results">
+        <form method="GET" id="form" onSubmit="myFunction()" name="postcodeform">
             <fieldset class="govuk-fieldset fieldset-background">
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="postcode">
@@ -40,20 +48,20 @@ Find a certificate | Energy performance of buildings
                     <br>
                     <div class="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-                            <label class="govuk-label govuk-radios__label" for="changed-name">
+                            <input class="govuk-radios__input" id="epc" type="radio" value="epc">
+                            <label class="govuk-label govuk-radios__label" for="epc">
                                 Non Domestic EPC/Recommendation Report
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                            <input class="govuk-radios__input" id="dec" type="radio" value="dec">
+                            <label class="govuk-label govuk-radios__label" for="dec">
                                 Display Energy Certificate/Advisory Report
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                            <input class="govuk-radios__input" id="ac" type="radio" value="ac">
+                            <label class="govuk-label govuk-radios__label" for="ac">
                                 Air Conditioning Inspection Certificate/Inspection Report
                             </label>
                         </div>
@@ -68,8 +76,7 @@ Find a certificate | Energy performance of buildings
                     </p>
                 </div>
                 <br>
-
-                <button class="govuk-button" data-module="govuk-button">Find</button>
+                <input class="govuk-button" data-module="govuk-button" type="submit" value="Find" class="button">
             </fieldset>
         </form>
 
