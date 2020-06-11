@@ -6,28 +6,68 @@ Find a certificate | Energy performance of buildings
 
 {% block content %}
 
-<div class="govuk-grid-row">
+<form class="govuk-grid-row">
+    <h1 class="govuk-heading-xl">
+        View assessment reports for <br />non-domestic buildings
+    </h1>
+    <input type="text" name="postcode" placeholder="Postcode" style="width: 100%; border: 2px solid #333; line-height: 40px; height: 40px; margin-bottom: 20px; " class="govuk-input" />
+    <p class="govuk-body">Results show the building's most recent certificate and report for each assessment type. Links to previous assessments can be found on the most recent certificate and report.</p>
+    <h2 class="govuk-heading-m">4 assessment reports for NW3 2UU</h2>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint" style="padding: 10px; background: #eee;">
+                <h4 class="govuk-heading-s">
+                    Certificates and reports
+                </h4>
+                <div class="govuk-checkboxes" style="background: #fff; padding: 5px;">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                            Energy Performance Certificate (EPC) and Recommendations Report (EPC-RR)
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                            Display Energy Certificate (DEC) and Advisory Report (DEC-AR)
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                            Air Condition Inspection Report (AC-REPORT) and Air Condition Inspection Certificate (AC-CERT)
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <a
+                    href="/find-a-non-dom-certificate-result"
+                    role="button"
+                    draggable="false"
+                    class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+                    data-module="govuk-button">
+                Filter results
+            </a>
+        </div>
+    </div>
+
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">
-            View assessment reports for non-domestic buildings
-        </h1>
-
-        <h2 class="govuk-heading-m">4 assessment reports for NW3 2UU</h2>
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
         <table class="govuk-table">
             <thead class="govuk-table__head">
             <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header">Address</th>
                 <th scope="col" class="govuk-table__header">Report type</th>
-                <th scope="col" class="govuk-table__header">EPC Expiry Date</th>
+                <th scope="col" class="govuk-table__header">Expiry Date</th>
             </tr>
             </thead>
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header"><a href="/find-a-non-dom-certificate-result-1">69 Primrose Hill, LONDON, NW3 2UU</a></th>
-                    <td class="govuk-table__cell">EPC</td>
-                    <td class="govuk-table__cell">30 September 2019</td>
+                    <td class="govuk-table__cell">EPC<br /><br />EPC-RR<br /><br />DEC<br /><br />DEC-AR<br /><br />AC-REPORT<br /><br />AC-CERT</td>
+                    <td class="govuk-table__cell">30 September 2019<br /><br />30 September 2019<br /><br />1 November 2010<br /><br />25 January 2015<br /><br />10 August 2012<br /><br />20 September 2017</td>
                 </tr>
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header"><a href="/find-a-non-dom-certificate-result-1">70 Barn Hill, LONDON, NW3 2UU</a></th>
@@ -46,8 +86,7 @@ Find a certificate | Energy performance of buildings
                 </tr>
             </tbody>
         </table>
-
     </div>
-</div>
+</form>
 
 {% endblock %}
