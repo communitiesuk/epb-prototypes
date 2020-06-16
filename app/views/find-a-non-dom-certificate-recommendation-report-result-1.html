@@ -1,0 +1,272 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find an assessor | Energy performance of buildings
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper" id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-!-margin-bottom-8">
+      <a href="/find-a-certificate" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-xl">
+        Non-domestic Energy Performance Certificate Recommendation Report
+      </h1>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <hr class="epc-blue-top" />
+      <h2 class="govuk-heading-m">Report Contents</h2>
+      <div class="dashed-p">
+        <p class="govuk-body"><a href="#rating">Energy rating and EPC</a></p>
+        <p class="govuk-body"><a href="#recommendations">Recommendations</a></p>
+        <p class="govuk-body"><a href="#building">Building and report details</a></p>
+        <p class="govuk-body"><a href="#assessor">Assessor's details</a></p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <hr class="epc-light-top" />
+
+      <div class="epc-blue-bottom">
+        <div class="epc-box">
+          <div class="epc-rr-report-box">
+            <p class="govuk-body">
+              Report number<br>
+              <b>9876-6789-5432-2345-1350</b>
+            </p>
+          </div>
+          <div class="epc-rr-expiry-box">
+            <p class="govuk-body">
+              Valid until<br>
+              <b>21 September 2020</b>
+            </p>
+          </div>
+          <p class="epc-rr-address govuk-body">
+            66 Primrose Hill<br>
+            London<br>
+            NW3 2UU
+          </p>
+        </div>
+      </div>
+      <div>
+        <a onclick="window.print();return false;" class="govuk-link govuk-!-margin-bottom-5" id="link" href="#" style="display: none;">Print this report</a>
+        <noscript><p class="govuk-body">To print this report, press CMD/CTRL + P on your keyboard</p></noscript>
+        <script>document.getElementById('link').style.display = 'block';</script>
+
+        <hr class="epc-light-top">
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a id="rating"></a>
+        <h2 class="govuk-heading-l">Energy rating and EPC</h2>
+
+        <p class="govuk-body govuk-!-margin-bottom-6">
+          This building’s current energy rating is F.
+        </p>
+
+        <p class="govuk-body govuk-!-margin-bottom-6">
+          For more information, see the <a href="./find-a-non-dom-certificate-result-1">Energy Performance Certificate for this report</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-!-margin-bottom-8 epc-blue-bottom">
+        <a id="recommendations"></a>
+        <h2 class="govuk-heading-l">Recommendations</h2>
+
+        <p class="govuk-body govuk-!-margin-bottom-6">
+          The assessment found opportunities to improve the building's energy efficiency.
+        </p>
+        <p class="govuk-body govuk-!-margin-bottom-6">
+          Recommended improvements are grouped by the estimated time it would take for the change to pay for itself. The assessor may also make additional recommendations.
+        </p>
+        <p class="govuk-body govuk-!-margin-bottom-6">
+          Each recommendation is marked as low, medium or high for the potential impact the change would have on reducing the building’s carbon emissions.
+        </p>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Changes that pay for themselves within 3 years</caption>
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Recommendation</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Potential impact</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Consider replacing T8 lamps with retrofit T5 conversion kit.</th>
+            <td class="govuk-table__cell">High</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Introduce HF (high frequency) ballasts for fluorescent tubes: Reduced number of fittings required.</th>
+            <td class="govuk-table__cell">Low</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Changes that pay for themselves within 3 to 7 years</caption>
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Recommendation</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Potential impact</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+              Add optimum start/stop to the heating system.
+            </th>
+            <td class="govuk-table__cell">Low</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+              Add weather compensation controls to heating system.
+            </th>
+            <td class="govuk-table__cell">Low</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Changes that pay for themselves in more than 7 years</caption>
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Recommendation</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Potential impact</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+              Consider installing an air source heat pump.
+            </th>
+            <td class="govuk-table__cell">Medium</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+              Consider installing solar water heating.
+            </th>
+            <td class="govuk-table__cell">Low</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Additional recommendations</caption>
+
+          <p class="govuk-body govuk-!-margin-bottom-6">
+            This table lists additional recommendations made by the assessor.
+          </p>
+
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Recommendation</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Potential impact</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+              Consider installing PV.
+            </th>
+            <td class="govuk-table__cell">Medium</td>
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a id="building"></a>
+        <h2 class="govuk-heading-l">Building and report details</h2>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row" id="date">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Report issued on</dt>
+            <dd class="govuk-summary-list__value">22 September 2010</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="floor">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Total useful floor area</dt>
+            <dd class="govuk-summary-list__value">935 metres squared</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="environment">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Building environment</dt>
+            <dd class="govuk-summary-list__value">Air conditioning</dd>
+          </div>
+          <div class="govuk-summary-list__row" id="tools">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Calculation tools</dt>
+            <dd class="govuk-summary-list__value">CLG, iSBEM, v5.4.b, SBEM, v5.4.b.0</dd>
+          </div>
+        </dl>
+
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a id="assessor"></a>
+        <h2 class="govuk-heading-l">Assessor’s details</h2>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row" id="name">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Assessor's name</dt>
+            <dd class="govuk-summary-list__value">John Howard</dd>
+          </div>
+
+          <div class="govuk-summary-list__row" id="employer">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Employer's name</dt>
+            <dd class="govuk-summary-list__value">Viridian Consulting Engineers Ltd</dd>
+          </div>
+
+          <div class="govuk-summary-list__row" id="address">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Employer’s address</dt>
+            <dd class="govuk-summary-list__value">Lloyds House, 18, Lloyd Street,
+              Manchester, M2 5WA
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row" id="number">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Assessor number</dt>
+            <dd class="govuk-summary-list__value">ECMK201470</dd>
+          </div>
+
+          <div class="govuk-summary-list__row" id="scheme">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Accreditation scheme</dt>
+            <dd class="govuk-summary-list__value">ECMK Ltd</dd>
+          </div>
+
+          <div class="govuk-summary-list__row" id="declaration">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Assessor’s declaration</dt>
+            <dd class="govuk-summary-list__value">
+              <details class="govuk-details" data-module="govuk-details" open="">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    No connection to the property
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  The assessor declared they have no personal or business connection with the property’s owner or anyone who may have an interest in the property.
+                </div>
+              </details>
+            </dd>
+          </div>
+
+        </dl>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

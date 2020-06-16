@@ -32,11 +32,17 @@
   background: #005ea5;
   padding: 0;
   overflow: hidden;
+  border: 1px solid #000;
 }
 
 .epc-box .epc-address {
   padding-left: 30px;
   padding-top: 30px;
+}
+
+.epc-box .epc-rr-address {
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .epc-box p.govuk-body, .epc-rating-box p.govuk-body {
@@ -54,6 +60,25 @@
 
 .epc-rating-box.do-wide {
   width: 45%;
+}
+
+.epc-rr-report-box {
+  padding-top: 10px;
+  width: 315px;
+  background: #005ea5;
+  text-align: center;
+  float: right;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.epc-rr-expiry-box {
+  padding-top: 10px;
+  width: 315px;
+  background: #005ea5;
+  text-align: center;
+  float: right;
+  border-left: 1px solid #000;
 }
 
 .epc-rating-title {
