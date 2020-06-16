@@ -1,0 +1,474 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find an assessor | Energy performance of buildings
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper" id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-!-margin-bottom-8">
+      <a href="/find-a-non-dom-certificate" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-xl">
+        Non-domestic Energy Performance Certificate
+      </h1>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <hr class="epc-blue-top" />
+      <h2 class="govuk-heading-m">Certificate Contents</h2>
+      <div class="dashed-p">
+        <p class="govuk-body"><a href="#renting">Rules on letting this property</a></p>
+        <p class="govuk-body"><a href="#epc">Energy efficiency rating for this building</a></p>
+        <p class="govuk-body"><a href="#benchmark">How this building compares to others</a></p>
+        <p class="govuk-body"><a href="#technical-information">Breakdown of this building's energy performance</a></p>
+        <p class="govuk-body"><a href="#recommendation-report">Recommendation Report</a></p>
+        <p class="govuk-body"><a href="#certificate">Contacting the assessor and accreditation scheme</a></p>
+        <p class="govuk-body"><a href="#previous">Other certificates for this property</a></p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <hr class="epc-light-top" />
+
+      <div class="epc-blue-bottom">
+        <div class="epc-box">
+          <div class="epc-rating-box">
+            <p class="epc-rating-title govuk-body">
+              Energy rating
+            </p>
+            <p class="epc-rating-result govuk-body">
+              F
+            </p>
+          </div>
+          <p class="epc-address govuk-body">
+            69 Primrose Hill<br>
+            London<br>
+            NW3 2UU
+          </p>
+          <p class="govuk-body epc-extra-box">
+            Valid until 21 September 2020
+          </p>
+          <p class="govuk-body epc-extra-box">
+            <span>Certificate number</span>
+            <b>9876-6789-5432-2345-1350</b>
+          </p>
+        </div>
+      </div>
+      <div>
+        <a onclick="window.print();return false;" class="govuk-link govuk-!-margin-bottom-5" id="link" href="#" style="display: none;">Print this certificate page</a>
+        <noscript><p class="govuk-body">To print this certificate, press cmd/ctrl+p on your keyboard</p></noscript>
+        <script>document.getElementById('link').style.display = 'block';</script>
+
+        <hr class="epc-light-top">
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="renting"></a>
+        <h2 class="govuk-heading-l">Rules on letting this property</h2>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <div class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              You may not be able to let this property
+            </h2>
+            <div class="govuk-error-summary__body">
+              <p class="govuk-body">
+                This building has an EPC rating of F or G. The landlord cannot grant a tenancy to new or existing tenants, unless an exemption has been registered.
+              </p>
+
+              <p class="govuk-body">
+                From 1 April 2023, landlords will not be allowed to continue letting a non-domestic property which is already let if that building has an EPC rating of F or G.
+              </p>
+
+              <p>
+                You can read <a href="https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance">guidance for landlords on the regulations and exemptions</a>.
+              </p>
+              <p>
+                Buildings can be let if they have an energy rating of A+ to E. The recommendations report sets out changes you can make to improve the building’s rating.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-!-margin-bottom-8 epc-blue-bottom">
+        <a name="epc"></a>
+        <h2 class="govuk-heading-l">Energy efficiency rating for this building</h2>
+
+        <p class="govuk-body govuk-!-margin-bottom-6">
+          This building’s current energy rating is F.
+        </p>
+
+        <svg width="615" height="426" viewBox="0 0 615 426" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" role="img">
+          <style>
+            .letter {
+              font-size: 40px;
+              font-family: sans-serif;
+              fill: black;
+              font-weight: bold;
+            }
+
+            .current-potential-number {
+              font-size: 27px;
+              font-family: sans-serif;
+              fill: #000;
+              line-height: 50px;
+              margin-top: 100px;
+            }
+
+            .small-letter {
+              font-size: 24px;
+              font-family: sans-serif;
+              fill: black;
+              font-weight: bold;
+              text-align: center;
+            }
+
+            .small {
+              font-size: 20px;
+              font-family: sans-serif;
+              fill: black;
+              line-height: 50px;
+              margin-top: 100px;
+            }
+
+            .band-a-plus {
+              stroke: #005a30;
+              stroke-width: 5;
+              stroke-opacity:0.9;
+              fill: whitesmoke;
+            }
+
+            .band-a {
+              fill: #008054
+            }
+
+            .band-b {
+              fill: #19b459
+            }
+
+            .band-c {
+              fill: #8dce46
+            }
+
+            .band-d {
+              fill: #ffd500
+            }
+
+            .band-e {
+              fill: #fcaa65
+            }
+
+            .band-f {
+              fill: #ef8023
+            }
+
+            .band-g {
+              fill: #e9153b
+            }
+          </style>
+
+          <line x1="0" y1="65" x2="415" y2="65" style="stroke:lightblue;stroke-width:3"></line>
+
+          <rect width="175" height="50" x="4" y="5" class="band-a-plus">
+          </rect>
+
+          <rect width="195" height="50" x="0" y="75" class="band-a">
+          </rect>
+
+          <rect width="215" height="50" x="0" y="125" class="band-b">
+          </rect>
+
+          <rect width="235" height="50" x="0" y="175" class="band-c">
+          </rect>
+
+          <rect width="255" height="50" x="0" y="225" class="band-d">
+          </rect>
+
+          <rect width="275" height="50" x="0" y="275" class="band-e">
+          </rect>
+
+          <rect width="295" height="50" x="0" y="325" class="band-f">
+          </rect>
+
+          <rect width="315" height="50" x="0" y="375" class="band-g">
+          </rect>
+
+          <text  x="0" y="0" class="small">
+
+            <tspan x="415" y="65">Net zero CO₂</tspan>
+
+          </text>
+
+          <text x="0" y="0" class="letter">
+
+            <tspan x="120" y="44">A+</tspan>
+
+            <tspan x="150" y="114">A</tspan>
+
+            <tspan x="170" y="164">B</tspan>
+
+            <tspan x="190" y="214">C</tspan>
+
+            <tspan x="210" y="264">D</tspan>
+
+            <tspan x="230" y="314">E</tspan>
+
+            <tspan x="250" y="364">F</tspan>
+
+            <tspan x="270" y="414">G</tspan>
+
+          </text>
+
+          <text x="0" y="0" class="small">
+
+            <tspan x="8" y="38">Under 0</tspan>
+
+            <tspan x="8" y="108">0-25</tspan>
+
+            <tspan x="8" y="158">26-50</tspan>
+
+            <tspan x="8" y="208">51-75</tspan>
+
+            <tspan x="8" y="258">76-100</tspan>
+
+            <tspan x="8" y="308">101-125</tspan>
+
+            <tspan x="8" y="358">126-150</tspan>
+
+            <tspan x="8" y="408">Over 150</tspan>
+
+          </text>
+
+          <svg x="340" y="325" width="100" height="50">
+            <rect width="90" height="50" class="band-f" x="25"></rect>
+            <polygon points="0,25 25,50 25,0 0,25" class="band-f"></polygon>
+            <text x="20" y="32" class="current-potential-number">130 |</text>
+            <text x="80" y="32" class="small-letter">F</text>
+          </svg>
+        </svg>
+
+        <p class="govuk-body govuk-!-margin-top-5">
+            Buildings are given a rating from A+ (most efficient) to G (least efficient).
+        </p>
+        <p class="govuk-body govuk-!-margin-top-5">
+          Buildings are also given a score. The larger the number, the more expensive your fuel bills are likely to be.
+        </p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="benchmarks"></a>
+        <h2 class="govuk-heading-l">How this building compares to others</h2>
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Buildings similar to this one could have ratings:</caption>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">If newly built</th>
+            <td class="govuk-table__cell">
+              <svg width="100" height="50">
+                <rect width="90" height="50" class="band-a" x="25"></rect>
+                <polygon points="0,25 25,50 25,0 0,25" class="band-a"></polygon>
+                <text x="20" y="32" class="current-potential-number">19 |</text>
+                <text x="75" y="32" class="small-letter">A</text>
+              </svg>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">If typical of the existing stock</th>
+            <td class="govuk-table__cell">
+              <svg width="100" height="50">
+                <rect width="90" height="50" class="band-e" x="25"></rect>
+                <polygon points="0,25 25,50 25,0 0,25" class="band-e"></polygon>
+                <text x="20" y="32" class="current-potential-number">118|</text>
+                <text x="75" y="32" class="small-letter">E</text>
+              </svg>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="technical-information"></a>
+        <h2 class="govuk-heading-l">Breakdown of this building’s energy performance</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Feature</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Main heating fuel</td>
+              <td class="govuk-table__cell">District Heating</td>
+              <td class="govuk-table__header"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Building environment:</td>
+              <td class="govuk-table__cell">Heating and Natural Ventilation</td>
+              <td class="govuk-table__header"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Total useful floor area (m2)</td>
+              <td class="govuk-table__cell">212</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Assessment Level</td>
+              <td class="govuk-table__cell">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Building emission rate (kgCO2/m2 per year)</td>
+              <td class="govuk-table__cell">30.12</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Primary energy use (kWh/m2 per year)</td>
+              <td class="govuk-table__cell">161.86</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="recommendation-report"></a>
+        <h2 class="govuk-heading-l">Recommendation Report</h2>
+        <p>
+          Guidance on improving the energy performance of this building can be found in the <a href="./find-a-non-dom-certificate-recommendation-report-result-2">recommendation report</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-page-break epc-blue-bottom">
+        <a name="certificate"></a>
+        <h2 class="govuk-heading-l">Contacting the assessor and accreditation scheme</h2>
+        <p class="govuk-body">This EPC was created by a qualified energy assessor.</p>
+        <p class="govuk-body">If you are unhappy about your property’s energy assessment or certificate, you can complain to the assessor directly.</p>
+        <p class="govuk-body">If you are still unhappy after contacting the assessor, you should contact the assessor’s accreditation scheme.</p>
+        <p class="govuk-body">Accreditation schemes are appointed by the government to ensure that assessors are qualified to carry out EPC assessments.</p>
+
+        <h3 class="govuk-heading-m">Assessor contact details</h3>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row" name="assessor-name">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Assessor's Name</dt>
+            <dd class="govuk-summary-list__value">James Cox</dd>
+          </div>
+          <div class="govuk-summary-list__row" name="assessor-telephone">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Telephone</dt>
+            <dd class="govuk-summary-list__value">07921 021 368</dd>
+          </div>
+          <div class="govuk-summary-list__row" name="assessor-email">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Email</dt>
+            <dd class="govuk-summary-list__value"><a href="mailto:marten@mww.se">james@cox.com</a></dd>
+          </div>
+        </dl>
+
+        <h3 class="govuk-heading-m govuk-!-margin-top-5">Accreditation scheme contact details</h3>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row" name="scheme-name">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Accreditation scheme</dt>
+            <dd class="govuk-summary-list__value">Quidos Limited</dd>
+          </div>
+          <div class="govuk-summary-list__row" name="scheme-assessor-id">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Assessor's accreditation number</dt>
+            <dd class="govuk-summary-list__value">QUID205385</dd>
+          </div>
+          <div class="govuk-summary-list__row" name="scheme-phone">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Telephone</dt>
+            <dd class="govuk-summary-list__value">02021 021 368</dd>
+          </div>
+          <div class="govuk-summary-list__row" name="scheme-email">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Email</dt>
+            <dd class="govuk-summary-list__value"><a href="mailto:marten@mww.se">help@quidos.com</a></dd>
+          </div>
+        </dl>
+
+        <h3 class="govuk-heading-m govuk-!-margin-top-5">Assessment details</h3>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row" name="date-of-assessment">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of assessment</dt>
+            <dd class="govuk-summary-list__value">8 Oct 2018</dd>
+          </div>
+          <div class="govuk-summary-list__row" name="date-of-certificate">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Date of certificate</dt>
+            <dd class="govuk-summary-list__value">8 Oct 2018</dd>
+          </div>
+          <div class="govuk-summary-list__row" name="employer-name">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Employer</dt>
+            <dd class="govuk-summary-list__value">Nexus</dd>
+          </div>
+          <div class="govuk-summary-list__row" name="employer-address">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Employer address</dt>
+            <dd class="govuk-summary-list__value">Nexus house, Haversham Retail Park, Nickleby Road, London, SE2 5RF</dd>
+          </div>
+
+          <div class="govuk-summary-list__row" name="assessor-declaration">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">Assessor's declaration</dt>
+            <dd class="govuk-summary-list__value">
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      No connection to the property
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                  The assessor declared they have no personal or business connection with the property’s owner or anyone who may have an interest in the property.
+                </div>
+              </details>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third"> <br> </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-body epc-blue-bottom">
+        <a name="previous"></a>
+        <h2 class="govuk-heading-l">Other certificates for this property</h2>
+
+        <p class="govuk-body">If you are aware of previous assessments for this property and they are not listed here please contact the Help Desk at 0207 164 6672.</p>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Reference number</th>
+            <th scope="col" class="govuk-table__header">EPC Rating</th>
+            <th scope="col" class="govuk-table__header">EPC Expiry Date</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/find-a-non-dom-certificate-result-1">9876-6789-5432-2345-1357</a></th>
+            <td class="govuk-table__cell">E</td>
+            <td class="govuk-table__cell">9 August 2030</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
