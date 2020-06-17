@@ -10,3 +10,38 @@
 {% if useAutoStoreData %}
   <script src="/public/javascripts/auto-store-data.js"></script>
 {% endif %}
+
+<script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const values = Array.from(document.querySelectorAll('input[type=checkbox]:checked'))
+            .map(item => item.value)
+            .join(',');
+
+    switch (values) {
+      case 'epc':
+        location.href = "./find-a-non-dom-certificate-results-epc"
+        break;
+      case 'dec':
+        location.href = "./find-a-non-dom-certificate-results-dec"
+        break;
+      case 'ac':
+        location.href = "./find-a-non-dom-certificate-results-ac"
+        break;
+      case 'epc,dec':
+        location.href = "./find-a-non-dom-certificate-results-epc-dec"
+        break;
+      case 'epc,ac':
+        location.href = "./find-a-non-dom-certificate-results-epc-ac"
+        break;
+      case 'dec,ac':
+        location.href = "./find-a-non-dom-certificate-results-dec-ac"
+        break;
+      default:
+        location.href = './find-a-non-dom-certificate-results';
+    }
+  });
+</script>
