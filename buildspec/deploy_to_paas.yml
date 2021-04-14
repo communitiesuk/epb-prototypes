@@ -25,5 +25,5 @@ phases:
       - echo ">>>>>>>> DEPLOY PROTOTYPES"
       - cf login -a $PAAS_API -u $PAAS_LOGIN_PROTOTYPES -p "$PAAS_PW_PROTOTYPES" -o $PAAS_ORG -s $PAAS_SPACE_PROTOTYPES
       - cf apply-manifest -f manifest.yml
-      - cf push "${DEPLOY_APPNAME}" --strategy rolling --wait-for-deploy-complete
+      - cf push "${DEPLOY_APPNAME}" --strategy rolling
       - cf logout
