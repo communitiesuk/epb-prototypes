@@ -5,7 +5,7 @@ This is where we store our prototypes.
 ## Getting Started
 
 ### Dependencies
-- [Node.js](https://nodejs.org)
+- [Node.js 14.x.x](https://nodejs.org)
     - _Note: Installing Node.js using the above link will automatically install Node Package Manager (NPM)._
 - [Node Package Manager (NPM)](https://www.npmjs.com)
 
@@ -38,7 +38,7 @@ $ npm start
 ```
 
 - Go to [localhost](https://localhost:80) in your browser
-  - _Note: Some systems might have a service already listening 
+  - _Note: Some systems might have a service already listening
   on port 80. Simply read the console output from `npm start` to identify your port._
 
 ## Resources
