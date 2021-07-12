@@ -41,6 +41,15 @@ $ npm start
   - _Note: Some systems might have a service already listening
   on port 80. Simply read the console output from `npm start` to identify your port._
 
+## CI/CD
+You can view the deployed prototypes at https://mhclg-epb-prototypes.london.cloudapps.digital/
+
+The login credentials are set as environment variables in the app. You can view them using the Cloud Foundry CLI:
+1. Login: `cf login -u <username>`
+2. Select `prototypes` space
+3. List environment variables: `cf env mhclg-epb-prototypes`
+4. The USERNAME and PASSWORD are listed under User-Provided variables
+
 ## Resources
 - Cloned from [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com/docs)
 - [GOV.UK Design System](https://design-system.service.gov.uk/get-started/)
