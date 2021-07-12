@@ -20,7 +20,7 @@ module.exports = {
   useCookieSessionStore: 'false',
 
   // Enable or disable built-in docs and examples.
-  useDocumentation: 'false',
+  useDocumentation: 'true',
 
   // Force HTTP to redirect to HTTPS on production
   useHttps: 'true',
@@ -30,4 +30,5 @@ module.exports = {
 
   // Enable or disable Browser Sync
   useBrowserSync: 'false'
+
 }
