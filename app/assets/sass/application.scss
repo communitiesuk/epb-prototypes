@@ -16,3 +16,19 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+@import "epb-frontend/components/epc-box";
+@import "epb-frontend/components/environmental-impact-chart";
+@import "epb-frontend/components/related-items";
+@import "epb-frontend/components/expired-text";
+@import "epb-frontend/components/section-breaks";
+@import "epb-frontend/components/search";
+@import "epb-frontend/components/print";
+@import "epb-frontend/components/report_contents";
+@import "epb-frontend/components/epc-print-summary";
+@import "epb-frontend/components/share-certificate";
+
+// TODO: Import printable styles
+// @import "epb-frontend/printable";
+// @import "epb-frontend/print_certificates";
+// @import "epb-frontend/alternative-styles/print";
