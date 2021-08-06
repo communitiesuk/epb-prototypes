@@ -28,6 +28,7 @@
 {% from "govuk/components/tag/macro.njk"              import govukTag %}
 {% from "govuk/components/textarea/macro.njk"         import govukTextarea %}
 {% from "govuk/components/warning-text/macro.njk"     import govukWarningText %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
 {% block head %}
   {% include "includes/head.html" %}
@@ -61,6 +62,15 @@
   </div>
 </div>
 
+{% endblock %}
+
+{% block beforeContent %}
+  {% if backLink %}
+    {{ govukBackLink({
+    text: "Back",
+    href: backLink
+    }) }}
+  {% endif %}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
