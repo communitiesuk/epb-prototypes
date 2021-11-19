@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find an assessor | Energy performance of buildings
+{% endblock %}
+
+{% set backLink="/find-an-assessor-type-of-property" %}
+
+{% block content %}
+
+<form method="post">
+    <input type="hidden" name="lang" value="en" />
+    {{ govukRadios({
+        idPrefix: 'is-existing-building',
+        name: 'is-existing-building',
+        fieldset: {
+            legend: {
+                text: "Is the property an existing or new building?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+            }
+        },
+        items: [
+            {
+                value: "existing",
+                text: "Existing building"
+            },
+            {
+                value: "not_existing",
+                text: "New building",
+                hint: {
+                    text: "A new building is either being built or will be built soon. Some extensions, conversions or change of use dwellings also count as new buildings."
+                }
+            }
+        ]
+    }) }}
+    <button class="govuk-button" data-module="govuk-button" type="submit">
+      Continue
+    </button>
+</form>
+
+<script>
+    var propertyForm = document.querySelector("form");
+    propertyForm.addEventListener('submit', e => {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        location.href = "/find-an-assessor-search");
+    });
+</script>
+
+{% endblock %}

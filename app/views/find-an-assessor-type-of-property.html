@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find an assessor | Energy performance of buildings
+{% endblock %}
+
+{% set backLink="/find-an-assessor" %}
+
+{% block content %}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+<form method="post">
+    <input type="hidden" name="lang" value="en" />
+    {{ govukRadios({
+        idPrefix: 'property-type',
+        name: 'property-type',
+        fieldset: {
+            legend: {
+                text: "What type of property is the certificate for?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+            }
+        },
+        items: [
+            {
+                value: "domestic",
+                text: "A domestic property",
+                hint: {
+                    text: "For example, a house or flat."
+                }
+            },
+            {
+                value: "non_domestic",
+                text: "A non-domestic property",
+                hint: {
+                    text: "For example, a commercial, industrial or public building."
+                }
+            }
+        ]
+    }) }}
+    <button class="govuk-button" data-module="govuk-button" type="submit">
+      Continue
+    </button>
+</form>
+
+<script>
+    var propertyForm = document.querySelector("form");
+    propertyForm.addEventListener('submit', e => {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        choseDomestic = document.querySelector('input[name="property-type"]:checked').value == "domestic";
+        location.href = (choseDomestic ? "/find-an-assessor-domestic-existing-property" : "/find-an-assessor-search");
+    });
+</script>
+
+{% endblock %}
