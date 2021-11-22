@@ -1,0 +1,6 @@
+---
+applications:
+- name: mhclg-epb-prototypes
+  memory: 256M
+  buildpacks:
+    - nodejs_buildpack

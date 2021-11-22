@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="360d28d9-8434-4826-9b6b-bf0693961897" name="Default Changelist" comment="EPBR-1713 Security update to the GOV.UK Prototype Kit version 11">
+    <list default="true" id="360d28d9-8434-4826-9b6b-bf0693961897" name="Default Changelist" comment="EPBR-1713 Re added deploy .yml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +44,7 @@
       <workItem from="1627294205209" duration="1957000" />
       <workItem from="1627313057664" duration="538000" />
       <workItem from="1628504922487" duration="556000" />
-      <workItem from="1637581100231" duration="2142000" />
+      <workItem from="1637581100231" duration="2728000" />
     </task>
     <task id="LOCAL-00001" summary="EPBR-1713 Security update to the GOV.UK Prototype Kit version 11">
       <created>1637582838761</created>
@@ -60,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637582851166</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="EPBR-1713 Re added deploy .yml">
+      <created>1637583645133</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637583645133</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,6 +86,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="EPBR-1713 Security update to the GOV.UK Prototype Kit version 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="EPBR-1713 Security update to the GOV.UK Prototype Kit version 11" />
+    <MESSAGE value="EPBR-1713 Re added deploy .yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="EPBR-1713 Re added deploy .yml" />
   </component>
 </project>
