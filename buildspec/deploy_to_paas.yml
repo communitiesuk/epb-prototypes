@@ -1,0 +1,29 @@
+version: 0.2
+
+runtime-versions:
+  nodejs: 14
+
+env:
+  variables:
+    DEPLOY_APPNAME: "mhclg-epb-prototypes"
+
+  parameter-store:
+    PAAS_LOGIN_PROTOTYPES: "epbr-govpaas-integration-login"
+    PAAS_PW_PROTOTYPES: "epbr-govpaas-integration-pw"
+    PAAS_SPACE_PROTOTYPES: "epbr-govpaas-prototypes-space"
+    PAAS_API: "epbr-govpaas-api"
+    PAAS_ORG: "epbr-govpaas-orgname"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - npm install
+  build:
+    commands:
+      - echo ">>>>>>>> DEPLOY PROTOTYPES"
+      - cf login -a $PAAS_API -u $PAAS_LOGIN_PROTOTYPES -p "$PAAS_PW_PROTOTYPES" -o $PAAS_ORG -s $PAAS_SPACE_PROTOTYPES
+      - cf apply-manifest -f manifest.yml
+      - cf push "${DEPLOY_APPNAME}" --strategy rolling
+      - cf logout
