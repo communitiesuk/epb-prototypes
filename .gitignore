@@ -2,7 +2,6 @@
 usage-data-config.json
 # ignore extension SCSS because it's dynamically generated
 lib/extensions/_extensions.scss
-.idea
 .env
 .sass-cache
 .DS_Store
@@ -11,4 +10,3 @@ lib/extensions/_extensions.scss
 public
 node_modules/*
 .tmuxp.*
-package-lock.json

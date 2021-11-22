@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="360d28d9-8434-4826-9b6b-bf0693961897" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VERSION.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VERSION.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/sass/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/sass/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildspec/deploy_to_paas.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/adding-css-javascript-and-images.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/adding-css-javascript-and-images.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/install/developer-install-instructions.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/install/developer-install-instructions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/install/install-the-kit.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/install/install-the-kit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/install/requirements.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/install/requirements.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/install/run-the-kit.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/install/run-the-kit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/make-first-prototype/branching.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/make-first-prototype/branching.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/make-first-prototype/create-pages.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/make-first-prototype/create-pages.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/make-first-prototype/let-user-change-answers.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/make-first-prototype/let-user-change-answers.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/make-first-prototype/link-pages-together.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/make-first-prototype/link-pages-together.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/make-first-prototype/show-users-answers.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/make-first-prototype/show-users-answers.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/make-first-prototype/start.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/make-first-prototype/start.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/make-first-prototype/use-components-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/make-first-prototype/use-components-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/make-first-prototype/use-components.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/make-first-prototype/use-components.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/publishing-on-heroku.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/publishing-on-heroku.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/updating-the-kit.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/updating-the-kit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation_routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation_routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/views/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/views/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/views/templates/check-your-answers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/views/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/views/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/views/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/views/templates/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/views/tutorials-and-examples.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/views/tutorials-and-examples.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/sass.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulp/sass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/start.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1v4kfmTv1CxIwU15dUhexUKrP7b" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/node_modules/standard" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTHome" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="360d28d9-8434-4826-9b6b-bf0693961897" name="Default Changelist" comment="" />
+      <created>1625828854032</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625828854032</updated>
+      <workItem from="1625828855654" duration="863000" />
+      <workItem from="1625829745476" duration="1093000" />
+      <workItem from="1626077205304" duration="570000" />
+      <workItem from="1626259520187" duration="598000" />
+      <workItem from="1627294205209" duration="1957000" />
+      <workItem from="1627313057664" duration="538000" />
+      <workItem from="1628504922487" duration="556000" />
+      <workItem from="1637581100231" duration="1370000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
