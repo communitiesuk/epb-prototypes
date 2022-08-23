@@ -1,11 +1,11 @@
 {% set serviceName %}
-  Find an energy certificate
+Find an energy certificate
 {% endset%}
 
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
+Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 {% endblock %}
 
 {{ backLink }}
@@ -43,7 +43,7 @@
         <p class="govuk-body"><a class="govuk-link" href="#epc">Energy performance rating for this property</a></p>
         <p class="govuk-body"><a class="govuk-link" href="#summary">Breakdown of property’s energy performance</a></p>
         <p class="govuk-body"><a class="govuk-link" href="#energy">Environmental impact of this property</a></p>
-        <p class="govuk-body"><a class="govuk-link" href="#recommendations">How to improve this property’s energy performance</a></p>
+        <p class="govuk-body"><a class="govuk-link" href="#recommendations">Improve this property’s energy performance</a></p>
         <p class="govuk-body"><a class="govuk-link" href="#heat-demand">Estimated energy use and potential savings</a></p>
         <p class="govuk-body"><a class="govuk-link" href="#information">Contacting the assessor and accreditation scheme</a></p>
         <p class="govuk-body"><a class="govuk-link" href="#other_certificates_and_reports">Other certificates for this property</a></p>
@@ -56,13 +56,13 @@
         <li>
           <p gov-body >
             <a id="email" style="text-decoration: none;"
-              href="mailto:?subject= Energy performance certificate (EPC) for 63A Kimberley Avenue&amp;body=Please find your energy performance certificate (EPC) at https://find-energy-certificate.digital.communities.gov.uk/energy-certificate/9958-0033-7326-3865-8984"
-              target="_blank"
-              title="Email">
+               href="mailto:?subject= Energy performance certificate (EPC) for 63A Kimberley Avenue&amp;body=Please find your energy performance certificate (EPC) at https://find-energy-certificate.digital.communities.gov.uk/energy-certificate/9958-0033-7326-3865-8984"
+               target="_blank"
+               title="Email">
             <span class="share-icon">
             <img src="/public/images/email.svg">
             </span>
-            Email
+              Email
             </a>
           </p>
         </li>
@@ -72,7 +72,7 @@
             <span class="share-icon">
             <img src="/public/images/copy-link.svg">
             </span>
-            Copy link
+              Copy link
             </button>
             <script>document.getElementById('copyToClipboardButton').style.display = 'inline';</script>
           </p>
@@ -83,7 +83,7 @@
             <span class="share-icon">
             <img src="/public/images/print.svg">
             </span>
-            Print
+              Print
             </a>
             <script>document.getElementById('link').style.display = 'inline';</script>
           </p>
@@ -109,7 +109,7 @@
         <div class="epc-extra-boxes">
           <p class="govuk-body epc-extra-box">
             <label>
-            Valid until</label>
+              Valid until</label>
             <b>21 September 2030</b>
           </p>
           <p class="govuk-body epc-extra-box">
@@ -132,9 +132,6 @@
           </dd>
         </div>
       </dl>
-      <div class="govuk-inset-text">
-        This home is built to the 2006 energy efficiency standards. The most up to date version is the 2013 energy efficiency standards.
-      </div>
     </div>
     <div class="govuk-body epc-blue-bottom printable-area">
       <a id="renting"></a>
@@ -143,7 +140,7 @@
         Properties can be rented if they have an energy rating from A to E.
       </p>
       <p class="govuk-body">
-        If the property is rated F or G, it cannot be let, unless an exemption has been registered. You can read <a class="govuk-link" href="https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance">guidance for landlords on the regulations and exemptions</a>.
+        You can read <a class="govuk-link" href="https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance">guidance for landlords on the regulations and exemptions</a>.
       </p>
     </div>
     <div class="govuk-body epc-blue-bottom printable-area epc-rating-graph-section">
@@ -191,27 +188,27 @@
             font-weight: bold;
           }
 
-            .band-a{
-              fill: #008054
-            }
-            .band-b{
-              fill: #19b459
-            }
-            .band-c{
-              fill: #8dce46
-            }
-            .band-d{
-              fill: #ffd500
-            }
-            .band-e{
-              fill: #fcaa65
-            }
-            .band-f{
-              fill: #ef8023
-            }
-            .band-g{
-              fill: #e9153b
-            }
+          .band-a{
+            fill: #008054
+          }
+          .band-b{
+            fill: #19b459
+          }
+          .band-c{
+            fill: #8dce46
+          }
+          .band-d{
+            fill: #ffd500
+          }
+          .band-e{
+            fill: #fcaa65
+          }
+          .band-f{
+            fill: #ef8023
+          }
+          .band-g{
+            fill: #e9153b
+          }
           .band-a-score{
             fill: #67A687
           }
@@ -338,74 +335,74 @@
       <p class="govuk-body">When the description says “assumed”, it means that the feature could not be inspected and an assumption has been made based on the property’s age and type.</p>
       <table class="govuk-table">
         <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Feature</th>
-            <th scope="col" class="govuk-table__header">Description</th>
-            <th scope="col" class="govuk-table__header">Rating</th>
-          </tr>
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Feature</th>
+          <th scope="col" class="govuk-table__header">Description</th>
+          <th scope="col" class="govuk-table__header">Rating</th>
+        </tr>
         </thead>
         <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-!-font-weight-regular">Walls</th>
-            <td class="govuk-table__cell">Average thermal transmittance 0.27 W/m²K</td>
-            <td class="govuk-table__cell">Very good</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-!-font-weight-regular">Roof</th>
-            <td class="govuk-table__cell">Average thermal transmittance 0.12 W/m²K</td>
-            <td class="govuk-table__cell">Very good</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-!-font-weight-regular">Floor</th>
-            <td class="govuk-table__cell">Average thermal transmittance 0.22 W/m²K</td>
-            <td class="govuk-table__cell">Good</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-!-font-weight-regular">Windows</th>
-            <td class="govuk-table__cell">Fully double glazed</td>
-            <td class="govuk-table__cell">Good</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-!-font-weight-regular">Main heating</th>
-            <td class="govuk-table__cell">Boiler and radiators, mains gas</td>
-            <td class="govuk-table__cell">Good</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-!-font-weight-regular">Main heating control</th>
-            <td class="govuk-table__cell">Programmer, room thermostat and TRVs</td>
-            <td class="govuk-table__cell">Good</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-!-font-weight-regular">Hot water</th>
-            <td class="govuk-table__cell">From main system</td>
-            <td class="govuk-table__cell">Good</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-!-font-weight-regular">Lighting</th>
-            <td class="govuk-table__cell">Low energy lighting in all fixed outlets</td>
-            <td class="govuk-table__cell">Very good</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-!-font-weight-regular">Air tightness</th>
-            <td class="govuk-table__cell">Air permeability 7.2 m³/h.m² (as tested)</td>
-            <td class="govuk-table__cell">Average</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-!-font-weight-regular">Secondary heating</th>
-            <td class="govuk-table__cell">None</td>
-            <td class="govuk-table__cell">N/A</td>
-          </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell govuk-!-font-weight-regular">Walls</th>
+          <td class="govuk-table__cell">Average thermal transmittance 0.27 W/m²K</td>
+          <td class="govuk-table__cell">Very good</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell govuk-!-font-weight-regular">Roof</th>
+          <td class="govuk-table__cell">Average thermal transmittance 0.12 W/m²K</td>
+          <td class="govuk-table__cell">Very good</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell govuk-!-font-weight-regular">Floor</th>
+          <td class="govuk-table__cell">Average thermal transmittance 0.22 W/m²K</td>
+          <td class="govuk-table__cell">Good</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell govuk-!-font-weight-regular">Windows</th>
+          <td class="govuk-table__cell">Fully double glazed</td>
+          <td class="govuk-table__cell">Good</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell govuk-!-font-weight-regular">Main heating</th>
+          <td class="govuk-table__cell">Boiler and radiators, mains gas</td>
+          <td class="govuk-table__cell">Good</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell govuk-!-font-weight-regular">Main heating control</th>
+          <td class="govuk-table__cell">Programmer, room thermostat and TRVs</td>
+          <td class="govuk-table__cell">Good</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell govuk-!-font-weight-regular">Hot water</th>
+          <td class="govuk-table__cell">From main system</td>
+          <td class="govuk-table__cell">Good</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell govuk-!-font-weight-regular">Lighting</th>
+          <td class="govuk-table__cell">Low energy lighting in all fixed outlets</td>
+          <td class="govuk-table__cell">Very good</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell govuk-!-font-weight-regular">Air tightness</th>
+          <td class="govuk-table__cell">Air permeability 7.2 m³/h.m² (as tested)</td>
+          <td class="govuk-table__cell">Average</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell govuk-!-font-weight-regular">Secondary heating</th>
+          <td class="govuk-table__cell">None</td>
+          <td class="govuk-table__cell">N/A</td>
+        </tr>
         </tbody>
       </table>
-      <h2 class="govuk-heading-m">Low and zero carbon energy sources</h2>
-      <p class="govuk-body">
-        Low and zero carbon energy sources release very little or no CO2. Installing these sources may help reduce energy bills as well as cutting carbon emissions. The following low or zero carbon energy sources are installed in this property:
-      </p>
-      <ul class="govuk-list govuk-list--bullet govuk-!-margin-left-6">
-        <li>
-          Solar photovoltaics
-        </li>
-      </ul>
+      <!--      <h2 class="govuk-heading-m">Low and zero carbon energy sources</h2>-->
+      <!--      <p class="govuk-body">-->
+      <!--        Low and zero carbon energy sources release very little or no CO2. Installing these sources may help reduce energy bills as well as cutting carbon emissions. The following low or zero carbon energy sources are installed in this property:-->
+      <!--      </p>-->
+      <!--      <ul class="govuk-list govuk-list&#45;&#45;bullet govuk-!-margin-left-6">-->
+      <!--        <li>-->
+      <!--          Solar photovoltaics-->
+      <!--        </li>-->
+      <!--      </ul>-->
       <h2 class="govuk-heading-m">Primary energy use</h2>
       <p class="govuk-body">The primary energy use for this property per year is 74 kilowatt hours per square metre (kWh/m2).</p>
       <details class="govuk-details" data-module="govuk-details">
@@ -421,14 +418,13 @@
           </ul>
         </div>
       </details>
-      <p class="govuk-body">Installing a smart meter will help you to understand more about how you use energy in your home and may help you to reduce your energy bills.
-        For information about smart meters visit <a class="govuk-link" href="https://www.smartenergygb.org/en/get-a-smart-meter/how-to-get-a-smart-meter">Smart Energy GB</a>.
-      </p>
     </div>
     <div class="govuk-body epc-page-break epc-blue-bottom printable-area epc-environmental-impact">
       <a id="energy"></a>
       <h2 class="govuk-heading-l">Environmental impact of this property</h2>
-      <p class="govuk-body">One of the biggest contributors to climate change is carbon dioxide (CO2). The energy used for heating, lighting and power in our homes produces over a quarter of the UK’s CO2 emissions.</p>
+      <p class="govuk-body">This property’s current environmental impact rating is B. It has the potential to be A.</p>
+      <p class="govuk-body">Properties are rated in a scale from A to G based on how much carbon dioxide (CO2) they produce.</p>
+      <p class="govuk-body">Properties with an A rating produce less CO2 than G rated properties.</p>
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row" id="type">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">An average household produces</dt>
@@ -436,11 +432,11 @@
         </div>
         <div class="govuk-summary-list__row" id="type">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">This property produces</dt>
-          <dd class="govuk-summary-list__value" id="property-produces" style="text-align: right">1.1 tonnes of CO2</dd>
+          <dd class="govuk-summary-list__value" id="property-produces" style="text-align: right">1.3 tonnes of CO2</dd>
         </div>
         <div class="govuk-summary-list__row" id="type">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">This property’s potential production</dt>
-          <dd class="govuk-summary-list__value" id="potential-production" style="text-align: right">0.9 tonnes of CO2</dd>
+          <dd class="govuk-summary-list__value" id="potential-production" style="text-align: right">0.2 tonnes of CO2</dd>
         </div>
       </dl>
       <p class="govuk-body">
@@ -450,37 +446,35 @@
     </div>
     <div class="govuk-body printable-area epc-recommendations">
       <a id="recommendations"></a>
-      <h2 class="govuk-heading-l">How to improve this property’s energy performance</h2>
+      <h2 class="govuk-heading-l">Improve this property’s energy performance</h2>
       <div class="allow-break ">
         <div class="epc-rating-box">
           <p class="epc-rating-title govuk-body">
             Potential energy rating
           </p>
           <p class="epc-rating-result govuk-body">
-            B
+            A
           </p>
         </div>
-        <p class="govuk-body">Making any of the recommended changes will improve this property’s energy efficiency.</p>
+        <p class="govuk-body">By following our step by step recommendations you could reduce this property’s energy use and potentially save money.</p>
         <p class="govuk-body">
-          If you make all of the recommended changes, this will improve the property’s energy rating and score from B (85) to B (87).
+          Carrying out these changes in order will improve the property’s energy rating and score from B (83) to A (95).
         </p>
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">What is an energy rating?</span>
+            <span class="govuk-details__summary-text">Do I need to follow these steps in order?</span>
           </summary>
           <div class="govuk-details__text">
-            An energy rating shows a property’s energy efficiency.
+            Yes. Each step builds on the one before it so you can save the most energy.
             <br /><br />
-            Properties are given a rating from A (most efficient) to G (least efficient).
-            <br /><br />
-            Properties are also given a score. The higher this number, the lower your CO2 emissions are likely to be.
+            For example, it’s more energy efficient to insulate your home before you buy a new boiler. A well insulated home will lose less heat so you do not have to run your boiler as often.
           </div>
         </details>
       </div>
     </div>
     <div class="govuk-body printable-area">
       <hr class="epc-light-top" />
-      <h3 class="govuk-heading-m">Recommendation 1: Solar water heating</h3>
+      <h3 class="govuk-heading-m">Step 1: Solar water heating</h3>
       <p class="govuk-body">Solar water heating</p>
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
@@ -492,7 +486,7 @@
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">Typical yearly saving</dt>
           <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
-            £34
+            £26
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -502,7 +496,37 @@
               band-b
               <rect width="75" height="50" class=band-b x="25"></rect>
               <polygon points="0,25 25,50 25,0 0,25" class=band-b></polygon>
-              <text x="30" y="30">87 | B</text>
+              <text x="30" y="30">84 | B</text>
+            </svg>
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <div class="govuk-body printable-area">
+      <hr class="epc-light-top" />
+      <h3 class="govuk-heading-m">Step 2: Solar photovoltaic panels, 2.5 kWp</h3>
+      <p class="govuk-body">Solar photovoltaic panels</p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">Typical installation cost</dt>
+          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
+            £3,500 - £5,500
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">Typical yearly saving</dt>
+          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
+            £337
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half" style="vertical-align: top">Potential rating after carrying out recommendation 1</dt>
+          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
+            <svg width="90" height="50" style="vertical-align: middle">
+              band-b
+              <rect width="75" height="50" class=band-b x="25"></rect>
+              <polygon points="0,25 25,50 25,0 0,25" class=band-a></polygon>
+              <text x="30" y="30">95 | A</text>
             </svg>
           </dd>
         </div>
@@ -521,13 +545,13 @@
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">Estimated yearly energy cost for this property</dt>
           <dd class="govuk-summary-list__value govuk-!-width-one-half govuk-table__cell--numeric">
-            £482
+            £359
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">Potential saving</dt>
           <dd class="govuk-summary-list__value govuk-!-width-one-half govuk-table__cell--numeric">
-            £34
+            £26
           </dd>
         </div>
       </dl>
@@ -541,13 +565,13 @@
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">Space heating</dt>
           <dd class="govuk-summary-list__value govuk-!-width-one-half govuk-table__cell--numeric">
-            4270 kWh per year
+            2661 kWh per year
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">Water heating</dt>
           <dd class="govuk-summary-list__value govuk-!-width-one-half govuk-table__cell--numeric">
-            2025 kWh per year
+            1614 kWh per year
           </dd>
         </div>
       </dl>
@@ -555,7 +579,6 @@
       <p class="govuk-body">
         The assessor did not find any opportunities to save energy by installing insulation in this property.
       </p>
-      <p class="govuk-body">You might be able to receive <a class="govuk-link" href="https://www.gov.uk/domestic-renewable-heat-incentive">Renewable Heat Incentive payments</a>. This will help to reduce carbon emissions by replacing your existing heating system with one that generates renewable heat. The estimated energy required for space and water heating will form the basis of the payments.</p>
     </div>
     <div class="govuk-body epc-blue-bottom epc-contact-assessor">
       <a id="information"></a>
@@ -645,7 +668,7 @@
     <div class="epc-blue-bottom printable-area govuk-body" id="other_certificates_and_reports">
       <h2 class="govuk-heading-l">Other certificates for this property</h2>
       <p class="govuk-body">
-        If you are aware of previous certificates for this property and they are not listed here, please contact us at <span style="white-space: nowrap;"><a href="mailto:mhclg.digital-services@communities.gov.uk?subject=EPB - ">mhclg.digital-services@communities.gov.uk</a></span> or call our helpdesk on <span style="white-space: nowrap;">020 3829 0748.</span>
+        If you are aware of previous certificates for this property and they are not listed here, please contact us at <span style="white-space: nowrap;"><a href="mailto:mhclg.digital-services@communities.gov.uk?subject=EPB - ">mhclg.digital-services@communities.gov.uk</a></span> or call our helpdesk on <span style="white-space: nowrap;">020 3829 0748 (Monday to Friday, 9am to 5pm)..</span>
       </p>
       <p class="govuk-body">There are no related certificates for this property.</p>
     </div>
