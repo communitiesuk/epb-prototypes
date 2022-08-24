@@ -1,11 +1,11 @@
 {% set serviceName %}
-Find an energy certificate
+  Find an energy certificate
 {% endset%}
 
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
+  Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 {% endblock %}
 
 {{ backLink }}
@@ -56,13 +56,13 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
         <li>
           <p gov-body >
             <a id="email" style="text-decoration: none;"
-               href="mailto:?subject= Energy performance certificate (EPC) for 63A Kimberley Avenue&amp;body=Please find your energy performance certificate (EPC) at https://find-energy-certificate.digital.communities.gov.uk/energy-certificate/9958-0033-7326-3865-8984"
-               target="_blank"
-               title="Email">
+              href="mailto:?subject= Energy performance certificate (EPC) for 63A Kimberley Avenue&amp;body=Please find your energy performance certificate (EPC) at https://find-energy-certificate.digital.communities.gov.uk/energy-certificate/9958-0033-7326-3865-8984"
+              target="_blank"
+              title="Email">
             <span class="share-icon">
             <img src="/public/images/email.svg">
             </span>
-              Email
+            Email
             </a>
           </p>
         </li>
@@ -72,7 +72,7 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
             <span class="share-icon">
             <img src="/public/images/copy-link.svg">
             </span>
-              Copy link
+            Copy link
             </button>
             <script>document.getElementById('copyToClipboardButton').style.display = 'inline';</script>
           </p>
@@ -83,7 +83,7 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
             <span class="share-icon">
             <img src="/public/images/print.svg">
             </span>
-              Print
+            Print
             </a>
             <script>document.getElementById('link').style.display = 'inline';</script>
           </p>
@@ -109,7 +109,7 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
         <div class="epc-extra-boxes">
           <p class="govuk-body epc-extra-box">
             <label>
-              Valid until</label>
+            Valid until</label>
             <b>21 September 2030</b>
           </p>
           <p class="govuk-body epc-extra-box">
@@ -152,165 +152,165 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
       <p class="govuk-body govuk-!-margin-bottom-6">
         <a class="govuk-link" href=" #recommendations">See how to improve this property’s energy performance.</a>
       </p>
-      <svg width="615" height="376" viewBox="0 0 615 376" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
-        <title id="svg-title">Energy efficiency chart</title>
-        <desc id="svg-desc">This property’s current energy rating is B with a score of 85. It has a potential energy rating of B with a score of 87.</desc>
-        <style>
-          .letter {
-            font-size: 40px;
-            font-family: sans-serif;
-            fill: 	#0b0c0c;
-            font-weight: bold;
-          }
+<!--      <svg width="615" height="376" viewBox="0 0 615 376" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">-->
+<!--        <title id="svg-title">Energy efficiency chart</title>-->
+<!--        <desc id="svg-desc">This property’s current energy rating is B with a score of 85. It has a potential energy rating of B with a score of 87.</desc>-->
+<!--        <style>-->
+<!--          .letter {-->
+<!--            font-size: 40px;-->
+<!--            font-family: sans-serif;-->
+<!--            fill: 	#0b0c0c;-->
+<!--            font-weight: bold;-->
+<!--          }-->
 
-          .current-potential-number {
-            font-size: 22px;
-            font-family: sans-serif;
-            fill: #000;
-            line-height: 50px;
-            margin-top: 100px;
-          }
+<!--          .current-potential-number {-->
+<!--            font-size: 22px;-->
+<!--            font-family: sans-serif;-->
+<!--            fill: #000;-->
+<!--            line-height: 50px;-->
+<!--            margin-top: 100px;-->
+<!--          }-->
 
-          .small-letter {
-            font-size: 19px;
-            font-family: sans-serif;
-            fill: 	#0b0c0c;
-            font-weight: bold;
-            text-align: center;
-          }
+<!--          .small-letter {-->
+<!--            font-size: 19px;-->
+<!--            font-family: sans-serif;-->
+<!--            fill: 	#0b0c0c;-->
+<!--            font-weight: bold;-->
+<!--            text-align: center;-->
+<!--          }-->
 
-          .small {
-            font-size: 20px;
-            font-family: sans-serif;
-            fill: 	#0b0c0c;
-            line-height: 50px;
-            margin-top: 100px;
-            font-weight: bold;
-          }
+<!--          .small {-->
+<!--            font-size: 20px;-->
+<!--            font-family: sans-serif;-->
+<!--            fill: 	#0b0c0c;-->
+<!--            line-height: 50px;-->
+<!--            margin-top: 100px;-->
+<!--            font-weight: bold;-->
+<!--          }-->
 
-          .band-a{
-            fill: #008054
-          }
-          .band-b{
-            fill: #19b459
-          }
-          .band-c{
-            fill: #8dce46
-          }
-          .band-d{
-            fill: #ffd500
-          }
-          .band-e{
-            fill: #fcaa65
-          }
-          .band-f{
-            fill: #ef8023
-          }
-          .band-g{
-            fill: #e9153b
-          }
-          .band-a-score{
-            fill: #67A687
-          }
-          .band-b-score{
-            fill: #72CA8B
-          }
-          .band-c-score{
-            fill: #b4df86
-          }
-          .band-d-score{
-            fill: #ffe666
-          }
-          .band-e-score{
-            fill: #fdc79b
-          }
-          .band-f-score{
-            fill: #f4ac71
-          }
-          .band-g-score{
-            fill: #f2738a
-          }
-        </style>
-        <line x1="72" y1="0" x2="72" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
-        <line x1="410" y1="0" x2="410" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
-        <line x1="510" y1="0" x2="510" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
-        <line x1="0" y1="25" x2="615" y2="25" style="stroke:#b1b4b6;stroke-width:1"></line>
-        <line x1="0" y1="0" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>
-        <line x1="0" y1="0" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>
-        <line x1="0" y1="0" x2="0" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
-        <line x1="615" y1="376" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>
-        <line x1="615" y1="376" x2="0" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>
-        <rect width="78" height="50" x="72" y="25" class="band-a">
-        </rect>
-        <rect width="118" height="50" x="72" y="75" class="band-b">
-        </rect>
-        <rect width="158" height="50" x="72" y="125" class="band-c">
-        </rect>
-        <rect width="198" height="50" x="72" y="175" class="band-d">
-        </rect>
-        <rect width="238" height="50" x="72" y="225" class="band-e">
-        </rect>
-        <rect width="278" height="50" x="72" y="275" class="band-f">
-        </rect>
-        <rect width="318" height="50" x="72" y="325" class="band-g">
-        </rect>
-        <rect width="72" height="50" x="0" y="25" class="band-a-score">
-        </rect>
-        <rect width="72" height="50" x="0" y="75" class="band-b-score">
-        </rect>
-        <rect width="72" height="50" x="0" y="125" class="band-c-score">
-        </rect>
-        <rect width="72" height="50" x="0" y="175" class="band-d-score">
-        </rect>
-        <rect width="72" height="50" x="0" y="225" class="band-e-score">
-        </rect>
-        <rect width="72" height="50" x="0" y="275" class="band-f-score">
-        </rect>
-        <rect width="72" height="50" x="0" y="325" class="band-g-score">
-        </rect>
-        <text role="presentation" aria-hidden="true" x="0" y="0" class="letter">
-          <tspan x="107" y="64">A</tspan>
-          <tspan x="147" y="114">B</tspan>
-          <tspan x="187" y="164">C</tspan>
-          <tspan x="227" y="214">D</tspan>
-          <tspan x="267" y="264">E</tspan>
-          <tspan x="307" y="314">F</tspan>
-          <tspan x="347" y="364">G</tspan>
-        </text>
-        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
-          <tspan x="8" y="55">92+</tspan>
-          <tspan x="8" y="105">81-91</tspan>
-          <tspan x="8" y="155">69-80</tspan>
-          <tspan x="8" y="205">55-68</tspan>
-          <tspan x="8" y="255">39-54</tspan>
-          <tspan x="8" y="305">21-38</tspan>
-          <tspan x="8" y="355">1-20</tspan>
-        </text>
-        <text role="presentation" aria-hidden="true" x="8" y="15" class="small" dominant-baseline="middle">
-          Score
-        </text>
-        <text role="presentation" aria-hidden="true" x="85" y="15" class="small" dominant-baseline="middle">
-          Energy rating
-        </text>
-        <text role="presentation" aria-hidden="true" x="460" y="15" class="small" text-anchor="middle" dominant-baseline="middle">
-          Current
-        </text>
-        <text role="presentation" aria-hidden="true" x="565" y="15" class="small" text-anchor="middle" dominant-baseline="middle">
-          Potential
-        </text>
-        <svg role="presentation" aria-hidden="true" x="415" y="75" width="90" height="50">
-          <rect width="75" height="50" class="band-b" x="25"></rect>
-          <polygon points="0,25 25,50 25,0 0,25" class="band-b"></polygon>
-          <text x="18" y="32" class="current-potential-number">85 |</text>
-          <text x="67" y="32" class="small-letter">B</text>
-        </svg>
-        <svg role="presentation" aria-hidden="true" x="515" y="75" width="90" height="50">
-          <rect width="75" height="50" class="band-b" x="25"></rect>
-          <polygon points="0,25 25,50 25,0 0,25" class="band-b"></polygon>
-          <text x="18" y="32" class="current-potential-number">87 |</text>
-          <text x="67" y="32" class="small-letter">B</text>
-        </svg>
-      </svg>
+<!--            .band-a{-->
+<!--              fill: #008054-->
+<!--            }-->
+<!--            .band-b{-->
+<!--              fill: #19b459-->
+<!--            }-->
+<!--            .band-c{-->
+<!--              fill: #8dce46-->
+<!--            }-->
+<!--            .band-d{-->
+<!--              fill: #ffd500-->
+<!--            }-->
+<!--            .band-e{-->
+<!--              fill: #fcaa65-->
+<!--            }-->
+<!--            .band-f{-->
+<!--              fill: #ef8023-->
+<!--            }-->
+<!--            .band-g{-->
+<!--              fill: #e9153b-->
+<!--            }-->
+<!--          .band-a-score{-->
+<!--            fill: #67A687-->
+<!--          }-->
+<!--          .band-b-score{-->
+<!--            fill: #72CA8B-->
+<!--          }-->
+<!--          .band-c-score{-->
+<!--            fill: #b4df86-->
+<!--          }-->
+<!--          .band-d-score{-->
+<!--            fill: #ffe666-->
+<!--          }-->
+<!--          .band-e-score{-->
+<!--            fill: #fdc79b-->
+<!--          }-->
+<!--          .band-f-score{-->
+<!--            fill: #f4ac71-->
+<!--          }-->
+<!--          .band-g-score{-->
+<!--            fill: #f2738a-->
+<!--          }-->
+<!--        </style>-->
+<!--        <line x1="72" y1="0" x2="72" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>-->
+<!--        <line x1="410" y1="0" x2="410" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>-->
+<!--        <line x1="510" y1="0" x2="510" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>-->
+<!--        <line x1="0" y1="25" x2="615" y2="25" style="stroke:#b1b4b6;stroke-width:1"></line>-->
+<!--        <line x1="0" y1="0" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>-->
+<!--        <line x1="0" y1="0" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>-->
+<!--        <line x1="0" y1="0" x2="0" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>-->
+<!--        <line x1="615" y1="376" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>-->
+<!--        <line x1="615" y1="376" x2="0" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>-->
+<!--        <rect width="78" height="50" x="72" y="25" class="band-a">-->
+<!--        </rect>-->
+<!--        <rect width="118" height="50" x="72" y="75" class="band-b">-->
+<!--        </rect>-->
+<!--        <rect width="158" height="50" x="72" y="125" class="band-c">-->
+<!--        </rect>-->
+<!--        <rect width="198" height="50" x="72" y="175" class="band-d">-->
+<!--        </rect>-->
+<!--        <rect width="238" height="50" x="72" y="225" class="band-e">-->
+<!--        </rect>-->
+<!--        <rect width="278" height="50" x="72" y="275" class="band-f">-->
+<!--        </rect>-->
+<!--        <rect width="318" height="50" x="72" y="325" class="band-g">-->
+<!--        </rect>-->
+<!--        <rect width="72" height="50" x="0" y="25" class="band-a-score">-->
+<!--        </rect>-->
+<!--        <rect width="72" height="50" x="0" y="75" class="band-b-score">-->
+<!--        </rect>-->
+<!--        <rect width="72" height="50" x="0" y="125" class="band-c-score">-->
+<!--        </rect>-->
+<!--        <rect width="72" height="50" x="0" y="175" class="band-d-score">-->
+<!--        </rect>-->
+<!--        <rect width="72" height="50" x="0" y="225" class="band-e-score">-->
+<!--        </rect>-->
+<!--        <rect width="72" height="50" x="0" y="275" class="band-f-score">-->
+<!--        </rect>-->
+<!--        <rect width="72" height="50" x="0" y="325" class="band-g-score">-->
+<!--        </rect>-->
+<!--        <text role="presentation" aria-hidden="true" x="0" y="0" class="letter">-->
+<!--          <tspan x="107" y="64">A</tspan>-->
+<!--          <tspan x="147" y="114">B</tspan>-->
+<!--          <tspan x="187" y="164">C</tspan>-->
+<!--          <tspan x="227" y="214">D</tspan>-->
+<!--          <tspan x="267" y="264">E</tspan>-->
+<!--          <tspan x="307" y="314">F</tspan>-->
+<!--          <tspan x="347" y="364">G</tspan>-->
+<!--        </text>-->
+<!--        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">-->
+<!--          <tspan x="8" y="55">92+</tspan>-->
+<!--          <tspan x="8" y="105">81-91</tspan>-->
+<!--          <tspan x="8" y="155">69-80</tspan>-->
+<!--          <tspan x="8" y="205">55-68</tspan>-->
+<!--          <tspan x="8" y="255">39-54</tspan>-->
+<!--          <tspan x="8" y="305">21-38</tspan>-->
+<!--          <tspan x="8" y="355">1-20</tspan>-->
+<!--        </text>-->
+<!--        <text role="presentation" aria-hidden="true" x="8" y="15" class="small" dominant-baseline="middle">-->
+<!--          Score-->
+<!--        </text>-->
+<!--        <text role="presentation" aria-hidden="true" x="85" y="15" class="small" dominant-baseline="middle">-->
+<!--          Energy rating-->
+<!--        </text>-->
+<!--        <text role="presentation" aria-hidden="true" x="460" y="15" class="small" text-anchor="middle" dominant-baseline="middle">-->
+<!--          Current-->
+<!--        </text>-->
+<!--        <text role="presentation" aria-hidden="true" x="565" y="15" class="small" text-anchor="middle" dominant-baseline="middle">-->
+<!--          Potential-->
+<!--        </text>-->
+<!--        <svg role="presentation" aria-hidden="true" x="415" y="75" width="90" height="50">-->
+<!--          <rect width="75" height="50" class="band-b" x="25"></rect>-->
+<!--          <polygon points="0,25 25,50 25,0 0,25" class="band-b"></polygon>-->
+<!--          <text x="18" y="32" class="current-potential-number">85 |</text>-->
+<!--          <text x="67" y="32" class="small-letter">B</text>-->
+<!--        </svg>-->
+<!--        <svg role="presentation" aria-hidden="true" x="515" y="75" width="90" height="50">-->
+<!--          <rect width="75" height="50" class="band-b" x="25"></rect>-->
+<!--          <polygon points="0,25 25,50 25,0 0,25" class="band-b"></polygon>-->
+<!--          <text x="18" y="32" class="current-potential-number">87 |</text>-->
+<!--          <text x="67" y="32" class="small-letter">B</text>-->
+<!--        </svg>-->
+<!--      </svg>-->
       <p class="govuk-body govuk-!-margin-top-6">The graph shows this property’s current and potential energy efficiency.</p>
       <p class="govuk-body govuk-!-margin-top-6">Properties are given a rating from A (most efficient) to G (least efficient).</p>
       <p class="govuk-body govuk-!-margin-top-6">Properties are also given a score. The higher the number the lower your fuel bills are likely to be.</p>
@@ -335,74 +335,74 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
       <p class="govuk-body">When the description says “assumed”, it means that the feature could not be inspected and an assumption has been made based on the property’s age and type.</p>
       <table class="govuk-table">
         <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Feature</th>
-          <th scope="col" class="govuk-table__header">Description</th>
-          <th scope="col" class="govuk-table__header">Rating</th>
-        </tr>
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Feature</th>
+            <th scope="col" class="govuk-table__header">Description</th>
+            <th scope="col" class="govuk-table__header">Rating</th>
+          </tr>
         </thead>
         <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell govuk-!-font-weight-regular">Walls</th>
-          <td class="govuk-table__cell">Average thermal transmittance 0.27 W/m²K</td>
-          <td class="govuk-table__cell">Very good</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell govuk-!-font-weight-regular">Roof</th>
-          <td class="govuk-table__cell">Average thermal transmittance 0.12 W/m²K</td>
-          <td class="govuk-table__cell">Very good</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell govuk-!-font-weight-regular">Floor</th>
-          <td class="govuk-table__cell">Average thermal transmittance 0.22 W/m²K</td>
-          <td class="govuk-table__cell">Good</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell govuk-!-font-weight-regular">Windows</th>
-          <td class="govuk-table__cell">Fully double glazed</td>
-          <td class="govuk-table__cell">Good</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell govuk-!-font-weight-regular">Main heating</th>
-          <td class="govuk-table__cell">Boiler and radiators, mains gas</td>
-          <td class="govuk-table__cell">Good</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell govuk-!-font-weight-regular">Main heating control</th>
-          <td class="govuk-table__cell">Programmer, room thermostat and TRVs</td>
-          <td class="govuk-table__cell">Good</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell govuk-!-font-weight-regular">Hot water</th>
-          <td class="govuk-table__cell">From main system</td>
-          <td class="govuk-table__cell">Good</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell govuk-!-font-weight-regular">Lighting</th>
-          <td class="govuk-table__cell">Low energy lighting in all fixed outlets</td>
-          <td class="govuk-table__cell">Very good</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell govuk-!-font-weight-regular">Air tightness</th>
-          <td class="govuk-table__cell">Air permeability 7.2 m³/h.m² (as tested)</td>
-          <td class="govuk-table__cell">Average</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell govuk-!-font-weight-regular">Secondary heating</th>
-          <td class="govuk-table__cell">None</td>
-          <td class="govuk-table__cell">N/A</td>
-        </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-!-font-weight-regular">Walls</th>
+            <td class="govuk-table__cell">Average thermal transmittance 0.27 W/m²K</td>
+            <td class="govuk-table__cell">Very good</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-!-font-weight-regular">Roof</th>
+            <td class="govuk-table__cell">Average thermal transmittance 0.12 W/m²K</td>
+            <td class="govuk-table__cell">Very good</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-!-font-weight-regular">Floor</th>
+            <td class="govuk-table__cell">Average thermal transmittance 0.22 W/m²K</td>
+            <td class="govuk-table__cell">Good</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-!-font-weight-regular">Windows</th>
+            <td class="govuk-table__cell">Fully double glazed</td>
+            <td class="govuk-table__cell">Good</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-!-font-weight-regular">Main heating</th>
+            <td class="govuk-table__cell">Boiler and radiators, mains gas</td>
+            <td class="govuk-table__cell">Good</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-!-font-weight-regular">Main heating control</th>
+            <td class="govuk-table__cell">Programmer, room thermostat and TRVs</td>
+            <td class="govuk-table__cell">Good</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-!-font-weight-regular">Hot water</th>
+            <td class="govuk-table__cell">From main system</td>
+            <td class="govuk-table__cell">Good</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-!-font-weight-regular">Lighting</th>
+            <td class="govuk-table__cell">Low energy lighting in all fixed outlets</td>
+            <td class="govuk-table__cell">Very good</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-!-font-weight-regular">Air tightness</th>
+            <td class="govuk-table__cell">Air permeability 7.2 m³/h.m² (as tested)</td>
+            <td class="govuk-table__cell">Average</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-!-font-weight-regular">Secondary heating</th>
+            <td class="govuk-table__cell">None</td>
+            <td class="govuk-table__cell">N/A</td>
+          </tr>
         </tbody>
       </table>
-      <!--      <h2 class="govuk-heading-m">Low and zero carbon energy sources</h2>-->
-      <!--      <p class="govuk-body">-->
-      <!--        Low and zero carbon energy sources release very little or no CO2. Installing these sources may help reduce energy bills as well as cutting carbon emissions. The following low or zero carbon energy sources are installed in this property:-->
-      <!--      </p>-->
-      <!--      <ul class="govuk-list govuk-list&#45;&#45;bullet govuk-!-margin-left-6">-->
-      <!--        <li>-->
-      <!--          Solar photovoltaics-->
-      <!--        </li>-->
-      <!--      </ul>-->
+<!--      <h2 class="govuk-heading-m">Low and zero carbon energy sources</h2>-->
+<!--      <p class="govuk-body">-->
+<!--        Low and zero carbon energy sources release very little or no CO2. Installing these sources may help reduce energy bills as well as cutting carbon emissions. The following low or zero carbon energy sources are installed in this property:-->
+<!--      </p>-->
+<!--      <ul class="govuk-list govuk-list&#45;&#45;bullet govuk-!-margin-left-6">-->
+<!--        <li>-->
+<!--          Solar photovoltaics-->
+<!--        </li>-->
+<!--      </ul>-->
       <h2 class="govuk-heading-m">Primary energy use</h2>
       <p class="govuk-body">The primary energy use for this property per year is 74 kilowatt hours per square metre (kWh/m2).</p>
       <details class="govuk-details" data-module="govuk-details">
