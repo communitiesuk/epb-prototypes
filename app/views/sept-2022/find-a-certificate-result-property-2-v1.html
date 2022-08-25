@@ -23,6 +23,81 @@
       display: block;
     }
   }
+
+  .letter {
+    font-size: 40px;
+    font-family: sans-serif;
+    fill: 	#0b0c0c;
+    font-weight: bold;
+  }
+
+  .current-potential-number {
+    font-size: 22px;
+    font-family: sans-serif;
+    fill: #000;
+    line-height: 50px;
+    margin-top: 100px;
+  }
+
+  .small-letter {
+    font-size: 19px;
+    font-family: sans-serif;
+    fill: 	#0b0c0c;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .small {
+    font-size: 25px;
+    font-family: sans-serif;
+    fill: 	#0b0c0c;
+    line-height: 50px;
+    margin-top: 100px;
+    font-weight: bold;
+  }
+
+  .band-a{
+    fill: #00c781
+  }
+  .band-b{
+    fill: #19b459
+  }
+  .band-c{
+    fill: #8dce46
+  }
+  .band-d{
+    fill: #ffd500
+  }
+  .band-e{
+    fill: #fcaa65
+  }
+  .band-f{
+    fill: #ef8023
+  }
+  .band-g{
+    fill: #e9153b
+  }
+  .light-grey{
+    fill: lightgrey;
+  }
+  .band-b-score{
+    fill: #72CA8B
+  }
+  .band-c-score{
+    fill: #b4df86
+  }
+  .band-d-score{
+    fill: #ffe666
+  }
+  .band-e-score{
+    fill: #fdc79b
+  }
+  .band-f-score{
+    fill: #f4ac71
+  }
+  .band-g-score{
+    fill: #f2738a
+  }
 </style>
 
 <p class="display_print">To check this EPC is valid visit www.find-energy-certificate.digital.communities.gov.uk and search for your postcode.</p>
@@ -145,180 +220,46 @@
     </div>
     <div class="govuk-body epc-blue-bottom printable-area epc-rating-graph-section">
       <a id="epc"></a>
-      <h2 class="govuk-heading-l">Energy efficiency rating for this property</h2>
+      <h2 class="govuk-heading-l">Energy efficiency rating</h2>
       <p class="govuk-body govuk-!-margin-bottom-6">
-        This property’s current energy rating is  B. It has the potential to be B.
+        Energy rating for this property
       </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">Energy rating</title>
+        <desc id="svg-desc">Energy rating for this property 48 E.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="300" height="45" x="0" y="0" class="band-e">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="200" y="32">48 | E</tspan>
+        </text>
+      </svg>
+      <br></br>
+      <p class="govuk-body govuk-!-margin-bottom-6">
+        This could be improved to
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">This could be improved to</title>
+        <desc id="svg-desc">This could be improved to 79 C.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="395" height="45" x="0" y="0" class="band-a">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="295" y="32">79 | C</tspan>
+        </text>
+      </svg>
+      <br></br>
       <p class="govuk-body govuk-!-margin-bottom-6">
         <a class="govuk-link" href=" #recommendations">See how to improve this property’s energy performance.</a>
       </p>
-<!--      <svg width="615" height="376" viewBox="0 0 615 376" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">-->
-<!--        <title id="svg-title">Energy efficiency chart</title>-->
-<!--        <desc id="svg-desc">This property’s current energy rating is B with a score of 85. It has a potential energy rating of B with a score of 87.</desc>-->
-<!--        <style>-->
-<!--          .letter {-->
-<!--            font-size: 40px;-->
-<!--            font-family: sans-serif;-->
-<!--            fill: 	#0b0c0c;-->
-<!--            font-weight: bold;-->
-<!--          }-->
-
-<!--          .current-potential-number {-->
-<!--            font-size: 22px;-->
-<!--            font-family: sans-serif;-->
-<!--            fill: #000;-->
-<!--            line-height: 50px;-->
-<!--            margin-top: 100px;-->
-<!--          }-->
-
-<!--          .small-letter {-->
-<!--            font-size: 19px;-->
-<!--            font-family: sans-serif;-->
-<!--            fill: 	#0b0c0c;-->
-<!--            font-weight: bold;-->
-<!--            text-align: center;-->
-<!--          }-->
-
-<!--          .small {-->
-<!--            font-size: 20px;-->
-<!--            font-family: sans-serif;-->
-<!--            fill: 	#0b0c0c;-->
-<!--            line-height: 50px;-->
-<!--            margin-top: 100px;-->
-<!--            font-weight: bold;-->
-<!--          }-->
-
-<!--            .band-a{-->
-<!--              fill: #008054-->
-<!--            }-->
-<!--            .band-b{-->
-<!--              fill: #19b459-->
-<!--            }-->
-<!--            .band-c{-->
-<!--              fill: #8dce46-->
-<!--            }-->
-<!--            .band-d{-->
-<!--              fill: #ffd500-->
-<!--            }-->
-<!--            .band-e{-->
-<!--              fill: #fcaa65-->
-<!--            }-->
-<!--            .band-f{-->
-<!--              fill: #ef8023-->
-<!--            }-->
-<!--            .band-g{-->
-<!--              fill: #e9153b-->
-<!--            }-->
-<!--          .band-a-score{-->
-<!--            fill: #67A687-->
-<!--          }-->
-<!--          .band-b-score{-->
-<!--            fill: #72CA8B-->
-<!--          }-->
-<!--          .band-c-score{-->
-<!--            fill: #b4df86-->
-<!--          }-->
-<!--          .band-d-score{-->
-<!--            fill: #ffe666-->
-<!--          }-->
-<!--          .band-e-score{-->
-<!--            fill: #fdc79b-->
-<!--          }-->
-<!--          .band-f-score{-->
-<!--            fill: #f4ac71-->
-<!--          }-->
-<!--          .band-g-score{-->
-<!--            fill: #f2738a-->
-<!--          }-->
-<!--        </style>-->
-<!--        <line x1="72" y1="0" x2="72" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>-->
-<!--        <line x1="410" y1="0" x2="410" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>-->
-<!--        <line x1="510" y1="0" x2="510" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>-->
-<!--        <line x1="0" y1="25" x2="615" y2="25" style="stroke:#b1b4b6;stroke-width:1"></line>-->
-<!--        <line x1="0" y1="0" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>-->
-<!--        <line x1="0" y1="0" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>-->
-<!--        <line x1="0" y1="0" x2="0" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>-->
-<!--        <line x1="615" y1="376" x2="615" y2="0" style="stroke:#b1b4b6;stroke-width:1"></line>-->
-<!--        <line x1="615" y1="376" x2="0" y2="376" style="stroke:#b1b4b6;stroke-width:1"></line>-->
-<!--        <rect width="78" height="50" x="72" y="25" class="band-a">-->
-<!--        </rect>-->
-<!--        <rect width="118" height="50" x="72" y="75" class="band-b">-->
-<!--        </rect>-->
-<!--        <rect width="158" height="50" x="72" y="125" class="band-c">-->
-<!--        </rect>-->
-<!--        <rect width="198" height="50" x="72" y="175" class="band-d">-->
-<!--        </rect>-->
-<!--        <rect width="238" height="50" x="72" y="225" class="band-e">-->
-<!--        </rect>-->
-<!--        <rect width="278" height="50" x="72" y="275" class="band-f">-->
-<!--        </rect>-->
-<!--        <rect width="318" height="50" x="72" y="325" class="band-g">-->
-<!--        </rect>-->
-<!--        <rect width="72" height="50" x="0" y="25" class="band-a-score">-->
-<!--        </rect>-->
-<!--        <rect width="72" height="50" x="0" y="75" class="band-b-score">-->
-<!--        </rect>-->
-<!--        <rect width="72" height="50" x="0" y="125" class="band-c-score">-->
-<!--        </rect>-->
-<!--        <rect width="72" height="50" x="0" y="175" class="band-d-score">-->
-<!--        </rect>-->
-<!--        <rect width="72" height="50" x="0" y="225" class="band-e-score">-->
-<!--        </rect>-->
-<!--        <rect width="72" height="50" x="0" y="275" class="band-f-score">-->
-<!--        </rect>-->
-<!--        <rect width="72" height="50" x="0" y="325" class="band-g-score">-->
-<!--        </rect>-->
-<!--        <text role="presentation" aria-hidden="true" x="0" y="0" class="letter">-->
-<!--          <tspan x="107" y="64">A</tspan>-->
-<!--          <tspan x="147" y="114">B</tspan>-->
-<!--          <tspan x="187" y="164">C</tspan>-->
-<!--          <tspan x="227" y="214">D</tspan>-->
-<!--          <tspan x="267" y="264">E</tspan>-->
-<!--          <tspan x="307" y="314">F</tspan>-->
-<!--          <tspan x="347" y="364">G</tspan>-->
-<!--        </text>-->
-<!--        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">-->
-<!--          <tspan x="8" y="55">92+</tspan>-->
-<!--          <tspan x="8" y="105">81-91</tspan>-->
-<!--          <tspan x="8" y="155">69-80</tspan>-->
-<!--          <tspan x="8" y="205">55-68</tspan>-->
-<!--          <tspan x="8" y="255">39-54</tspan>-->
-<!--          <tspan x="8" y="305">21-38</tspan>-->
-<!--          <tspan x="8" y="355">1-20</tspan>-->
-<!--        </text>-->
-<!--        <text role="presentation" aria-hidden="true" x="8" y="15" class="small" dominant-baseline="middle">-->
-<!--          Score-->
-<!--        </text>-->
-<!--        <text role="presentation" aria-hidden="true" x="85" y="15" class="small" dominant-baseline="middle">-->
-<!--          Energy rating-->
-<!--        </text>-->
-<!--        <text role="presentation" aria-hidden="true" x="460" y="15" class="small" text-anchor="middle" dominant-baseline="middle">-->
-<!--          Current-->
-<!--        </text>-->
-<!--        <text role="presentation" aria-hidden="true" x="565" y="15" class="small" text-anchor="middle" dominant-baseline="middle">-->
-<!--          Potential-->
-<!--        </text>-->
-<!--        <svg role="presentation" aria-hidden="true" x="415" y="75" width="90" height="50">-->
-<!--          <rect width="75" height="50" class="band-b" x="25"></rect>-->
-<!--          <polygon points="0,25 25,50 25,0 0,25" class="band-b"></polygon>-->
-<!--          <text x="18" y="32" class="current-potential-number">85 |</text>-->
-<!--          <text x="67" y="32" class="small-letter">B</text>-->
-<!--        </svg>-->
-<!--        <svg role="presentation" aria-hidden="true" x="515" y="75" width="90" height="50">-->
-<!--          <rect width="75" height="50" class="band-b" x="25"></rect>-->
-<!--          <polygon points="0,25 25,50 25,0 0,25" class="band-b"></polygon>-->
-<!--          <text x="18" y="32" class="current-potential-number">87 |</text>-->
-<!--          <text x="67" y="32" class="small-letter">B</text>-->
-<!--        </svg>-->
-<!--      </svg>-->
-<!--      <p class="govuk-body govuk-!-margin-top-6">The graph shows this property’s current and potential energy efficiency.</p>-->
-<!--      <p class="govuk-body govuk-!-margin-top-6">Properties are given a rating from A (most efficient) to G (least efficient).</p>-->
-<!--      <p class="govuk-body govuk-!-margin-top-6">Properties are also given a score. The higher the number the lower your fuel bills are likely to be.</p>-->
-<!--      <p class="govuk-body govuk-!-margin-top-6">For properties in England and Wales:</p>-->
-<!--      <ul>-->
-<!--        <li>the average energy rating is D</li>-->
-<!--        <li>the average energy score is 60</li>-->
-<!--      </ul>-->
+      <p class="govuk-body govuk-!-margin-top-6">Properties get a rating from A (best) to G (worst) and a score. The better the rating and score, the lower your fuel bills are likely to be.</p></p>
+      <p class="govuk-body govuk-!-margin-top-6">For properties in England and Wales:</p>
+      <ul>
+        <li>the average energy rating is D</li>
+        <li>the average energy score is 60</li>
+      </ul>
     </div>
     <div class="govuk-body epc-blue-bottom printable-area epc-energy-perf-breakdown">
       <a id="summary"></a>
@@ -421,10 +362,38 @@
     </div>
     <div class="govuk-body epc-page-break epc-blue-bottom printable-area epc-environmental-impact">
       <a id="energy"></a>
-      <h2 class="govuk-heading-l">Environmental impact of this property</h2>
-      <p class="govuk-body">This property’s current environmental impact rating is E. It has the potential to be C.</p>
-      <p class="govuk-body">Properties are rated in a scale from A to G based on how much carbon dioxide (CO2) they produce.</p>
-      <p class="govuk-body">Properties with an A rating produce less CO2 than G rated properties.</p>
+      <h2 class="govuk-heading-l">Carbon efficiency</h2>
+      <p class="govuk-body govuk-!-margin-bottom-6">
+        Carbon efficiency for this property
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">Carbon efficiency for this property</title>
+        <desc id="svg-desc">Carbon efficiency for this property 43 E.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="305" height="45" x="0" y="0" class="band-e">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="205" y="32">43 | E</tspan>
+        </text>
+      </svg>
+      <br></br>
+      <p class="govuk-body govuk-!-margin-bottom-6">
+        This could be improved to
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">This could be improved to</title>
+        <desc id="svg-desc">This could be improved to 76 C.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="395" height="45" x="0" y="0" class="band-c">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="295" y="32">76 | C</tspan>
+        </text>
+      </svg>
+      <br></br>
+      <p class="govuk-body">Properties get a rating from A (best) to G (worst) based on how much carbon dioxide (CO2) they produce each year. CO2 harms the environment. </p>
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row" id="type">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">An average household produces</dt>
@@ -435,31 +404,18 @@
           <dd class="govuk-summary-list__value" id="property-produces" style="text-align: right">6.0 tonnes of CO2</dd>
         </div>
         <div class="govuk-summary-list__row" id="type">
-          <dt class="govuk-summary-list__key govuk-!-width-one-half">This property’s potential production</dt>
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">This could be improved to</dt>
           <dd class="govuk-summary-list__value" id="potential-production" style="text-align: right">2.1 tonnes of CO2</dd>
         </div>
       </dl>
-      <p class="govuk-body">
-        By making the <a class="govuk-link" href="#recommendations">recommended changes</a>, you could reduce this property’s CO2 emissions by 3.9 tonnes per year. This will help to protect the environment.
-      </p>
-      <p class="govuk-body">Environmental impact ratings are based on assumptions about average occupancy and energy use. They may not reflect how energy is consumed by the people living at the property.</p>
+      <p class="govuk-body">You could improve this property's CO2 emissions by making the <a class="govuk-link" href="#recommendations">suggested changes</a>. This will help to protect the environment.</p>
+      <p class="govuk-body">These ratings are based on assumptions about average occupancy and energy use. They may not reflect how energy is consumed by the people living at the property.</p>
     </div>
     <div class="govuk-body printable-area epc-recommendations">
       <a id="recommendations"></a>
-      <h2 class="govuk-heading-l">Improve this property’s energy performance</h2>
+      <h2 class="govuk-heading-l">Improve this property’s energy rating</h2>
       <div class="allow-break ">
-        <div class="epc-rating-box">
-          <p class="epc-rating-title govuk-body">
-            Potential energy rating
-          </p>
-          <p class="epc-rating-result govuk-body">
-            C
-          </p>
-        </div>
-        <p class="govuk-body">By following our step by step recommendations you could reduce this property’s energy use and potentially save money.</p>
-        <p class="govuk-body">
-          Carrying out these changes in order will improve the property’s energy rating and score from E (48) to C (79).
-        </p>
+        <p class="govuk-body">Follow these steps to improve the energy rating and score. This will also help to protect the environment.</p>
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">Do I need to follow these steps in order?</span>
@@ -489,18 +445,21 @@
             £26
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key govuk-!-width-one-half" style="vertical-align: top">Potential rating after carrying out recommendation 1</dt>
-          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
-            <svg width="90" height="50" style="vertical-align: middle">
-              band-e
-              <rect width="75" height="50" class=band-e x="25"></rect>
-              <polygon points="0,25 25,50 25,0 0,25" class=band-e></polygon>
-              <text x="30" y="30">49 | E</text>
-            </svg>
-          </dd>
-        </div>
       </dl>
+      <p class="govuk-body govuk-!-margin-bottom-4" style="font-weight: bold">
+        Possible energy rating after step 1
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">Possible energy rating after step 1</title>
+        <desc id="svg-desc">Possible energy rating after step 1 is 49 E.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="300" height="45" x="0" y="0" class="band-e">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="200" y="32">49 | E</tspan>
+        </text>
+      </svg>
     </div>
     <div class="govuk-body printable-area">
       <hr class="epc-light-top" />
@@ -519,18 +478,21 @@
             £64
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key govuk-!-width-one-half" style="vertical-align: top">Potential rating after carrying out recommendation 1</dt>
-          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
-            <svg width="90" height="50" style="vertical-align: middle">
-              band-e
-              <rect width="75" height="50" class=band-e x="25"></rect>
-              <polygon points="0,25 25,50 25,0 0,25" class=band-e></polygon>
-              <text x="30" y="30">51 | E</text>
-            </svg>
-          </dd>
-        </div>
       </dl>
+      <p class="govuk-body govuk-!-margin-bottom-4" style="font-weight: bold">
+        Possible energy rating after step 2
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">Possible energy rating after step 2</title>
+        <desc id="svg-desc">Possible energy rating after step 2 is 51 E.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="305" height="45" x="0" y="0" class="band-e">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="205" y="32">51 | E</tspan>
+        </text>
+      </svg>
     </div>
     <div class="govuk-body printable-area">
       <hr class="epc-light-top" />
@@ -549,18 +511,21 @@
             £121
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key govuk-!-width-one-half" style="vertical-align: top">Potential rating after carrying out recommendation 1</dt>
-          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
-            <svg width="90" height="50" style="vertical-align: middle">
-              band-d
-              <rect width="75" height="50" class=band-d x="25"></rect>
-              <polygon points="0,25 25,50 25,0 0,25" class=band-d></polygon>
-              <text x="30" y="30">56 | D</text>
-            </svg>
-          </dd>
-        </div>
       </dl>
+      <p class="govuk-body govuk-!-margin-bottom-4" style="font-weight: bold">
+        Possible energy rating after step 3
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">Possible energy rating after step 3</title>
+        <desc id="svg-desc">Possible energy rating after step 3 is 56 D.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="320" height="45" x="0" y="0" class="band-d">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="220" y="32">56 | D</tspan>
+        </text>
+      </svg>
     </div>
     <div class="govuk-body printable-area">
       <hr class="epc-light-top" />
@@ -579,18 +544,21 @@
             £117
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key govuk-!-width-one-half" style="vertical-align: top">Potential rating after carrying out recommendation 1</dt>
-          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
-            <svg width="90" height="50" style="vertical-align: middle">
-              band-d
-              <rect width="75" height="50" class=band-d x="25"></rect>
-              <polygon points="0,25 25,50 25,0 0,25" class=band-d></polygon>
-              <text x="30" y="30">60 | D</text>
-            </svg>
-          </dd>
-        </div>
       </dl>
+      <p class="govuk-body govuk-!-margin-bottom-4" style="font-weight: bold">
+        Possible energy rating after step 4
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">Possible energy rating after step 4</title>
+        <desc id="svg-desc">Possible energy rating after step 4 is 60 D.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="335" height="45" x="0" y="0" class="band-d">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="235" y="32">60 | D</tspan>
+        </text>
+      </svg>
     </div>
     <div class="govuk-body printable-area">
       <hr class="epc-light-top" />
@@ -609,18 +577,21 @@
             £55
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key govuk-!-width-one-half" style="vertical-align: top">Potential rating after carrying out recommendation 1</dt>
-          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
-            <svg width="90" height="50" style="vertical-align: middle">
-              band-d
-              <rect width="75" height="50" class=band-d x="25"></rect>
-              <polygon points="0,25 25,50 25,0 0,25" class=band-d></polygon>
-              <text x="30" y="30">62 | D</text>
-            </svg>
-          </dd>
-        </div>
       </dl>
+      <p class="govuk-body govuk-!-margin-bottom-4" style="font-weight: bold">
+        Possible energy rating after step 5
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">Possible energy rating after step 5</title>
+        <desc id="svg-desc">Possible energy rating after step 5 is 62 D.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="345" height="45" x="0" y="0" class="band-d">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="245" y="32">62 | D</tspan>
+        </text>
+      </svg>
     </div>
     <div class="govuk-body printable-area">
       <hr class="epc-light-top" />
@@ -639,18 +610,21 @@
             £152
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key govuk-!-width-one-half" style="vertical-align: top">Potential rating after carrying out recommendation 1</dt>
-          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
-            <svg width="90" height="50" style="vertical-align: middle">
-              band-d
-              <rect width="75" height="50" class=band-d x="25"></rect>
-              <polygon points="0,25 25,50 25,0 0,25" class=band-d></polygon>
-              <text x="30" y="30">68 | D</text>
-            </svg>
-          </dd>
-        </div>
       </dl>
+      <p class="govuk-body govuk-!-margin-bottom-4" style="font-weight: bold">
+        Possible energy rating after step 6
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">Possible energy rating after step 6</title>
+        <desc id="svg-desc">Possible energy rating after step is 68 D.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="360" height="45" x="0" y="0" class="band-d">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="260" y="32">68 | D</tspan>
+        </text>
+      </svg>
     </div>
     <div class="govuk-body printable-area">
       <hr class="epc-light-top" />
@@ -669,18 +643,21 @@
             £38
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key govuk-!-width-one-half" style="vertical-align: top">Potential rating after carrying out recommendation 1</dt>
-          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
-            <svg width="90" height="50" style="vertical-align: middle">
-              band-c
-              <rect width="75" height="50" class=band-c x="25"></rect>
-              <polygon points="0,25 25,50 25,0 0,25" class=band-c></polygon>
-              <text x="30" y="30">69 | C</text>
-            </svg>
-          </dd>
-        </div>
       </dl>
+      <p class="govuk-body govuk-!-margin-bottom-4" style="font-weight: bold">
+        Possible energy rating after step 7
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">Possible energy rating after step 8</title>
+        <desc id="svg-desc">Possible energy rating after step 7 is 68 D.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="365" height="45" x="0" y="0" class="band-c">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="265" y="32">69 | C</tspan>
+        </text>
+      </svg>
     </div>
     <div class="govuk-body printable-area">
       <hr class="epc-light-top" />
@@ -699,18 +676,21 @@
             £389
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key govuk-!-width-one-half" style="vertical-align: top">Potential rating after carrying out recommendation 1</dt>
-          <dd class="govuk-summary-list__value govuk-!-width-one-half" style="text-align: right">
-            <svg width="90" height="50" style="vertical-align: middle">
-              band-c
-              <rect width="75" height="50" class=band-c x="25"></rect>
-              <polygon points="0,25 25,50 25,0 0,25" class=band-c></polygon>
-              <text x="30" y="30">79 | C</text>
-            </svg>
-          </dd>
-        </div>
       </dl>
+      <p class="govuk-body govuk-!-margin-bottom-4" style="font-weight: bold">
+        Possible energy rating after step 8
+      </p>
+      <svg width="615" height="45" viewBox="0 0 615 45" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;" aria-labelledby="svg-title" aria-describedby="svg-desc" role="img" class="epc-energy-rating-graph">
+        <title id="svg-title">Possible energy rating after step 8</title>
+        <desc id="svg-desc">Possible energy rating after step 8 is 79 C.</desc>
+        <rect width="615" height="45" x="72" y="0" class="light-grey">
+        </rect>
+        <rect width="395" height="45" x="0" y="0" class="band-c">
+        </rect>
+        <text role="presentation" aria-hidden="true" x="0" y="0" class="small">
+          <tspan x="295" y="32">79 | C</tspan>
+        </text>
+      </svg>
     </div>
     <div class="govuk-body epc-blue-bottom allow-break printable-area">
       <h3 class="govuk-heading-m">Paying for energy improvements</h3>
