@@ -1,7 +1,7 @@
 version: 0.2
 
 runtime-versions:
-  nodejs: 14
+  nodejs: 16
 
 env:
   variables:
@@ -17,7 +17,7 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 14
+      nodejs: 16
     commands:
       - npm install
   build:
