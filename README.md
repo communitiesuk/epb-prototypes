@@ -5,7 +5,7 @@ This is where we store our prototypes.
 ## Getting Started
 
 ### Dependencies
-- [Node.js 16.x.x](https://nodejs.org)
+- [Node.js 18.x.x](https://nodejs.org)
     - _Note: Installing Node.js using the above link will automatically install Node Package Manager (NPM)._
 - [Node Package Manager (NPM)](https://www.npmjs.com)
 
@@ -34,7 +34,7 @@ $ npm i
 Start the local server:
 
 ```sh
-$ npm start
+$ npm run dev
 ```
 
 - Go to [localhost](https://localhost:80) in your browser
