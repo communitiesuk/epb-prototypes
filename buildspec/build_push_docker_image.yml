@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - aws --version
+      - docker login -u AWS -p $(aws ecr get-login-password --region $AWS_DEFAULT_REGION) $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t prototypes-image ./
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - docker tag prototypes-image:latest $DOCKER_IMAGE_URI:latest
+      - docker push $DOCKER_IMAGE_URI:latest
+
+artifacts:
+  files:
+    - '**/*'
+
+
