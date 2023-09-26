@@ -4,11 +4,12 @@
     "serve": "govuk-prototype-kit serve",
     "start": "govuk-prototype-kit start"
   },
-  "name": "govuk-prototype-kit",
+  "name": "energy-performance-of-buildings-register-prototypes",
   "dependencies": {
+    "@govuk-prototype-kit/common-templates": "1.2.2",
     "@govuk-prototype-kit/step-by-step": "^2.1.0",
-    "govuk-frontend": "^4.5.0",
-    "govuk-prototype-kit": "^13.2.4",
+    "govuk-frontend": "4.7.0",
+    "govuk-prototype-kit": "13.13.3",
     "jquery": "^3.6.3",
     "notifications-node-client": "^5.2.3"
   }
