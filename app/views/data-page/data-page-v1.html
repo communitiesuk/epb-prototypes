@@ -1,0 +1,60 @@
+{% set serviceName %}
+Find an energy certificate
+{% endset%}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-body">
+            <h1 class="govuk-heading-xl printable-area">
+                Explore data on energy certificates
+            </h1>
+            <p class="govuk-body">Use this service to find data on the:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>number of certificates uploaded to the Energy Performance of Buildings Register</li>
+                <li>energy rating of certificates</li>
+            </ul>
+            <div class="allow-break ">
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">How to use this data</span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <p class="govuk-body">
+                            All certificates uploaded to the Energy Performance of Buildings Register are shown. Some certificates that are shown may have expired or been replaced.
+                            <br /><br />
+                            Energy certificates produced in different years are not directly comparable due to changes in methodology.
+                            <br /><br />
+                            Not all buildings in the UK have an energy certificate.
+                            <br /><br />
+                            Energy certificates are not a direct indicator of housing supply or the state of the housing or rental market.
+                            <br /><br />
+                            This data is not classed as official statistics. <a class="govuk-link" href="https://uksa.statisticsauthority.gov.uk/about-the-authority/uk-statistical-system/types-of-official-statistics/">Find out what this means</a>.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <p class="govuk-body">This data is updated monthly and covers:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>England</li>
+                <li>Wales</li>
+                <li>Northern Ireland</li>
+            </ul>
+            <p class="govuk-body">
+                For data in Scotland, <a class="govuk-link" href="https://www.scottishepcregister.org.uk/CustomerFacingPortal/DataExtract">visit the Scottish Energy Performance Certificate Register</a>.
+            </p>
+        </div>
+    </div>
+    <div class="govuk-grid-column-full">
+        <hr />
+    </div>
+</div>
+
+{% endblock %}
