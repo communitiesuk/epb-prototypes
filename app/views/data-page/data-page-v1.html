@@ -53,32 +53,74 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
         </div>
     </div>
     <div class="govuk-grid-column-full">
-        <hr />
+        <hr>
     </div>
     <div class="govuk-grid-column-full">
         <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
             <div class="govuk-accordion__section">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Domestic buildings
-        </span>
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                          Domestic buildings
+                        </span>
                     </h2>
                     <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
                         For example houses or flats.
                     </div>
                 </div>
-                <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content govuk-grid-row">
+                    <div class="govuk-grid-column-one-third govuk-body">
+                        <h3>Filter results</h3>
+                        <hr>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    <h4 class="govuk-fieldset__heading">
+                                        Assessment type
+                                    </h4>
+                                </legend>
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="SAP" name="SAP" type="checkbox" value="SAP">
+                                        <label class="govuk-label govuk-checkboxes__label" for="SAP">
+                                            SAP (new buildings and conversion)
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="RdSAP" name="RdSAP" type="checkbox" value="RdSAP">
+                                        <label class="govuk-label govuk-checkboxes__label" for="RdSAP">
+                                            RdSAP (existing buildings)
+                                        </label>
+                                    </div>
+                                </div>
+                                <details class="govuk-details govuk-!-margin-top-4">
+                                    <summary class="govuk-details__summary">
+                                            <span class="govuk-details__summary-text">
+                                              What does this mean?
+                                            </span>
+                                    </summary>
+                                    <div class="govuk-details__text">
+                                        Energy performance for new buildings and new conversions is calculated using the SAP methodology. It is calculated by an assessor with access to the building specifications.
+                                        <br /><br />
+                                        Energy performance for existing buildings is calculated using the RdSAP methodology. It is calculated by assuming certain building specifications based on the year that the building was constructed.                                    </div>
+                                </details>
+                            </fieldset>
+<!--                            Next fieldset in the form group goes here -->
+                        </div>
+                    </div>
+                    <div class="govuk-grid-column-two-thirds govuk-body">
+<!--                            The results will go here-->
+                    </div>
                 </div>
             </div>
             <div class="govuk-accordion__section">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-          Non-domestic buildings
-        </span>
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                          Non-domestic buildings
+                        </span>
                     </h2>
-                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
                         For example commercial, industrial or public buildings.
                     </div>
                 </div>
@@ -87,22 +129,20 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
             </div>
         </div>
     </div>
-    <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-body">
-            <h2 class="govuk-heading-m">Other data on energy certificates</h2>
-            <p class="govuk-body">For more detailed energy certificate data on specific buildings,
-                check the data published on <a class="govuk-link" href="https://epc.opendatacommunities.org/domestic/search">Open Data Communities</a>. This data is updated monthly.
-            </p>
-            <p class="govuk-body">
-                For enquiries about energy certificate data, please contact the Ministry of Housing, Communities and Local Government (MHCLG).
-            </p>
-            <div class="govuk-inset-text">
-                <ul class="govuk-list">
-                    <li><a class="govuk-link" href="#">dluhc.digital-services@levellingup.gov.uk</a></li>
-                    <li>Telephone: 020 3829 0748</li>
-                    <li>Monday to Friday, 9am to 5pm</li>
-                </ul>
-            </div>
+    <div class="govuk-grid-column-two-thirds govuk-body">
+        <h2 class="govuk-heading-m">Other data on energy certificates</h2>
+        <p class="govuk-body">For more detailed energy certificate data on specific buildings,
+            check the data published on <a class="govuk-link" href="https://epc.opendatacommunities.org/domestic/search">Open Data Communities</a>. This data is updated monthly.
+        </p>
+        <p class="govuk-body">
+            For enquiries about energy certificate data, please contact the Ministry of Housing, Communities and Local Government (MHCLG).
+        </p>
+        <div class="govuk-inset-text">
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">dluhc.digital-services@levellingup.gov.uk</a></li>
+                <li>Telephone: 020 3829 0748</li>
+                <li>Monday to Friday, 9am to 5pm</li>
+            </ul>
         </div>
     </div>
 </div>
