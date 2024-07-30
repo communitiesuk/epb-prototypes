@@ -106,6 +106,124 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                                 </details>
                             </fieldset>
 <!--                            Next fieldset in the form group goes here -->
+                            <hr>
+                            <fieldset class="govuk-fieldset" aria-describedby="nation-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    <h4 class="govuk-fieldset__heading">
+                                        Area
+                                    </h4>
+                                </legend>
+                                <div id="nation-hint" class="govuk-hint">
+                                    Select area type
+                                </div>
+                                <div class="govuk-radios" data-module="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="area" name="area" type="radio" value="nation" data-aria-controls="conditional-area">
+                                        <label class="govuk-label govuk-radios__label" for="area">
+                                            Nation
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__conditional" id="conditional-area">
+                                        <div class="govuk-form-group">
+                                            <fieldset class="govuk-fieldset" aria-describedby="nation-hint">
+                                                <div id="nation-hint" class="govuk-hint">
+                                                    Select all that apply
+                                                </div>
+                                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                                    <div class="govuk-checkboxes__item">
+                                                        <input class="govuk-checkboxes__input" id="nation" name="nation" type="checkbox" value="england">
+                                                        <label class="govuk-label govuk-checkboxes__label" for="nation">
+                                                            England
+                                                        </label>
+                                                    </div>
+                                                    <div class="govuk-checkboxes__item">
+                                                        <input class="govuk-checkboxes__input" id="nation-2" name="nation" type="checkbox" value="wales">
+                                                        <label class="govuk-label govuk-checkboxes__label" for="nation-2">
+                                                            Wales
+                                                        </label>
+                                                    </div>
+                                                    <div class="govuk-checkboxes__item">
+                                                        <input class="govuk-checkboxes__input" id="nation-3" name="nation" type="checkbox" value="ni">
+                                                        <label class="govuk-label govuk-checkboxes__label" for="nation-3">
+                                                            Northern Ireland
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="area-2" name="area" type="radio" value="la" data-aria-controls="conditional-area-2">
+                                        <label class="govuk-label govuk-radios__label" for="area-2">
+                                            Local authority
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-area-2">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="la">
+                                                Select local authority
+                                            </label>
+                                            <div id="la-hint" class="govuk-hint">
+                                                (Type to search)
+                                            </div>
+                                            <select class="govuk-select" id="la" name="la"
+                                                    data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+                                                <option value="all" selected>Select all</option>-->
+                                                <option value="arun">Arun</option>
+                                                <option value="bournemouth">Bournemouth, Christchurch and Poole</option>
+                                                <option value="bristol">Bristol, City of</option>
+                                                <option value="cheltenham">Cheltenham</option>
+                                                <option value="dacorum">Dacorum</option>
+                                                <option value="dudley">Dudley</option>
+                                                <option value="kings">King's Lynn and West Norfolk</option>
+                                                <option value="manchester">Manchester</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="area-3" name="area" type="radio" value="pc" data-aria-controls="conditional-area-3">
+                                        <label class="govuk-label govuk-radios__label" for="area-3">
+                                            Parliamentary constituency
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-area-3">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="pc">
+                                                Select parliamentary constituency
+                                            </label>
+                                            <div id="pc-hint" class="govuk-hint">
+                                                (Type to search)
+                                            </div>
+                                            <select class="govuk-select" id="pc" name="pc"
+                                                    data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+                                                <option value="all" selected>Select all</option>
+                                                <option value="banbury">Banbury</option>
+                                                <option value="boston">Boston and Skegness</option>
+                                                <option value="camborne">Camborne and Redruth</option>
+                                                <option value="london">Cities of London and Westminster</option>
+                                                <option value="croydon-south">Croydon South</option>
+                                                <option value="erewash">Erewash</option>
+                                                <option value="keighley">Keighley</option>
+                                                <option value="newbury">Newbury</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <details class="govuk-details">
+                                <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    About boundary changes
+                                </span>
+                                </summary>
+                                <div class="govuk-details__text">
+                                    <p> Results are shown according to the most recent boundaries for parliamentary constituencies or local authorities. </p>
+                                    <p> Boundary changes mean some energy certificates may have originally been categorised under different parliamentary constituencies or local authorities.</p>
+                                </div>
+                            </details>
+                            <hr>
+                            <!--                            Next fieldset in the form group goes here -->
+                            <!--                            Apply filter button will go here -->
                         </div>
                     </div>
                     <div class="govuk-grid-column-two-thirds govuk-body">
