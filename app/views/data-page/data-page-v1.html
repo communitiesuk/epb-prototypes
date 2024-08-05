@@ -298,7 +298,7 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                         </div>
                     </div>
                     <div class="govuk-grid-column-two-thirds govuk-body">
-<!--                            The results will go here-->
+                        <!--                            The results will go here-->
                     </div>
                 </div>
             </div>
@@ -313,7 +313,59 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                         For example commercial, industrial or public buildings.
                     </div>
                 </div>
-                <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+                <div id="accordion-default-content-2" class="govuk-accordion__section-content govuk-grid-row">
+                    <div class="govuk-grid-column-one-third govuk-body">
+                        <h3>Filter results</h3>
+                        <hr>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="area-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    <h4 class="govuk-fieldset__heading">
+                                        Certificate type
+                                    </h4>
+                                </legend>
+                                <div id="cert-type-hint" class="govuk-hint">
+                                    Select certificate type
+                                </div>
+                                <div class="govuk-radios" data-module="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="cert-type-1" name="cert-type" type="radio" value="cepc" data-aria-controls="conditional-cepc">
+                                        <label class="govuk-label govuk-radios__label" for="cert-type-1">
+                                            Commercial energy performance certificate (CEPC)
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="cert-type-2" name="cert-type" type="radio" value="dec" data-aria-controls="conditional-dec">
+                                        <label class="govuk-label govuk-radios__label" for="cert-type-2">
+                                            Display energy certificate (DEC)
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="cert-type-3" name="cert-type" type="radio" value="ac" data-aria-controls="conditional-ac">
+                                        <label class="govuk-label govuk-radios__label" for="cert-type-3">
+                                            Air conditioning inspection certificate (AC-CERT)
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <details class="govuk-details">
+                                <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    What does this mean?
+                                </span>
+                                </summary>
+                                <div class="govuk-details__text">
+                                    <p>Commercial energy performance certificates are for private commercial buildings. They are based on the carbon dioxide emissions of the building.</p>
+                                    <p>Display energy certificates are for public buildings. They are based on the energy use of the building.</p>
+                                    <p>Air conditioning inspection certificates are for buildings that contain air conditioning systems above 12 kW.</p>
+                                </div>
+                            </details>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="govuk-grid-column-two-thirds govuk-body">
+                        <!--                            The results will go here-->
+                    </div>
                 </div>
             </div>
         </div>
