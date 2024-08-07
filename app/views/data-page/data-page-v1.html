@@ -292,10 +292,22 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                                     </div>
                                 </details>
                             </fieldset>
-                            <!--                            Next fieldset in the form group goes here -->
                             <hr>
-                            <!--                            Apply filter button will go here -->
+                            <fieldset class="govuk-fieldset" aria-describedby="energy-efficiency-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    <h4 class="govuk-fieldset__heading">
+                                        View results from
+                                    </h4>
+                                </legend>
+                                <input type="number" min="2020" max="2024" step="1" value="2020" class="govuk-input govuk-date-input__input govuk-input--width-3"/>
+                                    <span class="govuk-body"> to </span>
+                                <input type="number" min="2020" max="2024" step="1" value="2024" class="govuk-input govuk-date-input__input govuk-input--width-3"/>
+                            </fieldset>
+                            <hr>
                         </div>
+                        <button type="submit" class="govuk-button" data-module="govuk-button">
+                            Apply filters
+                        </button>
                     </div>
                     <div class="govuk-grid-column-two-thirds govuk-body">
                         <h3>Number of certificates uploaded</h3>
