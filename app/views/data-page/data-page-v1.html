@@ -293,18 +293,55 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                                 </details>
                             </fieldset>
                             <hr>
-                            <fieldset class="govuk-fieldset" aria-describedby="energy-efficiency-hint">
-                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                                    <h4 class="govuk-fieldset__heading">
-                                        View results from
-                                    </h4>
-                                </legend>
-                                <input type="number" min="2020" max="2024" step="1" value="2020" class="govuk-input govuk-date-input__input govuk-input--width-3"/>
-                                    <span class="govuk-body"> to </span>
-                                <input type="number" min="2020" max="2024" step="1" value="2024" class="govuk-input govuk-date-input__input govuk-input--width-3"/>
-                            </fieldset>
-                            <hr>
+                            <div class="govuk-form-group">
+                                <h3 class="govuk-heading">
+                                    Time series
+                                </h3>
+                                <label class="govuk-label" for="from">
+                                    View results from
+                                </label>
+                                <select class="govuk-select" id="from" name="from">
+                                    <option value="Q3 2020" selected>Q3 2020</option>
+                                    <option value="Q4 2020">Q4 2020</option>
+                                    <option value="Q1 2021">Q1 2021</option>
+                                    <option value="Q2 2021">Q2 2021</option>
+                                    <option value="Q3 2021">Q3 2021</option>
+                                    <option value="Q4 2021">Q4 2021</option>
+                                    <option value="Q1 2022">Q1 2022</option>
+                                    <option value="Q2 2022">Q2 2022</option>
+                                    <option value="Q3 2022">Q3 2022</option>
+                                    <option value="Q4 2022">Q4 2022</option>
+                                    <option value="Q1 2023">Q1 2023</option>
+                                    <option value="Q2 2023">Q2 2023</option>
+                                    <option value="Q3 2023">Q3 2023</option>
+                                    <option value="Q4 2023">Q4 2023</option>
+                                    <option value="Q1 2024">Q1 2024</option>
+                                    <option value="Q2 2024">Q2 2024</option>
+                                </select>
+                                <label class="govuk-label" for="to">
+                                    to
+                                </label>
+                                <select class="govuk-select" id="to" name="to">
+                                    <option value="Q3 2020">Q3 2020</option>
+                                    <option value="Q4 2020">Q4 2020</option>
+                                    <option value="Q1 2021">Q1 2021</option>
+                                    <option value="Q2 2021">Q2 2021</option>
+                                    <option value="Q3 2021">Q3 2021</option>
+                                    <option value="Q4 2021">Q4 2021</option>
+                                    <option value="Q1 2022">Q1 2022</option>
+                                    <option value="Q2 2022">Q2 2022</option>
+                                    <option value="Q3 2022">Q3 2022</option>
+                                    <option value="Q4 2022">Q4 2022</option>
+                                    <option value="Q1 2023">Q1 2023</option>
+                                    <option value="Q2 2023">Q2 2023</option>
+                                    <option value="Q3 2023">Q3 2023</option>
+                                    <option value="Q4 2023">Q4 2023</option>
+                                    <option value="Q1 2024">Q1 2024</option>
+                                    <option value="Q2 2024" selected>Q2 2024</option>
+                                </select>
+                            </div>
                         </div>
+                        <hr>
                         <button type="submit" class="govuk-button" data-module="govuk-button">
                             Apply filters
                         </button>
