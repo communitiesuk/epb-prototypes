@@ -1,0 +1,443 @@
+{% set serviceName %}
+Find an energy certificate
+{% endset%}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-body">
+            <h1 class="govuk-heading-xl printable-area">
+                Explore data on energy certificates
+            </h1>
+            <p class="govuk-body">Use this service to find data on the:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>number of certificates uploaded to the Energy Performance of Buildings Register</li>
+                <li>energy rating of certificates</li>
+            </ul>
+            <div class="allow-break ">
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">How to use this data</span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <p class="govuk-body">
+                            All certificates uploaded to the Energy Performance of Buildings Register are shown. Some certificates that are shown may have expired or been replaced.
+                            <br /><br />
+                            Energy certificates produced in different years are not directly comparable due to changes in methodology.
+                            <br /><br />
+                            Not all buildings in the UK have an energy certificate.
+                            <br /><br />
+                            Energy certificates are not a direct indicator of housing supply or the state of the housing or rental market.
+                            <br /><br />
+                            This data is not classed as official statistics. <a class="govuk-link" href="https://uksa.statisticsauthority.gov.uk/about-the-authority/uk-statistical-system/types-of-official-statistics/">Find out what this means</a>.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <p class="govuk-body">This data is updated monthly and covers:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>England</li>
+                <li>Wales</li>
+                <li>Northern Ireland</li>
+            </ul>
+            <p class="govuk-body">
+                For data in Scotland, <a class="govuk-link" href="https://www.scottishepcregister.org.uk/CustomerFacingPortal/DataExtract">visit the Scottish Energy Performance Certificate Register</a>.
+            </p>
+        </div>
+    </div>
+    <div class="govuk-grid-column-full">
+        <hr>
+    </div>
+    <div class="govuk-grid-column-full">
+        <div class="govuk-tabs" data-module="govuk-tabs">
+            <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                    <a class="govuk-tabs__tab" href="#past-day">
+                        Domestic buildings
+                    </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#past-week">
+                        Non-domestic buildings
+                    </a>
+                </li>
+            </ul>
+            <div class="govuk-tabs__panel" id="past-day">
+                <h2 class="govuk-heading-l">Domestic buildings</h2>
+                <p class="govuk-body">For example houses or flats.</p>
+
+
+                <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                    <div class="govuk-accordion__section">
+                        <div class="govuk-accordion__section-header">
+                            <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                              Filter results
+                            </span>
+                            </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                            <fieldset class="govuk-fieldset" aria-describedby="assessment-type-hint">
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="SAP" name="SAP" type="checkbox" value="SAP">
+                                        <label class="govuk-label govuk-checkboxes__label" for="SAP">
+                                            SAP (new buildings and conversion)
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="RdSAP" name="RdSAP" type="checkbox" value="RdSAP">
+                                        <label class="govuk-label govuk-checkboxes__label" for="RdSAP">
+                                            RdSAP (existing buildings)
+                                        </label>
+                                    </div>
+                                </div>
+                                <details class="govuk-details govuk-!-margin-top-4">
+                                    <summary class="govuk-details__summary">
+                                            <span class="govuk-details__summary-text">
+                                              What does this mean?
+                                            </span>
+                                    </summary>
+                                    <div class="govuk-details__text">
+                                        Energy performance for new buildings and new conversions is calculated using the SAP methodology. It is calculated by an assessor with access to the building specifications.
+                                        <br /><br />
+                                        Energy performance for existing buildings is calculated using the RdSAP methodology. It is calculated by assuming certain building specifications based on the year that the building was constructed.                                    </div>
+                                </details>
+                            </fieldset>
+                            <hr>
+                            <fieldset class="govuk-fieldset" aria-describedby="area-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    <h3 class="govuk-fieldset__heading">
+                                        Area
+                                    </h3>
+                                </legend>
+                                <div id="area-hint" class="govuk-hint">
+                                    Select area type
+                                </div>
+                                <div class="govuk-radios" data-module="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="area" name="area" type="radio" value="nation" data-aria-controls="conditional-area">
+                                        <label class="govuk-label govuk-radios__label" for="area">
+                                            Nation
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__conditional" id="conditional-area">
+                                        <div class="govuk-form-group">
+                                            <fieldset class="govuk-fieldset" aria-describedby="nation-hint">
+                                                <div id="nation-hint" class="govuk-hint">
+                                                    Select all that apply
+                                                </div>
+                                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                                    <div class="govuk-checkboxes__item">
+                                                        <input class="govuk-checkboxes__input" id="nation" name="nation" type="checkbox" value="england">
+                                                        <label class="govuk-label govuk-checkboxes__label" for="nation">
+                                                            England
+                                                        </label>
+                                                    </div>
+                                                    <div class="govuk-checkboxes__item">
+                                                        <input class="govuk-checkboxes__input" id="nation-2" name="nation" type="checkbox" value="wales">
+                                                        <label class="govuk-label govuk-checkboxes__label" for="nation-2">
+                                                            Wales
+                                                        </label>
+                                                    </div>
+                                                    <div class="govuk-checkboxes__item">
+                                                        <input class="govuk-checkboxes__input" id="nation-3" name="nation" type="checkbox" value="ni">
+                                                        <label class="govuk-label govuk-checkboxes__label" for="nation-3">
+                                                            Northern Ireland
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="area-2" name="area" type="radio" value="la" data-aria-controls="conditional-area-2">
+                                        <label class="govuk-label govuk-radios__label" for="area-2">
+                                            Local authority
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-area-2">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="la">
+                                                Select local authority
+                                            </label>
+                                            <div id="la-hint" class="govuk-hint">
+                                                (Type to search)
+                                            </div>
+                                            <select class="govuk-select" id="la" name="la"
+                                                    data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+                                                <option value="all" selected>Select all</option>-->
+                                                <option value="arun">Arun</option>
+                                                <option value="bournemouth">Bournemouth, Christchurch and Poole</option>
+                                                <option value="bristol">Bristol, City of</option>
+                                                <option value="cheltenham">Cheltenham</option>
+                                                <option value="dacorum">Dacorum</option>
+                                                <option value="dudley">Dudley</option>
+                                                <option value="kings">King's Lynn and West Norfolk</option>
+                                                <option value="manchester">Manchester</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="area-3" name="area" type="radio" value="pc" data-aria-controls="conditional-area-3">
+                                        <label class="govuk-label govuk-radios__label" for="area-3">
+                                            Parliamentary constituency
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-area-3">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="pc">
+                                                Select parliamentary constituency
+                                            </label>
+                                            <div id="pc-hint" class="govuk-hint">
+                                                (Type to search)
+                                            </div>
+                                            <select class="govuk-select" id="pc" name="pc"
+                                                    data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+                                                <option value="all" selected>Select all</option>
+                                                <option value="banbury">Banbury</option>
+                                                <option value="boston">Boston and Skegness</option>
+                                                <option value="camborne">Camborne and Redruth</option>
+                                                <option value="london">Cities of London and Westminster</option>
+                                                <option value="croydon-south">Croydon South</option>
+                                                <option value="erewash">Erewash</option>
+                                                <option value="keighley">Keighley</option>
+                                                <option value="newbury">Newbury</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <hr>
+                            <fieldset class="govuk-fieldset" aria-describedby="energy-efficiency-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    <h3 class="govuk-fieldset__heading">
+                                        Energy efficiency rating
+                                    </h3>
+                                </legend>
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="a-rating" name="a-rating" type="checkbox" value="a-rating">
+                                        <label class="govuk-label govuk-checkboxes__label" for="a-rating">
+                                            A rating
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="b-rating" name="b-rating" type="checkbox" value="b-rating">
+                                        <label class="govuk-label govuk-checkboxes__label" for="b-rating">
+                                            B rating
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="c-rating" name="c-rating" type="checkbox" value="c-rating">
+                                        <label class="govuk-label govuk-checkboxes__label" for="c-rating">
+                                            C rating
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="d-rating" name="d-rating" type="checkbox" value="d-rating">
+                                        <label class="govuk-label govuk-checkboxes__label" for="d-rating">
+                                            D rating
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="e-rating" name="e-rating" type="checkbox" value="e-rating">
+                                        <label class="govuk-label govuk-checkboxes__label" for="e-rating">
+                                            E rating
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="f-rating" name="f-rating" type="checkbox" value="f-rating">
+                                        <label class="govuk-label govuk-checkboxes__label" for="f-rating">
+                                            F rating
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="g-rating" name="g-rating" type="checkbox" value="g-rating">
+                                        <label class="govuk-label govuk-checkboxes__label" for="g-rating">
+                                            G rating
+                                        </label>
+                                    </div>
+                                </div>
+                                <details class="govuk-details govuk-!-margin-top-4">
+                                    <summary class="govuk-details__summary">
+                                            <span class="govuk-details__summary-text">
+                                              What does this mean?
+                                            </span>
+                                    </summary>
+                                    <div class="govuk-details__text">
+                                        Energy efficiency rating (EER) is a metric based on how much it costs to heat and light a home to an agreed standard. It is calculated as a numerical score that typically ranges between 1 (high cost) and 100 (low cost).
+                                        <br /><br />
+                                        The numerical score can be presented as a letter range between A and G as shown below:
+                                        <br /><br />
+                                        <p class="govuk-!-margin-0">A rating – 92 plus</p>
+                                        <p class="govuk-!-margin-0">B rating – 81 to 91</p>
+                                        <p class="govuk-!-margin-0">C rating – 69 to 80</p>
+                                        <p class="govuk-!-margin-0">D rating – 55 to 68</p>
+                                        <p class="govuk-!-margin-0">E rating – 39 to 54</p>
+                                        <p class="govuk-!-margin-0">F rating – 21 to 38</p>
+                                        <p class="govuk-!-margin-0">G rating – 1 to 20</p>
+                                    </div>
+                                </details>
+                            </fieldset>
+                            <hr>
+                            <div class="govuk-form-group">
+                                <h3 class="govuk-heading">
+                                    Time series
+                                </h3>
+                                <label class="govuk-label" for="from">
+                                    View results from
+                                </label>
+                                <select class="govuk-select" id="from" name="from">
+                                    <option value="Q3 2020" selected>Q3 2020</option>
+                                    <option value="Q4 2020">Q4 2020</option>
+                                    <option value="Q1 2021">Q1 2021</option>
+                                    <option value="Q2 2021">Q2 2021</option>
+                                    <option value="Q3 2021">Q3 2021</option>
+                                    <option value="Q4 2021">Q4 2021</option>
+                                    <option value="Q1 2022">Q1 2022</option>
+                                    <option value="Q2 2022">Q2 2022</option>
+                                    <option value="Q3 2022">Q3 2022</option>
+                                    <option value="Q4 2022">Q4 2022</option>
+                                    <option value="Q1 2023">Q1 2023</option>
+                                    <option value="Q2 2023">Q2 2023</option>
+                                    <option value="Q3 2023">Q3 2023</option>
+                                    <option value="Q4 2023">Q4 2023</option>
+                                    <option value="Q1 2024">Q1 2024</option>
+                                    <option value="Q2 2024">Q2 2024</option>
+                                </select>
+                                <label class="govuk-label" for="to">
+                                    to
+                                </label>
+                                <select class="govuk-select" id="to" name="to">
+                                    <option value="Q3 2020">Q3 2020</option>
+                                    <option value="Q4 2020">Q4 2020</option>
+                                    <option value="Q1 2021">Q1 2021</option>
+                                    <option value="Q2 2021">Q2 2021</option>
+                                    <option value="Q3 2021">Q3 2021</option>
+                                    <option value="Q4 2021">Q4 2021</option>
+                                    <option value="Q1 2022">Q1 2022</option>
+                                    <option value="Q2 2022">Q2 2022</option>
+                                    <option value="Q3 2022">Q3 2022</option>
+                                    <option value="Q4 2022">Q4 2022</option>
+                                    <option value="Q1 2023">Q1 2023</option>
+                                    <option value="Q2 2023">Q2 2023</option>
+                                    <option value="Q3 2023">Q3 2023</option>
+                                    <option value="Q4 2023">Q4 2023</option>
+                                    <option value="Q1 2024">Q1 2024</option>
+                                    <option value="Q2 2024" selected>Q2 2024</option>
+                                </select>
+                            </div>
+                            <hr>
+                            <button type="submit" class="govuk-button" data-module="govuk-button">
+                                Apply filters
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <h3>Number of certificates uploaded</h3>
+                <p class="govuk-body"><b>Data view:</b>Energy performance certificates for domestic buildings; England, Wales and Northern Ireland; Energy efficiency ratings A, B and C; Jan 2024 to July 2024;</p>
+                <table class="govuk-table">
+                    <!--                            <caption class="govuk-table__caption govuk-table__caption--m">Number of certificates uploaded</caption>-->
+                    <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Month</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">Certificates uploaded</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">Average score</th>
+                    </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Jul 2024</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Jun 2024</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">May 2024</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Apr 2024</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Mar 2024</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Feb 2024</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Jan 2024</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <details class="govuk-details govuk-!-margin-top-4">
+                    <summary class="govuk-details__summary">
+                                        <span class="govuk-details__summary-text">
+                                          What is the average score?
+                                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        The average score is the median energy efficiency rating (EER).
+                        <br /><br />
+                        EER is a metric based on how much it costs to heat and light a home to an agreed standard. It is calculated as a numerical score that typically ranges between 1 (high cost) and 100 (low cost).
+                    </div>
+                </details>
+                <p class="govuk-body"><a class="govuk-link" href="https://uksa.statisticsauthority.gov.uk/about-the-authority/uk-statistical-system/types-of-official-statistics/">Download data(CSV)</a></p>
+
+
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+                <h2 class="govuk-heading-l">Non-domestic buildings</h2>
+                <p class="govuk-body">For example commercial, industrial or public buildings</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="govuk-grid-column-two-thirds govuk-body">
+        <h2 class="govuk-heading-m">Other data on energy certificates</h2>
+        <p class="govuk-body">For more detailed energy certificate data on specific buildings,
+            check the data published on <a class="govuk-link" href="https://epc.opendatacommunities.org/domestic/search">Open Data Communities</a>. This data is updated monthly.
+        </p>
+        <p class="govuk-body">
+            For enquiries about energy certificate data, please contact the Ministry of Housing, Communities and Local Government (MHCLG).
+        </p>
+        <div class="govuk-inset-text">
+            <ul class="govuk-list">
+                <li><a class="govuk-link" href="#">dluhc.digital-services@levellingup.gov.uk</a></li>
+                <li>Telephone: 020 3829 0748</li>
+                <li>Monday to Friday, 9am to 5pm</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
