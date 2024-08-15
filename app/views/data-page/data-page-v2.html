@@ -59,21 +59,19 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
         <div class="govuk-tabs" data-module="govuk-tabs">
             <ul class="govuk-tabs__list">
                 <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                    <a class="govuk-tabs__tab" href="#past-day">
+                    <a class="govuk-tabs__tab" href="#dom">
                         Domestic buildings
                     </a>
                 </li>
                 <li class="govuk-tabs__list-item">
-                    <a class="govuk-tabs__tab" href="#past-week">
+                    <a class="govuk-tabs__tab" href="#non-dom">
                         Non-domestic buildings
                     </a>
                 </li>
             </ul>
-            <div class="govuk-tabs__panel" id="past-day">
+            <div class="govuk-tabs__panel" id="dom">
                 <h2 class="govuk-heading-l">Domestic buildings</h2>
                 <p class="govuk-body">For example houses or flats.</p>
-
-
                 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
                     <div class="govuk-accordion__section">
                         <div class="govuk-accordion__section-header">
@@ -404,12 +402,149 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                     </div>
                 </details>
                 <p class="govuk-body"><a class="govuk-link" href="https://uksa.statisticsauthority.gov.uk/about-the-authority/uk-statistical-system/types-of-official-statistics/">Download data(CSV)</a></p>
-
-
             </div>
-            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="non-dom">
                 <h2 class="govuk-heading-l">Non-domestic buildings</h2>
                 <p class="govuk-body">For example commercial, industrial or public buildings</p>
+                <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                    <div class="govuk-accordion__section">
+                        <div class="govuk-accordion__section-header">
+                            <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                              Filter results
+                            </span>
+                            </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                            <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" aria-describedby="area-hint">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                        <h4 class="govuk-fieldset__heading">
+                                            Certificate type
+                                        </h4>
+                                    </legend>
+                                    <div id="cert-type-hint" class="govuk-hint">
+                                        Select certificate type
+                                    </div>
+                                    <div class="govuk-radios" data-module="govuk-radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="cert-type-1" name="cert-type" type="radio" value="cepc" data-aria-controls="conditional-cepc" checked="checked">
+                                            <label class="govuk-label govuk-radios__label" for="cert-type-1">
+                                                Commercial energy performance certificate (CEPC)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="cert-type-2" name="cert-type" type="radio" value="dec" data-aria-controls="conditional-dec">
+                                            <label class="govuk-label govuk-radios__label" for="cert-type-2">
+                                                Display energy certificate (DEC)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="cert-type-3" name="cert-type" type="radio" value="ac" data-aria-controls="conditional-ac">
+                                            <label class="govuk-label govuk-radios__label" for="cert-type-3">
+                                                Air conditioning inspection certificate (AC-CERT)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <details class="govuk-details">
+                                    <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    What does this mean?
+                                </span>
+                                    </summary>
+                                    <div class="govuk-details__text">
+                                        <p>Commercial energy performance certificates are for private commercial buildings. They are based on the carbon dioxide emissions of the building.</p>
+                                        <p>Display energy certificates are for public buildings. They are based on the energy use of the building.</p>
+                                        <p>Air conditioning inspection certificates are for buildings that contain air conditioning systems above 12 kW.</p>
+                                    </div>
+                                </details>
+                                <hr>
+                                <fieldset class="govuk-fieldset" aria-describedby="energy-efficiency-hint">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                        <h4 class="govuk-fieldset__heading">
+                                            Nation
+                                        </h4>
+                                    </legend>
+                                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="england" name="england" type="checkbox" value="england" checked="checked">
+                                            <label class="govuk-label govuk-checkboxes__label" for="england">
+                                                England
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="wales" name="wales" type="checkbox" value="wales" checked="checked">
+                                            <label class="govuk-label govuk-checkboxes__label" for="wales">
+                                                Wales
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="n-ireland" name="n-ireland" type="checkbox" value="n-ireland" checked="checked">
+                                            <label class="govuk-label govuk-checkboxes__label" for="n-ireland">
+                                                Northern Ireland
+                                            </label>
+                                        </div>
+                                </fieldset>
+                                <hr>
+                            </div>
+                            <button type="submit" class="govuk-button" data-module="govuk-button">
+                                Apply filters
+                            </button>
+                        </div>
+                        <hr>
+                        <h3>Number of certificates uploaded</h3>
+                        <p class="govuk-body"><b>Data view: </b>Commercial energy performance certificates; England, Wales and Northern Ireland; Jan 2024 to July 2024;</p>
+                        <table class="govuk-table">
+                            <!--                            <caption class="govuk-table__caption govuk-table__caption&#45;&#45;m">Number of certificates uploaded</caption>-->
+                            <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Month</th>
+                                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Certificates uploaded</th>
+                                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Average score</th>
+                            </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Jul 2024</th>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Jun 2024</th>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">May 2024</th>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Apr 2024</th>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Mar 2024</th>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Feb 2024</th>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Jan 2024</th>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">3000</td>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">70</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p class="govuk-body"><a class="govuk-link" href="https://uksa.statisticsauthority.gov.uk/about-the-authority/uk-statistical-system/types-of-official-statistics/">Download data(CSV)</a></p>
+                    </div>
+                </div>
             </div>
         </div>
 
