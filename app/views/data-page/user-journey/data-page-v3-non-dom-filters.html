@@ -1,0 +1,199 @@
+{% set serviceName %}
+Find an energy certificate
+{% endset%}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-body">
+            <h1 class="govuk-heading-xl printable-area">
+                Get data on energy certificates
+            </h1>
+            <p class="govuk-body">Use this service to find data on the:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>number of certificates uploaded to the Energy Performance of Buildings Register</li>
+                <li>energy rating of certificates</li>
+            </ul>
+            <div class="allow-break ">
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">How to use this data</span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <p class="govuk-body">
+                            All certificates uploaded to the Energy Performance of Buildings Register are shown. Some certificates may have expired or been replaced.
+                            <br /><br />
+                            Energy certificates are not:
+                        </p>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>required for every property in the UK</li>
+                            <li>directly comparable over time, due to changes in methodology</li>
+                            <li>a direct indicator of housing supply or the state of the housing or rental market</li>
+                        </ul>
+                        <p class="govuk-body">This data is not classed as official statistics. <a class="govuk-link" href="https://uksa.statisticsauthority.gov.uk/about-the-authority/uk-statistical-system/types-of-official-statistics/">Find out what this means</a>.</p>
+                    </div>
+                </details>
+            </div>
+            <p class="govuk-body">This data is updated monthly and covers:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>England</li>
+                <li>Wales</li>
+                <li>Northern Ireland</li>
+            </ul>
+            <p class="govuk-body">
+                For data in Scotland, <a class="govuk-link" href="https://www.scottishepcregister.org.uk/CustomerFacingPortal/DataExtract">visit the Scottish Energy Performance Certificate Register</a>.
+            </p>
+            <div class="allow-break ">
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">Can't find what you are looking for?</span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <p class="govuk-body">
+                            For more detailed energy certificate data, check the data published on <a class="govuk-link" href="https://epc.opendatacommunities.org/domestic/search">Open Data Communities</a>. This data is updated monthly.
+                        </p>
+                        <p class="govuk-body">
+                            For enquiries about energy certificate data, please contact the Ministry of Housing, Communities and Local Government (MHCLG).
+                        </p>
+                        <ul class="govuk-list">
+                            <li><a class="govuk-link" href="#">svc-mhclg.digital-services@communities.gov.uk</a></li>
+                            <li>Telephone: 020 3829 0748</li>
+                            <li>Monday to Friday, 9am to 5pm</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" id="radio">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h2 class="govuk-fieldset__heading">
+                        What type of property do you want data on?
+                    </h2>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                            Domestic properties
+                        </label>
+                        <div id="whereDoYouLive-hint" class="govuk-hint govuk-radios__hint">
+                            For example houses or flats.
+                        </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland"  checked="checked">
+                        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                            Non-domestic properties
+                        </label>
+                        <div id="whereDoYouLive-2-hint" class="govuk-hint govuk-radios__hint">
+                            For example commercial, industrial or public buildings.
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+        </div>
+        <a href="/data-page/user-journey/data-page-v3-non-dom-filters#radio">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Select
+            </button>
+        </a>
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="area-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h3 class="govuk-fieldset__heading">
+                        What certificate type do you want data on?
+                    </h3>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="cert-type-1" name="cert-type" type="radio" value="cepc" data-aria-controls="conditional-cepc">
+                        <label class="govuk-label govuk-radios__label" for="cert-type-1">
+                            Commercial energy performance certificate (CEPC)
+                        </label>
+                        <div id="cert-type-1-hint" class="govuk-hint govuk-radios__hint">
+                            For non-residential properties.
+                        </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="cert-type-2" name="cert-type" type="radio" value="dec" data-aria-controls="conditional-dec">
+                        <label class="govuk-label govuk-radios__label" for="cert-type-2">
+                            Display energy certificate (DEC)
+                        </label>
+                        <div id="cert-type-2-hint" class="govuk-hint govuk-radios__hint">
+                            For public buildings.
+                        </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="cert-type-3" name="cert-type" type="radio" value="ac" data-aria-controls="conditional-ac">
+                        <label class="govuk-label govuk-radios__label" for="cert-type-3">
+                            Air conditioning inspection certificate (AC-CERT)
+                        </label>
+                        <div id="cert-type-3-hint" class="govuk-hint govuk-radios__hint">
+                            For buildings with air conditioning systems above 12 kW.
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <br>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    What does this mean?
+                                </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p>Commercial energy performance certificates are for private commercial properties. They are based on the carbon dioxide emissions of the property. ----- Does the rating not also take into account the cost like a domestic EPC?</p>
+                    <p>Display energy certificates are for public property. They are based on the energy use of the property.</p>
+                </div>
+            </details>
+        </div>
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="energy-efficiency-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h3 class="govuk-fieldset__heading">
+                        Which nations do you want data on?
+                    </h3>
+                </legend>
+                <br>
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="england" name="england" type="checkbox" value="england">
+                        <label class="govuk-label govuk-checkboxes__label" for="england">
+                            England
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="wales" name="wales" type="checkbox" value="wales">
+                        <label class="govuk-label govuk-checkboxes__label" for="wales">
+                            Wales
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="n-ireland" name="n-ireland" type="checkbox" value="n-ireland">
+                        <label class="govuk-label govuk-checkboxes__label" for="n-ireland">
+                            Northern Ireland
+                        </label>
+                    </div>
+            </fieldset>
+        </div>
+        <a href="/data-page/user-journey/data-page-v3-non-dom-results">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Apply filters
+            </button>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% set serviceName %}
+Find an energy certificate
+{% endset%}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-body">
+            <h1 class="govuk-heading-xl printable-area">
+                Get data on energy certificates
+            </h1>
+            <a href="/data-page/user-journey/data-page-v3-non-dom" class="govuk-back-link">Back</a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-full">
+        <div class="govuk-body">
+            <h2 class="govuk-heading-m">Number of certificates uploaded</h2>
+            <p class="govuk-body"><b>Data view: </b>Display energy certificates; Wales; Jan 2024 to July 2024;</p>
+            <table class="govuk-table" id="non-dom-table">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Month</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header--numeric">Certificates uploaded</th>
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Jul 2024</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">903</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Jun 2024</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">832</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">May 2024</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">635</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Apr 2024</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">956</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Mar 2024</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">791</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Feb 2024</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">821</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Jan 2024</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">913</td>
+                </tr>
+                </tbody>
+            </table>
+            <p class="govuk-body">
+                <a class="govuk-link" href="https://uksa.statisticsauthority.gov.uk/about-the-authority/uk-statistical-system/types-of-official-statistics/">
+                    Download data (CSV)
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
