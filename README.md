@@ -24,7 +24,9 @@ $ cd epb-prototypes
 - Run in password protected mode
 `docker run -d -p 80:80  -e NODE_ENV=production -e USE_HTTPS=false  -e PASSWORD=test  --name epb-prototypes-web  epb-prototypes`  
 
-- Go to [localhost](https://localhost:80) in your browser
+- Go to [localhost](http://localhost:80) in your browser
+- Go to [localhost/get-energy-certificate-data](http://localhost:80/get-energy-certificate-data) in your browser to get
+to `get-energy-certificate-data` service
 
 
 ### Dependencies
@@ -48,9 +50,11 @@ Start the local server:
 $ npm run dev
 ```
 
-- Go to [localhost](https://localhost:80) in your browser
+- Go to [localhost](http://localhost:80) in your browser
     - _Note: Some systems might have a service already listening
       on port 80. Simply read the console output from `npm start` to identify your port._
+- Go to [localhost/get-energy-certificate-data](http://localhost:80/get-energy-certificate-data) in your browser to get
+  to `get-energy-certificate-data` service
 
       
 ## Resources
