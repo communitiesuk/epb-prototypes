@@ -1,0 +1,71 @@
+{% set serviceName %}
+Get energy certificate data
+{% endset%}
+
+{% set backLink = "/get-energy-certificate-data/" %}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+How would you like to access the data? - Get energy certificate data - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+            <div class="govuk-grid-row">
+                <h1 class="govuk-heading-xl">
+                    How would you like to access the data?
+                </h1>
+                <div class="govuk-grid-column-one-half">
+                    <div class="govuk-cookie-banner" data-nosnippet role="region" aria-label="Download files">
+                        <div class="govuk-cookie-banner__message govuk-width-container govuk-!-padding-left-4 govuk-width-container govuk-!-padding-right-4">
+                            <h2 class="govuk-cookie-banner__heading govuk-heading-m">
+                                Download files
+                            </h2>
+                            <div class="govuk-cookie-banner__content">
+                                <p class="govuk-body">Download certificate data as CSV files for analysis.</p>
+                            </div>
+                            <div class="govuk-button-group">
+                                <a
+                                        href="/get-energy-certificate-data/type-of-building"
+                                        role="button"
+                                        draggable="false"
+                                        class="govuk-button"
+                                        data-module="govuk-button" >
+                                    Download files
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-one-half">
+                    <div class="govuk-cookie-banner" data-nosnippet role="region" aria-label="Use a developer API">
+                        <div class="govuk-cookie-banner__message govuk-width-container govuk-width-container govuk-!-padding-left-4 govuk-width-container govuk-!-padding-right-4">
+                            <h2 class="govuk-cookie-banner__heading govuk-heading-m">
+                                Use a developer API
+                            </h2>
+                            <div class="govuk-cookie-banner__content">
+                                <p class="govuk-body">Use an API to access certificate data.</p>
+                            </div>
+                            <div class="govuk-button-group">
+                                <a
+                                        href="/get-energy-certificate-data/use-api"
+                                        role="button"
+                                        draggable="false"
+                                        class="govuk-button"
+                                        data-module="govuk-button" >
+                                    Use API
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
