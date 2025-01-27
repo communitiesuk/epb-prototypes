@@ -56,8 +56,9 @@ Non-domestic buildings - Get energy certificate data - GOV.UK
                                                 </label>
                                                 <p>(Type to search)</p>
                                                 <select class="govuk-select" id="local-authority" name="local-authority">
+                                                    <option value="" selected>Select all</option>
                                                     <option value="hammersmith-and-fulham">Hammersmith and Fulham</option>
-                                                    <option value="manchester-city-council" selected>Manchester City Council</option>
+                                                    <option value="manchester-city-council" >Manchester City Council</option>
                                                     <option value="tower-hamlets">Tower Hamlets</option>
                                                 </select>
                                             </div>
@@ -75,9 +76,10 @@ Non-domestic buildings - Get energy certificate data - GOV.UK
                                                 </label>
                                                 <p>(Type to search)</p>
                                                 <select class="govuk-select" id="parliamentary-constituency" name="parliamentary-constituency">
+                                                    <option value="" selected>Select all</option>
                                                     <option value="bristol-central">Bristol Central</option>
                                                     <option value="cities-of-london-and-westminster">Cities of London and Westminster</option>
-                                                    <option value="manchester-central" selected>Manchester Central</option>
+                                                    <option value="manchester-central" >Manchester Central</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -189,5 +191,6 @@ Non-domestic buildings - Get energy certificate data - GOV.UK
         </div>
     </div>
 </div>
+
 
 {% endblock %}
