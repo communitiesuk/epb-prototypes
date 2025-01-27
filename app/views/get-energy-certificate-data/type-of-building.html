@@ -1,0 +1,68 @@
+{% set serviceName %}
+Get energy certificate data
+{% endset%}
+
+{% set backLink = "/get-energy-certificate-data/way-to-access-data" %}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What type of buildings do you want data on? - Get energy certificate data - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+            <div class="govuk-form-group govuk-!-padding-bottom-4">
+                <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading govuk-!-padding-bottom-4">
+                            What type of buildings do you want data on?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="domestic" name="domestic" type="radio" value="govuk-domestic" aria-describedby="domestic-item-hint">
+                            <label class="govuk-label govuk-radios__label" for="domestic">
+                                Domestic buildings
+                            </label>
+                            <div id="domestic-item-hint" class="govuk-hint govuk-radios__hint">
+                                For example, houses or flats
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="non-domestic" name="non-domestic" type="radio" value="govuk-non-domestic" aria-describedby="non-domestic-hint">
+                            <label class="govuk-label govuk-radios__label" for="non-domestic">
+                                Non-domestic buildings
+                            </label>
+                            <div id="non-domestic-hint" class="govuk-hint govuk-radios__hint">
+                                For example, commercial or industrial buildings
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="public-buildings" name="public-buildings" type="radio" value="govuk-public-buildings" aria-describedby="public-buildings-hint">
+                            <label class="govuk-label govuk-radios__label" for="public-buildings">
+                                Public buildings
+                            </label>
+                            <div id="public-buildings-hint" class="govuk-hint govuk-radios__hint">
+                                For example, schools or hospitals
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <a
+                    href="/get-energy-certificate-data"
+                    role="button"
+                    draggable="false"
+                    class="govuk-button"
+                    data-module="govuk-button" >
+                Continue
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
