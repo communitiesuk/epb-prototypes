@@ -8,14 +8,19 @@ Get energy certificate data
 Get energy certificate data - GOV.UK
 {% endblock %}
 
+
+{{ backLink }}
+{% set backLink = "/get-energy-certificate-data" %}
+{{ backLink }}
+
 {% block content %}
 
-
-<div class="govuk-grid-row">
+<main class="govuk-main-wrapper govuk-!-padding-top-0" id="main-content" role="main">
+<div class="govuk-grid-row govuk-!-margin-bottom-0">
     <div class="govuk-grid-column-full">
         <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
-            <div class="govuk-grid-row">
-                <h1 class="govuk-heading-xl govuk-!-padding-top-4 ">
+
+                <h1 class="govuk-heading-xl  ">
                    Guidance
                 </h1>
 
@@ -23,9 +28,7 @@ Get energy certificate data - GOV.UK
                     You can use these resources to help you understand and use energy certificate data.
                     </p>
 
-            </div>
 
-            <div class="govuk-grid-row">
                 <h2 class="govuk-heading-m govuk-!-padding-top-4">
                     Understanding the data
                 </h2>
@@ -40,9 +43,8 @@ Get energy certificate data - GOV.UK
                 </ul>
 
 
-            </div>
 
-            <div class="govuk-grid-row">
+
                 <h2 class="govuk-heading-m govuk-!-padding-top-4">
                     Publishing and usage restrictions
                 </h2>
@@ -55,9 +57,7 @@ Get energy certificate data - GOV.UK
                     <li>  <a href="">Data protection</a></li>
                 </ul>
 
-            </div>
 
-            <div class="govuk-grid-row">
                 <h2 class="govuk-heading-m govuk-!-padding-top-4">
                     Developer APIs
                 </h2>
@@ -70,9 +70,9 @@ Get energy certificate data - GOV.UK
                     <li>  <a href="">API technical documentation</a></li>
                 </ul>
 
-            </div>
 
-            <div class="govuk-grid-row">
+
+
                 <h2 class="govuk-heading-m govuk-!-padding-top-8">
                     Get help
                 </h2>
@@ -89,10 +89,10 @@ Get energy certificate data - GOV.UK
                     <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
                 </ul>
 
-            </div>
+
 
         </div>
     </div>
 </div>
-
+</main>
 {% endblock %}
