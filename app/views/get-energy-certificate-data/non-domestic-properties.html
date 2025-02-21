@@ -51,16 +51,24 @@ Non-domestic properties - Get energy certificate data - GOV.UK
                                         </div>
                                         <div class="govuk-radios__conditional" id="conditional-contact">
                                             <div class="govuk-form-group">
-                                                <label class="govuk-label" for="local-authority">
-                                                    Select local authority
-                                                </label>
-                                                <p>(Type to search)</p>
-                                                <select class="govuk-select" id="local-authority" name="local-authority">
-                                                    <option value="" selected>Select all</option>
-                                                    <option value="hammersmith-and-fulham">Hammersmith and Fulham</option>
-                                                    <option value="manchester-city-council" >Manchester City Council</option>
-                                                    <option value="tower-hamlets">Tower Hamlets</option>
-                                                </select>
+
+                                                {{ xGovukAutocomplete({
+                                                id: "local-authority",
+                                                name: "local-authority",
+                                                allowEmpty: false,
+                                                label: {
+                                                classes: "govuk-label govuk-radios__label",
+                                                isPageHeading: true,
+                                                text: "Select local authority"
+                                                },
+                                                items: [
+                                                { text: "Hammersmith and Fulham" },
+                                                { text: "Manchester City Council" },
+                                                { text: "Tower Hamlets" }
+                                                ]
+                                                }) }}
+
+
                                             </div>
                                         </div>
                                         <div class="govuk-radios__item">
@@ -71,16 +79,23 @@ Non-domestic properties - Get energy certificate data - GOV.UK
                                         </div>
                                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
                                             <div class="govuk-form-group">
-                                                <label class="govuk-label" for="parliamentary-constituency">
-                                                    Select parliamentary constituency
-                                                </label>
-                                                <p>(Type to search)</p>
-                                                <select class="govuk-select" id="parliamentary-constituency" name="parliamentary-constituency">
-                                                    <option value="" selected>Select all</option>
-                                                    <option value="bristol-central">Bristol Central</option>
-                                                    <option value="cities-of-london-and-westminster">Cities of London and Westminster</option>
-                                                    <option value="manchester-central" >Manchester Central</option>
-                                                </select>
+
+                                                {{ xGovukAutocomplete({
+                                                id: "parliamentary-constituency",
+                                                name: "parliamentary-constituency",
+                                                allowEmpty: false,
+                                                label: {
+                                                classes: "govuk-label govuk-radios__label",
+                                                isPageHeading: true,
+                                                text: "Select parliamentary constituency"
+                                                },
+                                                items: [
+                                                { text: "Bristol Central" },
+                                                { text: "Cities of London and Westminster" },
+                                                { text: "Manchester Central" }
+                                                ]
+                                                }) }}
+
                                             </div>
                                         </div>
                                     </div>
