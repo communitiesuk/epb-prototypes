@@ -32,34 +32,7 @@ Public properties - Get energy certificate data - GOV.UK
                     Your request contains 37,000 results. The estimated download size is 1.8 GB.
                 </p>
             </div>
-            <div class="govuk-grid-row">
-                <h2 class="govuk-heading-m govuk-!-padding-top-2">
-                    Get help
-                </h2>
-
-                <p class="govuk-body">
-                    <a href="/get-energy-certificate-data/guidance">Visit the guidance page</a> for information on:
-                </p>
-
-                <ul class="govuk-list govuk-list--bullet govuk-!-margin-left-5">
-                    <li>what the data contains</li>
-                    <li>data methodology and limitations</li>
-                    <li>using the developer API</li>
-                    <li>licensing restrictions</li>
-                </ul>
-
-                <p class="govuk-body">
-                    For enquiries about the data, please contact the Ministry of Housing, Communities and Local Government (MHCLG)
-                </p>
-
-                <ul class="govuk-list">
-                    <li><a class="govuk-link" href="mailto:svc-mhclg.digital-services@communities.gov.uk?subject=EPB - ">svc-mhclg.digital-services@communities.gov.uk</a></li>
-                    <li>Telephone: 020 3829 0748</li>
-                    <li>Monday to Friday, 9am - 5pm</li>
-                    <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
-                </ul>
-
-            </div>
+            {% include "get-energy-certificate-data/components/get-help.html" %}
         </div>
     </div>
 </div>
