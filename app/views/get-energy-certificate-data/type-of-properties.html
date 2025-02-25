@@ -15,7 +15,7 @@ What type of properties do you want data on? - Get energy certificate data - GOV
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
         <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
-            <div class="govuk-form-group govuk-!-padding-bottom-4">
+            <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                         <h1 class="govuk-fieldset__heading govuk-!-padding-bottom-4">
@@ -26,31 +26,44 @@ What type of properties do you want data on? - Get energy certificate data - GOV
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="domestic" name="type-of-properties" type="radio" value="govuk-domestic" aria-describedby="domestic-item-hint">
                             <label class="govuk-label govuk-radios__label" for="domestic">
-                                Domestic properties
+                                Energy Performance Certificates (EPCs)
                             </label>
                             <div id="domestic-item-hint" class="govuk-hint govuk-radios__hint">
-                                For example, houses or flats
+                                For domestic properties such as houses or flats
                             </div>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="non-domestic" name="type-of-properties" type="radio" value="govuk-non-domestic" aria-describedby="non-domestic-hint">
                             <label class="govuk-label govuk-radios__label" for="non-domestic">
-                                Non-domestic properties
+                                Commercial Energy Performance Certificates (CEPCs)
                             </label>
                             <div id="non-domestic-hint" class="govuk-hint govuk-radios__hint">
-                                For example, commercial or industrial properties
+                                For non-domestic properties such as commercial or industrial buildings
                             </div>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="public-properties" name="type-of-properties" type="radio" value="govuk-public-properties" aria-describedby="public-properties-hint">
                             <label class="govuk-label govuk-radios__label" for="public-properties">
-                                Public properties
+                                Display Energy Certificates (DECs)
                             </label>
                             <div id="public-properties-hint" class="govuk-hint govuk-radios__hint">
-                                For example, schools or hospitals
+                                For public buildings such as schools or hospitals
                             </div>
                         </div>
                     </div>
+                    <details class="govuk-details govuk-!-margin-top-6 govuk-!-margin-left-3">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              What counts as a public building?
+                            </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                            Buildings that are occupied by a public authority, are frequently visited by the public and have a floor area above 250m² must have a Display Energy Certificate (DEC).
+                        </div>
+                        <div class="govuk-details__text">
+                            Buildings with a Display Energy Certificate (DEC) may also have a Commercial Energy Performance Certificate (CEPC).
+                        </div>
+                    </details>
                 </fieldset>
             </div>
             <a
