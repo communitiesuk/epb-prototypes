@@ -1,0 +1,57 @@
+{% set serviceName %}
+Get energy certificate data
+{% endset%}
+
+{% set backLink = "/get-energy-certificate-data/domestic-properties" %}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Get energy certificate data - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+            <div class="govuk-grid-row">
+                <div class="govuk-panel govuk-panel--confirmation">
+                    <h2 class="govuk-panel__title govuk-!-padding-6">
+                        Request received
+                    </h2>
+                </div>
+                <h2 class="govuk-heading-m govuk-!-padding-top-2">What happens next</h2>
+                <p class="govuk-body">
+                    An email with a download link for a ZIP file will be sent to: <strong>placeholder@email.com</strong>.
+                </p>
+                <p class="govuk-body">
+                    This may take up to 15 minutes to be delivered to your inbox.
+                </p>
+                <p class="govuk-body">
+                    If you cannot see the email in your inbox, check your junk or spam folder.
+                </p>
+
+                <div class="govuk-!-margin-top-7 govuk-!-margin-bottom-7">
+                    <p class="govuk-body">
+                        You requested data for:
+                    </p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Energy Performance Certificates</li>
+                        <li>January 2024 - March 2024</li>
+                        <li>Tower Hamlets</li>
+                        <li>Energy Efficiency Rating A, B, C</li>
+                        <li>Certificate recommendations</li>
+                    </ul>
+                </div>
+
+                <p class="govuk-body">
+                    Your request contains 150,000 certificates. The estimated download size is 250 MB.
+                </p>
+            </div>
+            {% include "get-energy-certificate-data/components/get-help.html" %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
