@@ -114,65 +114,53 @@ Domestic properties - Get energy certificate data - GOV.UK
                                     </legend>
                                     <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
                                         <div class="govuk-radios__item">
-                                            <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
-                                            <label class="govuk-label govuk-radios__label" for="contact">
+                                            <input class="govuk-radios__input" id="area" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
+                                            <label class="govuk-label govuk-radios__label" for="area">
                                                 Local authority
                                             </label>
                                         </div>
                                         <div class="govuk-radios__conditional" id="conditional-contact">
                                             <div class="govuk-form-group">
-
-                                                {{ xGovukAutocomplete({
-                                                id: "local-authority",
-                                                name: "local-authority",
-                                                allowEmpty: false,
-                                                label: {
-                                                classes: "govuk-label govuk-radios__label govuk-input--width-10",
-                                                isPageHeading: true,
-                                                text: "Select local authority"
-                                                },
-                                                items: [
-                                                { text: "Hammersmith and Fulham" },
-                                                { text: "Manchester City Council" },
-                                                { text: "Tower Hamlets" }
-                                                ]
-                                                }) }}
-
-
+                                                <label class="govuk-label" for="local-authority">
+                                                    Select local authority
+                                                </label>
+                                                <p>(Type to search)</p>
+                                                <select class="govuk-select" id="local-authority" name="local-authority">
+                                                    <option value="hammersmith-and-fulham">Hammersmith and Fulham</option>
+                                                    <option value="manchester-city-council" selected>Manchester City Council</option>
+                                                    <option value="tower-hamlets">Tower Hamlets</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="govuk-radios__item">
-                                            <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-                                            <label class="govuk-label govuk-radios__label" for="contact-2">
+                                            <input class="govuk-radios__input" id="parliamentary-constituency-radio" name="contact" type="radio" value="phone" data-aria-controls="conditional-parliamentary-constituency">
+                                            <label class="govuk-label govuk-radios__label" for="parliamentary-constituency">
                                                 Parliamentary constituency
                                             </label>
                                         </div>
-                                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-parliamentary-constituency">
                                             <div class="govuk-form-group">
-
-                                                {{ xGovukAutocomplete({
-                                                id: "parliamentary-constituency",
-                                                name: "parliamentary-constituency",
-                                                allowEmpty: false,
-                                                label: {
-                                                classes: "govuk-label govuk-radios__label",
-                                                isPageHeading: true,
-                                                text: "Select parliamentary constituency"
-                                                },
-                                                items: [
-                                                { text: "Bristol Central" },
-                                                { text: "Cities of London and Westminster" },
-                                                { text: "Manchester Central" }
-                                                ]
-                                                }) }}
-
+                                                <label class="govuk-label" for="parliamentary-constituency">
+                                                    Select parliamentary constituency
+                                                </label>
+                                                <p>(Type to search)</p>
+                                                <select class="govuk-select" id="parliamentary-constituency" name="parliamentary-constituency">
+                                                    <option value="bristol-central">Bristol Central</option>
+                                                    <option value="cities-of-london-and-westminster">Cities of London and Westminster</option>
+                                                    <option value="manchester-central" selected>Manchester Central</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="govuk-radios__item">
-                                            <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-3">
-                                            <label class="govuk-label govuk-radios__label" for="contact-3">
+                                            <input class="govuk-radios__input" id="postcode-radio" name="contact" type="radio" value="text" data-aria-controls="conditional-postcode">
+                                            <label class="govuk-label govuk-radios__label" for="postcode-radio">
                                                 Postcode
                                             </label>
+                                        </div>
+                                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-postcode">
+                                            <div class="govuk-form-group">
+                                                <input class="govuk-input govuk-!-width-one-third" id="postcode" name="postcode" type="tel" autocomplete="tel">
+                                            </div>
                                         </div>
                                     </div>
                                 </fieldset>
