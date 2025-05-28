@@ -1,6 +1,3 @@
-{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
-{%- set assetPath = '/govuk/assets' -%}
-
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
 {% block head %}
@@ -17,9 +14,12 @@
   {# Set serviceName in config.js. #}
   {{ govukHeader({
     homepageUrl: "/",
+    classes: "govuk-header--full-width-border"
+  }) }}
+
+  {{ govukServiceNavigation({
     serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
+    serviceUrl: "/"
   }) }}
 
 <div class="govuk-width-container">

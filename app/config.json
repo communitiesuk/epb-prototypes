@@ -1,5 +1,10 @@
 {
   "port":80,
   "serviceName":"Energy performance of buildings",
-  "useHttps":false
+  "useHttps":false,
+  "plugins": {
+    "govuk-frontend": {
+      "rebrand": false
+    }
+  }
 }
