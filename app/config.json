@@ -4,7 +4,7 @@
   "useHttps":false,
   "plugins": {
     "govuk-frontend": {
-      "rebrand": false
+      "rebrand": true
     }
   }
 }
