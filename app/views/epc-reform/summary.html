@@ -1,0 +1,94 @@
+{% set serviceName %}
+Find an energy certificate
+{% endset%}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper" id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl">
+                Energy Performance Certificate (EPC)
+            </h1>
+
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+            <div class="govuk-inset-text">
+                This certificate is 4 years old. Some information may be out of date.
+            </div>
+        </div>
+    </div>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">Property details</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Address: </dt>
+                            <dd class="govuk-summary-list__value">
+                                6 SEVILLE ROAD<br>
+                                KINGSDOWN <br>
+                                BRISTOL<br>
+                                BS2 1AD
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Property type: </dt>
+                            <dd class="govuk-summary-list__value">Mid-terrace house</dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Total floor area: </dt>
+                            <dd class="govuk-summary-list__value">70 square metres</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">Assessment details</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Valid until: </dt>
+                            <dd class="govuk-summary-list__value">
+                                18 July 2029
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Date of certificate: </dt>
+                            <dd class="govuk-summary-list__value">19 July 2019</dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Certificate number: </dt>
+                            <dd class="govuk-summary-list__value">2560-8103-5290-6200-2505</dd>
+                        </div>
+
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            More details
+                        </button>
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}
