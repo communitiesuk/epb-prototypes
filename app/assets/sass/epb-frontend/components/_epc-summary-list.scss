@@ -6,10 +6,13 @@
 .epc-summary-list__row--stacked .govuk-summary-list__value {
   display: block;
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .epc-summary-list__row--stacked .govuk-summary-list__key {
   margin-bottom: 4px;
+  padding-bottom: 0.5rem;
+}
+
+.epc-summary-list__row--stacked .govuk-summary-list__value {
+  padding-top: 0;
 }
