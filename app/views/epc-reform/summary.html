@@ -10,8 +10,8 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 
 {% block content %}
 
-<main class="govuk-main-wrapper" id="main-content" role="main">
-    <div class="govuk-grid-row">
+
+<div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
             <h1 class="govuk-heading-xl">
                 Energy Performance Certificate (EPC)
@@ -33,25 +33,27 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                 </div>
                 <div class="govuk-summary-card__content">
                     <dl class="govuk-summary-list govuk-summary-list--no-border">
-                        <div class="govuk-grid-column-one-half">
-                            <div class="govuk-summary-list__row epc-summary-list__row--stacked">
-                                <dt class="govuk-summary-list__key">Address: </dt>
-                                <dd class="govuk-summary-list__value">
-                                    6 SEVILLE ROAD<br>
-                                    KINGSDOWN <br>
-                                    BRISTOL<br>
-                                    BS2 1AD<br>
-                                </dd>
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <div class="govuk-summary-list__row epc-summary-list__row--stacked">
+                                    <dt class="govuk-summary-list__key">Address: </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        6 SEVILLE ROAD<br>
+                                        KINGSDOWN <br>
+                                        BRISTOL<br>
+                                        BS2 1AD<br>
+                                    </dd>
+                                </div>
                             </div>
-                        </div>
-                        <div class="govuk-grid-column-one-half">
-                            <div class="govuk-summary-list__row epc-summary-list__row--stacked">
-                                <dt class="govuk-summary-list__key">Property type: </dt>
-                                <dd class="govuk-summary-list__value">Mid-terrace house</dd>
-                            </div>
-                            <div class="govuk-summary-list__row epc-summary-list__row--stacked">
-                                <dt class="govuk-summary-list__key">Total floor area: </dt>
-                                <dd class="govuk-summary-list__value">70 square metres</dd>
+                            <div class="govuk-grid-column-one-half">
+                                <div class="govuk-summary-list__row epc-summary-list__row--stacked">
+                                    <dt class="govuk-summary-list__key">Property type: </dt>
+                                    <dd class="govuk-summary-list__value">Mid-terrace house</dd>
+                                </div>
+                                <div class="govuk-summary-list__row epc-summary-list__row--stacked">
+                                    <dt class="govuk-summary-list__key">Total floor area: </dt>
+                                    <dd class="govuk-summary-list__value">70 square metres</dd>
+                                </div>
                             </div>
                         </div>
                     </dl>
@@ -89,11 +91,11 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                                     <dd class="govuk-summary-list__value">2560-8103-5290-6200-2505</dd>
                                 </div>
                             </div>
-                        </div>
-                        <div class="govuk-grid-row govuk-!-padding-3">
-                            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                                More details
-                            </button>
+                            <div class="govuk-grid-column-full govuk-!-padding-top-3 ">
+                                <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2" data-module="govuk-button">
+                                    More details
+                                </button>
+                            </div>
                         </div>
                     </dl>
                 </div>
@@ -102,6 +104,5 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
         </div>
     </div>
 
-</main>
 
 {% endblock %}

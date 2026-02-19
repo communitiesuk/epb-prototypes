@@ -20,9 +20,10 @@
 
 .epc-summary-cards-row{
   display: flex;
-  align-items: stretch
+  align-items: stretch;
 }
 
 .summary-list-property-details, .summary-list-address-details{
   display: flex;
+  justify-content: space-between;
 }
