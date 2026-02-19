@@ -16,3 +16,13 @@
 .epc-summary-list__row--stacked .govuk-summary-list__value {
   padding-top: 0;
 }
+
+
+.epc-summary-cards-row{
+  display: flex;
+  align-items: stretch
+}
+
+.summary-list-property-details, .summary-list-address-details{
+  display: flex;
+}
