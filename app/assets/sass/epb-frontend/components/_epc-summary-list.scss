@@ -17,15 +17,20 @@
   padding-top: 0;
 }
 
+@media (min-width: 40.0625em) {
+  .epc-summary-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
 
-.epc-summary-cards-row{
-  display: flex;
-  align-items: stretch;
-}
+  .epc-summary-cards-row > [class*="govuk-grid-column-"] {
+    display: flex;
+  }
 
-.summary-list-property-details, .summary-list-address-details{
-  display: flex;
-  justify-content: space-between;
+  .epc-summary-cards-row .govuk-summary-card {
+    width: 100%;
+  }
 }
 
 .govuk-details {
