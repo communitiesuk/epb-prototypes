@@ -12,20 +12,23 @@
   border: 1px solid #888;
   text-align: center;
   position: relative;
-  padding: 8%;
+  padding: 4% 8% 8%;
   margin-bottom: 25px;
+
 }
 
 .rating-bubble .label {
-  display: block;
-  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #000;
   margin-bottom: 5px;
 }
 
 .rating-bubble .grade {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #000;
   line-height: 1;
@@ -66,6 +69,10 @@
 
 .box.active {
   height: 60px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  align-items: flex-start;
+  padding-top: 10px;
 }
 
 .a { background-color: #005A30; color: white; }
