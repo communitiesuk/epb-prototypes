@@ -12,19 +12,23 @@
   border: 1px solid #888;
   text-align: center;
   position: relative;
-  padding: 4% 8% 8%;
+  padding: 4rem 8% 8%;
   margin-bottom: 25px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .rating-bubble .label {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
   font-size: 1.2rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 5px;
+  margin: 0;
 }
 
 .rating-bubble .grade {
@@ -34,7 +38,7 @@
   line-height: 1;
   margin-bottom: 25px;
   position: relative;
-  top: 8px;
+  bottom: 4px;
 }
 
 .rating-bubble::after {
