@@ -21,7 +21,7 @@
   .epc-summary-cards-row {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: flex-start;
   }
 
   .epc-summary-cards-row > [class*="govuk-grid-column-"] {
