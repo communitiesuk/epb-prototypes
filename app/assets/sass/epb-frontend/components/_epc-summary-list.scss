@@ -21,6 +21,9 @@
   .epc-summary-cards-row {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .ratings-row{
     align-items: flex-start;
   }
 
