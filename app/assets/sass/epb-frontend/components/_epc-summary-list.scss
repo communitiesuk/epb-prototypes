@@ -45,6 +45,10 @@
     flex-direction: column;
     margin-top: 0;
   }
+
+  .govuk-body{
+    margin-bottom: 0;
+  }
   
   .epc-summary-cards-row .govuk-summary-card__content > .govuk-body {
     flex: 1;

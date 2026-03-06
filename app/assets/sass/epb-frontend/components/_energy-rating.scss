@@ -46,7 +46,7 @@
   position: absolute;
   width: 32px;
   height: 32px;
-  background-color: #E7EBDB;
+
   border-bottom: 1px solid #888;
   border-right: 1px solid #888;
   bottom: -17px;
@@ -57,6 +57,22 @@
   display: flex;
   align-items: flex-end;
   gap: 2px;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.energy-bill-wrapper > .rating-bubble {
+  padding: 6%;
+}
+
+.bill-outro{
+  margin-top: 10px;
+}
+
+.energy-bill-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
   width: 100%;
   margin-top: 17px;
 }
@@ -80,6 +96,27 @@
   padding-top: 10px;
 }
 
+.energy-bill-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.energy-bill-bar > .box {
+  flex: 1;
+  height: 26px;
+}
+
+.energy-bill-bar > .box.active {
+  height: 47px;
+  flex: 0 0 37%;
+  padding-top: 10px;
+}
+
+.epc-card__intro > .govuk-inset-text {
+  margin-top: 0;
+}
+
 .is-a .rating-bubble::after { left: calc((100% / 7) * 0.5); }
 .is-b .rating-bubble::after { left: calc((100% / 7) * 1.5); }
 .is-c .rating-bubble::after { left: calc((100% / 7) * 2.5); }
@@ -88,13 +125,19 @@
 .is-f .rating-bubble::after { left: calc((100% / 7) * 5.5); }
 .is-g .rating-bubble::after { left: calc((100% / 7) * 6.5); }
 
+.is-low .rating-bubble::after { left: calc((100% / 3) * 0.5); }
+.is-average .rating-bubble::after { left: calc((100% / 3) * 1.5); }
+.is-high .rating-bubble::after { left: calc((100% / 3) * 2.5); }
+
 
 .is-c .rating-bubble,
-.is-c .rating-bubble::after { background-color: #E7EBDB;
-; }
+.is-c .rating-bubble::after { background-color: #E7EBDB; }
 
 .is-d .rating-bubble,
 .is-d .rating-bubble::after { background-color: #FFF8CC; }
+
+.is-average .rating-bubble,
+.is-average .rating-bubble::after { background-color: #FFF8CC; }
 
 
 .a { background-color: #005A30; color: white; }
@@ -104,3 +147,8 @@
 .e { background-color: #F47738; color: black; }
 .f { background-color: #CA3535; color: white; }
 .g { background-color: #AA2A16; color: white; }
+
+
+.low { background-color: #11875A; color: white; }
+.average { background-color: #FFDD00; color: black; }
+.high { background-color: #CA3535; color: white; }
