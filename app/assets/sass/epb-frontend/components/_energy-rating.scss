@@ -1,10 +1,16 @@
 .energy-rating-wrapper {
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  max-width: 450px;
+  max-width: none;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+}
+
+@media (min-width: 40.0625em) {
+  .energy-rating-wrapper {
+    max-width: 450px;
+  }
 }
 
 .rating-bubble {
@@ -100,10 +106,7 @@
 
 
 .energy-bill-wrapper > .rating-bubble .bill-outro{
-
-  margin: 0;
   transform: translateY(-16px)
-
 }
 
 .energy-bill-bar {
