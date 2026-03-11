@@ -85,8 +85,6 @@
   margin: 0;
 }
 
-
-
 .energy-bill-wrapper > .rating-bubble .label {
   align-self: start;
 }
@@ -141,6 +139,27 @@
   margin-top: 0;
 }
 
+.warning-icon-container{
+  display: flex;
+  align-items: center;
+}
+
+.warning-icon-container{
+  font-size: 1.4rem;
+}
+
+.lettings-bar{
+  height: 29px;
+  gap: 8px;
+}
+
+.lettings-bar .active{
+  height: 58px;
+  gap: 8px;
+  align-items: center;
+  padding: 0;
+}
+
 .is-a .rating-bubble::after { left: calc((100% / 7) * 0.5); }
 .is-b .rating-bubble::after { left: calc((100% / 7) * 1.5); }
 .is-c .rating-bubble::after { left: calc((100% / 7) * 2.5); }
@@ -163,6 +182,9 @@
 .is-average .rating-bubble,
 .is-average .rating-bubble::after { background-color: #FFF8CC; }
 
+.is-f .letting-standards-bubble,
+.is-f .letting-standards-bubble::after { background-color: #F4D7D7; }
+
 
 .a { background-color: #005A30; color: white; }
 .b { background-color: #11875A; color: white; }
@@ -176,3 +198,6 @@
 .low { background-color: #11875A; color: white; }
 .average { background-color: #FFDD00; color: black; }
 .high { background-color: #CA3535; color: white; }
+
+.lettings-bar > .is-green { background-color: #11875A; color: white; }
+.lettings-bar > .is-red { background-color: #CA3535; color: white; }
