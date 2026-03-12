@@ -71,3 +71,11 @@
 .govuk-details {
   margin-top: 2rem;
 }
+
+.govuk-summary-list__row:first-of-type {
+  font-weight: bold;
+}
+
+.govuk-summary-list__row:not(:first-child) dt.govuk-summary-list__key {
+  font-weight: normal;
+}
