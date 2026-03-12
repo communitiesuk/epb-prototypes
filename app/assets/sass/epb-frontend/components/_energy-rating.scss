@@ -160,6 +160,21 @@
   padding: 0;
 }
 
+@media (max-width: 640px) {
+  .letting-standards-bubble{
+    position: relative;
+  }
+
+  .govuk-warning-text{
+    position: absolute;
+    top: 20px;
+  }
+
+  .warning-icon-container {
+    font-size: 1.15rem;
+  }
+}
+
 .is-a .rating-bubble::after { left: calc((100% / 7) * 0.5); }
 .is-b .rating-bubble::after { left: calc((100% / 7) * 1.5); }
 .is-c .rating-bubble::after { left: calc((100% / 7) * 2.5); }
