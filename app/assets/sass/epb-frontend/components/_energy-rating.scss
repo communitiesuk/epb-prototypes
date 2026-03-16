@@ -163,6 +163,7 @@
 @media (max-width: 640px) {
   .letting-standards-bubble {
     position: relative;
+    margin-bottom: 55px;
   }
 
   .govuk-warning-text {
@@ -184,6 +185,11 @@
 
   .lettings-bar {
     gap: 2px
+  }
+
+  .lettings-bar .active{
+    align-items: flex-start;
+    padding-top: 10px;
   }
 }
 
