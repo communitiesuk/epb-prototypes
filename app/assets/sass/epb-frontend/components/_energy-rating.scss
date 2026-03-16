@@ -139,6 +139,12 @@
   margin-top: 0;
 }
 
+@media (max-width: 640px) {
+  .energy-bill-bar {
+    gap: 2px;
+  }
+}
+
 .warning-icon-container{
   display: flex;
   align-items: center;
