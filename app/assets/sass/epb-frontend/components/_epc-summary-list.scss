@@ -83,3 +83,15 @@
 #previous-cert-for-property .govuk-summary-list__row {
   padding-bottom: 20px;
 }
+
+@media (max-width: 640px) {
+  .govuk-summary-list__row {
+    display: flex;
+  }
+
+  .govuk-summary-list__key,
+  .govuk-summary-list__value {
+    width: auto;
+    flex: 0.5;
+  }
+}
