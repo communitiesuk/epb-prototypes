@@ -363,20 +363,17 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                 </h2>
             </div>
             <div class="govuk-summary-card__content">
-                <dl id="other-property-information" class="govuk-summary-list">
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                            Measure
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-                            Description
-                        </dd>
-                    </div>
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                            Energy use
-                        </dt>
-                        <dd class="govuk-summary-list__value">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header cell-one">Measure</th>
+                        <th scope="col" class="govuk-table__header cell-two">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header cell-one">Energy use</th>
+                        <td class="govuk-table__cell cell-two">
                             <details class="govuk-details govuk-!-margin-top-0">
                                 <summary class="govuk-details__summary">
                                     <span class="govuk-details__summary-text">
@@ -387,13 +384,11 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                                     This property is expected to use around 500 kilowatt-hours per square metre per year (on-site). This is high compared with similar properties.
                                 </div>
                             </details>
-                        </dd>
-                    </div>
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                            Carbon emissions
-                        </dt>
-                        <dd class="govuk-summary-list__value">
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header cell-one">Carbon emissions</th>
+                        <td class="govuk-table__cell cell-two">
                             <details class="govuk-details govuk-!-margin-top-0">
                                 <summary class="govuk-details__summary">
                                     <span class="govuk-details__summary-text">
@@ -404,9 +399,10 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                                     This property is expected to produce around 2.7 tonnes of CO2 per year. This is high compared with similar properties.
                                 </div>
                             </details>
-                        </dd>
-                    </div>
-                </dl>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
