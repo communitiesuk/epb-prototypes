@@ -1,9 +1,16 @@
+.govuk-summary-card__content .govuk-table {
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .govuk-summary-card__content .govuk-table .cell-one {
-  width: 100px;
+  width: 25%;
+  padding-right: 10px;
 }
 
 .govuk-summary-card__content .govuk-table .cell-two {
-  padding-left: 20%;
+  padding-left: 0;
 }
 
 .govuk-table__header,
@@ -11,6 +18,20 @@
   padding-bottom: 10px;
 }
 
-.govuk-details {
+#other-property-information .govuk-details {
   margin-bottom: 0;
+}
+
+#other-property-information thead .govuk-table__header[scope="col"] {
+  font-weight: bold;
+}
+#other-property-information tbody .govuk-table__header[scope="row"] {
+  font-weight: normal;
+}
+
+@media (max-width: 640px) {
+  .govuk-summary-card__content .govuk-table .cell-one {
+    width: 40%;
+    padding-right: 10px;
+  }
 }
