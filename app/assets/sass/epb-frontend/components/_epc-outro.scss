@@ -4,8 +4,6 @@
   flex-direction: column;
   width: 100%;
   gap: 20px;
-  background-color: #f5f5f5;
-
 }
 
 .outro-wrapper .outro-box {
@@ -37,11 +35,6 @@
   align-items: center;
 }
 
-.actions-icons{
-  width: 30px;
-  height: 30px;
-}
-
 .outro-item-2-content, .outro-item-3-content, .outro-item-4-content{
   display: flex;
   flex-direction: row;
@@ -56,15 +49,28 @@
   justify-self: center;
 }
 
-.outro-item-2-content > .govuk-body-m{
+.outro-item-2-content > .govuk-body-m,
+.outro-item-3-content > .govuk-body-m,
+.outro-item-4-content > .govuk-body-m{
   margin: 0;
 }
 
 .outro-item-2-content > span,
 .outro-item-3-content > span,
-.outro-item-4 > span {
+.outro-item-4-content > span {
   text-decoration: underline;
   font-weight: bold;
+}
+
+.share-this-page-content{
+  display: flex;
+  flex-direction: row;
+}
+
+.share-link-content, .print-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 
