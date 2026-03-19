@@ -1,0 +1,75 @@
+.outro-wrapper {
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  background-color: #f5f5f5;
+
+}
+
+.outro-wrapper .outro-box {
+  width: 100%;
+  border: 1px solid #1D70B8;
+  box-sizing: border-box;
+}
+
+.outro-item-1-content > h2,
+.outro-item-2-content > h2 {
+  display: flex;
+  flex-direction: column;
+  width: 65%
+}
+
+.epc-blue-text{
+  color: #1D70B8;
+}
+
+.outro-item-1-content > .govuk-button {
+  background-color: #1D70B8;
+  border: 1px solid #144E81;
+  color: white;
+}
+
+.icon-box{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.actions-icons{
+  width: 30px;
+  height: 30px;
+}
+
+.outro-item-2-content, .outro-item-3-content, .outro-item-4-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.outro-item-2-content > p,
+.outro-item-2-content > p,
+.outro-item-2-content > p {
+  align-self: center;
+  justify-self: center;
+}
+
+.outro-item-2-content > .govuk-body-m{
+  margin: 0;
+}
+
+.outro-item-2-content > span,
+.outro-item-3-content > span,
+.outro-item-4 > span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+
+.outro-item-1 { flex: 0.5; background-color: #F4F8FB; }
+.outro-item-2 { flex: 0.167; background-color: #F4F8FB; }
+.outro-item-3 { flex: 0.167; background-color: #F4F8FB; }
+.outro-item-4 { flex: 0.167; background-color: #F4F8FB; }
