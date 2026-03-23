@@ -85,6 +85,11 @@
   .outro-item-1-content .govuk-button {
     margin-top: 20px;
   }
+
+  p.govuk-body,
+  .share-this-page-content > div > p {
+    margin-top: revert;
+  }
 }
 
 
