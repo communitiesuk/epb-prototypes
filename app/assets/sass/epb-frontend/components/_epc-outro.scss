@@ -73,6 +73,14 @@
   align-items: center;
 }
 
+@media (max-width: 640px) {
+  .outro-item-1-content > .govuk-button {
+    margin-left: 0 !important;;
+  }
+  .outro-item-1-content .govuk-button {
+    margin-top: 20px;
+  }
+}
 
 
 .outro-item-1 { flex: 0.5; background-color: #F4F8FB; }
