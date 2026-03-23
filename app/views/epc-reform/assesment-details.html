@@ -1,0 +1,95 @@
+{% set serviceName %}
+Find an energy certificate
+{% endset%}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link">Back</a>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Assessment details</h1>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible epc-strong-top">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">About this assessment</caption>
+            <thead class="govuk-table__head">
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Certificate number</th>
+                <td class="govuk-table__cell">2560-8103-5290-6200-2505</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Valid until</th>
+                <td class="govuk-table__cell">18 July 2029</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date of assessment</th>
+                <td class="govuk-table__cell">17 July 2019</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date of certificate</th>
+                <td class="govuk-table__cell">19 July 2019</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Assessment method</th>
+                <td class="govuk-table__cell">
+                    <span>RdHEM</span>
+                    <span>
+                        <details class="govuk-details assesment-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">What does the rating mean?</span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                RdHEM is an assessment method used to calculate the energy performance of an existing property.
+                                An accredited energy assessor completes the assessment through a visual inspection of the property.
+                                If some details are not visible, the assessor may make assumptions based on the property’s age or construction type.
+                            </div>
+                    </details>
+                    </span>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible epc-strong-top">
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Assessor details</caption>
+            <thead class="govuk-table__head">
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Name</th>
+                <td class="govuk-table__cell">Adam Brest</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Telephone</th>
+                <td class="govuk-table__cell">0117 395 2899</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Email</th>
+                <td class="govuk-table__cell">enquiries@focus180energy.co.uk</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}
