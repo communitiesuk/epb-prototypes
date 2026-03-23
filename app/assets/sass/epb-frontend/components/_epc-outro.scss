@@ -73,9 +73,14 @@
   align-items: center;
 }
 
+.share-icon, .print-icon {
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
 @media (max-width: 640px) {
   .outro-item-1-content > .govuk-button {
-    margin-left: 0 !important;;
+    margin-left: 0 !important;
   }
   .outro-item-1-content .govuk-button {
     margin-top: 20px;
