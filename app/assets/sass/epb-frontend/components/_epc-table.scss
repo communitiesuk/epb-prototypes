@@ -4,15 +4,6 @@
   margin-bottom: 10px;
 }
 
-.govuk-summary-card__content .govuk-table .cell-one {
-  width: 25%;
-  padding-right: 10px;
-}
-
-.govuk-summary-card__content .govuk-table .cell-two {
-  padding-left: 0;
-}
-
 .govuk-table__header,
 .govuk-table__cell {
   padding-bottom: 10px;
@@ -30,11 +21,6 @@
 }
 
 @media (max-width: 640px) {
-  .govuk-summary-card__content .govuk-table .cell-one {
-    width: 40%;
-    padding-right: 10px;
-  }
-
   #other-property-information{
    margin-bottom: 30px;
  }
