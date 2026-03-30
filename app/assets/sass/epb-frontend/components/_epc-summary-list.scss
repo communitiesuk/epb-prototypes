@@ -100,3 +100,7 @@
     flex: 0.5;
   }
 }
+
+#main-content:has(.govuk-back-link) {
+  padding-top: 0;
+}
