@@ -1,0 +1,77 @@
+{% set serviceName %}
+Find an energy certificate
+{% endset%}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <a href="#" class="govuk-back-link">Back</a>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Heat retention</h1>
+    <p class="govuk-body">This measures how well this property retains heat during winter and stays cool during summer. Improving the rating reduces energy bills and makes indoor spaces more comfortable.</p>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-padding-top-3">
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">Results for this property</h2>
+      <div class="energy-rating-wrapper include-score is-c govuk-!-padding-top-6">
+          <div class="rating-bubble two-col">
+          <div class="bubble-col rating-col">
+              <span class="label">Rating</span>
+              <div class="grade">C</div>
+          </div>
+          <div class="bubble-divider" aria-hidden="true"></div>
+          <div class="bubble-col score-col">
+              <span class="label">Score</span>
+              <div class="grade score">70</div>
+              <span class="score-sub">Points out of 100</span>
+          </div>
+      </div>
+      </div>
+      <div class="rating-bar full-column-bar" aria-hidden="true">
+          <div class="box a">A</div>
+          <div class="box b">B</div>
+          <div class="box c active">C</div>
+          <div class="box d">D</div>
+          <div class="box e">E</div>
+          <div class="box f">F</div>
+          <div class="box g">G</div>
+      </div>
+      <details class="govuk-details summary-details">
+          <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                  What does the rating mean?
+              </span>
+          </summary>
+          <div class="govuk-details__text">
+              Properties get a score from 100 (best) to 1 (worst).  A better score means the property needs less energy to stay at a comfortable temperature.<br><br>
+              The score is based on how much energy a property typically needs to be heated above 18°C in winter and cooled below 24°C in summer.<br><br>
+              Each score also has a letter rating from A (best) to G (worst):
+              <ul>
+                  <li>A rating - 90 to 100</li>
+                  <li>B rating - 80 to 89</li>
+                  <li>C rating - 70 to 79</li>
+                  <li>D rating - 60 to 69</li>
+                  <li>E rating - 50 to 59</li>
+                  <li>F rating - 40 to 49</li>
+                  <li>G rating - 1 to 39</li>
+              </ul>
+          </div>
+      </details>
+  </div>
+</div>
+
+
+{% endblock %}
