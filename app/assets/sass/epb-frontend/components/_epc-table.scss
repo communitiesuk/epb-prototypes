@@ -20,10 +20,24 @@
   font-weight: normal;
 }
 
+#about-assessment-table tbody > tr:nth-child(2) > th.govuk-table__header,
+#about-assessment-table tbody > tr:nth-child(3) > th.govuk-table__header,
+#about-assessment-table tbody > tr:nth-child(4) > th.govuk-table__header,
+#about-assessment-table tbody > tr:nth-child(5) > th.govuk-table__header {
+  font-weight: normal;
+}
+
+.assesment-details{
+  margin: 0;
+}
+
 @media (max-width: 640px) {
   #other-property-information{
    margin-bottom: 30px;
  }
+  .govuk-table__header {
+    width: auto !important;
+  }
 }
 
 .property-features-description-box {
@@ -47,7 +61,3 @@
     background: #FFF7BF;
     color: #594D00;
  }
-
-#about-assessment-table tbody > tr:nth-child(n+2):nth-child(-n+5) > th.govuk-table__header {
-  font-weight: 400;
-}
