@@ -25,3 +25,29 @@
    margin-bottom: 30px;
  }
 }
+
+.property-features-description-box {
+  max-width: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+.property-features-description-box#box-1,
+.property-features-description-box#box-3{
+  background: #CCE2D8;
+  color: #005A30;
+}
+
+.property-features-description-box#box-2{
+   background: #FCD6C3;
+   color: #6E3619;
+}
+
+.property-features-description-box#box-4 {
+    background: #FFF7BF;
+    color: #594D00;
+ }
+
+#about-assessment-table tbody > tr:nth-child(n+2):nth-child(-n+5) > th.govuk-table__header {
+  font-weight: 400;
+}
