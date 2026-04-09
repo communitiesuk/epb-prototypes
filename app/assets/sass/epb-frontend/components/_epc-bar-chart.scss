@@ -1,0 +1,103 @@
+.bar-chart {
+  position: relative;
+  max-width: 1000px;
+  font-family: Arial, sans-serif;
+}
+
+.bar-chart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(20% + 25px);
+  width: 2px;
+  background: #DBDCDC;
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: 20% auto 100%;
+  align-items: stretch;
+  column-gap: 25px;
+  margin-bottom: 38px;
+}
+
+.chart-row:last-child {
+  margin-bottom: 0;
+}
+
+.chart-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.chart-badge {
+  width: fit-content;
+  padding: 6px 10px;
+  font-size: 16px;
+  line-height: 1;
+  color: white;
+}
+
+.badge-a {
+  background: #015A30;
+}
+
+.badge-b {
+  background: #11875A;
+}
+
+.badge-c {
+  background: #85994B;
+  color: black;
+}
+
+.chart-middle {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  padding-left: 1px;
+}
+
+.chart-bar-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.chart-bar {
+  height: 64px;
+}
+
+.bar-1.this-property.heat-retention {
+  width: 125px;
+  background: #85994B;
+}
+
+.bar-2.similar-property.heat-retention {
+  width: 250px;
+  background: #11875A;
+}
+
+.bar-3.after-improvements.heat-retention {
+  width: 500px;
+  background: #015A30;
+}
+
+.chart-right {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.compare-property-heading {
+  display: flex;
+  justify-content: space-between;
+}
