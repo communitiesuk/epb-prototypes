@@ -136,6 +136,18 @@
     column-gap: 30px;
     margin-bottom: 20px;
   }
+
+  #accessible-table-version > table > tbody > tr:nth-child(1) > td:nth-child(2){
+    width: 66% !important;
+  }
+
+  #accessible-table-version > table > tbody > tr > td  {
+    vertical-align: middle;
+  }
+
+  #main-content > div:nth-child(8) > div > hr {
+    margin-bottom: 10px;
+  }
 }
 
 #accessible-table-version .govuk-table__row > .govuk-table__header {
