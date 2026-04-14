@@ -11,6 +11,33 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 {% block content %}
 
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const accessibleLink = document.getElementById('accessible-version-link');
+        const chartLink = document.getElementById('chart-version-link');
+        const chartVersion = document.getElementById('bar-chart-version');
+        const tableVersion = document.getElementById('accessible-table-version');
+
+        if (!accessibleLink || !chartLink || !chartVersion || !tableVersion) return;
+
+        accessibleLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            chartVersion.hidden = true;
+            tableVersion.hidden = false;
+            accessibleLink.hidden = true;
+            chartLink.hidden = false;
+        });
+
+        chartLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            chartVersion.hidden = false;
+            tableVersion.hidden = true;
+            accessibleLink.hidden = false;
+            chartLink.hidden = true;
+        });
+    });
+</script>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <a href="/epc-reform/summary" class="govuk-back-link">Back</a>
@@ -190,7 +217,7 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 </div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible epc-black-bottom govuk-!-margin-bottom-6 govuk-!-margin-top-7">
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible epc-black-bottom govuk-!-margin-bottom-6">
         <h2 class="govuk-heading-m">How this property compares</h2>
         <div class="govuk-inset-text">
             This property has a lower rating than average for Bristol Central.
@@ -206,7 +233,9 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
         <div class="compare-property-heading govuk-!-margin-top-4">
             <h3 class="govuk-heading-s">How long it stays warm</h3>
             <p class="govuk-body">
-                <a href="#" class="govuk-link">View accessible version</a>.
+                <a href="#" class="govuk-link " id="accessible-version-link">View accessible version</a>
+                <a href="#" class="govuk-link" id="chart-version-link" hidden>View bar-chart</a>
+
             </p>
         </div>
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-0">
@@ -214,45 +243,89 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 </div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        <div class="horizontal-bar-chart-wrapper">
-            <div class="bar-chart govuk-!-padding-top-5 govuk-!-padding-bottom-5">
-                <div class="chart-row">
-                    <div class="chart-left">
-                        <div class="chart-title">This property</div>
-                        <div class="chart-badge badge-c">C rating <span aria-hidden="true">·</span> 70 Points</div>
-                    </div>
-                    <div class="chart-middle">
-                        <div class="chart-bar-wrapper">
-                            <div class="chart-bar bar-1 this-property heat-retention"></div>
+        <div id="bar-chart-version">
+            <div class="horizontal-bar-chart-wrapper">
+                <div class="bar-chart govuk-!-padding-top-5 govuk-!-padding-bottom-5">
+                    <div class="chart-row">
+                        <div class="chart-left">
+                            <div class="chart-title">This property</div>
+                            <div class="chart-badge badge-c">C rating <span aria-hidden="true">·</span> 70 Points</div>
                         </div>
-                    </div>
-                    <div class="chart-right">Stays warm for 3 hours</div>
-                </div>
-                <div class="chart-row">
-                    <div class="chart-left">
-                        <div class="chart-title">Similar local<br>properties</div>
-                        <div class="chart-badge badge-b">B rating <span aria-hidden="true">·</span> 80 Points</div>
-                    </div>
-                    <div class="chart-middle">
-                        <div class="chart-bar-wrapper">
-                            <div class="chart-bar bar-2 similar-property heat-retention"></div>
+                        <div class="chart-middle">
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar bar-1 this-property heat-retention"></div>
+                            </div>
                         </div>
+                        <div class="chart-right">Stays warm for 3 hours</div>
                     </div>
-                    <div class="chart-right">Stays warm for 6 hours</div>
-                </div>
-                <div class="chart-row">
-                    <div class="chart-left">
-                        <div class="chart-title">This property after<br>improvements</div>
-                        <div class="chart-badge badge-a">A rating <span aria-hidden="true">·</span> 90 Points</div>
-                    </div>
-                    <div class="chart-middle">
-                        <div class="chart-bar-wrapper">
-                            <div class="chart-bar bar-3 after-improvements heat-retention"></div>
+                    <div class="chart-row">
+                        <div class="chart-left">
+                            <div class="chart-title">Similar local<br>properties</div>
+                            <div class="chart-badge badge-b">B rating <span aria-hidden="true">·</span> 80 Points</div>
                         </div>
+                        <div class="chart-middle">
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar bar-2 similar-property heat-retention"></div>
+                            </div>
+                        </div>
+                        <div class="chart-right">Stays warm for 6 hours</div>
                     </div>
-                    <div class="chart-right">Stays warm for 12 hours</div>
+                    <div class="chart-row">
+                        <div class="chart-left">
+                            <div class="chart-title">This property after<br>improvements</div>
+                            <div class="chart-badge badge-a">A rating <span aria-hidden="true">·</span> 90 Points</div>
+                        </div>
+                        <div class="chart-middle">
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar bar-3 after-improvements heat-retention"></div>
+                            </div>
+                        </div>
+                        <div class="chart-right">Stays warm for 12 hours</div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div id="accessible-table-version" hidden>
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-visually-hidden">
+                    How long it stays warm
+                </caption>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header govuk-!-width-one-third">
+                            <strong>This property</strong>
+                        </th>
+                        <td class="govuk-table__cell govuk-!-width-one-third">
+                            <span class="chart-badge badge-c">C rating <span aria-hidden="true">•</span> 70 Points</span>
+                        </td>
+                        <td class="govuk-table__cell govuk-!-width-one-third">
+                            Stays warm for 3 hours
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">
+                            Similar local properties
+                        </th>
+                        <td class="govuk-table__cell">
+                            <span class="chart-badge badge-b">B rating <span aria-hidden="true">•</span> 80 Points</span>
+                        </td>
+                        <td class="govuk-table__cell">
+                            Stays warm for 6 hours
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">
+                            This property after improvements
+                        </th>
+                        <td class="govuk-table__cell">
+                            <span class="chart-badge badge-a">A rating <span aria-hidden="true">•</span> 90 Points</span>
+                        </td>
+                        <td class="govuk-table__cell">
+                            Stays warm for 12 hours
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

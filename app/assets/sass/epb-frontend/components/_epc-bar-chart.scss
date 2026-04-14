@@ -8,7 +8,7 @@
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 5px;
   left: calc(20% + 25px);
   width: 2px;
   background: #DBDCDC;
@@ -100,4 +100,16 @@
 .compare-property-heading {
   display: flex;
   justify-content: space-between;
+}
+
+#accessible-table-version .govuk-table__row > .govuk-table__header {
+  text-align: left;
+}
+
+#accessible-table-version .govuk-table__row > .govuk-table__cell:nth-child(2) {
+  text-align: center;
+}
+
+#accessible-table-version .govuk-table__row > .govuk-table__cell:nth-child(3) {
+  text-align: right;
 }
