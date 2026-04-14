@@ -94,12 +94,48 @@
   display: flex;
   align-items: center;
   font-weight: bold;
-  white-space: nowrap;
 }
 
 .compare-property-heading {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .chart-title{
+    font-size: 14px;
+    width: 90px;
+  }
+
+  .chart-badge{
+    font-size: 14px;
+    padding: 6px 5px;
+  }
+
+  .bar-1.this-property.heat-retention {
+    width: 35px;
+  }
+
+  .bar-2.similar-property.heat-retention {
+    width: 70px;
+  }
+
+  .bar-3.after-improvements.heat-retention {
+    width: 135px;
+  }
+
+  .chart-right {
+    width: 70px;
+  }
+
+  .bar-chart::before {
+    left: calc(20% + 30px);
+  }
+
+  .chart-row {
+    column-gap: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 #accessible-table-version .govuk-table__row > .govuk-table__header {
