@@ -203,7 +203,9 @@
 .rating-bubble.two-col {
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
+  place-self: center;
   height: 186px;
+  width: calc(100%*6/7);
   padding: 16px;
   box-sizing: border-box;
 }
@@ -255,10 +257,20 @@
   gap: 7px;
 }
 
+#main-content > div:nth-child(4) > div > div.rating-bar.full-column-bar > div.box.c.active {
+  align-items: center;
+  padding-top: 0;
+}
+
 @media (max-width: 640px) {
   .full-column-bar{
     gap: 2px;
   }
+
+  .rating-bubble.two-col {
+    width: 100%;
+  }
+  .is-c .two-col::after { left: calc((100% / 7) * 2.5) !important; }
 }
 
 .is-a .rating-bubble::after { left: calc((100% / 7) * 0.5); }
@@ -280,7 +292,7 @@
 
 .is-a .two-col::after { left: calc((100% / 7) * 0.5); }
 .is-b .two-col::after { left: calc((100% / 7) * 1.5); }
-.is-c .two-col::after { left: calc((100% / 7) * 2.5); }
+.is-c .two-col::after { left: 33.3334%; }
 .is-d .two-col::after { left: calc((100% / 7) * 3.5); }
 
 
