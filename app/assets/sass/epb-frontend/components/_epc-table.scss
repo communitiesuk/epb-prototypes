@@ -32,12 +32,20 @@
 }
 
 @media (max-width: 640px) {
-  #other-property-information{
-   margin-bottom: 30px;
- }
-  .govuk-table__header {
-    width: auto !important;
+  #other-property-information {
+    margin-bottom: 30px;
   }
+
+  .govuk-table__header {
+    width: auto;
+  }
+
+  #about-assessment-table > tbody > tr:nth-child(1) > th,
+  #assessor-details-table > tbody > tr:nth-child(1) > th,
+  #accreditation-scheme-table > tbody > tr:nth-child(1) > th{
+    width: 33% !important;
+  }
+
 }
 
 .property-features-description-box {
