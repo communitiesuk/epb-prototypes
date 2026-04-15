@@ -145,6 +145,10 @@
     vertical-align: middle;
   }
 
+  #accessible-table-version > table > tbody > tr > th {
+    width: auto !important;
+  }
+
   #main-content > div:nth-child(8) > div > hr {
     margin-bottom: 10px;
   }
