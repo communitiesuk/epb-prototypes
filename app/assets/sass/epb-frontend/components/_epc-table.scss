@@ -20,15 +20,21 @@
   font-weight: normal;
 }
 
-#about-assessment-table tbody > tr:nth-child(2) > th.govuk-table__header,
-#about-assessment-table tbody > tr:nth-child(3) > th.govuk-table__header,
-#about-assessment-table tbody > tr:nth-child(4) > th.govuk-table__header,
-#about-assessment-table tbody > tr:nth-child(5) > th.govuk-table__header {
+#property-feature-table tbody > tr:nth-child(2) > th.govuk-table__header,
+#property-feature-table tbody > tr:nth-child(3) > th.govuk-table__header,
+#property-feature-table tbody > tr:nth-child(4) > th.govuk-table__header,
+#property-feature-table tbody > tr:nth-child(5) > th.govuk-table__header {
   font-weight: normal;
 }
 
-.assesment-details{
+.assesment-details {
   margin: 0;
+}
+
+#property-feature-table > tbody > tr > td:nth-child(3),
+#property-feature-table > tbody > tr:nth-child(1) > th:nth-child(3),
+#property-feature-table > tbody > tr:nth-child(2) > td:nth-child(3)  {
+  text-align: -webkit-right;
 }
 
 @media (max-width: 640px) {
@@ -36,8 +42,16 @@
     margin-bottom: 30px;
   }
 
-  .govuk-table__header {
-    width: auto;
+  #property-feature-table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  #property-feature-table th,
+  #property-feature-table td,
+  #property-feature-table .govuk-table__header,
+  #property-feature-table .govuk-table__header {
+    width: 33.333% !important;
   }
 
   #about-assessment-table > tbody > tr:nth-child(1) > th,
@@ -45,7 +59,6 @@
   #accreditation-scheme-table > tbody > tr:nth-child(1) > th{
     width: 33% !important;
   }
-
 }
 
 .property-features-description-box {
