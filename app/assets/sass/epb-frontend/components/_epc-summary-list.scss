@@ -131,7 +131,6 @@
 }
 
 .improve-rating-score {
-  min-width: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -177,6 +176,18 @@
   .govuk-summary-list__value {
     width: auto;
     flex: 0.5;
+  }
+
+  .improve-rating-contents{
+    flex-direction: column;
+  }
+
+  .improve-rating-score {
+    width: 66% !important;
+  }
+
+  .improve-rating-contents > ul > li:last-child {
+    margin-bottom: 18px;
   }
 }
 
