@@ -89,6 +89,85 @@
   padding-bottom: 20px;
 }
 
+.improve-rating-contents-wrapper {
+  display: flex;
+}
+
+#roof-insulation,
+#double-glazing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#roof-insulation > details,
+#double-glazing > details {
+  margin-bottom: 0;
+}
+
+.improve-rating-table,
+.improve-rating-table .govuk-table__row:last-child .govuk-table__cell {
+  margin-bottom: 0;
+}
+
+.improve-rating-contents {
+  display: flex;
+  gap: 20%;
+  border-right: 1px solid #B1B4B6;
+  box-sizing: border-box;
+}
+
+.improve-rating-contents > ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.improve-rating-contents > ul li {
+  margin-bottom: 18px;
+}
+
+.improve-rating-contents > ul li:last-child {
+  margin-bottom: 0;
+}
+
+.improve-rating-score {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.improve-rating-score .govuk-body {
+  margin-bottom: 8px;
+}
+
+.improve-rating-button {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.improve-rating-table > tbody > tr {
+  border-bottom: hidden;
+}
+
+.points {
+  display: inline-block;
+  padding: 4px 10px;
+}
+
+#roof-insulation-points {
+  background: #CCE2D8;
+  color: #005A30;
+}
+
+#double-glazing-points {
+  background: #FFF7BF;
+  color: #594D00;
+}
+
+
 @media (max-width: 640px) {
   .govuk-summary-list__row {
     display: flex;
