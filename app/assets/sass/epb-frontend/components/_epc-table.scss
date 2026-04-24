@@ -20,10 +20,10 @@
   font-weight: normal;
 }
 
-#property-feature-table tbody > tr:nth-child(2) > th.govuk-table__header,
-#property-feature-table tbody > tr:nth-child(3) > th.govuk-table__header,
-#property-feature-table tbody > tr:nth-child(4) > th.govuk-table__header,
-#property-feature-table tbody > tr:nth-child(5) > th.govuk-table__header {
+.property-feature-table tbody > tr:nth-child(2) > th.govuk-table__header,
+.property-feature-table tbody > tr:nth-child(3) > th.govuk-table__header,
+.property-feature-table tbody > tr:nth-child(4) > th.govuk-table__header,
+.property-feature-table tbody > tr:nth-child(5) > th.govuk-table__header {
   font-weight: normal;
 }
 
@@ -31,9 +31,9 @@
   margin: 0;
 }
 
-#property-feature-table > tbody > tr > td:nth-child(3),
-#property-feature-table > tbody > tr:nth-child(1) > th:nth-child(3),
-#property-feature-table > tbody > tr:nth-child(2) > td:nth-child(3)  {
+.property-feature-table > tbody > tr > td:nth-child(3),
+.property-feature-table > tbody > tr:nth-child(1) > th:nth-child(3),
+.property-feature-table > tbody > tr:nth-child(2) > td:nth-child(3)  {
   text-align: -webkit-right;
 }
 
@@ -42,15 +42,15 @@
     margin-bottom: 30px;
   }
 
-  #property-feature-table {
+  .property-feature-table {
     table-layout: fixed;
     width: 100%;
   }
 
-  #property-feature-table th,
-  #property-feature-table td,
-  #property-feature-table .govuk-table__header,
-  #property-feature-table .govuk-table__header {
+  .property-feature-table th,
+  .property-feature-table td,
+  .property-feature-table .govuk-table__header,
+  .property-feature-table .govuk-table__header {
     width: 33.333% !important;
   }
 
@@ -67,18 +67,17 @@
   justify-content: center;
 }
 
-.property-features-description-box#box-1,
-.property-features-description-box#box-3{
+.is-good{
   background: #CCE2D8;
   color: #005A30;
 }
 
-.property-features-description-box#box-2{
+.is-poor{
    background: #FCD6C3;
    color: #6E3619;
 }
 
-.property-features-description-box#box-4 {
+.is-fair {
     background: #FFF7BF;
     color: #594D00;
  }
