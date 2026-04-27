@@ -94,14 +94,18 @@
 }
 
 #roof-insulation,
-#double-glazing {
+#double-glazing,
+#solar-water-heating,
+#air-source-heat-pump {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 #roof-insulation > details,
-#double-glazing > details {
+#double-glazing > details,
+#solar-water-heating > details,
+#air-source-heat-pump > details {
   margin-bottom: 0;
 }
 
@@ -156,12 +160,14 @@
   padding: 4px 10px;
 }
 
-#roof-insulation-points {
+#roof-insulation-points,
+#air-source-heat-pump-points {
   background: #CCE2D8;
   color: #005A30;
 }
 
-#double-glazing-points {
+#double-glazing-points,
+#solar-water-heating-points {
   background: #FFF7BF;
   color: #594D00;
 }

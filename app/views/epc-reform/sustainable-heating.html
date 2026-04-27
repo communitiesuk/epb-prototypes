@@ -11,6 +11,32 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 {% block content %}
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const accessibleLink = document.getElementById('accessible-version-link');
+    const chartLink = document.getElementById('chart-version-link');
+    const chartVersion = document.getElementById('bar-chart-version');
+    const tableVersion = document.getElementById('accessible-table-version');
+
+    if (!accessibleLink || !chartLink || !chartVersion || !tableVersion) return;
+
+    accessibleLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      chartVersion.hidden = true;
+      tableVersion.hidden = false;
+      accessibleLink.hidden = true;
+      chartLink.hidden = false;
+    });
+
+    chartLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      chartVersion.hidden = false;
+      tableVersion.hidden = true;
+      accessibleLink.hidden = false;
+      chartLink.hidden = true;
+    });
+  });
+</script>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -201,6 +227,371 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
     <p class="govuk-body">
       This chart shows this property’s carbon emissions compared with similar local properties.
     </p>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="compare-property-heading govuk-!-margin-top-4">
+      <h3 class="govuk-heading-s">Carbon emissions per year</h3>
+      <p class="govuk-body">
+        <a href="#" class="govuk-link " id="accessible-version-link">View accessible version</a>
+        <a href="#" class="govuk-link" id="chart-version-link" hidden>View bar-chart</a>
+
+      </p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-0">
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div id="bar-chart-version">
+      <div class="horizontal-bar-chart-wrapper">
+        <div class="bar-chart govuk-!-padding-top-5 govuk-!-padding-bottom-5">
+          <div class="chart-row sustainable-heating-row">
+            <div class="chart-left">
+              <div class="chart-title">This property</div>
+              <div class="chart-badge badge-d">D rating <span aria-hidden="true">·</span> 60 Points</div>
+            </div>
+            <div class="chart-middle">
+              <div class="chart-bar-wrapper">
+                <div class="chart-bar bar-1 this-property"></div>
+              </div>
+            </div>
+            <div class="chart-right">
+              <div>
+                Same as burning 15 trees
+              </div>
+              <div>
+                <span style="font-weight: normal">(2.7 tonnes of CO₂)</span>
+              </div>
+            </div>
+          </div>
+          <div class="chart-row sustainable-heating-row">
+            <div class="chart-left">
+              <div class="chart-title">Similar local<br>properties</div>
+              <div class="chart-badge badge-b">B rating <span aria-hidden="true">·</span> 80 Points</div>
+            </div>
+            <div class="chart-middle">
+              <div class="chart-bar-wrapper">
+                <div class="chart-bar bar-2 similar-property"></div>
+              </div>
+            </div>
+            <div class="chart-right">
+              <div>
+                Same as burning 8 trees
+              </div>
+              <div>
+                <span style="font-weight: normal">(1.35 tonnes of CO₂)</span>
+              </div>
+            </div>
+          </div>
+          <div class="chart-row sustainable-heating-row">
+            <div class="chart-left">
+              <div class="chart-title">This property after<br>improvements</div>
+              <div class="chart-badge badge-a">A rating <span aria-hidden="true">·</span> 90 Points</div>
+            </div>
+            <div class="chart-middle">
+              <div class="chart-bar-wrapper">
+                <div class="chart-bar bar-3 after-improvements"></div>
+              </div>
+            </div>
+            <div class="chart-right">
+              <div>
+                Same as burning 4 trees
+              </div>
+              <div>
+                <span style="font-weight: normal">(0.7 tonnes of CO₂)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="accessible-table-version" hidden>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-visually-hidden">
+          Carbon emissions per year
+        </caption>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header govuk-!-width-one-third">
+            <strong>This property</strong>
+          </th>
+          <td class="govuk-table__cell govuk-!-width-one-third">
+            <span class="chart-badge badge-d">D rating <span aria-hidden="true">•</span> 60 Points</span>
+          </td>
+          <td class="govuk-table__cell govuk-!-width-one-third">
+            Same as burning 15 trees<br>
+            <div>
+              <span style="font-weight: normal">(2.7 tonnes of CO₂)</span>
+            </div>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Similar local properties
+          </th>
+          <td class="govuk-table__cell">
+            <span class="chart-badge badge-b">B rating <span aria-hidden="true">•</span> 80 Points</span>
+          </td>
+          <td class="govuk-table__cell">
+            Same as burning 8 trees
+            <div>
+              <span style="font-weight: normal">(1.35 tonnes of CO₂)</span>
+            </div>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            This property after improvements
+          </th>
+          <td class="govuk-table__cell">
+            <span class="chart-badge badge-a">A rating <span aria-hidden="true">•</span> 90 Points</span>
+          </td>
+          <td class="govuk-table__cell">
+            Same as burning 4 trees
+            <div>
+              <span style="font-weight: normal">(0.7 tonnes of CO₂)</span>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="govuk-!-margin-top-4">
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            How is this calculated?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          This calculation assumes the trees burnt are mature Sitka spruces.
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible epc-black-bottom govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">How to improve the rating and score</h2>
+    <p class="govuk-body">
+      These steps show how to improve this property’s rating and score.
+      They are ordered to give the biggest score increase for the lowest cost.
+      The costs are based on regional averages and are updated every year.
+    </p>
+    <div class="govuk-inset-text">
+      Get expert advice before you start any building work. The score increase for each step is an estimate based and is not guaranteed.
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-summary-card">
+      <div class="improve-rating govuk-summary-card__title-wrapper" id="solar-water-heating">
+        <h3 class="govuk-summary-card__title">
+          Step 1: Solar water heating
+        </h3>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">What does this involve?</span>
+          </summary>
+          <div class="govuk-details__text">
+            This involves installing panels on the roof which collect heat from the sun,
+            and installing a pump and a hot water storage tank inside the property.
+          </div>
+        </details>
+      </div>
+      <div class="govuk-summary-card__content">
+        <table class="govuk-table improve-rating-table">
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="improve-rating-contents-wrapper">
+                <div class="improve-rating-left govuk-!-width-two-thirds">
+                  <div class="improve-rating-contents">
+                    <ul>
+                      <li>Costs £3,000 - £6,000</li>
+                      <li>15 - 20 year lifespan</li>
+                    </ul>
+
+                    <ul>
+                      <li>Medium disruption</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="improve-rating-score govuk-!-width-one-third">
+                  <p class="govuk-body">Score increase</p>
+                  <div class="property-features-description-box points" id="solar-water-heating-points">
+                    +5 Points
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="govuk-button govuk-button--secondary improve-rating-button" data-module="govuk-button">
+                More details
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-summary-card">
+      <div class="improve-rating govuk-summary-card__title-wrapper" id="air-source-heat-pump">
+        <h3 class="govuk-summary-card__title">
+          Step 2: Air source heat pump
+        </h3>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">What does this involve?</span>
+          </summary>
+          <div class="govuk-details__text">
+            This involves installing an outdoor unit that takes heat from the outside air,
+            and an indoor unit that transfers the heat to your central heating and hot water system.
+          </div>
+        </details>
+      </div>
+      <div class="govuk-summary-card__content">
+        <table class="govuk-table improve-rating-table">
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="improve-rating-contents-wrapper">
+                <div class="improve-rating-left govuk-!-width-two-thirds">
+                  <div class="improve-rating-contents">
+                    <ul>
+                      <li>Costs £7,000 - £15,000</li>
+                      <li>15 - 20 year lifespan</li>
+                    </ul>
+                    <ul>
+                      <li>High disruption</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="improve-rating-score govuk-!-width-one-third">
+                  <p class="govuk-body">Score increase</p>
+                  <div class="property-features-description-box points" id="air-source-heat-pump-points">
+                    +10 points
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="govuk-button govuk-button--secondary improve-rating-button" data-module="govuk-button">
+                More details
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">Actions you can take</h2>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="outro-wrapper">
+      <div class="outro-item-1 outro-box">
+        <div class="outro-item-1-title govuk-!-margin-top-7">
+          <h3 class="govuk-heading-l epc-blue-text govuk-!-margin-left-6 govuk-!-margin-right-1">Want to know which improvements to make?</h3>
+        </div>
+        <div class="outro-item-1-content">
+          <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-left-6 govuk-!-margin-bottom-7" data-module="govuk-button">
+            Get a personal action plan
+          </button>
+        </div>
+      </div>
+      <div class="outro-item-2 outro-box icon-box">
+        <div class="outro-item-2-content govuk-!-margin-left-5">
+          <svg
+                  class="currency-icon actions-icons"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="30px"
+                  viewBox="0 -960 960 960"
+                  width="30px"
+                  fill="#1D70B8">
+            <path d="M240-120v-80l16.5-10q16.5-10 36-29.5t35.5-50q16-30.5 16-70.5 0-11-1.5-21t-3.5-19h-99v-80h60q-21-33-40.5-69.5T240-640q0-92 64-156t156-64q71 0 126 39t79 101l-74 31q-15-40-50.5-65.5T460-780q-58 0-99 41t-41 99q0 48 24 80t49 80h167v80H421q2 9 2.5 19t.5 21q0 50-17.5 90T364-200h196q40 0 61-21t29-54l70 35q-11 55-56.5 87.5T560-120H240Z"/>
+          </svg>
+          <span class="govuk-body-m epc-blue-text outro-p govuk-!-margin-left-3">Find out if you can get funding</span>
+        </div>
+      </div>
+      <div class="outro-item-3 outro-box icon-box">
+        <div class="outro-item-3-content govuk-!-margin-left-5">
+          <svg
+                  class="support-agent-icon actions-icons"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="30px"
+                  viewBox="0 -960 960 960"
+                  width="30px" fill="#1D70B8">
+            <path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440ZM331.5-411.5Q320-423 320-440t11.5-28.5Q343-480 360-480t28.5 11.5Q400-457 400-440t-11.5 28.5Q377-400 360-400t-28.5-11.5Zm240 0Q560-423 560-440t11.5-28.5Q583-480 600-480t28.5 11.5Q640-457 640-440t-11.5 28.5Q617-400 600-400t-28.5-11.5ZM241-462q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/>
+          </svg>
+          <span class="govuk-body-m epc-blue-text outro-p govuk-!-margin-left-3">Get free expert advice </span>
+        </div>
+      </div>
+      <div class="outro-item-4 outro-box icon-box">
+        <div class="outro-item-3-content govuk-!-margin-left-5">
+          <svg
+                  class="tools-icon actions-icons"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="30px"
+                  viewBox="0 -960 960 960"
+                  width="30px"
+                  fill="#1D70B8">
+            <path d="M739-83.5q-7-2.5-13-8.5L522-296q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l85-85q6-6 13-8.5t15-2.5q8 0 15 2.5t13 8.5l204 204q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13l-85 85q-6 6-13 8.5T754-81q-8 0-15-2.5Zm15-92.5 29-29-147-147-29 29 147 147ZM189.5-83q-7.5-3-13.5-9l-84-84q-6-6-9-13.5T80-205q0-8 3-15t9-13l212-212h85l34-34-165-165h-57L80-765l113-113 121 121v57l165 165 116-116-43-43 56-56H495l-28-28 142-142 28 28v113l56-56 142 142q17 17 26 38.5t9 45.5q0 24-9 46t-26 39l-85-85-56 56-42-42-207 207v84L233-92q-6 6-13 9t-15 3q-8 0-15.5-3Zm15.5-93 170-170v-29h-29L176-205l29 29Zm0 0-29-29 15 14 14 15Zm549 0 29-29-29 29Z"/>
+          </svg>
+          <span class="govuk-body-m epc-blue-text outro-p govuk-!-margin-left-3">Find an installer  </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-6 govuk-!-margin-top-8">
+    <h2 class="govuk-heading-m">Share this page</h2>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+    <div class="share-this-page-content">
+      <div class="share-link-content">
+        <svg
+                class="share-icon actions-icons"
+                xmlns="http://www.w3.org/2000/svg"
+                height="30px"
+                viewBox="0 -960 960 960"
+                width="30px"
+                fill="#1D70B8">
+          <path d="M680-80q-50 0-85-35t-35-85q0-6 3-28L282-392q-16 15-37 23.5t-45 8.5q-50 0-85-35t-35-85q0-50 35-85t85-35q24 0 45 8.5t37 23.5l281-164q-2-7-2.5-13.5T560-760q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-24 0-45-8.5T598-672L317-508q2 7 2.5 13.5t.5 14.5q0 8-.5 14.5T317-452l281 164q16-15 37-23.5t45-8.5q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T720-200q0-17-11.5-28.5T680-240q-17 0-28.5 11.5T640-200q0 17 11.5 28.5T680-160ZM200-440q17 0 28.5-11.5T240-480q0-17-11.5-28.5T200-520q-17 0-28.5 11.5T160-480q0 17 11.5 28.5T200-440Zm508.5-291.5Q720-743 720-760t-11.5-28.5Q697-800 680-800t-28.5 11.5Q640-777 640-760t11.5 28.5Q663-720 680-720t28.5-11.5ZM680-200ZM200-480Zm480-280Z"/>
+        </svg>
+        <p class="govuk-body govuk-!-padding-left-1">
+          <a href="#" class="govuk-link">Share link</a>
+        </p>
+      </div>
+      <div class="print-content govuk-!-padding-left-7">
+        <svg
+                class="print-icon actions-icons"
+                xmlns="http://www.w3.org/2000/svg"
+                height="30px"
+                viewBox="0 -960 960 960"
+                width="30px"
+                fill="#1D70B8">
+          <path d="M640-640v-120H320v120h-80v-200h480v200h-80Zm-480 80h640-640Zm560 100q17 0 28.5-11.5T760-500q0-17-11.5-28.5T720-540q-17 0-28.5 11.5T680-500q0 17 11.5 28.5T720-460Zm-80 260v-160H320v160h320Zm80 80H240v-160H80v-240q0-51 35-85.5t85-34.5h560q51 0 85.5 34.5T880-520v240H720v160Zm80-240v-160q0-17-11.5-28.5T760-560H200q-17 0-28.5 11.5T160-520v160h80v-80h480v80h80Z"/>
+        </svg>
+        <p class="govuk-body govuk-!-padding-left-1">
+          <a href="#" class="govuk-link">Print</a>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 

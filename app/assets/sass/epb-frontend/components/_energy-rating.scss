@@ -257,7 +257,8 @@
   gap: 7px;
 }
 
-#main-content > div:nth-child(4) > div > div.rating-bar.full-column-bar > div.box.c.active {
+#main-content > div:nth-child(4) > div > div.rating-bar.full-column-bar > div.box.c.active,
+.rating-bar.full-column-bar > div.box.d.active {
   align-items: center;
   padding-top: 0;
 }
