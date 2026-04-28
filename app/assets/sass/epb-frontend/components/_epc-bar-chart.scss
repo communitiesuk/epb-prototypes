@@ -1,7 +1,7 @@
 .bar-chart {
   position: relative;
   max-width: 1000px;
-  font-family: Arial, sans-serif;
+  font-family: GDS Transport, Arial, sans-serif;
 }
 
 .bar-chart::before {
@@ -191,14 +191,14 @@
     width: auto !important;
   }
 
-  #main-content > div:nth-child(8) > div > hr {
-    margin-bottom: 0;
-  }
-
   #accessible-table-version > table > tbody > tr > th {
     text-align: center;
     vertical-align: middle;
   }
+}
+
+.compare-property-heading + hr {
+  margin-bottom: 0;
 }
 
 #accessible-table-version .govuk-table__row > .govuk-table__header {
