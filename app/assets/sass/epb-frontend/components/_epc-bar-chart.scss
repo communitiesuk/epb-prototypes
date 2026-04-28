@@ -183,22 +183,22 @@
     width: 66% !important;
   }
 
-  #accessible-table-version > table > tbody > tr > td  {
-    vertical-align: middle;
-  }
-
   #accessible-table-version > table > tbody > tr > th {
     width: auto !important;
-  }
-
-  #accessible-table-version > table > tbody > tr > th {
-    text-align: center;
-    vertical-align: middle;
   }
 }
 
 .compare-property-heading + hr {
   margin-bottom: 0;
+}
+
+#accessible-table-version > table > tbody > tr > td  {
+  vertical-align: middle;
+}
+
+#accessible-table-version > table > tbody > tr > th {
+  text-align: center;
+  vertical-align: middle;
 }
 
 #accessible-table-version .govuk-table__row > .govuk-table__header {
