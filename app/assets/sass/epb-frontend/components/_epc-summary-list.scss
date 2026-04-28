@@ -160,6 +160,10 @@
   padding: 4px 10px;
 }
 
+.improve-rating-contents > ul:nth-of-type(2) > li:last-child {
+  margin-bottom: 0;
+}
+
 #roof-insulation-points,
 #air-source-heat-pump-points {
   background: #CCE2D8;
@@ -184,7 +188,7 @@
     flex: 0.5;
   }
 
-  .improve-rating-contents{
+  .improve-rating-contents {
     flex-direction: column;
   }
 
@@ -194,6 +198,10 @@
 
   .improve-rating-contents > ul > li:last-child {
     margin-bottom: 18px;
+  }
+
+  .improve-rating-button {
+    margin-top: 35px;
   }
 }
 
