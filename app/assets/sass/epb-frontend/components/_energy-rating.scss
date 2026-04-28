@@ -268,6 +268,11 @@
     gap: 2px;
   }
 
+  .full-column-bar > .active {
+    align-items: flex-start !important;
+    padding-top: 10px !important;
+  }
+
   .rating-bubble.two-col {
     width: 100%;
   }
