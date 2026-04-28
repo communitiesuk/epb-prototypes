@@ -138,6 +138,15 @@
     padding: 6px 5px;
   }
 
+  .bar-chart > div >div > .chart-badge {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .badge-separator {
+    display: none;
+  }
+
   .bar-1.this-property.heat-retention,
   .sustainable-heating-row > div > div > .bar-3.after-improvements {
     width: 35px;
@@ -183,7 +192,7 @@
   }
 
   #main-content > div:nth-child(8) > div > hr {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
   #accessible-table-version > table > tbody > tr > th {
@@ -202,6 +211,10 @@
 
 #accessible-table-version .govuk-table__row > .govuk-table__cell:nth-child(3) {
   text-align: right;
+}
+
+#accessible-table-version > table > tbody > tr > th {
+  font-weight: normal;
 }
 
 #accessible-table-version > table > tbody > tr:nth-child(1) > th {
