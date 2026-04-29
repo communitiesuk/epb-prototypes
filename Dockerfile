@@ -11,7 +11,7 @@ COPY package.json .
 COPY ./ .
 
 # install all dependencies
-RUN npm install
+RUN npm ci
 
 #expose the port
 EXPOSE 80 443
