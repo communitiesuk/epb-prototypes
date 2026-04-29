@@ -81,32 +81,32 @@
 }
 
 .bar-1.this-property.heat-retention {
-  width: 125px;
+  width: calc(25vw * 0.25);
   background: #85994B;
 }
 
 .bar-2.similar-property.heat-retention {
-  width: 250px;
+  width: calc(25vw * 0.5);
   background: #11875A;
 }
 
 .bar-3.after-improvements.heat-retention {
-  width: 500px;
+  width: calc(25vw);
   background: #015A30;
 }
 
 .sustainable-heating-row > div > div > .bar-1.this-property {
-  width: 440px;
+  width: calc(25vw * 0.88);
   background: #FFDE02;
 }
 
 .sustainable-heating-row > div > div > .bar-2.similar-property {
-  width: 250px;
+  width: calc(25vw * 0.5);
   background: #11875A;
 }
 
 .sustainable-heating-row > div > div > .bar-3.after-improvements {
-  width: 140px;
+  width: calc(25vw * 0.28);
   background: #015A30;
 }
 
@@ -136,6 +136,7 @@
   .chart-badge{
     font-size: 14px;
     padding: 6px 5px;
+    width: 70px;
   }
 
   .bar-chart > div >div > .chart-badge {
@@ -149,17 +150,19 @@
 
   .bar-1.this-property.heat-retention,
   .sustainable-heating-row > div > div > .bar-3.after-improvements {
-    width: 35px;
+    width: calc(45vw * 0.18);
   }
 
   .bar-2.similar-property.heat-retention,
   .sustainable-heating-row > div > div > .bar-2.similar-property {
-    width: 70px;
+    width: calc(45vw * 0.38);
+
   }
 
   .bar-3.after-improvements.heat-retention,
   .sustainable-heating-row > div > div > .bar-1.this-property {
-    width: 135px;
+    width: calc(45vw * 0.68);
+
   }
 
   .chart-right {
@@ -186,6 +189,17 @@
   #accessible-table-version > table > tbody > tr > th {
     width: auto !important;
   }
+
+  .chart-left > .chart-badge > span {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+
+  .chart-left > .chart-badge > span:nth-child(1){
+    padding-bottom: 1px;
+  }
+
+
 }
 
 .compare-property-heading + hr {
