@@ -96,7 +96,9 @@
 #roof-insulation,
 #double-glazing,
 #solar-water-heating,
-#air-source-heat-pump {
+#air-source-heat-pump,
+#solar-panels,
+#electric-battery {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -105,7 +107,9 @@
 #roof-insulation > details,
 #double-glazing > details,
 #solar-water-heating > details,
-#air-source-heat-pump > details {
+#air-source-heat-pump > details,
+#solar-panels > details,
+#electric-battery > details {
   margin-bottom: 0;
 }
 
@@ -165,13 +169,15 @@
 }
 
 #roof-insulation-points,
-#air-source-heat-pump-points {
+#air-source-heat-pump-points,
+#solar-panels-points {
   background: #CCE2D8;
   color: #005A30;
 }
 
 #double-glazing-points,
-#solar-water-heating-points {
+#solar-water-heating-points,
+#electric-battery-points {
   background: #FFF7BF;
   color: #594D00;
 }

@@ -110,13 +110,29 @@
   background: #015A30;
 }
 
+.flexible-energy-use-row > div > div > .bar-1.this-property {
+  width: calc(25vw * 0.28);
+  background: #FFDE02;
+}
+
+.flexible-energy-use-row > div > div > .bar-2.similar-property {
+  width: calc(25vw * 0.5);
+  background: #11875A;
+}
+
+.flexible-energy-use-row > div > div > .bar-3.after-improvements {
+  width: calc(25vw * 0.88);
+  background: #015A30;
+}
+
 .chart-right {
   display: flex;
   align-items: center;
   font-weight: bold;
 }
 
-.sustainable-heating-row > .chart-right {
+.sustainable-heating-row > .chart-right,
+.flexible-energy-use-row > .chart-right {
   align-items: unset;
   flex-direction: column;
   justify-content: center;
@@ -125,6 +141,10 @@
 .compare-property-heading {
   display: flex;
   justify-content: space-between;
+}
+
+.mobile-break {
+  display: inline;
 }
 
 @media (max-width: 640px) {
@@ -149,27 +169,29 @@
   }
 
   .bar-1.this-property.heat-retention,
-  .sustainable-heating-row > div > div > .bar-3.after-improvements {
+  .sustainable-heating-row > div > div > .bar-3.after-improvements,
+  .flexible-energy-use-row > div > div > .bar-3.after-improvements {
     width: calc(45vw * 0.18);
   }
 
   .bar-2.similar-property.heat-retention,
-  .sustainable-heating-row > div > div > .bar-2.similar-property {
+  .sustainable-heating-row > div > div > .bar-2.similar-property,
+  .flexible-energy-use-row > div > div > .bar-2.similar-property {
     width: calc(45vw * 0.38);
-
   }
 
   .bar-3.after-improvements.heat-retention,
-  .sustainable-heating-row > div > div > .bar-1.this-property {
+  .sustainable-heating-row > div > div > .bar-1.this-property,
+  .flexible-energy-use-row > div > div > .bar-1.this-property {
     width: calc(45vw * 0.68);
-
   }
 
   .chart-right {
     width: 70px;
   }
 
-  .sustainable-heating-row > .chart-right {
+  .sustainable-heating-row > .chart-right,
+  .flexible-energy-use-row > .chart-right {
     width: 116px;
   }
 
@@ -199,7 +221,9 @@
     padding-bottom: 1px;
   }
 
-
+  .mobile-break {
+    display: block;
+  }
 }
 
 .compare-property-heading + hr {

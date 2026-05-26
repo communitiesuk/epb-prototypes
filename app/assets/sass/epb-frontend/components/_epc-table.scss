@@ -23,7 +23,10 @@
 .property-feature-table tbody > tr:nth-child(2) > th.govuk-table__header,
 .property-feature-table tbody > tr:nth-child(3) > th.govuk-table__header,
 .property-feature-table tbody > tr:nth-child(4) > th.govuk-table__header,
-.property-feature-table tbody > tr:nth-child(5) > th.govuk-table__header {
+.property-feature-table tbody > tr:nth-child(5) > th.govuk-table__header,
+.property-feature-table tbody > tr:nth-child(6) > th.govuk-table__header,
+.property-feature-table tbody > tr:nth-child(7) > th.govuk-table__header,
+.property-feature-table tbody > tr:nth-child(8) > th.govuk-table__header {
   font-weight: normal;
 }
 
@@ -80,4 +83,9 @@
 .is-fair {
     background: #FFF7BF;
     color: #594D00;
+ }
+
+.is-none {
+    background: #EEEFEF;;
+    color: #383F43;
  }
