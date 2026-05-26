@@ -235,7 +235,6 @@
 }
 
 #accessible-table-version > table > tbody > tr > th {
-  text-align: center;
   vertical-align: middle;
 }
 
@@ -244,7 +243,7 @@
 }
 
 #accessible-table-version .govuk-table__row > .govuk-table__cell:nth-child(2) {
-  text-align: center;
+  text-align: left;
 }
 
 #accessible-table-version .govuk-table__row > .govuk-table__cell:nth-child(3) {
