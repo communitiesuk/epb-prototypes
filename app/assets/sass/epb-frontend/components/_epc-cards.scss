@@ -1,0 +1,39 @@
+.benefits-cards,
+.expectation-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.benefit-card, .expectation-card {
+  border-left: 4px solid #1D70B8;
+  padding-left: 20px;
+}
+
+.expectation-card {
+  border-left: 4px solid black;
+}
+
+.benefit-card__heading,
+.expectation__heading {
+  margin-bottom: 5px;
+}
+
+.benefit-card__text,
+.expectation__text {
+  margin-bottom: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .benefits-cards {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 70px;
+    row-gap: 45px;
+  }
+}
+
+@media (max-width: 640px) {
+  .benefits-cards {
+    gap: 25px;
+  }
+}
