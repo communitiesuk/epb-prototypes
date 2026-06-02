@@ -43,13 +43,6 @@
   align-items: center;
 }
 
-.outro-item-2-content > p,
-.outro-item-2-content > p,
-.outro-item-2-content > p {
-  align-self: center;
-  justify-self: center;
-}
-
 .outro-item-2-content > .govuk-body-m,
 .outro-item-3-content > .govuk-body-m,
 .outro-item-4-content > .govuk-body-m{
@@ -64,8 +57,7 @@
 }
 
 .outro-wrapper--no-top-box {
-  min-height: auto;
-  height: 315px;
+  height: auto;
 }
 
 .outro-wrapper--no-top-box .outro-item-2,
