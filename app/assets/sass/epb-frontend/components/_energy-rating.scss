@@ -2,8 +2,9 @@
   margin-bottom: 30px;
 }
 
-.energy-rating-wrapper {
-  font-family: Arial, Helvetica, sans-serif;
+.energy-rating-wrapper,
+.energy-bill-wrapper {
+  font-family: GDS Transport, Arial, Helvetica, sans-serif;
   width: 100%;
   max-width: none;
   display: flex;
@@ -139,6 +140,12 @@
   align-items: center;
   padding-top: 0;
 }
+
+.energy-bill-wrapper > .rating-bubble {
+  align-self: center;
+  width: 75%;
+}
+
 
 .epc-card__intro > .govuk-inset-text {
   margin-top: 0;
@@ -280,6 +287,11 @@
   .rating-bubble.two-col {
     width: 100%;
   }
+
+  .energy-bill-wrapper > .rating-bubble{
+    width: auto;
+  }
+
   .is-c .two-col::after { left: calc((100% / 7) * 2.5) !important; }
 }
 

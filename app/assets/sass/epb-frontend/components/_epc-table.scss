@@ -62,12 +62,20 @@
   #accreditation-scheme-table > tbody > tr:nth-child(1) > th{
     width: 33% !important;
   }
+
+  .property-features-estimated-cost-box {
+    width: 71%;
+  }
 }
 
 .property-features-description-box {
   max-width: 90px;
   display: flex;
   justify-content: center;
+}
+
+.property-features-estimated-cost-box {
+  justify-content: end;
 }
 
 .is-good{
