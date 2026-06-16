@@ -10,6 +10,24 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 
 {% block content %}
 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const backLink = document.querySelector('.govuk-back-link');
+        const from = new URLSearchParams(window.location.search).get('from');
+
+        const backLinks = {
+            'heat-retention': '/epc-reform/heat-retention',
+            'energy-bill-estimate': '/epc-reform/energy-bill-estimate'
+        };
+
+        if (backLink && backLinks[from]) {
+            backLink.setAttribute('href', backLinks[from]);
+        }
+    });
+</script>
+
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
         <a href="/epc-reform/heat-retention" class="govuk-back-link">Back</a>
