@@ -289,7 +289,9 @@
   }
 
   .energy-bill-wrapper > .rating-bubble{
-    width: auto;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .is-c .two-col::after { left: calc((100% / 7) * 2.5) !important; }
