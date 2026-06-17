@@ -164,8 +164,15 @@
   padding: 4px 10px;
 }
 
-.improve-rating-contents > ul:nth-of-type(2) > li:last-child {
+.improve-rating-left > div > ul > li:nth-child(4) {
   margin-bottom: 0;
+}
+
+.improve-rating-list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  width: 80%;
 }
 
 #roof-insulation-points,
@@ -217,6 +224,11 @@
   .improve-rating-button {
     margin-top: 35px;
   }
+
+  .improve-rating-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
 }
 
 #main-content:has(.govuk-back-link) {
