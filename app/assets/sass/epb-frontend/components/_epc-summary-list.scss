@@ -115,7 +115,8 @@
 
 .improve-rating-table,
 .improve-rating-table .govuk-table__row:last-child .govuk-table__cell {
-  margin-bottom: 0;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .improve-rating-contents {
@@ -164,7 +165,7 @@
   padding: 4px 10px;
 }
 
-.improve-rating-left > div > ul > li:nth-child(4) {
+.improve-rating-left > div > ul > li:last-child {
   margin-bottom: 0;
 }
 
@@ -205,8 +206,8 @@
   margin-bottom: 15px;
   }
 
-  .improve-rating-table {
-    margin-bottom: 15px !important;
+  .improve-rating-contents-wrapper {
+    margin-bottom: 0;
   }
 
   .improve-rating-contents {
