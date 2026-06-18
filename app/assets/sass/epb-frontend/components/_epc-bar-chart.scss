@@ -38,7 +38,8 @@
   font-weight: bold;
 }
 
-.chart-badge {
+.chart-badge,
+.letting-standards-badge {
   width: fit-content;
   padding: 6px 10px;
   font-size: 16px;
@@ -62,6 +63,17 @@
 .badge-d {
   background: #FFDE02;
   color: black;
+}
+
+.letting-standards-badge {
+  &.badge-c {
+    background: #11875A;
+    color: white;
+  }
+
+  &.badge-f {
+    background: #CA3535;
+  }
 }
 
 .chart-middle {
@@ -223,6 +235,10 @@
 
   .mobile-break {
     display: block;
+  }
+
+  .letting-standards-badge {
+    width: fit-content;
   }
 }
 
