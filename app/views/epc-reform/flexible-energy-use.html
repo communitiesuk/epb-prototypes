@@ -11,32 +11,6 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 {% block content %}
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const accessibleLink = document.getElementById('accessible-version-link');
-        const chartLink = document.getElementById('chart-version-link');
-        const chartVersion = document.getElementById('bar-chart-version');
-        const tableVersion = document.getElementById('accessible-table-version');
-
-        if (!accessibleLink || !chartLink || !chartVersion || !tableVersion) return;
-
-        accessibleLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            chartVersion.hidden = true;
-            tableVersion.hidden = false;
-            accessibleLink.hidden = true;
-            chartLink.hidden = false;
-        });
-
-        chartLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            chartVersion.hidden = false;
-            tableVersion.hidden = true;
-            accessibleLink.hidden = false;
-            chartLink.hidden = true;
-        });
-    });
-</script>
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
@@ -295,11 +269,6 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
     <div class="govuk-grid-column-full">
         <div class="compare-property-heading govuk-!-margin-top-4">
             <h3 class="govuk-heading-s">Energy stored and generated <span class="mobile-break"></span> each day</h3>
-            <p class="govuk-body">
-                <a href="#" class="govuk-link " id="accessible-version-link">View accessible version</a>
-                <a href="#" class="govuk-link" id="chart-version-link" hidden>View chart</a>
-
-            </p>
         </div>
     </div>
 </div>
@@ -380,49 +349,6 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="accessible-table-version" hidden>
-            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-0 govuk-!-margin-bottom-0" aria-hidden="true">
-            <table class="govuk-table">
-                <caption class="govuk-table__caption govuk-visually-hidden">
-                    Energy stored and generated each day
-                </caption>
-                <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">
-                        This property
-                    </th>
-                    <td class="govuk-table__cell govuk-!-width-one-third">
-                        <span class="chart-badge badge-d">D rating <span aria-hidden="true">•</span> 60 Points</span>
-                    </td>
-                    <td class="govuk-table__cell govuk-!-width-one-third">
-                        Enough to run a washing machine 3 times <span style="font-weight: normal">(2 kWh)</span>
-                    </td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">
-                        Similar local properties
-                    </th>
-                    <td class="govuk-table__cell">
-                        <span class="chart-badge badge-b">B rating <span aria-hidden="true">•</span> 80 Points</span>
-                    </td>
-                    <td class="govuk-table__cell">
-                        Enough to run a washing machine 8 times <span style="font-weight: normal">(5 kWh)</span>
-                    </td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">
-                        This property after improvements
-                    </th>
-                    <td class="govuk-table__cell">
-                        <span class="chart-badge badge-a">A rating <span aria-hidden="true">•</span> 90 Points</span>
-                    </td>
-                    <td class="govuk-table__cell">
-                        Enough to run a washing machine 14 times <span style="font-weight: normal">(10 kWh)</span>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
         </div>
         <div class="govuk-!-margin-top-4">
             <details class="govuk-details">
