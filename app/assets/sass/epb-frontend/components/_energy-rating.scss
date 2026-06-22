@@ -141,11 +141,17 @@
   padding-top: 0;
 }
 
-.energy-bill-wrapper > .rating-bubble {
-  align-self: center;
-  width: 75%;
+.energy-bill-wrapper {
+  .rating-bubble {
+    align-self: center;
+    width: 88%;
+  }
 }
 
+.full-page-bubble{
+  width: 75%;
+  justify-self: center;
+}
 
 .epc-card__intro > .govuk-inset-text {
   margin-top: 0;
@@ -272,6 +278,10 @@
 .rating-bar.full-column-bar > div.box.d.active {
   align-items: center;
   padding-top: 0;
+}
+
+.right-aligned {
+  text-align: -webkit-right;
 }
 
 @media (max-width: 640px) {
