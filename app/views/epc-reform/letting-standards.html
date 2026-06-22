@@ -32,12 +32,15 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full govuk-body">
     <h2 class="govuk-heading-m">Results for this property</h2>
-    <div class="letting-standards-wrapper is-f">
-        <div class="rating-bubble letting-standards-bubble">
-
+    <div class="letting-standards-wrapper is-f"
+         role="img"
+         aria-label="Warning. This property has an energy efficiency rating of F."
+         aria-describedby="energy-rating-f-description"
+    >
+        <div class="rating-bubble letting-standards-bubble" aria-hidden="true">
           <div class="govuk-warning-text govuk-!-margin-bottom-3">
             <div class="warning-icon-container govuk-!-margin-left-5">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <span class="govuk-warning-text__icon">!</span>
             </div>
           </div>
           <div class="warning-text-container">
@@ -57,15 +60,21 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
           <div class="box f active is-red">F</div>
           <div class="box g is-red">G</div>
         </div>
-      </div>
+    </div>
     <details class="govuk-details summary-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">What is the Energy efficiency rating?</span>
         </summary>
         <div class="govuk-details__text">
-          Properties get an Energy efficiency score from 100 (best) to 1 (worst). A better score means the property costs less to run.  The score is based on how much it typically costs to provide a property’s heating, hot water and lighting.
-          <br><br>
+          <p class="govuk-body">
+          Properties get an Energy efficiency score from 100 (best) to 1 (worst). A better score means the property costs less to run.
+          </p>
+          <p class="govuk-body">
+          The score is based on how much it typically costs to provide a property’s heating, hot water and lighting.
+          </p>
+          <p class="govuk-body">
           Each score also has a letter rating from A (best) to G (worst):
+          </p>
           <ul>
             <li>A rating - 90 to 100</li>
             <li>B rating - 80 to 89</li>

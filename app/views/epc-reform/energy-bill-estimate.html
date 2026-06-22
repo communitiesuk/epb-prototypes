@@ -34,8 +34,10 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
       This is an estimate. The actual energy bill may be higher or lower, depending on the tariff and the amount of energy used.
     </div>
 
-    <div class="energy-bill-wrapper is-average">
-      <div class="rating-bubble">
+    <div class="energy-bill-wrapper is-average" role="img"
+         aria-label="This property has an estimated energy bill of £800 per year. This is average compared to similar properties."
+    >
+      <div class="rating-bubble" aria-hidden="true">
         <span class="label">Cost per year</span>
         <div class="grade govuk-!-margin-top-5" >£800</div>
         <div class="bill-outro govuk-!-margin-top-3">This is average compared to similar properties</div>
@@ -88,8 +90,12 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                   <span class="govuk-details__summary-text">Electricity</span>
               </summary>
                 <div class="govuk-details__text">
-                  This property is expected to use around 500 kWh in electricity each year for heating.<br><br>
-                  Properties with effective insulation, good airtightness and efficient heating systems use less energy.
+                  <p class="govuk-body">
+                    This property is expected to use around 500 kWh in electricity each year for heating.
+                  </p>
+                  <p class="govuk-body">
+                    Properties with effective insulation, good airtightness and efficient heating systems use less energy.
+                  </p>
                 </div>
             </details>
         </td>
@@ -107,8 +113,12 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                 <span class="govuk-details__summary-text">Electricity</span>
               </summary>
               <div class="govuk-details__text">
-                This property is expected to use around 200 kWh in electricity each year for hot water.<br><br>
-                Properties with efficient hot water systems use less energy.
+                <p class="govuk-body">
+                  This property is expected to use around 200 kWh in electricity each year for hot water.
+                </p>
+                <p class="govuk-body">
+                  Properties with efficient hot water systems use less energy.
+                </p>
               </div>
             </details>
         </td>
@@ -126,8 +136,12 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                 <span class="govuk-details__summary-text">Gas</span>
               </summary>
               <div class="govuk-details__text">
-                This property is expected to use around 50 kWh in gas each year for cooking.<br><br>
-                Properties with efficient cooking appliances use less energy.
+                <p class="govuk-body">
+                  This property is expected to use around 50 kWh in gas each year for cooking.
+                </p>
+                <p class="govuk-body">
+                  Properties with efficient cooking appliances use less energy.
+                </p>
               </div>
             </details>
         </td>
