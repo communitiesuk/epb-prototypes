@@ -40,6 +40,10 @@
   text-align: -webkit-right;
 }
 
+table > caption {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 640px) {
   #other-property-information {
     margin-bottom: 30px;

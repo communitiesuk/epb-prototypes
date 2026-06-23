@@ -11,32 +11,6 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 {% block content %}
 
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const accessibleLink = document.getElementById('accessible-version-link');
-    const chartLink = document.getElementById('chart-version-link');
-    const chartVersion = document.getElementById('bar-chart-version');
-    const tableVersion = document.getElementById('accessible-table-version');
-
-    if (!accessibleLink || !chartLink || !chartVersion || !tableVersion) return;
-
-    accessibleLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      chartVersion.hidden = true;
-      tableVersion.hidden = false;
-      accessibleLink.hidden = true;
-      chartLink.hidden = false;
-    });
-
-    chartLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      chartVersion.hidden = false;
-      tableVersion.hidden = true;
-      accessibleLink.hidden = false;
-      chartLink.hidden = true;
-    });
-  });
-</script>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -107,16 +81,12 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
   <div class="govuk-grid-column-full">
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible epc-black-bottom govuk-!-margin-bottom-6 govuk-!-margin-top-7" aria-hidden="true">
     <h2 class="govuk-heading-m">How this property’s features impact the rating</h2>
-    <p class="govuk-body">
-      This table shows how different features of this property impact the rating.
-      The features are shown in order of importance.
-    </p>
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <table class="govuk-table property-feature-table govuk-!-margin-top-4">
-      <thead class="govuk-table__head">
+    <table class="govuk-table property-feature-table govuk-!-margin-top-0">
+      <caption class="govuk-table__caption govuk-!-font-weight-regular">This table shows how different features of this property impact the rating. The features are shown in order of importance.</caption>
       <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header">Feature</th>
