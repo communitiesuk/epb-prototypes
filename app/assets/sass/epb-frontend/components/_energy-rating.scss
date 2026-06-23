@@ -312,7 +312,7 @@
 .is-c .rating-bubble::after { left: calc((100% / 7) * 2.5); }
 .is-d .rating-bubble::after { left: calc((100% / 7) * 3.5); }
 .is-e .rating-bubble::after { left: calc((100% / 7) * 4.5); }
-.is-f .rating-bubble::after { left: calc((100% / 7) * 5.5); }
+.is-f .rating-bubble::after { left: 81% }
 .is-g .rating-bubble::after { left: calc((100% / 7) * 6.5); }
 
 .is-low .rating-bubble::after { left: calc((100% / 3) * 0.5); }
