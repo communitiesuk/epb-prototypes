@@ -117,7 +117,8 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                             This measures how well this property retains heat during winter and stays cool during summer.
                         </p>
                     </div>
-                    <div class="energy-rating-wrapper in-summary-card is-c" role="img" aria-label="This property has a heat retention rating of C. Properties can get a rating from A (best) to G (worst).">
+                    <div class="energy-rating-wrapper in-summary-card is-c" role="img" aria-labelledby="heat-retention-label">
+                        <span id="heat-retention-label" class="govuk-visually-hidden">This property has a heat retention rating of C. Properties can get a rating from A (best) to G (worst).</span>
                         <div class="rating-bubble" aria-hidden="true">
                             <span class="label">Rating</span>
                             <div class="grade">C</div>
@@ -167,7 +168,8 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                             This measures this property’s heating system efficiency and carbon emissions.
                         </p>
                     </div>
-                    <div class="energy-rating-wrapper in-summary-card is-d" role="img" aria-label="This property has a sustainable heating rating of D. Properties can get a rating from A (best) to G (worst).">
+                    <div class="energy-rating-wrapper in-summary-card is-d" role="img" aria-labelledby="sustainable-heating-label">
+                        <span id="sustainable-heating-label" class="govuk-visually-hidden">This property has a sustainable heating rating of D. Properties can get a rating from A (best) to G (worst).</span>
                         <div class="rating-bubble" aria-hidden="true">
                             <span class="label">Rating</span>
                             <div class="grade">D</div>
@@ -217,7 +219,8 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                             This measures the energy technologies installed in this property, such as solar panels and batteries.
                         </p>
                     </div>
-                    <div class="energy-rating-wrapper in-summary-card is-d" role="img" aria-label="This property has a flexible energy use rating of D. Properties can get a rating from A (best) to G (worst).">
+                    <div class="energy-rating-wrapper in-summary-card is-d" role="img" aria-labelledby="flexible-energy-use-label">
+                        <span id="flexible-energy-use-label" class="govuk-visually-hidden">This property has a flexible energy use rating of D. Properties can get a rating from A (best) to G (worst).</span>
                         <div class="rating-bubble" aria-hidden="true">
                             <span class="label">Rating</span>
                             <div class="grade">D</div>
@@ -272,7 +275,8 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                             This is an estimate. The actual energy bill may be higher or lower, depending on the tariff and the amount of energy used.
                         </div>
                     </div>
-                    <div class="energy-bill-wrapper is-average" role="img" aria-label="This property has an estimated energy bill of £800 per year. This is average compared to similar properties.">
+                    <div class="energy-bill-wrapper is-average" role="img" aria-labelledby="energy-bill-label">
+                        <span id="energy-bill-label" class="govuk-visually-hidden">This property has an estimated energy bill of £800 per year. This is average compared to similar properties.</span>
                         <div class="rating-bubble" aria-hidden="true">
                             <span class="label">Cost per year</span>
                             <div class="grade govuk-!-margin-top-5" >£800</div>
@@ -325,7 +329,6 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                     </div>
                     <div class="letting-standards-wrapper is-f"
                          role="img"
-                         aria-label="Warning. This property has an energy efficiency rating of F."
                          aria-describedby="energy-rating-f-description"
                     >
                         <div class="rating-bubble letting-standards-bubble" aria-hidden="true">
@@ -353,6 +356,7 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
                             <div class="box g is-red">G</div>
                         </div>
                         <p id="energy-rating-f-description" class="govuk-visually-hidden">
+                            Warning. This property has an energy efficiency rating of F.
                             Properties can get a rating from A (best) to G (worst).
                             Most properties must have an energy efficiency rating from A to E to be privately rented.
                             This property may not be let unless the landlord registers an exemption.
