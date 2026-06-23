@@ -219,16 +219,23 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
 </div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        <div id="bar-chart-version" aria-labelledby="heat-retention-bar-chart-label">
-            <span id="heat-retention-bar-chart-label" class="govuk-visually-hidden">
+        <div
+                id="bar-chart-version"
+                role="img"
+                aria-labelledby="heat-retention-chart-title"
+                aria-describedby="heat-retention-chart-description"
+        >
+            <span id="heat-retention-chart-title" class="govuk-visually-hidden">
+                Heat retention comparison chart
+            </span>
+            <p id="heat-retention-chart-description" class="govuk-visually-hidden">
                 This property has a rating of C and a score of 70. It stays warm for 3 hours.
                 Similar local properties have a rating of B and a score of 80. They stay warm for 6 hours.
-                If improvements were made, this property could have a rating of A and a score of 90. It could stay warm for 9 hours.
-            </span>
-
+                If improvements were made, this property could have a rating of A and a score of 90. It could stay warm for 12 hours.
+            </p>
             <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-0" aria-hidden="true">
             <div class="horizontal-bar-chart-wrapper" aria-hidden="true">
-                <div class="bar-chart govuk-!-padding-top-5 govuk-!-padding-bottom-5">
+                <div class="bar-chart govuk-!-padding-top-5 govuk-!-padding-bottom-5" aria-hidden="true">
                     <div class="chart-row">
                         <div class="chart-left">
                             <div class="chart-title">This property</div>
