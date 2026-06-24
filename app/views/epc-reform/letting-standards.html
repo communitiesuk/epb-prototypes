@@ -34,9 +34,15 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
     <h2 class="govuk-heading-m">Results for this property</h2>
     <div class="letting-standards-wrapper is-f govuk-!-margin-top-8"
          role="img"
-         aria-describedby="energy-rating-f-description"
+         aria-labelledby="energy-rating-f-description"
     >
-      <div class="rating-bubble letting-standards-bubble full-page-bubble" aria-hidden="true">
+      <span id="energy-rating-f-description" class="govuk-visually-hidden">
+        Warning. This property has an energy efficiency rating of F.
+        Properties can get a rating from A (best) to G (worst).
+        Most properties must have an energy efficiency rating from A to E to be privately rented.
+        This property may not be let unless the landlord registers an exemption.
+      </span>
+      <div class="rating-bubble letting-standards-bubble full-page-bubble">
         <div class="govuk-warning-text govuk-!-margin-bottom-3">
             <div class="warning-icon-container govuk-!-margin-left-5">
               <span class="govuk-warning-text__icon">!</span>
@@ -50,7 +56,7 @@ Energy performance certificate (EPC) - Find an energy certificate - GOV.UK
             </strong>
           </div>
       </div>
-      <div class="rating-bar lettings-bar govuk-!-padding-top-8" aria-hidden="true">
+      <div class="rating-bar lettings-bar govuk-!-padding-top-8">
         <div class="box a is-green">A</div>
         <div class="box b is-green">B</div>
         <div class="box c is-green">C</div>
