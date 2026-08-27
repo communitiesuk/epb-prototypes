@@ -1,0 +1,35 @@
+name: Test Docker image
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build image
+        run: docker build -t prototype-kit .
+      - name: Start container
+        run: |
+          docker run -d \
+          --name prototype-kit \
+          -p 3000:80 \
+          prototype-kit
+      - name: Wait for startup
+        run: |
+          curl \
+            --fail \
+            --retry 30 \
+            --retry-delay 1 \
+            --retry-all-errors \
+            http://localhost:3000/
+      - name: Show logs on failure
+        if: failure()
+        run: docker logs prototype-kit
