@@ -8,6 +8,10 @@ updates:
 
   - package-ecosystem: 'docker'
     directory: '/'
+    ignore:
+      - dependency-name: "node"
+        # Node 27+ will all be LTS releases
+        versions: [ "21", "23", "25" ]
     schedule:
       interval: 'weekly'
 
