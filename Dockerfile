@@ -1,4 +1,4 @@
-FROM node:24-slim
+FROM node:26-slim
 
 # Create app directory
 RUN mkdir -p /usr/src/app
