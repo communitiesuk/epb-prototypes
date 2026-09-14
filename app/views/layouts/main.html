@@ -8,40 +8,28 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
+{% include "includes/cookie-banner.html" %}
 
-  {% include "includes/cookie-banner.html" %}
-  {# Set serviceName in config.js. #}
+{% block govukHeader %}
   {{ govukHeader({
-    homepageUrl: "/",
-    classes: "govuk-header--full-width-border"
+    homepageUrl: "/"
   }) }}
-
-  {{ govukServiceNavigation({
-    serviceName: serviceName,
-    serviceUrl: "/"
-  }) }}
-
-<div class="govuk-width-container">
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-        prototype
-      </strong>
-      <span class="govuk-phase-banner__text">
-        This is not a live service. This is a service currently being designed.
-      </span>
-    </p>
-  </div>
-</div>
-
 {% endblock %}
 
-{% block beforeContent %}
+{% block headerEnd %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    text: "This is not a live service. This is a service currently being designed."
+  }) }}
+{% endblock %}
+
+{% block containerStart %}
   {% if backLink %}
     {{ govukBackLink({
-    text: "Back",
-    href: backLink
+      text: "Back",
+      href: backLink
     }) }}
   {% endif %}
 {% endblock %}
@@ -49,12 +37,12 @@
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
 {% if useAutoStoreData %}
-  {% block footer %}
+  {% block govukFooter %}
     {{ govukFooter({
       meta: {
         items: [
           {
-            href: "https://govuk-prototype-kit.herokuapp.com/",
+            href: "https://prototype-kit.service.gov.uk/",
             text: "GOV.UK Prototype Kit " + releaseVersion
           },
           {
