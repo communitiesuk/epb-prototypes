@@ -6,7 +6,6 @@
   },
   "name": "energy-performance-of-buildings-register-prototypes",
   "dependencies": {
-    "@govuk-prototype-kit/step-by-step": "^3.0.0",
     "@x-govuk/govuk-prototype-components": "^6.0.0",
     "govuk-frontend": "^6.5.1",
     "govuk-prototype-kit": "^13.20.4",
