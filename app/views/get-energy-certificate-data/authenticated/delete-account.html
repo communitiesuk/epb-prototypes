@@ -1,0 +1,37 @@
+{% extends "get-energy-certificate-data/layouts/main.html" %}
+
+{% block pageTitle %}
+Delete your account - GOV.UK
+{% endblock %}
+
+{{ backLink }}
+{% set backLink = "/get-energy-certificate-data/authenticated/my-account" %}
+{{ backLink }}
+
+{% block content %}
+<h1 class="govuk-heading-xl">Delete your account</h1>
+    
+<p>
+  This will permanently delete the account information stored by this service. This includes your email address and any saved preferences.
+</p>
+
+<p>
+  This will not delete your GOV.UK One Login account. To delete your One Login account, <a href="https://www.gov.uk/guidance/deleting-your-govuk-one-login">follow the GOV.UK One Login guidance</a>
+</p>
+
+<p>
+  If you delete your account, you will:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>stop receiving email updates</li>
+  <li>need to create a new account to use the service again</li>
+  <li>lose access to the API (any existing API tokens will stop working)</li>
+</ul>
+
+<form action="/get-energy-certificate-data/account-deleted" method="post">
+  <button type="submit" class="govuk-button govuk-button--warning govuk-!-margin-right-2">Delete account</button>
+  <a class="govuk-button govuk-button--secondary" href="/get-energy-certificate-data/authenticated/my-account">Cancel</a>
+</form>
+    
+{% endblock %}

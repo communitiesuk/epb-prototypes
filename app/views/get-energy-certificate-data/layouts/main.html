@@ -1,0 +1,26 @@
+{% extends "layouts/main.html" %}
+
+{% set endHtml %}
+  <li class="epb-ml-auto">
+    <a href="/get-energy-certificate-data/authenticated/my-account" class="govuk-link">
+      My account
+    </a>
+  </div>
+{% endset %}
+
+{% block govukServiceNavigation %}
+  {% if data.signedIn %}
+    {{ govukServiceNavigation({
+      serviceName: "Get energy certificate data",
+      serviceUrl: "/get-energy-certificate-data",
+      slots: {
+        navigationEnd: endHtml
+      }
+    }) }}
+  {% else %}
+    {{ govukServiceNavigation({
+      serviceName: "Get energy certificate data",
+      serviceUrl: "/get-energy-certificate-data"
+    }) }}
+  {% endif %}
+{% endblock %}

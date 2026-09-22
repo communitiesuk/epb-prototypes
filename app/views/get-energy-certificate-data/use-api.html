@@ -1,0 +1,115 @@
+{% extends "get-energy-certificate-data/layouts/main.html" %}
+
+{% block pageTitle %}
+Energy certificate data APIs - GOV.UK
+{% endblock %}
+
+{{ backLink }}
+{% set backLink = "/get-energy-certificate-data/way-to-access-data" %}
+{{ backLink }}
+
+{% block content %}
+<h1 class="govuk-heading-xl">Energy certificate data APIs</h1>
+<div class="epb-reading-width">
+  <p>Learn about the APIs we offer for software developers and how you can connect to them.</p>
+
+  <h2 class="govuk-heading-m govuk-!-padding-top-4">Data available</h2>
+  <p>
+    Use the APIs to get data on:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Domestic Energy Performance Certificates (EPCs)</li>
+    <li>Non-domestic Energy Performance Certificates (EPCs) and recommendation reports</li>
+    <li>Display Energy Certificates (DECs) and recommendation reports for public buildings</li>
+  </ul>
+      
+  <h2 class="govuk-heading-m govuk-!-padding-top-4">Technical documentation</h2>
+  <p>
+    View <a href="/get-energy-certificate-data/guidance">technical documentation</a> for the APIs.
+  </p>
+
+  {% if data.signedIn %}
+
+    <h2 class="govuk-heading-m govuk-!-padding-top-4">My Bearer token</h2>
+
+    <dl class="govuk-summary-list govuk-!-width-full">
+      <div class="govuk-summary-list__row" id="bearer-token">
+         <dd class="govuk-summary-list__value" id="bearer-token-value">
+            vVKh3sw0zAow5Mpq2dY5iSqjltQYZxMHo47maRagr2o5Ht3fDbL3aF1o629twU1q 
+         </dd>
+         <dd class="govuk-summary-list__actions">
+           <button type="button" class="govuk-body copy-button">
+             <span class="share-icon">
+               <svg width="16" height="16" fill="#1d70b8" class="bi bi-clipboard" aria-hidden="true"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path></svg>
+              </span>
+              Copy
+           </button>
+         </dd>
+      </div>
+    </dl>
+
+  {% else %}
+
+    <h2 class="govuk-heading-m govuk-!-padding-top-4">How to get started</h2>
+
+    <p>
+      You need to sign in or create an account with GOV.UK One Login to receive a bearer token.
+    </p>
+
+    {{ govukButton({
+      text: "Sign in or create an account",
+      href: "/get-energy-certificate-data/one-login?referer=/get-energy-certificate-data/use-api"
+    }) }}
+  {% endif %}
+
+  <h2 class="govuk-heading-m govuk-!-padding-top-4">Open API specification</h2>
+
+  <p>
+    Our APIs use <a href="https://swagger.io/specification/">OpenAPI Specification</a> (OAS) - previously known as 'Swagger' - to describe the API's interface.
+  </p>
+  <p>
+    The OAS file for each API contains general documentation as well as specific details of endpoints, including request and response headers and bodies.
+    We use the OAS file to generate the API specifications in our API catalogue.
+    You can also download the OAS file for an API - go to the API specification and look for the "Get this specification in OAS format" button.
+  </p>
+  <p>
+    You can use a tool such as <a href="https://swagger.io/tools/swagger-codegen/">Swagger Codegen</a> to generate stubs, test harnesses and SDKs in your favourite programming language.
+    Our OAS files use OAS version 3.
+  </p>
+        
+
+  <h2 class="govuk-heading-m govuk-!-padding-top-4">Conditions of use</h2>
+
+  <p>
+    Find out more about <a href="/guidance/licensing-restrictions">Licensing restrictions</a> and <a href="/guidance/data-protection-requirements">Data protection</a>.
+  </p>
+
+  <h2 class="govuk-heading-m govuk-!-padding-top-4">
+    Get help or give feedback
+  </h2>
+
+  <p>
+    <a href="/guidance">Visit the guidance page</a> for information on:
+  </p>
+
+  <ul class="govuk-list govuk-list--bullet govuk-!-margin-left-5">
+    <li>what the data contains</li>
+    <li>data methodology and limitations</li>
+    <li>using the developer API</li>
+    <li>licensing restrictions</li>
+  </ul>
+
+  <p>
+    For enquiries about the data, please contact the Ministry of Housing, Communities and Local Government (MHCLG)
+  </p>
+
+  <p>
+    <a href="mailto:mhclg.digital-services@communities.gov.uk?subject=EPB - ">mhclg.digital-services@communities.gov.uk</a>
+  </p>
+
+  <p>
+    If you would like to give feedback to help us improve this service, please use our <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=EGg0v32c3kOociSi7zmVqHoHbhsFaRhKtJNsRmvj1SVUQ0JSSTAxMVBKQVZCODgyOUYzSTU5VUJRRS4u">feedback form</a>.
+  </p>
+</div>
+    
+{% endblock %}

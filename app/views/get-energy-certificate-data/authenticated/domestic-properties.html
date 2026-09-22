@@ -1,10 +1,6 @@
-{% set serviceName %}
-Get energy certificate data
-{% endset%}
+{% extends "get-energy-certificate-data/layouts/main.html" %}
 
-{% set backLink = "/get-energy-certificate-data/type-of-properties" %}
-
-{% extends "layouts/main.html" %}
+{% set backLink = "/get-energy-certificate-data/authenticated/type-of-properties" %}
 
 {% block pageTitle %}
 Domestic properties - Get energy certificate data - GOV.UK
@@ -40,7 +36,7 @@ Domestic properties - Get energy certificate data - GOV.UK
                     A download link will be sent to your email address. The estimated download size is 5.7 GB.
                 </p>
                 <a
-                        href="/get-energy-certificate-data/download-all-confirmation"
+                        href="/get-energy-certificate-data/authenticated/download-all-confirmation"
                         role="button"
                         draggable="false"
                         class="govuk-button"
@@ -292,7 +288,7 @@ Domestic properties - Get energy certificate data - GOV.UK
                 </div>
                 <p class="govuk-body">A download link will be sent to your email address. </p>
                 <a
-                    href="/get-energy-certificate-data/download-selected-confirmation"
+                    href="/get-energy-certificate-data/authenticated/download-selected-confirmation"
                     role="button"
                     draggable="false"
                     class="govuk-button"

@@ -1,13 +1,9 @@
-{% set serviceName %}
-Get energy certificate data
-{% endset%}
+{% extends "get-energy-certificate-data/layouts/main.html" %}
 
-{% set backLink = "/get-energy-certificate-data/type-of-properties" %}
-
-{% extends "layouts/main.html" %}
+{% set backLink = "/get-energy-certificate-data/authenticated/type-of-properties" %}
 
 {% block pageTitle %}
-Non-domestic properties - Get energy certificate data - GOV.UK
+Public properties - Get energy certificate data - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -17,7 +13,7 @@ Non-domestic properties - Get energy certificate data - GOV.UK
         <div class="govuk-grid-column-full-from-desktop">
             <div class="govuk-grid-row">
                 <h1 class="govuk-heading-xl">
-                    Commercial Energy Performance Certificates
+                    Display Energy Certificates
                 </h1>
             </div>
         </div>
@@ -31,7 +27,7 @@ Non-domestic properties - Get energy certificate data - GOV.UK
                         You will get data for:
                     </p>
                     <ul class="govuk-list govuk-list--bullet">
-                        <li>Commercial Energy Performance Certificates and recommendations</li>
+                        <li>Display Energy Certificates and recommendations</li>
                         <li>England and Wales</li>
                         <li>October 2008 - February 2025</li>
                     </ul>
@@ -40,7 +36,7 @@ Non-domestic properties - Get energy certificate data - GOV.UK
                     A download link will be sent to your email address. The estimated download size is 5.7 GB.
                 </p>
                 <a
-                        href="/get-energy-certificate-data/download-all-confirmation"
+                        href="/get-energy-certificate-data/authenticated/download-all-confirmation"
                         role="button"
                         draggable="false"
                         class="govuk-button"
@@ -124,53 +120,65 @@ Non-domestic properties - Get energy certificate data - GOV.UK
                                     </legend>
                                     <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
                                         <div class="govuk-radios__item">
-                                            <input class="govuk-radios__input" id="area" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
-                                            <label class="govuk-label govuk-radios__label" for="area">
+                                            <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
+                                            <label class="govuk-label govuk-radios__label" for="contact">
                                                 Local authority
                                             </label>
                                         </div>
                                         <div class="govuk-radios__conditional" id="conditional-contact">
                                             <div class="govuk-form-group">
-                                                <label class="govuk-label" for="local-authority">
-                                                    Select local authority
-                                                </label>
-                                                <p>(Type to search)</p>
-                                                <select class="govuk-select" id="local-authority" name="local-authority">
-                                                    <option value="hammersmith-and-fulham">Hammersmith and Fulham</option>
-                                                    <option value="manchester-city-council" selected>Manchester City Council</option>
-                                                    <option value="tower-hamlets">Tower Hamlets</option>
-                                                </select>
+
+                                                {{ xGovukAutocomplete({
+                                                id: "local-authority",
+                                                name: "local-authority",
+                                                allowEmpty: false,
+                                                label: {
+                                                classes: "govuk-label govuk-radios__label govuk-input--width-10",
+                                                isPageHeading: true,
+                                                text: "Select local authority"
+                                                },
+                                                items: [
+                                                { text: "Hammersmith and Fulham" },
+                                                { text: "Manchester City Council" },
+                                                { text: "Tower Hamlets" }
+                                                ]
+                                                }) }}
+
+
                                             </div>
                                         </div>
                                         <div class="govuk-radios__item">
-                                            <input class="govuk-radios__input" id="parliamentary-constituency-radio" name="contact" type="radio" value="phone" data-aria-controls="conditional-parliamentary-constituency">
-                                            <label class="govuk-label govuk-radios__label" for="parliamentary-constituency">
+                                            <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                                            <label class="govuk-label govuk-radios__label" for="contact-2">
                                                 Parliamentary constituency
                                             </label>
                                         </div>
-                                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-parliamentary-constituency">
+                                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
                                             <div class="govuk-form-group">
-                                                <label class="govuk-label" for="parliamentary-constituency">
-                                                    Select parliamentary constituency
-                                                </label>
-                                                <p>(Type to search)</p>
-                                                <select class="govuk-select" id="parliamentary-constituency" name="parliamentary-constituency">
-                                                    <option value="bristol-central">Bristol Central</option>
-                                                    <option value="cities-of-london-and-westminster">Cities of London and Westminster</option>
-                                                    <option value="manchester-central" selected>Manchester Central</option>
-                                                </select>
+
+                                                {{ xGovukAutocomplete({
+                                                id: "parliamentary-constituency",
+                                                name: "parliamentary-constituency",
+                                                allowEmpty: false,
+                                                label: {
+                                                classes: "govuk-label govuk-radios__label",
+                                                isPageHeading: true,
+                                                text: "Select parliamentary constituency"
+                                                },
+                                                items: [
+                                                { text: "Bristol Central" },
+                                                { text: "Cities of London and Westminster" },
+                                                { text: "Manchester Central" }
+                                                ]
+                                                }) }}
+
                                             </div>
                                         </div>
                                         <div class="govuk-radios__item">
-                                            <input class="govuk-radios__input" id="postcode-radio" name="contact" type="radio" value="text" data-aria-controls="conditional-postcode">
-                                            <label class="govuk-label govuk-radios__label" for="postcode-radio">
+                                            <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-3">
+                                            <label class="govuk-label govuk-radios__label" for="contact-3">
                                                 Postcode
                                             </label>
-                                        </div>
-                                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-postcode">
-                                            <div class="govuk-form-group">
-                                                <input class="govuk-input govuk-!-width-one-third" id="postcode" name="postcode" type="tel" autocomplete="tel">
-                                            </div>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -211,7 +219,7 @@ Non-domestic properties - Get energy certificate data - GOV.UK
                 </div>
                 <p class="govuk-body">A download link will be sent to your email address. </p>
                 <a
-                        href="/get-energy-certificate-data/download-selected-confirmation"
+                        href="/get-energy-certificate-data/authenticated/download-selected-confirmation"
                         role="button"
                         draggable="false"
                         class="govuk-button"

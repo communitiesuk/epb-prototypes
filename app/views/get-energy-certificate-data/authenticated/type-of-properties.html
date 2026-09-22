@@ -1,0 +1,61 @@
+{% extends "get-energy-certificate-data/layouts/main.html" %}
+
+{% set backLink = "/get-energy-certificate-data/authenticated/way-to-access-data" %}
+
+{% block pageTitle %}
+What type of properties do you want data on? - Get energy certificate data - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<form method="post">
+  {{ govukRadios({
+    name: "type_of_properties",
+    fieldset: {
+      legend: {
+        text: "What type of certificates do you want data on?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    items: [
+      {
+        value: "domestic",
+        text: "Domestic Energy Performance Certificates",
+        hint: {
+          text: "For domestic properties such as houses or flats"
+        }
+      },
+      {
+        value: "non-domestic",
+        text: "Non-domestic Energy Performance Certificates ",
+        hint: {
+          text: "For non-domestic properties such as commercial or industrial buildings"
+        }
+      },
+      {
+        value: "display",
+        text: "Display Energy Certificates",
+        hint: {
+          text: "For public buildings such as schools or hospitals"
+        }
+      }
+    ]
+  }) }}
+
+  {% call govukDetails({
+    summaryText: "What buildings have a Display Energy Certificate?"
+  }) %}
+    <p>
+      Buildings that are occupied by a public authority, are frequently visited by the public and have a floor area above 250m² must have a Display Energy Certificate (DEC).
+    </p>
+    <p>
+      Buildings with a Display Energy Certificate (DEC) may also have a Commercial Energy Performance Certificate (CEPC).
+    </p>
+  {% endcall %}
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</form>
+{% endblock %}

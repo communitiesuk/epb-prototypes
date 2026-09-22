@@ -1,0 +1,30 @@
+.epb-reading-width {
+  max-width: 75ch;
+}
+
+.epb-ml-auto {
+  margin-left: auto;
+}
+
+.epb-display-contents {
+  display: contents;
+}
+
+.epb-after-display-none::after {
+  display: none !important;
+}
+
+.epb-display-table-cell {
+  display: table-cell;
+}
+
+.copy-button {
+  text-decoration: none;
+  text-align: left;
+  border: none;
+  padding: 0;
+  outline: none;
+  color: #1d70b8;
+  background-color: #fff;
+  cursor: pointer;
+}

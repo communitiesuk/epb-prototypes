@@ -1,0 +1,113 @@
+{% extends "get-energy-certificate-data/layouts/main.html" %}
+
+{% block pageTitle %}
+My account - GOV.UK
+{% endblock %}
+
+{{ backLink }}
+{% set backLink = "/get-energy-certificate-data" %}
+{{ backLink }}
+
+{% block content %}
+<h1 class="govuk-heading-xl">Energy certificate data APIs</h1>
+
+{% set subscribedText %}
+  {% if data.unsubscribed == "yes" %}
+    You have unsubscribed from emails about changes to the service.
+  {% else %}
+    You will get emails about changes to the service.
+  {% endif %}
+{% endset %}
+
+{% set subscribedLabel %}
+  {% if data.unsubscribed == "yes" %}
+    Resubscribe
+  {% else %}
+    Unsubscribe
+  {% endif %}
+{% endset %}
+
+{% set subscribedHref %}
+  {% if data.unsubscribed == "yes" %}
+    ?unsubscribed=no
+  {% else %}
+    ?unsubscribed=yes
+  {% endif %}
+{% endset %}
+
+{% set tokenHtml %}
+  <div class="epb-display-table-cell">
+    vVKh3sw0zAow5Mpq2dY5iSqjltQYZxMHo47maRagr2o5Ht3fDbL3aF1o629twU1q
+  </div>
+  <div class="epb-display-table-cell govuk-summary-list__actions">
+    <button type="button" class="govuk-body copy-button">
+      <span class="share-icon">
+        <svg width="16" height="16" fill="#1d70b8" class="bi bi-clipboard" aria-hidden="true"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path></svg>
+      </span>
+      Copy
+    </button>
+  </div>
+{% endset %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Email address"
+      },
+      value: {
+        text: "test@example.com"
+      },
+      actions: {
+        items: [
+          {
+            href: "/get-energy-certificate-data/sign-out",
+            text: "Sign out"
+          }
+        ]
+      }
+    },
+    {
+      classes: "epb-after-display-none",
+      key: {
+        text: "Bearer token (for developers)"
+      },
+      value: {
+        html: tokenHtml,
+        classes: "epb-display-contents"
+      }
+    },
+    {
+      key: {
+        text: "Email notifications"
+      },
+      value: {
+        html: subscribedText
+      },
+      actions: {
+        items: [
+          {
+            href: subscribedHref,
+            html: subscribedLabel
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-m govuk-!-padding-top-4">Delete your account</h2>
+
+<div class="epb-reading-width">
+  <p>Deleting your account removes your data from this service.</p>
+  <p>You will no longer be able to use the service or API, and you will stop receiving email updates.</p>
+  <p>You cannot undo this action.</p>
+
+  {{ govukButton({
+    text: "Delete account",
+    classes: "govuk-button--secondary",
+    href: "/get-energy-certificate-data/authenticated/delete-account"
+  }) }}
+</div>
+    
+{% endblock %}
