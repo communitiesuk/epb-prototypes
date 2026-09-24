@@ -1,3 +1,5 @@
+@use "node_modules/govuk-frontend/dist/govuk/base" as *;
+
 .epb-reading-width {
   max-width: 75ch;
 }
@@ -18,13 +20,36 @@
   display: table-cell;
 }
 
-.copy-button {
-  text-decoration: none;
-  text-align: left;
-  border: none;
-  padding: 0;
-  outline: none;
-  color: #1d70b8;
-  background-color: #fff;
-  cursor: pointer;
+epb-copy-to-clipboard {
+  display: none;
+
+  &:defined {
+    display: block; 
+  }
+
+  button {
+    text-align: center;
+
+    slot {
+      display: flex;
+      gap: govuk-spacing(1);
+      justify-content: space-around;
+      align-items: center;
+
+      // Ensure that element has the width of the larger
+      // of the two labels so the layout doesn't jump
+      &[hidden] {
+        visibility: hidden;
+        height: 0;
+      }
+    }
+  }
+
+  .govuk-button {
+    margin-bottom: 0;
+
+    &:active {
+      top: 0;
+    }
+  }
 }
