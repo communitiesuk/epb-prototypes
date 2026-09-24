@@ -13,4 +13,9 @@ router.get('/healthcheck', function(_, response) {
   response.sendStatus(200)
 })
 
+router.get('/prototype-admin/clear-data', function(req, res) {
+  req.session.data = {};
+  res.redirect("/");
+})
+
 router.use('/get-energy-certificate-data', accountRouter);
