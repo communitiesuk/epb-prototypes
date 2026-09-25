@@ -3,7 +3,6 @@ services:
     command: npm run dev
     environment:
       - NODE_ENV=development
-      - PORT=8080
     build:
       context: .
       dockerfile: Dockerfile
