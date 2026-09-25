@@ -11,6 +11,4 @@ EXPOSE 80
 ENV PORT=80
 ENV NODE_ENV=production
 
-USER node
-
 CMD ["npm", "run", "serve"]
