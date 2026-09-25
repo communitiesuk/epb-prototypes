@@ -6,6 +6,9 @@ COPY . .
 
 RUN npm ci
 
-EXPOSE 80 443
+RUN mkdir .tmp \
+    && chown -R node:node .tmp
+
+USER node
 
 CMD ["npm", "run", "start"]

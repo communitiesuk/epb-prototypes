@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "govuk-prototype-kit dev",
+    "dev": "PORT=8080 govuk-prototype-kit dev",
     "start": "govuk-prototype-kit serve"
   },
   "name": "energy-performance-of-buildings-register-prototypes",
