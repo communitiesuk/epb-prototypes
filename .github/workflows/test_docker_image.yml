@@ -20,7 +20,7 @@ jobs:
         run: |
           docker run -d \
           --name prototype-kit \
-          -p 8080:8080 \
+          -p 3000:80 \
           prototype-kit
       - name: Wait for startup
         run: |
@@ -29,7 +29,7 @@ jobs:
             --retry 30 \
             --retry-delay 1 \
             --retry-all-errors \
-            http://localhost:8080/
+            http://localhost:3000/
       - name: Show logs on failure
         if: failure()
         run: docker logs prototype-kit
