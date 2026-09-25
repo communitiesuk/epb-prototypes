@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "govuk-prototype-kit dev",
-    "start": "govuk-prototype-kit serve"
+    "serve": "govuk-prototype-kit serve",
+    "start": "govuk-prototype-kit start"
   },
   "name": "energy-performance-of-buildings-register-prototypes",
   "dependencies": {

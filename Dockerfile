@@ -1,14 +1,19 @@
 FROM node:24-slim
 
 # Create app directory
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY . .
+# copying all the files from your file system to container file system
+COPY package.json .
 
+# copy other files as well
+COPY ./ .
+
+# install all dependencies
 RUN npm ci
 
-EXPOSE 80
-ENV PORT=80
-ENV NODE_ENV=production
+#expose the port
+EXPOSE 80 443
 
-CMD ["npm", "run", "serve"]
+CMD ["npm", "run", "dev"]
