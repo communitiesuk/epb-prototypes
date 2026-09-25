@@ -1,0 +1,14 @@
+services:
+  epb-prototypes:
+    command: npm run dev
+    environment:
+      - NODE_ENV=development
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+      - "81:81"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules

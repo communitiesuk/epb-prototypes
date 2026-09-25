@@ -17,8 +17,6 @@ Example usage:
 
 */
 
-module.exports = {
+const session = {};
 
-  // Insert values here
-
-}
+export default session;

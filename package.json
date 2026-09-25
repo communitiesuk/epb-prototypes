@@ -1,10 +1,10 @@
 {
   "scripts": {
     "dev": "govuk-prototype-kit dev",
-    "serve": "govuk-prototype-kit serve",
-    "start": "govuk-prototype-kit start"
+    "start": "govuk-prototype-kit serve"
   },
   "name": "energy-performance-of-buildings-register-prototypes",
+  "type": "module",
   "dependencies": {
     "@x-govuk/govuk-prototype-components": "^6.0.0",
     "govuk-frontend": "^6.5.1",
