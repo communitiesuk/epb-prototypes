@@ -1,143 +1,169 @@
+{% from "get-energy-certificate-data/components/copy-button.html" import epbCopyButton %}
 {% extends "get-energy-certificate-data/layouts/main.html" %}
 
 {% block pageTitle %}
   My account - GOV.UK
 {% endblock %}
 
-{{ backLink }}
-{% set backLink = "/get-energy-certificate-data" %}
-{{ backLink }}
-
 {% block content %}
-  <h1 class='govuk-heading-xl'>Energy certificate data APIs</h1>
-
-  {% set subscribedText %}
-    {% if data.unsubscribed == "yes" %}
-      You have unsubscribed from emails about changes to the service.
-    {% else %}
-      You will get emails about changes to the service.
-    {% endif %}
-  {% endset %}
-
-  {% set subscribedLabel %}
-    {% if data.unsubscribed == "yes" %}
-      Resubscribe
-    {% else %}
-      Unsubscribe
-    {% endif %}
-  {% endset %}
-
-  {% set subscribedHref %}
-    {% if data.unsubscribed == "yes" %}
-      ?unsubscribed=no
-    {% else %}
-      ?unsubscribed=yes
-    {% endif %}
-  {% endset %}
-
-  {% set tokenHtml %}
-    <div id='bearer-token-value' class='epb-display-table-cell'>
-      vVKh3sw0zAow5Mpq2dY5iSqjltQYZxMHo47maRagr2o5Ht3fDbL3aF1o629twU1q
-    </div>
-    <div
-      class='
-        epb-display-table-cell
-        govuk-summary-list__actions
-        govuk-!-padding-right-0
-      '
-    >
-      <epb-copy-to-clipboard target='bearer-token-value'>
-        <button
-          class='govuk-button govuk-button--secondary epb-copy-to-clipboard-button'
-          type='button'
-        >
-          <slot name='action-message'>
-            <svg width='16' height='16' aria-hidden='true'>
-              <path
-                d='M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z'
-              ></path>
-              <path
-                d='M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z'
-              ></path>
-            </svg>
-            Copy
-            <span class='govuk-visually-hidden'>bearer token</span>
-          </slot>
-          <slot name='success-message' hidden>
-            <svg width='16' height='16' aria-hidden='true' fill='#1d70b8'>
-              <path
-                d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'
-              />
-            </svg>
-            <span class='govuk-visually-hidden'>Bearer token</span>
-            Copied
-          </slot>
-        </button>
-      </epb-copy-to-clipboard>
-    </div>
-  {% endset %}
-
-  {{ govukSummaryList({
-    rows: [
-      {
-        key: {
-          text: "Email address"
-        },
-        value: {
-          text: "test@example.com"
-        },
-        actions: {
-          items: [
-            {
-              href: "/get-energy-certificate-data/sign-out",
-              text: "Sign out"
-            }
-          ]
-        }
-      },
-      {
-        classes: "epb-after-display-none",
-        key: {
-          text: "Bearer token (for developers)"
-        },
-        value: {
-          html: tokenHtml,
-          classes: "epb-display-contents"
-        }
-      },
-      {
-        key: {
-          text: "Email notifications"
-        },
-        value: {
-          html: subscribedText
-        },
-        actions: {
-          classes: "govuk-!-padding-right-0",
-          items: [
-            {
-              href: subscribedHref,
-              html: subscribedLabel
-            }
-          ]
-        }
-      }
-    ]
-  }) }}
-
-  <h2 class='govuk-heading-m govuk-!-padding-top-4'>Delete your account</h2>
-
   <div class='epb-reading-width'>
+
+    {% if flash %}
+      {% call govukNotificationBanner({
+          type: "success"
+        })
+      %}
+        {{ flash }}
+      {% endcall %}
+    {% endif %}
+
+    <h1 class='govuk-heading-xl'>My account</h1>
+
+    <h2 class='govuk-heading-m govuk-!-padding-top-4'>Bearer tokens</h2>
+
+    {% if data.bearerTokens | length > 1 %}
+      <dl class='govuk-summary-list govuk-summary-list--epb'>
+        {% for token in data.bearerTokens %}
+          {% set bearerDomId = "bearer_token_" ~ loop.index %}
+          {% set bearerHidden = "Bearer token starting " ~ token.value | bearerStarting ~ " created " ~ token.createdAt | formatDate(
+              "long"
+            )
+          %}
+          {{ bearerId | dump }}
+          <div class='govuk-summary-list__row'>
+            <dt id='{{ bearerDomId }}_label' class='govuk-summary-list__key'>
+              {{ token.createdAt | formatDate("medium") }}
+            </dt>
+            <dd id='{{ bearerDomId }}' class='govuk-summary-list__value'>
+              <code id='{{ bearerDomId }}' class='epb-break-anywhere'>
+                {{ token.value }}
+              </code>
+            </dd>
+            <dd class='govuk-summary-list__actions epb-whitespace-nowrap'>
+              {% if data.bearerTokens | length > 1 %}
+                <ul class='govuk-summary-list__actions-list'>
+                  <li class='govuk-summary-list__actions-list-item'>
+                    {{ epbCopyButton(bearerDomId, bearerHidden) }}
+                  </li>
+                  <li class='govuk-summary-list__actions-list-item'>
+                    {% if data.bearerTokens | length > 1 %}
+                      <a
+                        id='{{ bearerDomId }}_delete'
+                        class='govuk-link'
+                        href='/get-energy-certificate-data/authenticated/delete-bearer-token?index={{ loop.index0 }}'
+                      >
+                        Delete
+                        <span class='govuk-visually-hidden'>
+                          {{ bearerHidden }}
+                        </span>
+                      </a>
+                    {% endif %}
+                  </li>
+                </ul>
+              {% else %}
+                {{ epbCopyButton(bearerDomId, "Bearer token") }}
+              {% endif %}
+            </dd>
+          </div>
+        {% endfor %}
+      </dl>
+    {% else %}
+      <div
+        class='govuk-body epb-d-flex epb-gap-2 epb-items-center govuk-!-margin-bottom-5'
+      >
+        <code id='bearer-token' class='epb-break-anywhere epb-max-w-20'>
+          {{ data.bearerTokens[0].value }}
+        </code>
+        {{ epbCopyButton("bearer-token", "bearer-token_label", "Bearer token") }}
+      </div>
+
+      <form
+        method='post'
+        action='/get-energy-certificate-data/authenticated/create-bearer-token'
+      >
+        {{ govukButton({
+          text: "Create additional token"
+        }) }}
+      </form>
+    {% endif %}
+
+    <hr class="epb-hr"> 
+
+    <h2 class='govuk-heading-m govuk-!-padding-top-4'>Service update emails</h2>
+
+    <p>
+      We will send emails to subscribed users about major changes to the service such as:
+    </p>
+    <ul class='govuk-list govuk-list--bullet'>
+      <li>changes to the API</li>
+      <li>changes to the published data</li>
+      <li>notification interruptions to the service.</li>
+    </ul>
+
+    <dl class='govuk-summary-list govuk-summary-list--epb'>
+      <div class='govuk-summary-list__row'>
+        <dt class='govuk-summary-list__key'>Subscription</dt>
+        <dd class='govuk-summary-list__value'>
+          {% if data.subscribed %}
+            Subscribed to service updates
+          {% else %}
+            Not subscribed to service updates
+          {% endif %}
+        </dd>
+        <dd class='govuk-summary-list__actions'>
+          {#
+            {% if data.subscribed %}
+              <form method="post" action="/get-energy-certificate-data/authenticated/unsubscribe">
+                {{ govukButton({
+                  classes: "govuk-button--secondary govuk-!-margin-bottom-0 govuk-button--epb-secondary",
+                  html: "Unsubscribe <span class='govuk-visually-hidden'>from service updates</span>"
+                }) }}
+              </form>
+            {% else %}
+              <form method="post" action="/get-energy-certificate-data/authenticated/subscribe">
+                {{ govukButton({
+                  classes: "govuk-button--secondary govuk-!-margin-bottom-0 govuk-button--epb-secondary",
+                  html: "Subscribe <span class='govuk-visually-hidden'>to service updates</span>"
+                }) }}
+              </form>
+            {% endif %}
+          #}
+          <a href='/get-energy-certificate-data/authenticated/service-updates'>
+            Change
+            <span class='govuk-visually-hidden'>
+              service update subscription
+            </span>
+          </a>
+        </dd>
+      </div>
+      <div class='govuk-summary-list__row'>
+        <dt class='govuk-summary-list__key'>Email address</dt>
+        <dd id='{{ bearerDomId }}' class='govuk-summary-list__value'>
+          {{ data.email }}
+        </dd>
+        {#
+          <dd class="govuk-summary-list__actions epb-whitespace-nowrap">
+            <a href="/get-energy-certificate-data/authenticated/change-email" class="govuk-link">
+              Change
+            </a>
+          </dd>
+        #}
+      </div>
+    </dl>
+
+    <hr class="epb-hr"> 
+
+    <h2 class='govuk-heading-m govuk-!-padding-top-4'>Delete your account</h2>
+
     <p>Deleting your account removes your data from this service.</p>
     <p>
       You will no longer be able to use the service or API, and you will stop receiving email updates.
     </p>
-    <p>You cannot undo this action.</p>
+    <p>
+      <a href='/get-energy-certificate-data/authenticated/delete-account'>
+        Delete your account
+      </a>
+    </p>
 
-    {{ govukButton({
-      text: "Delete account",
-      classes: "govuk-button--secondary",
-      href: "/get-energy-certificate-data/authenticated/delete-account"
-    }) }}
   </div>
 {% endblock %}

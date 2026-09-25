@@ -27,6 +27,10 @@ window.GOVUKPrototypeKit.documentReady(() => {
 //
 class CopyToClipboardElement extends HTMLElement {
   connectedCallback() {
+    if (!navigator.clipboard) {
+      this.hidden = true;
+      return;
+    }
     this.querySelector('button')?.addEventListener('click', this.#onClick);
   }
 

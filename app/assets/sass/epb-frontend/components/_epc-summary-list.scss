@@ -193,16 +193,6 @@
 }
 
 @media (max-width: 640px) {
-  .govuk-summary-list__row {
-    display: flex;
-  }
-
-  .govuk-summary-list__key,
-  .govuk-summary-list__value {
-    width: auto;
-    flex: 0.5;
-  }
-
   #assement-details-table-content {
     margin-bottom: 15px;
   }

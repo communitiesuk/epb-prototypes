@@ -1,14 +1,20 @@
 {% extends "layouts/main.html" %}
 
 {% set endHtml %}
-  <li class="epb-ml-auto">
-  <a
-    class='govuk-link'
-    href='/get-energy-certificate-data/authenticated/my-account'
-  >
-    My account
-  </a>
-  </div>
+  <li class='epb-ml-auto epb-self-center'>
+    <form action='/get-energy-certificate-data/sign-out' method='POST'>
+      <button
+        class='
+          govuk-button
+          govuk-button--secondary
+          govuk-!-margin-bottom-0
+          govuk-button--epb-secondary
+        '
+      >
+        Sign out
+      </button>
+    </form>
+  </li>
 {% endset %}
 
 {% block govukServiceNavigation %}
@@ -16,6 +22,12 @@
     {{ govukServiceNavigation({
       serviceName: "Get energy certificate data",
       serviceUrl: "/get-energy-certificate-data",
+      navigation: [
+        {
+          href: "/get-energy-certificate-data/authenticated/my-account",
+          text: "My account"
+        }
+      ],
       slots: {
         navigationEnd: endHtml
       }
@@ -24,6 +36,44 @@
     {{ govukServiceNavigation({
       serviceName: "Get energy certificate data",
       serviceUrl: "/get-energy-certificate-data"
+    }) }}
+  {% endif %}
+{% endblock %}
+
+{% block govukFooter %}
+  {% if data.signedIn %}
+    {{ govukFooter({
+      meta: {
+        items: [
+          {
+            href: "https://prototype-kit.service.gov.uk/",
+            text: "GOV.UK Prototype Kit " + releaseVersion
+          },
+          {
+            href: "/prototype-admin/clear-data",
+            text: "Clear data"
+          },
+          {
+            href: "/get-energy-certificate-data/authenticated/my-account",
+            text: "My account"
+          }
+        ]
+      }
+    }) }}
+  {% else %}
+    {{ govukFooter({
+      meta: {
+        items: [
+          {
+            href: "https://prototype-kit.service.gov.uk/",
+            text: "GOV.UK Prototype Kit " + releaseVersion
+          },
+          {
+            href: "/prototype-admin/clear-data",
+            text: "Clear data"
+          }
+        ]
+      }
     }) }}
   {% endif %}
 {% endblock %}

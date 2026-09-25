@@ -1,3 +1,4 @@
+{% from "get-energy-certificate-data/components/copy-button.html" import epbCopyButton %}
 {% extends "get-energy-certificate-data/layouts/main.html" %}
 
 {% block pageTitle %}
@@ -39,45 +40,49 @@
     </p>
 
     {% if data.signedIn %}
-      <h2 class='govuk-heading-m govuk-!-padding-top-4'>My Bearer token</h2>
-
-      <dl class='govuk-summary-list govuk-!-width-full'>
-        <div id='bearer-token' class='govuk-summary-list__row'>
-          <dd id='bearer-token-value' class='govuk-summary-list__value'>
-            vVKh3sw0zAow5Mpq2dY5iSqjltQYZxMHo47maRagr2o5Ht3fDbL3aF1o629twU1q
-          </dd>
-          <dd class='govuk-summary-list__actions'>
-            <epb-copy-to-clipboard target='bearer-token-value'>
-              <button
-                class='govuk-button govuk-button--secondary epb-copy-to-clipboard-button'
-                type='button'
-              >
-                <slot name='action-message'>
-                  <svg width='16' height='16' aria-hidden='true'>
-                    <path
-                      d='M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z'
-                    ></path>
-                    <path
-                      d='M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z'
-                    ></path>
-                  </svg>
-                  Copy
-                  <span class='govuk-visually-hidden'>bearer token</span>
-                </slot>
-                <slot name='success-message' hidden>
-                  <svg width='16' height='16' aria-hidden='true' fill='#1d70b8'>
-                    <path
-                      d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'
-                    />
-                  </svg>
-                  <span class='govuk-visually-hidden'>Bearer token</span>
-                  Copied
-                </slot>
-              </button>
-            </epb-copy-to-clipboard>
-          </dd>
+      {% if data.bearerTokens | length == 1 %}
+        <h2 class='govuk-heading-m govuk-!-padding-top-4'>My Bearer token</h2>
+        <div
+          class='govuk-body epb-d-flex epb-gap-2 epb-items-center govuk-!-margin-bottom-5'
+        >
+          <code id='bearer-token' class='epb-break-anywhere epb-max-w-20'>
+            {{ data.bearerTokens[0].value }}
+          </code>
+          {{ epbCopyButton("bearer-token", "bearer-token_label", "Bearer token") }}
         </div>
-      </dl>
+      {% else %}
+        <h2 class='govuk-heading-m govuk-!-padding-top-4'>My Bearer tokens</h2>
+        <dl class='govuk-summary-list govuk-summary-list--epb'>
+          {% for token in data.bearerTokens %}
+            {% set bearerDomId = "bearer_token_" ~ loop.index %}
+            {% set bearerHidden = "Bearer token starting " ~ token.value | bearerStarting ~ " created " ~ token.createdAt | formatDate(
+                "long"
+              )
+            %}
+            {{ bearerId | dump }}
+            <div class='govuk-summary-list__row'>
+              <dt id='{{ bearerDomId }}_label' class='govuk-summary-list__key'>
+                {{ token.createdAt | formatDate("medium") }}
+              </dt>
+              <dd class='govuk-summary-list__value'>
+                <code id='{{ bearerDomId }}' class='epb-break-anywhere'>
+                  {{ token.value }}
+                </code>
+              </dd>
+              <dd class='govuk-summary-list__actions epb-whitespace-nowrap'>
+                {{ epbCopyButton(bearerDomId, bearerHidden) }}
+              </dd>
+            </div>
+          {% endfor %}
+        </dl>
+      {% endif %}
+
+      <p>
+        Manage your bearer tokens from
+        <a href='/get-energy-certificate-data/authenticated/my-account'>
+          My account
+        </a>.
+      </p>
     {% else %}
       <h2 class='govuk-heading-m govuk-!-padding-top-4'>How to get started</h2>
 

@@ -1,0 +1,58 @@
+{% extends "get-energy-certificate-data/layouts/main.html" %}
+
+{% block pageTitle %}
+  Delete bearer token - GOV.UK
+{% endblock %}
+
+{{ backLink }}
+{% set backLink = "/get-energy-certificate-data/authenticated/my-account" %}
+{{ backLink }}
+
+{% block content %}
+  <h1 class='govuk-heading-xl'>Delete bearer token</h1>
+  <div class='epb-reading-width'>
+    <p>This will permanently delete your bearer token:</p>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Value"
+          },
+          value: {
+            html: "<code>" ~ data.bearerTokens[
+              data.index
+            ].value ~ "</code>"
+          }
+        },
+        {
+          key: {
+            text: "Created on"
+          },
+          value: {
+            text: token.createdAt | formatDate(
+              "long"
+            )
+          }
+        }
+      ]
+    }) }}
+
+    <p>
+      You will no longer be able to make requests to the API using this token.
+    </p>
+
+    <form
+      action='/get-energy-certificate-data/authenticated/delete-bearer-token'
+      method='post'
+    >
+      <input type='hidden' name='index' value='{{ data.index }}' />
+      <button
+        class='govuk-button govuk-button--warning govuk-!-margin-right-2'
+        type='submit'
+      >
+        Delete bearer token
+      </button>
+    </form>
+  </div>
+{% endblock %}

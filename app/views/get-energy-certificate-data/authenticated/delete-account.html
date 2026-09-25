@@ -11,6 +11,8 @@
 {% block content %}
   <h1 class='govuk-heading-xl'>Delete your account</h1>
 
+  <div class='epb-reading-width'>
+
   <p>
     This will permanently delete the account information stored by this service. This includes your email address and any saved preferences.
   </p>
@@ -30,18 +32,16 @@
     <li>lose access to the API (any existing API tokens will stop working)</li>
   </ul>
 
-  <form action='/get-energy-certificate-data/account-deleted' method='post'>
+  <form
+    action='/get-energy-certificate-data/authenticated/delete-account'
+    method='post'
+  >
     <button
       class='govuk-button govuk-button--warning govuk-!-margin-right-2'
       type='submit'
     >
       Delete account
     </button>
-    <a
-      class='govuk-button govuk-button--secondary'
-      href='/get-energy-certificate-data/authenticated/my-account'
-    >
-      Cancel
-    </a>
   </form>
+  </div>
 {% endblock %}
