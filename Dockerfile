@@ -11,4 +11,5 @@ RUN mkdir .tmp \
 
 USER node
 
+EXPOSE 80 443
 CMD ["npm", "run", "start"]
