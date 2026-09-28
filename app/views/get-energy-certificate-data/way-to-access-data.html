@@ -1,48 +1,46 @@
 {% set serviceName %}
-Get energy certificate data
-{% endset%}
+  Get energy certificate data
+{% endset %}
 
 {% set backLink = "/get-energy-certificate-data" %}
 
 {% extends "get-energy-certificate-data/layouts/main.html" %}
 
 {% block pageTitle %}
-How would you like to access the data? - Get energy certificate data - GOV.UK
+  How would you like to access the data? - Get energy certificate data - GOV.UK
 {% endblock %}
 
 {% block content %}
-
-<form method="post">
-  {{ govukRadios({
-    name: "access_type",
-    fieldset: {
-      legend: {
-        text: "How would you like to access the data?",
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--l"
-      }
-    },
-    items: [
-      {
-        value: "download",
-        text: "Download files",
-        hint: {
-          text: "Download certificate data in a CSV format"
+  <form method='post'>
+    {{ govukRadios({
+      name: "access_type",
+      fieldset: {
+        legend: {
+          text: "How would you like to access the data?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
         }
       },
-      {
-        value: "api",
-        text: "Use a developer API",
-        hint: {
-          text: "Use an API to access certificate data "
+      items: [
+        {
+          value: "download",
+          text: "Download files",
+          hint: {
+            text: "Download certificate data in a CSV format"
+          }
+        },
+        {
+          value: "api",
+          text: "Use a developer API",
+          hint: {
+            text: "Use an API to access certificate data "
+          }
         }
-      }
-    ]
-  }) }}
+      ]
+    }) }}
 
-  {{ govukButton({
-    text: "Continue"
-  }) }}
-</form>
-
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </form>
 {% endblock %}

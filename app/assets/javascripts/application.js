@@ -5,7 +5,7 @@
 
 window.GOVUKPrototypeKit.documentReady(() => {
   // Add JavaScript here
-})
+});
 
 // Wraps the copy to clipboard button
 // Must have a `target` attribute with the id of the element to copy
@@ -35,7 +35,9 @@ class CopyToClipboardElement extends HTMLElement {
   }
 
   get target() {
-    const element = this.ownerDocument.getElementById(this.getAttribute('target'));
+    const element = this.ownerDocument.getElementById(
+      this.getAttribute('target'),
+    );
     if (!element) {
       console.warn(`missing target element for`, this);
     }
@@ -48,14 +50,14 @@ class CopyToClipboardElement extends HTMLElement {
     }
     try {
       await navigator.clipboard.writeText(this.target?.innerText?.trim());
-    } catch(e) {
+    } catch (e) {
       // Ignore copy errors
       console.error(e);
       return;
     }
     this.#setSlotHidden('action-message', true);
     this.#setSlotHidden('success-message', false);
-  }
+  };
 
   #setSlotHidden(name, state) {
     const element = this.querySelector(`slot[name="${name}"]`);
@@ -67,4 +69,4 @@ class CopyToClipboardElement extends HTMLElement {
   }
 }
 
-customElements.define("epb-copy-to-clipboard", CopyToClipboardElement);
+customElements.define('epb-copy-to-clipboard', CopyToClipboardElement);

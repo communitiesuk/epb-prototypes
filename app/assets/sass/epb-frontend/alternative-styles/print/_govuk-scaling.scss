@@ -1,4 +1,5 @@
-.govuk-body, .govuk-body-m {
+.govuk-body,
+.govuk-body-m {
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }
@@ -14,13 +15,13 @@
   }
 }
 
-@media not all and (min-resolution:.001dpcm) {
+@media not all and (min-resolution: 0.001dpcm) {
   p.govuk-body {
     margin-bottom: 0.5rem;
   }
 
-  svg[role="img"] {
-    zoom: 0.70;
+  svg[role='img'] {
+    zoom: 0.7;
   }
 
   table {

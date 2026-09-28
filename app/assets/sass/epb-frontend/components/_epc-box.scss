@@ -92,7 +92,6 @@
 }
 
 .govuk-summary-list {
-
   .epc-box-container & {
     margin-bottom: 0;
   }
@@ -159,7 +158,7 @@
       margin-top: -30px;
     }
 
-    +.epc-extra-box {
+    + .epc-extra-box {
       border-left: 2px solid #fff;
       box-sizing: border-box;
       float: right;
@@ -247,7 +246,8 @@ $epc-box-gutter: 2px;
         padding-top: $epc-box-print-base-font-size - 0.2rem;
       }
 
-      label, b {
+      label,
+      b {
         font-size: $epc-box-print-base-font-size;
         text-align: left;
         margin-top: 0;
@@ -263,7 +263,7 @@ $epc-box-gutter: 2px;
       }
 
       label:after {
-        content: ":";
+        content: ':';
       }
     }
   }

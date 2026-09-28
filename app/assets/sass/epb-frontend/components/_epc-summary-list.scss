@@ -23,11 +23,11 @@
     flex-wrap: wrap;
     align-items: stretch;
   }
-  .ratings-row{
+  .ratings-row {
     align-items: flex-start;
   }
 
-  .epc-summary-cards-row > [class*="govuk-grid-column-"] {
+  .epc-summary-cards-row > [class*='govuk-grid-column-'] {
     display: flex;
     flex-direction: column;
   }
@@ -46,10 +46,10 @@
     margin-top: 0;
   }
 
-  .govuk-body{
+  .govuk-body {
     margin-bottom: 0;
   }
-  
+
   .epc-summary-cards-row .govuk-summary-card__content > .govuk-body {
     flex: 1;
     display: flex;
@@ -81,7 +81,9 @@
   font-weight: bold;
 }
 
-#other-property-information .govuk-summary-list__row:not(:first-child) dt.govuk-summary-list__key {
+#other-property-information
+  .govuk-summary-list__row:not(:first-child)
+  dt.govuk-summary-list__key {
   font-weight: normal;
 }
 
@@ -122,7 +124,7 @@
 .improve-rating-contents {
   display: flex;
   gap: 20%;
-  border-right: 1px solid #B1B4B6;
+  border-right: 1px solid #b1b4b6;
   box-sizing: border-box;
 }
 
@@ -179,17 +181,16 @@
 #roof-insulation-points,
 #air-source-heat-pump-points,
 #solar-panels-points {
-  background: #CCE2D8;
-  color: #005A30;
+  background: #cce2d8;
+  color: #005a30;
 }
 
 #double-glazing-points,
 #solar-water-heating-points,
 #electric-battery-points {
-  background: #FFF7BF;
-  color: #594D00;
+  background: #fff7bf;
+  color: #594d00;
 }
-
 
 @media (max-width: 640px) {
   .govuk-summary-list__row {
@@ -203,7 +204,7 @@
   }
 
   #assement-details-table-content {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   .improve-rating-contents-wrapper {
@@ -229,7 +230,6 @@
   .improve-rating-list {
     grid-template-columns: repeat(1, 1fr);
   }
-
 }
 
 #main-content:has(.govuk-back-link) {

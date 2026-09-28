@@ -1,6 +1,6 @@
 import express from 'express';
 
-export const accountRouter = express.Router()
+export const accountRouter = express.Router();
 
 accountRouter.use('/authenticated', function (req, res, next) {
   if (!req.session.data.signedIn) {
@@ -8,48 +8,61 @@ accountRouter.use('/authenticated', function (req, res, next) {
     delete req.session.data.referer;
     if (referer.startsWith('/get-energy-certificate-data')) {
       req.session.data.referer = referer;
-    } 
-    res.redirect('/get-energy-certificate-data/one-login')
+    }
+    res.redirect('/get-energy-certificate-data/one-login');
   } else {
     next();
   }
 });
 
 accountRouter.post('/way-to-access-data', function (req, res, next) {
-  const accessType = req.body.access_type
+  const accessType = req.body.access_type;
 
   if (accessType === 'download') {
-    return res.redirect('/get-energy-certificate-data/authenticated/type-of-properties')
+    return res.redirect(
+      '/get-energy-certificate-data/authenticated/type-of-properties',
+    );
   }
 
   if (accessType === 'api') {
-    return res.redirect('/get-energy-certificate-data/use-api')
+    return res.redirect('/get-energy-certificate-data/use-api');
   }
 
   next();
-})
+});
 
-accountRouter.post('/authenticated/type-of-properties', function (req, res, next) {
-  const type = req.body.type_of_properties
+accountRouter.post(
+  '/authenticated/type-of-properties',
+  function (req, res, next) {
+    const type = req.body.type_of_properties;
 
-  if (type === 'domestic') {
-    return res.redirect('/get-energy-certificate-data/authenticated/domestic-properties')
-  }
+    if (type === 'domestic') {
+      return res.redirect(
+        '/get-energy-certificate-data/authenticated/domestic-properties',
+      );
+    }
 
-  if (type === 'non-domestic') {
-    return res.redirect('/get-energy-certificate-data/authenticated/non-domestic-properties')
-  }
+    if (type === 'non-domestic') {
+      return res.redirect(
+        '/get-energy-certificate-data/authenticated/non-domestic-properties',
+      );
+    }
 
-  if (type === 'display') {
-    return res.redirect('/get-energy-certificate-data/authenticated/public-properties')
-  }
+    if (type === 'display') {
+      return res.redirect(
+        '/get-energy-certificate-data/authenticated/public-properties',
+      );
+    }
 
-  next();
-})
+    next();
+  },
+);
 
 accountRouter.post('/one-login', function (req, res) {
   req.session.data.signedIn = true;
-  const referer = req.session.data.referer || '/get-energy-certificate-data/authenticated/my-account';
+  const referer =
+    req.session.data.referer ||
+    '/get-energy-certificate-data/authenticated/my-account';
   delete req.session.data.referer;
   res.redirect(referer);
 });

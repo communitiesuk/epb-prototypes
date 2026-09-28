@@ -1,29 +1,29 @@
 //
 // For guidance on how to add CSS and SCSS see:
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
-// 
+//
 
 // Add extra styles here
 
-@use "epb-data-frontend";
+@use 'epb-data-frontend';
 
-@import "epb-frontend/components/epc-box";
-@import "epb-frontend/components/environmental-impact-chart";
-@import "epb-frontend/components/related-items";
-@import "epb-frontend/components/expired-text";
-@import "epb-frontend/components/section-breaks";
-@import "epb-frontend/components/search";
-@import "epb-frontend/components/print";
-@import "epb-frontend/components/report_contents";
-@import "epb-frontend/components/epc-print-summary";
-@import "epb-frontend/components/share-certificate";
-@import "epb-frontend/components/_epc-summary-list";
-@import "epb-frontend/components/_energy-rating";
-@import "epb-frontend/components/_epc-timeline";
-@import "epb-frontend/components/_epc-table";
-@import "epb-frontend/components/_epc-outro";
-@import "epb-frontend/components/_epc-bar-chart";
-@import "epb-frontend/components/_epc-cards";
+@import 'epb-frontend/components/epc-box';
+@import 'epb-frontend/components/environmental-impact-chart';
+@import 'epb-frontend/components/related-items';
+@import 'epb-frontend/components/expired-text';
+@import 'epb-frontend/components/section-breaks';
+@import 'epb-frontend/components/search';
+@import 'epb-frontend/components/print';
+@import 'epb-frontend/components/report_contents';
+@import 'epb-frontend/components/epc-print-summary';
+@import 'epb-frontend/components/share-certificate';
+@import 'epb-frontend/components/_epc-summary-list';
+@import 'epb-frontend/components/_energy-rating';
+@import 'epb-frontend/components/_epc-timeline';
+@import 'epb-frontend/components/_epc-table';
+@import 'epb-frontend/components/_epc-outro';
+@import 'epb-frontend/components/_epc-bar-chart';
+@import 'epb-frontend/components/_epc-cards';
 
 // TODO: Import printable styles
 // @import "epb-frontend/printable";

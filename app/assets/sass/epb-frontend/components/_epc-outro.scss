@@ -8,7 +8,7 @@
 
 .outro-wrapper .outro-box {
   width: 100%;
-  border: 1px solid #1D70B8;
+  border: 1px solid #1d70b8;
   box-sizing: border-box;
 }
 
@@ -16,27 +16,29 @@
 .outro-item-2-content > h2 {
   display: flex;
   flex-direction: column;
-  width: 65%
+  width: 65%;
 }
 
-.epc-blue-text{
-  color: #1D70B8;
+.epc-blue-text {
+  color: #1d70b8;
 }
 
 .outro-item-1-content > .govuk-button {
-  background-color: #1D70B8;
-  border: 1px solid #1D70B8;
+  background-color: #1d70b8;
+  border: 1px solid #1d70b8;
   color: white;
-  box-shadow: 0 2px 0 #144E81;
+  box-shadow: 0 2px 0 #144e81;
 }
 
-.icon-box{
+.icon-box {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.outro-item-2-content, .outro-item-3-content, .outro-item-4-content{
+.outro-item-2-content,
+.outro-item-3-content,
+.outro-item-4-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -45,7 +47,7 @@
 
 .outro-item-2-content > .govuk-body-m,
 .outro-item-3-content > .govuk-body-m,
-.outro-item-4-content > .govuk-body-m{
+.outro-item-4-content > .govuk-body-m {
   margin: 0;
 }
 
@@ -63,18 +65,20 @@
   height: 80px;
 }
 
-.share-this-page-content{
+.share-this-page-content {
   display: flex;
   flex-direction: row;
 }
 
-.share-link-content, .print-content {
+.share-link-content,
+.print-content {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.share-icon, .print-icon {
+.share-icon,
+.print-icon {
   padding-top: 5px;
   padding-right: 5px;
 }
@@ -88,7 +92,7 @@
     margin-top: revert;
   }
 
-  .outro-item-1-content{
+  .outro-item-1-content {
     padding: 5px 15px 0;
   }
 
@@ -101,11 +105,24 @@
     margin-bottom: 0;
   }
 
-  .outro-item-1 { flex: 0.25 !important; }
+  .outro-item-1 {
+    flex: 0.25 !important;
+  }
 }
 
-
-.outro-item-1 { flex: 0.4; background-color: #F4F8FB; }
-.outro-item-2 { flex: 0.167; background-color: #F4F8FB; }
-.outro-item-3 { flex: 0.167; background-color: #F4F8FB; }
-.outro-item-4 { flex: 0.167; background-color: #F4F8FB; }
+.outro-item-1 {
+  flex: 0.4;
+  background-color: #f4f8fb;
+}
+.outro-item-2 {
+  flex: 0.167;
+  background-color: #f4f8fb;
+}
+.outro-item-3 {
+  flex: 0.167;
+  background-color: #f4f8fb;
+}
+.outro-item-4 {
+  flex: 0.167;
+  background-color: #f4f8fb;
+}

@@ -3,22 +3,23 @@
 $govuk-global-styles: true;
 $govuk-assets-path: '';
 
-@import "./node_modules/govuk-frontend/govuk/all";
-@import "epb-frontend/components/_print";
-@import "epb-frontend/components/epc-box";
+@import './node_modules/govuk-frontend/govuk/all';
+@import 'epb-frontend/components/_print';
+@import 'epb-frontend/components/epc-box';
 
 //hack to target safari (10.1+) ONLY as print rendering significantly different
 //see https://browserstrangeness.bitbucket.io/css_hacks.html#safari
 @mixin target-safari {
-  @media not all and (min-resolution:.001dpcm) {
-    @supports (-webkit-appearance:none) {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
       @content;
     }
   }
 }
 
 @include target-safari {
-  html, body {
+  html,
+  body {
     font-size: 10pt;
   }
 }
@@ -33,7 +34,8 @@ $govuk-assets-path: '';
   column-gap: 4rem;
 }
 
-h2, h3 {
+h2,
+h3 {
   page-break-after: avoid;
   break-after: avoid-page;
 }
@@ -80,11 +82,13 @@ div.epc-blue-bottom {
   padding-right: 0;
 }
 
-hr.epc-light-top, hr.epc-blue-top {
+hr.epc-light-top,
+hr.epc-blue-top {
   display: none;
 }
 
-h1.main-heading, h1.govuk-heading-xl {
+h1.main-heading,
+h1.govuk-heading-xl {
   background-color: #000 !important;
   color: #fff !important;
   font-size: 1.5rem;
@@ -97,12 +101,15 @@ h2.govuk-heading-l {
   margin-bottom: 1.6rem;
 }
 
-h2.govuk-heading-m, h3.govuk-heading-m, .epc-energy-rating-graph h2 {
+h2.govuk-heading-m,
+h3.govuk-heading-m,
+.epc-energy-rating-graph h2 {
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 
-h4.govuk-heading-s, h5.govuk-heading-s {
+h4.govuk-heading-s,
+h5.govuk-heading-s {
   font-size: 1rem;
   break-after: avoid;
 }
@@ -112,7 +119,11 @@ caption.govuk-table__caption {
   font-weight: normal;
 }
 
-p.govuk-body, p.govuk-body-m, p.govuk-hint, pre.govuk-body, .govuk-body li {
+p.govuk-body,
+p.govuk-body-m,
+p.govuk-hint,
+pre.govuk-body,
+.govuk-body li {
   font-size: 1rem;
 }
 
@@ -130,7 +141,8 @@ p.govuk-body, p.govuk-body-m, p.govuk-hint, pre.govuk-body, .govuk-body li {
   line-height: 1rem;
   padding: 0.4rem 0;
 
-  dt, dd {
+  dt,
+  dd {
     flex: 1;
   }
 
@@ -140,7 +152,8 @@ p.govuk-body, p.govuk-body-m, p.govuk-hint, pre.govuk-body, .govuk-body li {
   }
 }
 
-.govuk-summary-list__key, .govuk-summary-list__value {
+.govuk-summary-list__key,
+.govuk-summary-list__value {
   padding: 0;
 }
 
@@ -186,7 +199,8 @@ $epc-compare-svg-width: $epc-compare-svg-height * 1.8;
         font-size: 1.3rem;
       }
 
-      rect, polygon {
+      rect,
+      polygon {
         shape-rendering: crispEdges;
       }
     }
@@ -198,11 +212,14 @@ $epc-compare-svg-width: $epc-compare-svg-height * 1.8;
 }
 
 .epc-ac-report-sections {
-  p, li {
+  p,
+  li {
     font-size: 1rem;
   }
 
-  p, pre, .cooling-plants p.govuk-body {
+  p,
+  pre,
+  .cooling-plants p.govuk-body {
     margin-bottom: 0.5rem;
   }
 
@@ -217,7 +234,9 @@ $epc-compare-svg-width: $epc-compare-svg-height * 1.8;
   }
 }
 
-.epc-cepc-rr-sections table, .epc-energy-perf-breakdown table, .epc-recommendation-list table {
+.epc-cepc-rr-sections table,
+.epc-energy-perf-breakdown table,
+.epc-recommendation-list table {
   margin-bottom: 1rem;
 }
 
@@ -230,7 +249,8 @@ $epc-compare-svg-width: $epc-compare-svg-height * 1.8;
   padding-bottom: 2px;
 }
 
-.epc-environmental-impact, .epc-estimated-energy-use {
+.epc-environmental-impact,
+.epc-estimated-energy-use {
   @include split-into-columns;
 }
 

@@ -1,4 +1,4 @@
-@use "node_modules/govuk-frontend/dist/govuk/base" as *;
+@use 'node_modules/govuk-frontend/dist/govuk/base' as *;
 
 .epb-reading-width {
   max-width: 75ch;
@@ -24,7 +24,7 @@ epb-copy-to-clipboard {
   display: none;
 
   &:defined {
-    display: block; 
+    display: block;
   }
 
   button {

@@ -1,17 +1,20 @@
 .bar-chart {
   position: relative;
   max-width: 1000px;
-  font-family: GDS Transport, Arial, sans-serif;
+  font-family:
+    GDS Transport,
+    Arial,
+    sans-serif;
 }
 
 .bar-chart::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   bottom: 5px;
   left: calc(20% + 25px);
   width: 2px;
-  background: #DBDCDC;
+  background: #dbdcdc;
 }
 
 .chart-row {
@@ -48,31 +51,31 @@
 }
 
 .badge-a {
-  background: #015A30;
+  background: #015a30;
 }
 
 .badge-b {
-  background: #11875A;
+  background: #11875a;
 }
 
 .badge-c {
-  background: #85994B;
+  background: #85994b;
   color: black;
 }
 
 .badge-d {
-  background: #FFDE02;
+  background: #ffde02;
   color: black;
 }
 
 .letting-standards-badge {
   &.badge-c {
-    background: #11875A;
+    background: #11875a;
     color: white;
   }
 
   &.badge-f {
-    background: #CA3535;
+    background: #ca3535;
   }
 }
 
@@ -94,47 +97,47 @@
 
 .bar-1.this-property.heat-retention {
   width: calc(25vw * 0.25);
-  background: #85994B;
+  background: #85994b;
 }
 
 .bar-2.similar-property.heat-retention {
   width: calc(25vw * 0.5);
-  background: #11875A;
+  background: #11875a;
 }
 
 .bar-3.after-improvements.heat-retention {
   width: calc(25vw);
-  background: #015A30;
+  background: #015a30;
 }
 
 .sustainable-heating-row > div > div > .bar-1.this-property {
   width: calc(25vw * 0.88);
-  background: #FFDE02;
+  background: #ffde02;
 }
 
 .sustainable-heating-row > div > div > .bar-2.similar-property {
   width: calc(25vw * 0.5);
-  background: #11875A;
+  background: #11875a;
 }
 
 .sustainable-heating-row > div > div > .bar-3.after-improvements {
   width: calc(25vw * 0.28);
-  background: #015A30;
+  background: #015a30;
 }
 
 .flexible-energy-use-row > div > div > .bar-1.this-property {
   width: calc(25vw * 0.28);
-  background: #FFDE02;
+  background: #ffde02;
 }
 
 .flexible-energy-use-row > div > div > .bar-2.similar-property {
   width: calc(25vw * 0.5);
-  background: #11875A;
+  background: #11875a;
 }
 
 .flexible-energy-use-row > div > div > .bar-3.after-improvements {
   width: calc(25vw * 0.88);
-  background: #015A30;
+  background: #015a30;
 }
 
 .chart-right {
@@ -160,18 +163,18 @@
 }
 
 @media (max-width: 640px) {
-  .chart-title{
+  .chart-title {
     font-size: 14px;
     width: 90px;
   }
 
-  .chart-badge{
+  .chart-badge {
     font-size: 14px;
     padding: 6px 5px;
     width: 70px;
   }
 
-  .bar-chart > div >div > .chart-badge {
+  .bar-chart > div > div > .chart-badge {
     display: flex;
     flex-direction: column;
   }
@@ -216,7 +219,11 @@
     margin-bottom: 20px;
   }
 
-  #accessible-table-version > table > tbody > tr:nth-child(1) > td:nth-child(2){
+  #accessible-table-version
+    > table
+    > tbody
+    > tr:nth-child(1)
+    > td:nth-child(2) {
     width: 66% !important;
   }
 
@@ -229,7 +236,7 @@
     padding-left: 2px;
   }
 
-  .chart-left > .chart-badge > span:nth-child(1){
+  .chart-left > .chart-badge > span:nth-child(1) {
     padding-bottom: 1px;
   }
 
@@ -246,7 +253,7 @@
   margin-bottom: 0;
 }
 
-#accessible-table-version > table > tbody > tr > td  {
+#accessible-table-version > table > tbody > tr > td {
   vertical-align: middle;
 }
 

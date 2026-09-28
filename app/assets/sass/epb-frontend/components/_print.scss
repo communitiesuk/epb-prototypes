@@ -3,7 +3,6 @@
 }
 
 @media print {
-
   @page {
     size: A4;
     margin: 10mm;
@@ -36,7 +35,9 @@
     float: left;
   }
 
-  .epc-no-print, footer, .govuk-back-link {
+  .epc-no-print,
+  footer,
+  .govuk-back-link {
     display: none;
   }
 
@@ -57,7 +58,8 @@
     page-break-after: always;
   }
 
-  .govuk-grid-column-full, .govuk-width-container {
+  .govuk-grid-column-full,
+  .govuk-width-container {
     width: auto !important;
     float: none !important;
   }
@@ -94,7 +96,7 @@
   }
 
   div.print-background {
-    background-color: #F2EFEF;
+    background-color: #f2efef;
     padding: 15px;
   }
 }

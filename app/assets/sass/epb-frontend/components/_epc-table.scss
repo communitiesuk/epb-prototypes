@@ -13,10 +13,10 @@
   margin-bottom: 0;
 }
 
-#other-property-information .govuk-table__header[scope="col"] {
+#other-property-information .govuk-table__header[scope='col'] {
   font-weight: bold;
 }
-#other-property-information .govuk-table__header[scope="row"] {
+#other-property-information .govuk-table__header[scope='row'] {
   font-weight: normal;
 }
 
@@ -36,7 +36,7 @@
 
 .property-feature-table > tbody > tr > td:nth-child(3),
 .property-feature-table > tbody > tr:nth-child(1) > th:nth-child(3),
-.property-feature-table > tbody > tr:nth-child(2) > td:nth-child(3)  {
+.property-feature-table > tbody > tr:nth-child(2) > td:nth-child(3) {
   text-align: -webkit-right;
 }
 
@@ -63,7 +63,7 @@ table > caption {
 
   #about-assessment-table > tbody > tr:nth-child(1) > th,
   #assessor-details-table > tbody > tr:nth-child(1) > th,
-  #accreditation-scheme-table > tbody > tr:nth-child(1) > th{
+  #accreditation-scheme-table > tbody > tr:nth-child(1) > th {
     width: 33% !important;
   }
 
@@ -82,22 +82,22 @@ table > caption {
   justify-content: end;
 }
 
-.is-good{
-  background: #CCE2D8;
-  color: #005A30;
+.is-good {
+  background: #cce2d8;
+  color: #005a30;
 }
 
-.is-poor{
-   background: #FCD6C3;
-   color: #6E3619;
+.is-poor {
+  background: #fcd6c3;
+  color: #6e3619;
 }
 
 .is-fair {
-    background: #FFF7BF;
-    color: #594D00;
- }
+  background: #fff7bf;
+  color: #594d00;
+}
 
 .is-none {
-    background: #EEEFEF;;
-    color: #383F43;
- }
+  background: #eeefef;
+  color: #383f43;
+}

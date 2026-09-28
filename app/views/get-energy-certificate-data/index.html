@@ -1,66 +1,69 @@
 {% set serviceName %}
-Get energy certificate data
-{% endset%}
+  Get energy certificate data
+{% endset %}
 
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Get energy certificate data - GOV.UK
+  Get energy certificate data - GOV.UK
 {% endblock %}
 
 {% block content %}
+  <div class='govuk-grid-row'>
+    <div class='govuk-grid-column-full'>
+      <div class='govuk-grid-column-two-thirds'>
+        <div class='govuk-grid-row'>
+          <h1 class='govuk-heading-xl'>Get energy certificate data</h1>
+          <p class='govuk-body'>Use this service to get bulk data on:</p>
 
+          <ul class='govuk-list govuk-list--bullet'>
+            <li>
+              Energy Performance Certificates (EPCs) for domestic properties
+            </li>
+            <li>
+              Commercial Energy Performance Certificates (CEPCs) for non-domestic properties
+            </li>
+            <li>Display Energy Certificates (DECs) for public buildings</li>
+          </ul>
 
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <div class="govuk-grid-column-two-thirds">
-            <div class="govuk-grid-row">
-                <h1 class="govuk-heading-xl">
-                    Get energy certificate data
-                </h1>
-                <p class="govuk-body">
-                    Use this service to get bulk data on:
-                </p>
-
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>Energy Performance Certificates (EPCs) for domestic properties</li>
-                    <li>Commercial Energy Performance Certificates (CEPCs) for non-domestic properties</li>
-                    <li>Display Energy Certificates (DECs) for public buildings</li>
-                </ul>
-
-                <p class="govuk-body">
-                    This data covers England and Wales. For data in Scotland, <a href="https://www.scottishepcregister.org.uk/">visit the Scottish EPC Register</a>.
-                </p>
-            </div>
-
-            <div class="govuk-grid-row">
-                <h2 class="govuk-heading-m govuk-!-padding-top-2">
-                    How you can use this service
-                </h2>
-
-                <p class="govuk-body">
-                    You can use this service to:
-                </p>
-
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>download bulk certificate data which can be opened in Microsoft Excel</li>
-                    <li>access certificate data using a developer API</li>
-                </ul>
-
-                <p>
-                    If you need an energy certificate to sell or lease a property, <a href="https://www.gov.uk/find-energy-certificate">visit the EPC Register</a>.
-                </p>
-
-                {{ govukButton({
-                  text: "Start now",
-                  href: "/get-energy-certificate-data/way-to-access-data",
-                  isStartButton: true
-                }) }}
-            </div>
-
-            {% include "get-energy-certificate-data/components/get-help.html" %}
+          <p class='govuk-body'>
+            This data covers England and Wales. For data in Scotland,
+            <a href='https://www.scottishepcregister.org.uk/'>
+              visit the Scottish EPC Register
+            </a>.
+          </p>
         </div>
-    </div>
-</div>
 
+        <div class='govuk-grid-row'>
+          <h2 class='govuk-heading-m govuk-!-padding-top-2'>
+            How you can use this service
+          </h2>
+
+          <p class='govuk-body'>You can use this service to:</p>
+
+          <ul class='govuk-list govuk-list--bullet'>
+            <li>
+              download bulk certificate data which can be opened in Microsoft Excel
+            </li>
+            <li>access certificate data using a developer API</li>
+          </ul>
+
+          <p>
+            If you need an energy certificate to sell or lease a property,
+            <a href='https://www.gov.uk/find-energy-certificate'>
+              visit the EPC Register
+            </a>.
+          </p>
+
+          {{ govukButton({
+            text: "Start now",
+            href: "/get-energy-certificate-data/way-to-access-data",
+            isStartButton: true
+          }) }}
+        </div>
+
+        {% include "get-energy-certificate-data/components/get-help.html" %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

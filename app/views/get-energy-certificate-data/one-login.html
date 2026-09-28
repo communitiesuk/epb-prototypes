@@ -1,19 +1,19 @@
 {% set serviceName %}
-{% endset%}
+{% endset %}
 
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Sign in to GOV.UK One Login - GOV.UK
+  Sign in to GOV.UK One Login - GOV.UK
 {% endblock %}
 
 {% block content %}
-<h1 class="govuk-heading-xl">Sign in to One Gov</h1>
+  <h1 class='govuk-heading-xl'>Sign in to One Gov</h1>
 
-<form method="post">
-  <input type="hidden" name="signedIn" value="true">
-  {{ govukButton({
-    text: "Sign in"
-  }) }}
-</form>
+  <form method='post'>
+    <input type='hidden' name='signedIn' value='true' />
+    {{ govukButton({
+      text: "Sign in"
+    }) }}
+  </form>
 {% endblock %}

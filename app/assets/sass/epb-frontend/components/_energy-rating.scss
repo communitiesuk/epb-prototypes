@@ -4,7 +4,11 @@
 
 .energy-rating-wrapper,
 .energy-bill-wrapper {
-  font-family: GDS Transport, Arial, Helvetica, sans-serif;
+  font-family:
+    GDS Transport,
+    Arial,
+    Helvetica,
+    sans-serif;
   width: 100%;
   max-width: none;
   display: flex;
@@ -148,7 +152,7 @@
   }
 }
 
-.full-page-bubble{
+.full-page-bubble {
   width: 75%;
   justify-self: center;
 }
@@ -163,21 +167,21 @@
   }
 }
 
-.warning-icon-container{
+.warning-icon-container {
   display: flex;
   align-items: center;
 }
 
-.warning-text-container{
+.warning-text-container {
   font-size: 1.4rem;
 }
 
-.lettings-bar{
+.lettings-bar {
   height: 29px;
   gap: 7px;
 }
 
-.lettings-bar .active{
+.lettings-bar .active {
   height: 58px;
   gap: 8px;
   align-items: center;
@@ -208,10 +212,10 @@
   }
 
   .lettings-bar {
-    gap: 2px
+    gap: 2px;
   }
 
-  .lettings-bar .active{
+  .lettings-bar .active {
     align-items: flex-start;
     padding-top: 10px;
   }
@@ -222,7 +226,7 @@
   grid-template-columns: 1fr 1px 1fr;
   place-self: center;
   height: 186px;
-  width: calc(100%*6/7);
+  width: calc(100% * 6 / 7);
   padding: 16px;
   box-sizing: border-box;
 }
@@ -242,7 +246,7 @@
   background: black;
 }
 
-.rating-bubble.two-col .label{
+.rating-bubble.two-col .label {
   position: static;
   margin: 0;
 }
@@ -256,7 +260,7 @@
 }
 
 .rating-bubble.two-col .rating-col::after {
-  content: "";
+  content: '';
   display: block;
   height: 1.2rem;
 }
@@ -266,15 +270,19 @@
   display: block;
 }
 
-.energy-rating-wrapper.include-score{
+.energy-rating-wrapper.include-score {
   justify-self: center;
 }
 
-.full-column-bar{
+.full-column-bar {
   gap: 7px;
 }
 
-#main-content > div:nth-child(4) > div > div.rating-bar.full-column-bar > div.box.c.active,
+#main-content
+  > div:nth-child(4)
+  > div
+  > div.rating-bar.full-column-bar
+  > div.box.c.active,
 .rating-bar.full-column-bar > div.box.d.active {
   align-items: center;
   padding-top: 0;
@@ -285,7 +293,7 @@
 }
 
 @media (max-width: 640px) {
-  .full-column-bar{
+  .full-column-bar {
     gap: 2px;
   }
 
@@ -298,63 +306,142 @@
     width: 100%;
   }
 
-  .energy-bill-wrapper > .rating-bubble{
+  .energy-bill-wrapper > .rating-bubble {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
 
-  .is-c .two-col::after { left: calc((100% / 7) * 2.5) !important; }
+  .is-c .two-col::after {
+    left: calc((100% / 7) * 2.5) !important;
+  }
 }
 
-.is-a .rating-bubble::after { left: calc((100% / 7) * 0.5); }
-.is-b .rating-bubble::after { left: calc((100% / 7) * 1.5); }
-.is-c .rating-bubble::after { left: calc((100% / 7) * 2.5); }
-.is-d .rating-bubble::after { left: calc((100% / 7) * 3.5); }
-.is-e .rating-bubble::after { left: calc((100% / 7) * 4.5); }
-.is-f .rating-bubble::after { left: 81% }
-.is-g .rating-bubble::after { left: calc((100% / 7) * 6.5); }
+.is-a .rating-bubble::after {
+  left: calc((100% / 7) * 0.5);
+}
+.is-b .rating-bubble::after {
+  left: calc((100% / 7) * 1.5);
+}
+.is-c .rating-bubble::after {
+  left: calc((100% / 7) * 2.5);
+}
+.is-d .rating-bubble::after {
+  left: calc((100% / 7) * 3.5);
+}
+.is-e .rating-bubble::after {
+  left: calc((100% / 7) * 4.5);
+}
+.is-f .rating-bubble::after {
+  left: 81%;
+}
+.is-g .rating-bubble::after {
+  left: calc((100% / 7) * 6.5);
+}
 
-.is-low .rating-bubble::after { left: calc((100% / 3) * 0.5); }
-.is-average .rating-bubble::after { left: calc((100% / 3) * 1.5); }
-.is-high .rating-bubble::after { left: calc((100% / 3) * 2.5); }
+.is-low .rating-bubble::after {
+  left: calc((100% / 3) * 0.5);
+}
+.is-average .rating-bubble::after {
+  left: calc((100% / 3) * 1.5);
+}
+.is-high .rating-bubble::after {
+  left: calc((100% / 3) * 2.5);
+}
 
-.is-a .two-col::after { left: 0; }
-.is-b .two-col::after { left: 137.42px; }
-.is-c .two-col::after { left: 274.84px; }
-.is-d .two-col::after { left: 412.26px; }
+.is-a .two-col::after {
+  left: 0;
+}
+.is-b .two-col::after {
+  left: 137.42px;
+}
+.is-c .two-col::after {
+  left: 274.84px;
+}
+.is-d .two-col::after {
+  left: 412.26px;
+}
 
-.is-a .two-col::after { left: calc((100% / 7) * 0.5); }
-.is-b .two-col::after { left: calc((100% / 7) * 1.5); }
-.is-c .two-col::after { left: 33.3334%; }
-.is-d .two-col::after { left: calc((100% / 7) * 3.5); }
-
+.is-a .two-col::after {
+  left: calc((100% / 7) * 0.5);
+}
+.is-b .two-col::after {
+  left: calc((100% / 7) * 1.5);
+}
+.is-c .two-col::after {
+  left: 33.3334%;
+}
+.is-d .two-col::after {
+  left: calc((100% / 7) * 3.5);
+}
 
 .is-c .rating-bubble,
-.is-c .rating-bubble::after { background-color: #E7EBDB; }
+.is-c .rating-bubble::after {
+  background-color: #e7ebdb;
+}
 
 .is-d .rating-bubble,
-.is-d .rating-bubble::after { background-color: #FFF8CC; }
+.is-d .rating-bubble::after {
+  background-color: #fff8cc;
+}
 
 .is-average .rating-bubble,
-.is-average .rating-bubble::after { background-color: #FFF8CC; }
+.is-average .rating-bubble::after {
+  background-color: #fff8cc;
+}
 
 .is-f .letting-standards-bubble,
-.is-f .letting-standards-bubble::after { background-color: #F4D7D7; }
+.is-f .letting-standards-bubble::after {
+  background-color: #f4d7d7;
+}
 
+.a {
+  background-color: #005a30;
+  color: white;
+}
+.b {
+  background-color: #11875a;
+  color: white;
+}
+.c {
+  background-color: #85994b;
+  color: black;
+}
+.d {
+  background-color: #ffdd00;
+  color: black;
+}
+.e {
+  background-color: #f47738;
+  color: black;
+}
+.f {
+  background-color: #ca3535;
+  color: white;
+}
+.g {
+  background-color: #aa2a16;
+  color: white;
+}
 
-.a { background-color: #005A30; color: white; }
-.b { background-color: #11875A; color: white; }
-.c { background-color: #85994B; color: black; }
-.d { background-color: #FFDD00; color: black; }
-.e { background-color: #F47738; color: black; }
-.f { background-color: #CA3535; color: white; }
-.g { background-color: #AA2A16; color: white; }
+.low {
+  background-color: #11875a;
+  color: white;
+}
+.average {
+  background-color: #ffdd00;
+  color: black;
+}
+.high {
+  background-color: #ca3535;
+  color: white;
+}
 
-
-.low { background-color: #11875A; color: white; }
-.average { background-color: #FFDD00; color: black; }
-.high { background-color: #CA3535; color: white; }
-
-.lettings-bar > .is-green { background-color: #11875A; color: white; }
-.lettings-bar > .is-red { background-color: #CA3535; color: white; }
+.lettings-bar > .is-green {
+  background-color: #11875a;
+  color: white;
+}
+.lettings-bar > .is-red {
+  background-color: #ca3535;
+  color: white;
+}
