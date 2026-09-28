@@ -28,16 +28,12 @@
   display: flex;
 }
 
-.epb-gap-2 {
-  gap: govuk-spacing(2);
+.epb-gap-3 {
+  gap: govuk-spacing(3);
 }
 
 .epb-max-w-20 {
   max-width: 20em;
-}
-
-.epb-items-center {
-  align-items: center;
 }
 
 .govuk-button--epb-secondary {
@@ -99,6 +95,9 @@
 
 epb-copy-to-clipboard {
   display: none;
+  height: 1lh;
+  top: -2px;
+  position: relative;
 
   &:defined {
     display: inline-block;
