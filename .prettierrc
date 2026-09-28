@@ -1,0 +1,12 @@
+{
+  "singleQuote": true,
+  "plugins": ["prettier-plugin-nunjucks"],
+  "overrides": [
+    {
+      "files": ["*.html", "*.njk", "*.nunjucks", "*.nunj"],
+      "options": {
+        "parser": "nunjucks"
+      }
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 {
   "scripts": {
+    "format": "prettier . --write",
+    "lint": "eslint . && prettier . --check",
     "dev": "govuk-prototype-kit dev",
     "start": "govuk-prototype-kit serve"
   },
@@ -10,5 +12,13 @@
     "govuk-frontend": "^6.5.1",
     "govuk-prototype-kit": "^13.20.4",
     "jquery": "^4.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.8",
+    "prettier-plugin-nunjucks": "^0.2.1"
   }
 }
