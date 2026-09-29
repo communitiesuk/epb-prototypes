@@ -1,13 +1,14 @@
 {% from "get-energy-certificate-data/components/copy-button.html" import epbCopyButton %}
 {% extends "get-energy-certificate-data/layouts/main.html" %}
 
+{% set section = "my_account" %}
+
 {% block pageTitle %}
   My account - GOV.UK
 {% endblock %}
 
 {% block content %}
   <div class='epb-reading-width'>
-
     {% if flash %}
       {% call govukNotificationBanner({
           type: "success"
