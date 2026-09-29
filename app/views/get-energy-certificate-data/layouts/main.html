@@ -1,5 +1,7 @@
+{% from "service-header/service-header.njk" import govukOneLoginServiceHeader %}
 {% extends "layouts/main.html" %}
 
+{#
 {% set endHtml %}
   <li class='epb-ml-auto epb-self-center'>
     <form action='/get-energy-certificate-data/sign-out' method='POST'>
@@ -16,6 +18,20 @@
     </form>
   </li>
 {% endset %}
+#}
+
+{% block govukHeader %}
+  {% if data.signedIn %}
+    {{ govukOneLoginServiceHeader({
+      signOutFormAction: "/get-energy-certificate-data/sign-out",
+      oneLoginLink: "/get-energy-certificate-data/one-login"
+    }) }}
+  {% else %}
+    {{ govukHeader({
+      homepageUrl: "/"
+    }) }}
+  {% endif %}
+{% endblock %}
 
 {% block govukServiceNavigation %}
   {% if data.signedIn %}
@@ -27,10 +43,7 @@
           href: "/get-energy-certificate-data/authenticated/my-account",
           text: "My account"
         }
-      ],
-      slots: {
-        navigationEnd: endHtml
-      }
+      ]
     }) }}
   {% else %}
     {{ govukServiceNavigation({

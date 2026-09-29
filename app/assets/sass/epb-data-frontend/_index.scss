@@ -1,7 +1,7 @@
 @use 'node_modules/govuk-frontend/dist/govuk/base' as *;
 
 .epb-reading-width {
-  max-width: 90ch;
+  max-width: 80ch;
 }
 
 .epb-ml-auto {
@@ -74,8 +74,9 @@
   table-layout: auto;
 
   dt {
-    width: auto;
+    width: 0;
     white-space: nowrap;
+    padding-right: govuk-spacing(5);
   }
 
   dd {
@@ -85,12 +86,6 @@
   .govuk-summary-list__actions {
     white-space: nowrap;
   }
-}
-
-.ebp-hr {
-  color: govuk-functional-colour('input-border');
-  border-style: solid;
-  border-bottom-width: 0;
 }
 
 epb-copy-to-clipboard {

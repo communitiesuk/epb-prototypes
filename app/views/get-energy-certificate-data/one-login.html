@@ -3,17 +3,47 @@
 
 {% extends "layouts/main.html" %}
 
+{% block govukHeader %}
+  {% if data.signedIn %}
+    {{ govukOneLoginServiceHeader({
+      signOutFormAction: "/get-energy-certificate-data/sign-out",
+      oneLoginLink: "/get-energy-certificate-data/one-login"
+    }) }}
+  {% else %}
+    {{ govukHeader({
+      homepageUrl: "/"
+    }) }}
+  {% endif %}
+{% endblock %}
+
+{% block govukServiceNavigation %}
+  {{ govukServiceNavigation({
+    serviceName: "GOV.UK One Login",
+    serviceUrl: "/get-energy-certificate-data/one-login"
+    }) }}
+{% endblock %}
+
 {% block pageTitle %}
-  Sign in to GOV.UK One Login - GOV.UK
+  {% if data.signedIn %}
+    Your One Login account
+  {% else %}
+    Sign in to GOV.UK One Login - GOV.UK
+  {% endif %}
 {% endblock %}
 
 {% block content %}
-  <h1 class='govuk-heading-xl'>Sign in to One Gov</h1>
+  {% if data.signedIn %}
+    <h1 class='govuk-heading-xl'>Your One Login account</h1>
 
-  <form method='post'>
-    <input type='hidden' name='signedIn' value='true' />
-    {{ govukButton({
-      text: "Sign in"
-    }) }}
-  </form>
+    <p>Hi {{ data.email }}</p>
+  {% else %}
+    <h1 class='govuk-heading-xl'>Sign in to One Gov</h1>
+
+    <form method='post'>
+      <input type='hidden' name='signedIn' value='true' />
+      {{ govukButton({
+        text: "Sign in"
+      }) }}
+    </form>
+  {% endif %}
 {% endblock %}
