@@ -11,7 +11,7 @@
     "@govuk-one-login/service-header": "^6.0.0",
     "@x-govuk/govuk-prototype-components": "^6.0.0",
     "govuk-frontend": "^6.5.1",
-    "govuk-prototype-kit": "^13.20.4",
+    "govuk-prototype-kit": "^13.20.5",
     "jquery": "^4.0.0"
   },
   "devDependencies": {
