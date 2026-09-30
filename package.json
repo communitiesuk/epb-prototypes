@@ -11,7 +11,7 @@
     "@govuk-one-login/service-header": "^6.0.0",
     "@x-govuk/govuk-prototype-components": "^6.0.0",
     "govuk-frontend": "^6.5.1",
-    "govuk-prototype-kit": "^13.20.4",
+    "govuk-prototype-kit": "^13.20.5",
     "jquery": "^4.0.0"
   },
   "devDependencies": {
@@ -19,7 +19,7 @@
     "eslint": "^10.11.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.12.0",
-    "prettier": "^3.9.8",
+    "prettier": "^3.9.9",
     "prettier-plugin-nunjucks": "^0.2.1"
   }
 }

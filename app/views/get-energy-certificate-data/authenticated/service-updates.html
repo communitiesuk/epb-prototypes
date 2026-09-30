@@ -12,45 +12,45 @@
 
 {% block content %}
   <div class='epb-reading-width'>
-  <form method='post'>
-    {{ govukRadios({
-      name: "subscribed",
-      value: data.subscribed.toString(
-      ),
-      fieldset: {
-        legend: {
-          text: "Subscribe to service update emails",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
-        }
-      },
-      items: [
-        {
-          value: "true",
-          text: "Yes",
-          hint: {
-            text: "Send me emails about major changes to the service"
+    <form method='post'>
+      {{ govukRadios({
+        name: "subscribed",
+        value: data.subscribed.toString(
+        ),
+        fieldset: {
+          legend: {
+            text: "Subscribe to service update emails",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
           }
         },
-        {
-          value: "false",
-          text: "No"
-        }
-      ]
-    }) }}
+        items: [
+          {
+            value: "true",
+            text: "Yes",
+            hint: {
+              text: "Send me emails about major changes to the service"
+            }
+          },
+          {
+            value: "false",
+            text: "No"
+          }
+        ]
+      }) }}
 
-    <p>
-      We will send emails to subscribed users about major changes to the service such as:
-    </p>
-    <ul class='govuk-list govuk-list--bullet'>
-      <li>changes to the API</li>
-      <li>changes to the published data</li>
-      <li>notice about interruptions to the service.</li>
-    </ul>
+      <p>
+        We will send emails to subscribed users about major changes to the service such as:
+      </p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>changes to the API</li>
+        <li>changes to the published data</li>
+        <li>notice about interruptions to the service.</li>
+      </ul>
 
-    {{ govukButton({
-      text: "Save"
-    }) }}
-  </form>
+      {{ govukButton({
+        text: "Save"
+      }) }}
+    </form>
   </div>
 {% endblock %}

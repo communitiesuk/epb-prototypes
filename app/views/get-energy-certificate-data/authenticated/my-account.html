@@ -69,9 +69,7 @@
         {% endfor %}
       </dl>
     {% else %}
-      <div
-        class='govuk-body epb-d-flex epb-gap-3 govuk-!-margin-bottom-5'
-      >
+      <div class='govuk-body epb-d-flex epb-gap-3 govuk-!-margin-bottom-5'>
         <code id='bearer-token' class='epb-break-anywhere epb-max-w-20'>
           {{ data.bearerTokens[0].value }}
         </code>
@@ -140,8 +138,11 @@
         <dd id='{{ bearerDomId }}' class='govuk-summary-list__value'>
           {{ data.email }}
         </dd>
-        <dd class="govuk-summary-list__actions epb-whitespace-nowrap">
-          <a href="/get-energy-certificate-data/authenticated/change-email" class="govuk-link">
+        <dd class='govuk-summary-list__actions epb-whitespace-nowrap'>
+          <a
+            class='govuk-link'
+            href='/get-energy-certificate-data/authenticated/change-email'
+          >
             Change
           </a>
         </dd>

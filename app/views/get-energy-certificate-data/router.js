@@ -1,5 +1,5 @@
 import { randomInt } from 'node:crypto';
-import express from 'express';
+import govukPrototypeKit from 'govuk-prototype-kit';
 
 const alphabet =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -11,7 +11,7 @@ function randomToken(length) {
   ).join('');
 }
 
-export const accountRouter = express.Router();
+export const accountRouter = govukPrototypeKit.requests.setupRouter();
 
 accountRouter.use('/', (req, res, next) => {
   if (req.method === 'GET') {
