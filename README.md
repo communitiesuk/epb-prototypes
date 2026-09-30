@@ -27,5 +27,5 @@ PASSWORD=test npm start
 
 # Run in docker in production mode
 docker build . -t epb-prototypes
-docker run -p 8080:8080 -e NODE_ENV=production -e PASSWORD=test epb-prototypes
+docker run --rm -p 8080:8080 -e PASSWORD=test epb-prototypes
 ```

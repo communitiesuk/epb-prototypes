@@ -11,4 +11,6 @@ RUN mkdir .tmp \
 
 USER node
 
+ENV NODE_ENV=production
+
 CMD ["npm", "run", "start"]
