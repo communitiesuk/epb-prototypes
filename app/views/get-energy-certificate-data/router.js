@@ -77,7 +77,7 @@ accountRouter.post('/authenticated/type-of-properties', (req, res, next) => {
 accountRouter.post('/one-login', (req, res) => {
   const referer =
     req.session.data.referer ||
-    '/get-energy-certificate-data/authenticated/my-account';
+    '/get-energy-certificate-data/authenticated/account-details';
 
   req.session.data.bearerTokens ??= [
     { createdAt: new Date(2026, 0, 1), value: randomToken(22) },
@@ -106,7 +106,7 @@ accountRouter.post('/authenticated/create-bearer-token', function (req, res) {
     value: randomToken(22),
   });
   req.session.flash = 'Bearer token created';
-  res.redirect('/get-energy-certificate-data/authenticated/my-account');
+  res.redirect('/get-energy-certificate-data/authenticated/account-details');
 });
 
 accountRouter.get(
@@ -117,7 +117,7 @@ accountRouter.get(
       value: randomToken(64),
     });
     req.session.flash = 'Bearer token created';
-    res.redirect('/get-energy-certificate-data/authenticated/my-account');
+    res.redirect('/get-energy-certificate-data/authenticated/account-details');
   },
 );
 
@@ -126,7 +126,7 @@ accountRouter.post('/authenticated/delete-bearer-token', function (req, res) {
   delete req.session.data.index;
   req.session.data.bearerTokens.splice(index, 1);
   req.session.flash = 'Bearer token deleted';
-  res.redirect('/get-energy-certificate-data/authenticated/my-account');
+  res.redirect('/get-energy-certificate-data/authenticated/account-details');
 });
 
 accountRouter.post('/authenticated/service-updates', function (req, res) {
@@ -137,19 +137,19 @@ accountRouter.post('/authenticated/service-updates', function (req, res) {
   } else {
     req.session.flash = 'Unsubscribed from service update emails';
   }
-  res.redirect('/get-energy-certificate-data/authenticated/my-account');
+  res.redirect('/get-energy-certificate-data/authenticated/account-details');
 });
 
 // Unused alternative
 accountRouter.post('/authenticated/subscribe', function (req, res) {
   req.session.data.subscribed = true;
   req.session.flash = 'Subscribed to service update emails';
-  res.redirect('/get-energy-certificate-data/authenticated/my-account');
+  res.redirect('/get-energy-certificate-data/authenticated/account-details');
 });
 
 // Unused alternative
 accountRouter.post('/authenticated/unsubscribe', function (req, res) {
   req.session.data.subscribed = false;
   req.session.flash = 'Unsubscribed from service update emails';
-  res.redirect('/get-energy-certificate-data/authenticated/my-account');
+  res.redirect('/get-energy-certificate-data/authenticated/account-details');
 });
