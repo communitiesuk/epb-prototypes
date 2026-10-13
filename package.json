@@ -20,6 +20,6 @@
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.12.0",
     "prettier": "^3.9.9",
-    "prettier-plugin-nunjucks": "^0.2.1"
+    "prettier-plugin-nunjucks": "^0.2.3"
   }
 }
