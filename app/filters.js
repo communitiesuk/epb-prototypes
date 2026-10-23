@@ -17,21 +17,21 @@ addFilter('formatDate', (date, dateStyle) => {
 addFilter('bearerStarting', (token) => token.slice(0, 5).split('').join(' '));
 
 addFilter('daysAgo', (date) => {
-  const createdAt = new Date(date)
-  const now = new Date()
+  const createdAt = new Date(date);
+  const now = new Date();
 
   // update this method and check if the format one is still being used.
-  const millisecondsPerDay = 1000 * 60 * 60 * 24
-  const difference = now.getTime() - createdAt.getTime()
-  const days = Math.floor(difference / millisecondsPerDay)
+  const millisecondsPerDay = 1000 * 60 * 60 * 24;
+  const difference = now.getTime() - createdAt.getTime();
+  const days = Math.floor(difference / millisecondsPerDay);
 
   if (days === 0) {
-    return "Today"
+    return 'Today';
   }
 
   if (days === 1) {
-    return "1 day ago"
+    return '1 day ago';
   }
 
-  return `${days} days ago`
-})
+  return `${days} days ago`;
+});

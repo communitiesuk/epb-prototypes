@@ -40,7 +40,12 @@
     </p>
 
     {% if data.signedIn %}
-    <h2 class='govuk-heading-m govuk-!-padding-top-4'>My Bearer token{% if data.bearerTokens | length > 1%}s{% endif %} </h2>
+      <h2 class='govuk-heading-m govuk-!-padding-top-4'>
+        My Bearer token
+        {% if data.bearerTokens | length > 1 %}
+          s
+        {% endif %}
+      </h2>
 
       {{ epbBearerTokens(data, false) }}
 
