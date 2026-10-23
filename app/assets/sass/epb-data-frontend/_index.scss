@@ -36,6 +36,14 @@
   max-width: 20em;
 }
 
+.epb-align-start {
+  align-items: flex-start;
+}
+
+.epb-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
 .govuk-button--epb-secondary {
   background-color: govuk-colour('black', $variant: 'tint-95');
   color: govuk-colour('black');
@@ -90,33 +98,37 @@
 
 epb-copy-to-clipboard {
   display: none;
-  height: 1lh;
-  top: -2px;
-  position: relative;
 
   &:defined {
     display: inline-block;
   }
+}
 
-  button {
-    text-align: center;
+.epb-copy-button {
+  @include govuk-font($size: 19);
 
-    slot {
-      display: flex;
-      gap: govuk-spacing(1);
-      justify-content: space-around;
-      align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-weight: bold;
+  color: $govuk-link-colour;
+  text-decoration-line: underline;
+  //text-decoration-thickness: max(1px, 0.0625rem);
+  text-underline-offset: 0.1578em;
+  cursor: pointer;
 
-      // Ensure that element has the width of the larger
-      // of the two labels so the layout doesn't jump
-      &[hidden] {
-        visibility: hidden;
-        height: 0;
-      }
-    }
+  &:hover {
+    color: $govuk-link-hover-colour;
+    text-decoration-thickness: max(3px, 0.1875rem);
   }
 
-  .govuk-button {
-    margin-bottom: 0;
+  &:focus {
+    @include govuk-focused-text;
+  }
+
+  slot:not([hidden]) {
+    display: flex;
+    align-items: center;
+    gap: govuk-spacing(1);
   }
 }

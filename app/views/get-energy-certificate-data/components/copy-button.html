@@ -1,12 +1,10 @@
 {% macro epbCopyButton(id, hiddenText) %}
   <epb-copy-to-clipboard target='{{ id }}'>
     <button
-      id='{{ id }}_button'
+      id='{{ id }}_copy'
       class='
-        govuk-button
-        govuk-button--secondary
-        govuk-button--epb-secondary
-        epb-copy-to-clipboard-button
+        epb-copy-button
+        govuk-link
       '
       type='button'
     >

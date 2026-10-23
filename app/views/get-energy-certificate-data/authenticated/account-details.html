@@ -22,67 +22,75 @@
 
     <h2 class='govuk-heading-m govuk-!-padding-top-4'>Bearer tokens</h2>
 
-    {% if data.bearerTokens | length > 1 %}
-      <dl class='govuk-summary-list govuk-summary-list--epb'>
-        {% for token in data.bearerTokens %}
-          {% set bearerDomId = "bearer_token_" ~ loop.index %}
-          {% set bearerHidden = "Bearer token starting " ~ token.value | bearerStarting ~ " created " ~ token.createdAt | formatDate(
-              "long"
-            )
-          %}
-          {{ bearerId | dump }}
-          <div class='govuk-summary-list__row'>
-            <dt id='{{ bearerDomId }}_label' class='govuk-summary-list__key'>
-              {{ token.createdAt | formatDate("medium") }}
-            </dt>
-            <dd id='{{ bearerDomId }}' class='govuk-summary-list__value'>
-              <code id='{{ bearerDomId }}' class='epb-break-anywhere'>
-                {{ token.value }}
-              </code>
-            </dd>
-            <dd class='govuk-summary-list__actions epb-whitespace-nowrap'>
-              {% if data.bearerTokens | length > 1 %}
-                <ul class='govuk-summary-list__actions-list'>
-                  <li class='govuk-summary-list__actions-list-item'>
-                    {{ epbCopyButton(bearerDomId, bearerHidden) }}
-                  </li>
-                  <li class='govuk-summary-list__actions-list-item'>
-                    {% if data.bearerTokens | length > 1 %}
-                      <a
-                        id='{{ bearerDomId }}_delete'
-                        class='govuk-link'
-                        href='/get-energy-certificate-data/authenticated/delete-bearer-token?index={{ loop.index0 }}'
-                      >
-                        Delete
-                        <span class='govuk-visually-hidden'>
+    {% for token in data.bearerTokens %}
+      {% set bearerDomId = "bearer_token_" ~ loop.index %}
+      {% set bearerHidden = "Bearer token starting " ~ token.value | bearerStarting ~ " created " ~ token.createdAt | formatDate(
+      "long"
+      )
+      %}
+      {{ bearerId | dump }}
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper epb-align-start">
+        <h2 id='{{ bearerDomId }}' class="govuk-summary-card__title epb-break-anywhere" >
+            <code id='{{ bearerDomId }}'>
+              {{ token.value }}
+            </code>
+        </h2>
+        {% if data.bearerTokens | length > 1 %}
+        <ul class='govuk-summary-card__actions epb-flex-nowrap' >
+          <li class='govuk-summary-card__action'>
+            {{ epbCopyButton(bearerDomId, bearerHidden) }}
+          </li>
+          <li class='govuk-summary-card__action'>
+            {% if data.bearerTokens | length > 1 %}
+            <a
+                    id='{{ bearerDomId }}_delete'
+                    class='govuk-link'
+                    href='/get-energy-certificate-data/authenticated/delete-bearer-token?index={{ loop.index0 }}'
+            >
+              Delete
+              <span class='govuk-visually-hidden'>
                           {{ bearerHidden }}
                         </span>
-                      </a>
-                    {% endif %}
-                  </li>
-                </ul>
-              {% else %}
-                {{ epbCopyButton(bearerDomId, "Bearer token") }}
-              {% endif %}
+            </a>
+            {% endif %}
+          </li>
+        </ul>
+        {% else %}
+        {{ epbCopyButton(bearerDomId, "Bearer token") }}
+        {% endif %}
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Created
+            </dt>
+            <dd id='{{ bearerDomId }}_created' class="govuk-summary-list__value">
+              {{ token.createdAt | daysAgo }}
             </dd>
           </div>
-        {% endfor %}
-      </dl>
-    {% else %}
-      <div class='govuk-body epb-d-flex epb-gap-3 govuk-!-margin-bottom-5'>
-        <code id='bearer-token' class='epb-break-anywhere epb-max-w-20'>
-          {{ data.bearerTokens[0].value }}
-        </code>
-        {{ epbCopyButton("bearer-token", "Bearer token") }}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Last used
+            </dt>
+            <dd id='{{ bearerDomId }}_last_used' class="govuk-summary-list__value">
+              {{ token.createdAt | daysAgo }}
+            </dd>
+          </div>
+        </dl>
       </div>
+    </div>
+    {% endfor %}
 
+    {% if data.bearerTokens | length < 2 %}
       <form
-        method='post'
-        action='/get-energy-certificate-data/authenticated/create-bearer-token'
+              method='post'
+              action='/get-energy-certificate-data/authenticated/create-bearer-token'
       >
-        {{ govukButton({
-          text: "Create additional token"
-        }) }}
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Add a token
+        </button>
       </form>
     {% endif %}
 
