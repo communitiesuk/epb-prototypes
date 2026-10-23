@@ -16,24 +16,8 @@
   white-space: nowrap;
 }
 
-.epb-whitespace-nowrap {
-  white-space: nowrap;
-}
-
 .epb-break-anywhere {
   overflow-wrap: anywhere;
-}
-
-.epb-d-flex {
-  display: flex;
-}
-
-.epb-gap-3 {
-  gap: govuk-spacing(3);
-}
-
-.epb-max-w-20 {
-  max-width: 20em;
 }
 
 .epb-align-start {
@@ -100,13 +84,15 @@ epb-copy-to-clipboard {
   display: none;
 
   &:defined {
-    display: inline-block;
+    display: block;
   }
 }
 
 .epb-copy-button {
   @include govuk-font($size: 19);
 
+  display: flex;
+  flex-direction: column;
   padding: 0;
   border: 0;
   background: transparent;
@@ -125,10 +111,16 @@ epb-copy-to-clipboard {
   &:focus {
     @include govuk-focused-text;
   }
+}
 
-  slot:not([hidden]) {
-    display: flex;
-    align-items: center;
-    gap: govuk-spacing(1);
+.epb-copy-button__label {
+  display: flex;
+  align-items: center;
+  gap: govuk-spacing(1);
+  justify-content: center;
+
+  &[hidden] {
+    visibility: hidden;
+    height: 0;
   }
 }

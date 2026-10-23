@@ -26,16 +26,26 @@ window.GOVUKPrototypeKit.documentReady(() => {
 //
 //
 class CopyToClipboardElement extends HTMLElement {
+  #blurTimeout;
+  #copied = false;
+
   connectedCallback() {
     if (!navigator.clipboard) {
       this.hidden = true;
       return;
     }
-    this.querySelector('button')?.addEventListener('click', this.#onClick);
+    const button = this.#button;
+    button?.addEventListener('click', this.#onClick);
+    button?.addEventListener('blur', this.#onBlur);
+    button?.addEventListener('focus', this.#onFocus);
   }
 
   disconnectedCallback() {
-    this.querySelector('button')?.removeEventListener('click', this.#onClick);
+    const button = this.#button;
+    button?.removeEventListener('click', this.#onClick);
+    button?.removeEventListener('blur', this.#onBlur);
+    button?.removeEventListener('focus', this.#onFocus);
+    clearTimeout(this.#blurTimeout);
   }
 
   get target() {
@@ -48,10 +58,15 @@ class CopyToClipboardElement extends HTMLElement {
     return element;
   }
 
+  get #button() {
+    return this.querySelector('button');
+  }
+
   #onClick = async (e) => {
     if (e.defaultPrevented) {
       return;
     }
+    clearTimeout(this.#blurTimeout);
     try {
       await navigator.clipboard.writeText(this.target?.innerText?.trim());
     } catch (e) {
@@ -61,7 +76,29 @@ class CopyToClipboardElement extends HTMLElement {
     }
     this.#setSlotHidden('action-message', true);
     this.#setSlotHidden('success-message', false);
+    this.#copied = true;
   };
+
+  #onBlur = async () => {
+    clearTimeout(this.#blurTimeout);
+    if (!this.#copied) {
+      return;
+    }
+    this.#blurTimeout = setTimeout(() => {
+      this.#reset();
+    }, 2000);
+  };
+
+  #onFocus = async () => {
+    this.#reset();
+  };
+
+  #reset() {
+    clearTimeout(this.#blurTimeout);
+    this.#setSlotHidden('action-message', false);
+    this.#setSlotHidden('success-message', true);
+    this.#copied = false;
+  }
 
   #setSlotHidden(name, state) {
     const element = this.querySelector(`slot[name="${name}"]`);
