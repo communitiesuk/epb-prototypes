@@ -17,10 +17,10 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.11.0",
+    "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.12.0",
-    "prettier": "^3.9.9",
-    "prettier-plugin-nunjucks": "^0.2.1"
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "prettier-plugin-nunjucks": "^0.2.3"
   }
 }
