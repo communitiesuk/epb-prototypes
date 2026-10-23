@@ -1,4 +1,4 @@
-{% from "get-energy-certificate-data/components/copy-button.html" import epbCopyButton %}
+{% from "get-energy-certificate-data/components/bearer-tokens.html" import epbBearerTokens %}
 {% extends "get-energy-certificate-data/layouts/main.html" %}
 
 {% block pageTitle %}
@@ -40,40 +40,9 @@
     </p>
 
     {% if data.signedIn %}
-      {% if data.bearerTokens | length == 1 %}
-        <h2 class='govuk-heading-m govuk-!-padding-top-4'>My Bearer token</h2>
-        <div class='govuk-body epb-d-flex epb-gap-3 govuk-!-margin-bottom-5'>
-          <code id='bearer-token' class='epb-break-anywhere epb-max-w-20'>
-            {{ data.bearerTokens[0].value }}
-          </code>
-          {{ epbCopyButton("bearer-token", "bearer token") }}
-        </div>
-      {% else %}
-        <h2 class='govuk-heading-m govuk-!-padding-top-4'>My Bearer tokens</h2>
-        <dl class='govuk-summary-list govuk-summary-list--epb'>
-          {% for token in data.bearerTokens %}
-            {% set bearerDomId = "bearer_token_" ~ loop.index %}
-            {% set bearerHidden = "Bearer token starting " ~ token.value | bearerStarting ~ " created " ~ token.createdAt | formatDate(
-                "long"
-              )
-            %}
-            {{ bearerId | dump }}
-            <div class='govuk-summary-list__row'>
-              <dt id='{{ bearerDomId }}_label' class='govuk-summary-list__key'>
-                {{ token.createdAt | formatDate("medium") }}
-              </dt>
-              <dd class='govuk-summary-list__value'>
-                <code id='{{ bearerDomId }}' class='epb-break-anywhere'>
-                  {{ token.value }}
-                </code>
-              </dd>
-              <dd class='govuk-summary-list__actions epb-whitespace-nowrap'>
-                {{ epbCopyButton(bearerDomId, bearerHidden) }}
-              </dd>
-            </div>
-          {% endfor %}
-        </dl>
-      {% endif %}
+    <h2 class='govuk-heading-m govuk-!-padding-top-4'>My Bearer token{% if data.bearerTokens | length > 1%}s{% endif %} </h2>
+
+      {{ epbBearerTokens(data, false) }}
 
       <p>
         Manage your bearer tokens from the
