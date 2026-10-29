@@ -139,17 +139,3 @@ accountRouter.post('/authenticated/service-updates', function (req, res) {
   }
   res.redirect('/get-energy-certificate-data/authenticated/account-details');
 });
-
-// Unused alternative
-accountRouter.post('/authenticated/subscribe', function (req, res) {
-  req.session.data.subscribed = true;
-  req.session.flash = 'Subscribed to service update emails';
-  res.redirect('/get-energy-certificate-data/authenticated/account-details');
-});
-
-// Unused alternative
-accountRouter.post('/authenticated/unsubscribe', function (req, res) {
-  req.session.data.subscribed = false;
-  req.session.flash = 'Unsubscribed from service update emails';
-  res.redirect('/get-energy-certificate-data/authenticated/account-details');
-});

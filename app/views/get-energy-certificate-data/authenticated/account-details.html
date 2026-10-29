@@ -48,23 +48,6 @@
           {% endif %}
         </dd>
         <dd class='govuk-summary-list__actions'>
-          {#
-            {% if data.subscribed %}
-              <form method="post" action="/get-energy-certificate-data/authenticated/unsubscribe">
-                {{ govukButton({
-                  classes: "govuk-button--secondary govuk-!-margin-bottom-0 govuk-button--epb-secondary",
-                  html: "Unsubscribe <span class='govuk-visually-hidden'>from service updates</span>"
-                }) }}
-              </form>
-            {% else %}
-              <form method="post" action="/get-energy-certificate-data/authenticated/subscribe">
-                {{ govukButton({
-                  classes: "govuk-button--secondary govuk-!-margin-bottom-0 govuk-button--epb-secondary",
-                  html: "Subscribe <span class='govuk-visually-hidden'>to service updates</span>"
-                }) }}
-              </form>
-            {% endif %}
-          #}
           <a href='/get-energy-certificate-data/authenticated/service-updates'>
             Change
             <span class='govuk-visually-hidden'>
