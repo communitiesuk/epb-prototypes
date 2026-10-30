@@ -1,6 +1,6 @@
 services:
   epb-prototypes:
-    command: node ./node_modules/govuk-prototype-kit/bin/cli dev
+    command: npm run dev
     environment:
       - NODE_ENV=development
       - PORT=8080
