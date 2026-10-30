@@ -1,16 +1,25 @@
-FROM node:24-slim
+FROM dhi.io/node:26-dev AS builder
 
 WORKDIR /usr/src/app
 
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
+
 COPY . .
 
-RUN npm ci
+RUN mkdir /tmp/app-tmp
 
-RUN mkdir .tmp \
-    && chown -R node:node .tmp
+# ------------------------------------------------------------------------------
+
+FROM dhi.io/node:26
+
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app .
+COPY --from=builder --chown=node:node /tmp/app-tmp .tmp 
 
 USER node
 
 ENV NODE_ENV=production
 
-CMD ["npm", "run", "start"]
+CMD ["node", "./node_modules/govuk-prototype-kit/bin/cli", "start"]
