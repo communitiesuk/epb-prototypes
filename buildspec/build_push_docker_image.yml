@@ -6,6 +6,7 @@ phases:
       - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2&
       - timeout 30 sh -c "until docker info; do echo .; sleep 1; done"
       - docker login -u AWS -p $(aws ecr get-login-password --region $AWS_DEFAULT_REGION) $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - echo $DOCKER_HUB_ACCESS_TOKEN | docker login dhi.io --username $DOCKER_HUB_ORGANISATION --password-stdin
 
   build:
     commands:
