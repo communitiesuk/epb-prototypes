@@ -4,7 +4,7 @@ This is where we store our prototypes.
 
 See:
 
-- [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com/docs)
+- [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/)
 - [GOV.UK Design System](https://design-system.service.gov.uk/get-started/)
   - [Styles](https://design-system.service.gov.uk/styles/)
   - [Components](https://design-system.service.gov.uk/components/)
